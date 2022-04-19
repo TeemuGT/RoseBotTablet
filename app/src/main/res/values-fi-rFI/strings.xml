@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RoseBotTablet</string>
+
+    <string name="fantapuhe">Jos menet tänne niin löydät fantasia kirjat.</string>
+    <string name="scifipuhe">Jos menet tänne niin löydät scifi kirjat.?</string>
+    <string name="mispuhe">Olet tällähetkellä täällä. Mitä haluat löytää?</string>
+    <string name="tiedpuhe">Jos menet tänne niin löydät tietokirjat.</string>
+    <string name="terve">Hei minun nimeni on RoseBotti. Voit kysyä minulta missä eri kirja kategoriat ovat tai painaa valmista nappia. Mitä kirjoja etsit?</string>
+    <string name="kiitos">Mahtavaa oli ilo olla avuksi. Nyt menen takaisin nukkumaan.</string>
+    <string name="enymr">Anteeki en ymmärtänyt, voitko kysyä uudelleen?</string>
+    <string name="kysyuu">En valitettavasti ymmärrä sinua. Voit myös painaa valmista nappia, tai sitten klikata minua ja yrittää kysyä uudelleen.</string>
+    <string name="keskus">Kiitos kysymästä. Minä voin oikein hyvin. Miten sinä voit?</string>
+    <string name="kuuluu">Hienoa kuulla että voit hyvin. Miten voin auttaa sinua?</string>
+
+
+    <string name="ohje">Kysy minulta mitä halua tietää klikaamalla minua tai valitse valmis nappi.</string>
+    <string name="otsikko">Kirjakauppa</string>
+    <string name="kieli">Kieli</string>
+    <string name="alotusbtn">Paina aloittaaksesi</string>
+    <string name="fantabtn">Fantasia</string>
+    <string name="scifibtn">Scifi</string>
+    <string name="tietobtn">Tiede</string>
+
+    <string name="kesk0">Mitä sinulle kuuluu</string>
+    <string name="kesk1">Kuinka sinä voit</string>
+    <string name="kesk2">Miten voit</string>
+    <string name="kesk3">Hauska tavata</string>
+    <string name="kesk4">Voitko sinä hyvin</string>
+
+    <string name="kuin0">Voin hyvin</string>
+    <string name="kuin1">Minulla menee hyvin</string>
+    <string name="kuin2">Minä voin hyvin</string>
+    <string name="kuin3">Minulle kuuluu hyvää</string>
+    <string name="kuin4">Kakki on hyvin</string>
+
+    <string name="fanta0">Missä fantasia</string>
+    <string name="fanta1">Onko fantasia</string>
+    <string name="fanta2">Mistä löydän fantasia</string>
+    <string name="fanta3">Missä on fantasia</string>
+    <string name="fanta4">Löytää fantasia</string>
+    <string name="fanta5">missä fantasia</string>
+    <string name="fanta6">onko fantasia</string>
+    <string name="fanta7">sistä löydän fantasia</string>
+    <string name="fanta8">missä on fantasia</string>
+    <string name="fanta9">löytää fantasia</string>
+
+    <string name="scif0">scifi</string>
+
+    <string name="tiet0">tietokirja</string>
+    <string name="tiet1">tiedekirja</string>
+    <string name="tiet2">tietokirjoja</string>
+    <string name="tiet3">tiedekirjoja</string>
+    <string name="tiet4">Tietokirja</string>
+    <string name="tiet5">Tiedekirja</string>
+    <string name="tiet6">Tietokirjoja</string>
+    <string name="tiet7">Tiedekirjoja</string>
+
+    <string name="kiits0">Kiitos</string>
+    <string name="kiits1">kiitos</string>
+    <string name="kiits2">oli apua</string>
+
+    <string name="sijan0">missä minä</string>
+    <string name="sijan1">minä olen</string>
+    <string name="sijan2">Missä minä</string>
+    <string name="sijan3">Minä olen</string>
+
+</resources>
