@@ -12,6 +12,8 @@
     <string name="kysyuu">En valitettavasti ymmärrä sinua. Voit myös painaa valmista nappia, tai sitten klikata minua ja yrittää kysyä uudelleen.</string>
     <string name="keskus">Kiitos kysymästä. Minä voin oikein hyvin. Miten sinä voit?</string>
     <string name="kuuluu">Hienoa kuulla että voit hyvin. Miten voin auttaa sinua?</string>
+    <string name="kaunospeak">Tästä voit valita etsimäsi kaunokirjallisuuden kategorian.</string>
+    <string name="tietospeak">Tästä voit valita etsimäsi tietokirjallisuuden kategorian.</string>
 
 
     <string name="ohje">Kysy minulta mitä halua tietää klikaamalla minua tai valitse valmis nappi.</string>
@@ -21,6 +23,8 @@
     <string name="fantabtn">Fantasia</string>
     <string name="scifibtn">Scifi</string>
     <string name="tietobtn">Tiede</string>
+    <string name="kaunokirbtn">Kaunokirjallisuus</string>
+    <string name="tietokirbtn">Tietokirjallisuus</string>
 
     <string name="kesk0">Mitä sinulle kuuluu</string>
     <string name="kesk1">Kuinka sinä voit</string>

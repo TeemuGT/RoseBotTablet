@@ -117,10 +117,12 @@ public class MainActivity extends AppCompatActivity {
     public static boolean tiede = false;
     public static boolean kiitoksia = false;
     @SuppressLint("StaticFieldLeak")
-    public static Button button;
-    public static Button button1;
-    public static Button button2;
+    public static Button fantasibtn;
+    public static Button scifibtn;
+    public static Button tietobtn;
     public static Button shlang;
+    public Button kaunokirjallisuus;
+    public Button tietokirjallisuus;
 
 
 
@@ -218,9 +220,9 @@ public class MainActivity extends AppCompatActivity {
         marker = (ImageView) findViewById(R.id.marker);
         kartta = (ImageView) findViewById(R.id.kartta);
         hahmo = (ImageView) findViewById(R.id.hahmo);
-        button = findViewById(R.id.button);
-        button1 = findViewById(R.id.button1);
-        button2 = findViewById(R.id.button2);
+        fantasibtn = findViewById(R.id.fantasibtn);
+        scifibtn = findViewById(R.id.scifibtn);
+        tietobtn = findViewById(R.id.tietobtn);
         voiceBtn = findViewById(R.id.voiceBtn);
         text = findViewById(R.id.text);
         text1 = findViewById(R.id.text1);
@@ -229,6 +231,10 @@ public class MainActivity extends AppCompatActivity {
         shlang = findViewById(R.id.shlang);
         //gif = findViewById(R.id.gif);
         otsikko = findViewById(R.id.otsikko);
+
+        //Yläkategoriat napit
+        kaunokirjallisuus = findViewById(R.id.kaunokirjallisuus);
+        tietokirjallisuus = findViewById(R.id.tietokirjallisuus);
 
 
         ActionBar actionBar = getSupportActionBar();
@@ -280,9 +286,11 @@ public class MainActivity extends AppCompatActivity {
 
                         hahmo.setImageResource(R.drawable.androidukko);
                         voiceBtn.setVisibility(View.VISIBLE);
-                        button.setVisibility(View.VISIBLE);
-                        button1.setVisibility(View.VISIBLE);
-                        button2.setVisibility(View.VISIBLE);
+                        kaunokirjallisuus.setVisibility(View.VISIBLE);
+                        tietokirjallisuus.setVisibility(View.VISIBLE);
+
+
+
                         marker.setVisibility(View.VISIBLE);
                         converBtn.setVisibility(View.INVISIBLE);
                         kartta.setVisibility(View.VISIBLE);
@@ -312,8 +320,58 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+        //Yläkategorioiden nappien toiminnot
+
+        kaunokirjallisuus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                textToSpeech.speak(getString(R.string.kaunospeak), TextToSpeech.QUEUE_FLUSH, null);
+                //Poistetaan pääkategotia napit käytöstä.
+                kaunokirjallisuus.setVisibility(View.INVISIBLE);
+                tietokirjallisuus.setVisibility(View.INVISIBLE);
+
+                //Avataan alakategorianapit käyttöön.
+                fantasibtn.setVisibility(View.VISIBLE);
+                scifibtn.setVisibility(View.VISIBLE);
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
+
+            }
+        });
+
+        tietokirjallisuus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                textToSpeech.speak(getString(R.string.tietospeak), TextToSpeech.QUEUE_FLUSH, null);
+                //Poistetaan pääkategotia napit käytöstä.
+                kaunokirjallisuus.setVisibility(View.INVISIBLE);
+                tietokirjallisuus.setVisibility(View.INVISIBLE);
+
+                //Avataan alakategorianapit käyttöön.
+                tietobtn.setVisibility(View.VISIBLE);
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
+            }
+        });
+
         //Nappulat valitsevat eri kategorioita
-        button.setOnClickListener(new View.OnClickListener() {
+        fantasibtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -322,7 +380,7 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        button1.setOnClickListener(new View.OnClickListener() {
+        scifibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 speechRecognizer.stopListening();
@@ -332,7 +390,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        button2.setOnClickListener(new View.OnClickListener() {
+        tietobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 speechRecognizer.stopListening();
