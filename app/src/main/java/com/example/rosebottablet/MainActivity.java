@@ -121,8 +121,8 @@ public class MainActivity extends AppCompatActivity {
     public static Button scifibtn;
     public static Button tietobtn;
     public static Button shlang;
-    public Button kaunokirjallisuus;
-    public Button tietokirjallisuus;
+    public Button kaunobtn;
+    public Button tietogabtn;
 
 
 
@@ -233,8 +233,8 @@ public class MainActivity extends AppCompatActivity {
         otsikko = findViewById(R.id.otsikko);
 
         //Yläkategoriat napit
-        kaunokirjallisuus = findViewById(R.id.kaunokirjallisuus);
-        tietokirjallisuus = findViewById(R.id.tietokirjallisuus);
+         kaunobtn = findViewById(R.id.kaunobtn);
+        tietogabtn = findViewById(R.id.tietogabtn);
 
 
         ActionBar actionBar = getSupportActionBar();
@@ -286,8 +286,8 @@ public class MainActivity extends AppCompatActivity {
 
                         hahmo.setImageResource(R.drawable.androidukko);
                         voiceBtn.setVisibility(View.VISIBLE);
-                        kaunokirjallisuus.setVisibility(View.VISIBLE);
-                        tietokirjallisuus.setVisibility(View.VISIBLE);
+                        kaunobtn.setVisibility(View.VISIBLE);
+                        tietogabtn.setVisibility(View.VISIBLE);
 
 
 
@@ -322,15 +322,15 @@ public class MainActivity extends AppCompatActivity {
 
         //Yläkategorioiden nappien toiminnot
 
-        kaunokirjallisuus.setOnClickListener(new View.OnClickListener() {
+        kaunobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 speechRecognizer.stopListening();
                 Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
                 textToSpeech.speak(getString(R.string.kaunospeak), TextToSpeech.QUEUE_FLUSH, null);
                 //Poistetaan pääkategotia napit käytöstä.
-                kaunokirjallisuus.setVisibility(View.INVISIBLE);
-                tietokirjallisuus.setVisibility(View.INVISIBLE);
+                kaunobtn.setVisibility(View.INVISIBLE);
+                tietogabtn.setVisibility(View.INVISIBLE);
 
                 //Avataan alakategorianapit käyttöön.
                 fantasibtn.setVisibility(View.VISIBLE);
@@ -347,15 +347,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        tietokirjallisuus.setOnClickListener(new View.OnClickListener() {
+       tietogabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 speechRecognizer.stopListening();
                 Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
                 textToSpeech.speak(getString(R.string.tietospeak), TextToSpeech.QUEUE_FLUSH, null);
                 //Poistetaan pääkategotia napit käytöstä.
-                kaunokirjallisuus.setVisibility(View.INVISIBLE);
-                tietokirjallisuus.setVisibility(View.INVISIBLE);
+                kaunobtn.setVisibility(View.INVISIBLE);
+                tietogabtn.setVisibility(View.INVISIBLE);
 
                 //Avataan alakategorianapit käyttöön.
                 tietobtn.setVisibility(View.VISIBLE);
