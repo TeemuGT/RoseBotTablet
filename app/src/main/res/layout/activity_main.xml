@@ -100,18 +100,19 @@
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/fantasibtn"
-        android:layout_width="100dp"
+        android:id="@+id/ylakate"
+        android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="260dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="270dp"
+        android:layout_marginBottom="730dp"
         android:backgroundTint="#990600"
-        android:text="@string/fantabtn"
+        android:text="@string/ylakate"
         android:textColor="@android:color/white"
         android:textSize="12sp"
-        android:visibility="invisible" />
+        android:visibility="invisible"
+        />
 
     <Button
         android:id="@+id/kaunobtn"
@@ -141,6 +142,49 @@
         android:textSize="12sp"
         android:visibility="invisible"
          />
+
+    <!-- Alakategoria napit -->
+    <Button
+        android:id="@+id/fantasibtn"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="260dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/fantabtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/runobtn"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="380dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/runobtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/rikojanbtn"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="500dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/rikojanbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/scifibtn"
@@ -198,6 +242,34 @@
         android:visibility="visible" />
 
     <ImageView
+        android:id="@+id/here"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginEnd="1350dp"
+        android:layout_marginBottom="50dp"
+
+        android:src="@drawable/ic_baseline_circle_24"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/where"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="1240dp"
+        android:layout_marginBottom="42dp"
+        android:text="@string/where"
+        android:textSize="20sp"
+        android:visibility="invisible"
+
+        />
+
+
+    <ImageView
         android:id="@+id/kartta"
         android:layout_width="900dp"
         android:layout_height="550dp"
@@ -209,6 +281,7 @@
         android:layout_marginEnd="15dp"
         android:background="@drawable/kartta2"
         android:visibility="invisible" />
+
 
     <ImageView
         android:id="@+id/marker"
@@ -223,4 +296,16 @@
         android:layout_marginBottom="365dp"
         android:src="@drawable/marker"
         android:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/herek"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+
+        android:layout_marginEnd="646dp"
+        android:layout_marginBottom="565dp"
+        android:src="@drawable/ic_baseline_circle_24"
+        android:visibility="invisible"/>
 </RelativeLayout>

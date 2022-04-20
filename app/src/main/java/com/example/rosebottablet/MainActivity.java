@@ -42,20 +42,18 @@ public class MainActivity extends AppCompatActivity {
 
     public static final Integer RecordAudioRequestCode = 1;
 
+    //Avainsanojen Boolean
     public boolean keskustelu0 = false;
     public boolean keskustelu1 = false;
     public boolean keskustelu2 = false;
     public boolean keskustelu3 = false;
     public boolean keskustelu4 = false;
 
-
     public boolean kuinkaVoin0 = false;
     public boolean kuinkaVoin1 = false;
     public boolean kuinkaVoin2 = false;
     public boolean kuinkaVoin3 = false;
     public boolean kuinkaVoin4 = false;
-
-
 
     public boolean fantasia0 = false;
     public boolean fantasia1 = false;
@@ -79,6 +77,18 @@ public class MainActivity extends AppCompatActivity {
     public boolean tiede6 = false;
     public boolean tiede7 = false;
 
+    public boolean runot0 = false;
+    public boolean runot1 = false;
+    public boolean runot2 = false;
+    public boolean runot3 = false;
+    public boolean runot4 = false;
+    public boolean runot5 = false;
+
+    public boolean rikoja0 = false;
+    public boolean rikoja1 = false;
+    public boolean rikoja2 = false;
+    public boolean rikoja3 = false;
+
     public boolean kiitos1 = false;
     public boolean oli = false;
     public boolean kiito = false;
@@ -88,9 +98,14 @@ public class MainActivity extends AppCompatActivity {
     public boolean sijainti2 = false;
     public boolean sijainti3 = false;
 
+
+    //Layout Objekteja
     static ImageView marker;
     static ImageView kartta;
     static ImageView hahmo;
+    ImageView here;
+    ImageView herek;
+    TextView where;
     ImageButton voiceBtn;
     public static TextView text;
     static TextView text1;
@@ -102,9 +117,8 @@ public class MainActivity extends AppCompatActivity {
 
     public int laskuri =  0;
 
+    //Avain sana
     public static String word = "";
-
-    public static Boolean lopetus = false;
 
     private static final String LOG_TAG = "LogActivity";
 
@@ -113,19 +127,25 @@ public class MainActivity extends AppCompatActivity {
     //Boolean joka määrittää mikä kategoria on valittu
     public static boolean sijainti = false;
     public static boolean fantasia = false;
+    public static boolean runo = false;
+    public static boolean rikojanitus;
     public static boolean scifi = false;
     public static boolean tiede = false;
     public static boolean kiitoksia = false;
     @SuppressLint("StaticFieldLeak")
-    public static Button fantasibtn;
-    public static Button scifibtn;
-    public static Button tietobtn;
-    public static Button shlang;
+    //Napit
+    public Button fantasibtn;
+    public Button runobtn;
+    public Button rikojanbtn;
+    public Button scifibtn;
+    public Button tietobtn;
+    public Button shlang;
     public Button kaunobtn;
     public Button tietogabtn;
+    public Button ylakate;
 
 
-
+    //Puheen tunnistus
     public static SpeechRecognizer speechRecognizer;
     public static Intent speechRecognizerIntent;
 
@@ -133,25 +153,28 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
+        //Ylä bannerin piilpitus
         Objects.requireNonNull(getSupportActionBar()).hide();
+        //Valitu kieli
         loadLocale();
         setContentView(R.layout.activity_main);
 
-        //Contain con = new Contain();
 
+        //Kysyy mikrofoonin käyttöoikeutta
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED){
             checkPermission();
         }
 
 
 
-
+        //Puheen tunnistuksen määrittelyä
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
         speechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, loadLocale());
 
+        //Puheen tunnistus
         speechRecognizer.setRecognitionListener(new RecognitionListener() {
             @Override
             public void onReadyForSpeech(Bundle bundle) {
@@ -220,7 +243,13 @@ public class MainActivity extends AppCompatActivity {
         marker = (ImageView) findViewById(R.id.marker);
         kartta = (ImageView) findViewById(R.id.kartta);
         hahmo = (ImageView) findViewById(R.id.hahmo);
+        here = (ImageView) findViewById(R.id.here);
+        herek = (ImageView) findViewById(R.id.herek);
+        where = findViewById(R.id.where);
+
         fantasibtn = findViewById(R.id.fantasibtn);
+        runobtn = findViewById(R.id.runobtn);
+        rikojanbtn = findViewById(R.id.rikojanbtn);
         scifibtn = findViewById(R.id.scifibtn);
         tietobtn = findViewById(R.id.tietobtn);
         voiceBtn = findViewById(R.id.voiceBtn);
@@ -233,13 +262,15 @@ public class MainActivity extends AppCompatActivity {
         otsikko = findViewById(R.id.otsikko);
 
         //Yläkategoriat napit
-         kaunobtn = findViewById(R.id.kaunobtn);
+        kaunobtn = findViewById(R.id.kaunobtn);
         tietogabtn = findViewById(R.id.tietogabtn);
+        ylakate = findViewById(R.id.ylakate);
 
-
+        //Kielen vaihto bar
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.app_name));
 
+        //Kielen vaihto nappula
         shlang.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -247,6 +278,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Puheen tuottaminen tekstistä
         textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
 
             @Override
@@ -254,23 +286,25 @@ public class MainActivity extends AppCompatActivity {
 
                 if(i != TextToSpeech.ERROR){
                     textToSpeech.setLanguage(Locale.forLanguageTag(loadLocale()));
-                    //kuvaSeis();
                 }
 
             }
         });
 
+        //Aloitus nappula joka aloittaa toiminnan
         converBtn.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
-
-
-
+                //Hakee stringin ja tuotaa sen puheeksi
                 String x = getString(R.string.terve);
                 textToSpeech.speak(x, TextToSpeech.QUEUE_FLUSH, null);
 
+                converBtn.setVisibility(View.INVISIBLE);
+
+                //Vaihtaa hahmo imagen tilalle gif animaation
                 Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
 
+                //Handlerissä tuotetaan usempia toimintoja saman aikasesti
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -279,34 +313,35 @@ public class MainActivity extends AppCompatActivity {
                         //gif.setVisibility(View.INVISIBLE);
                         //hahmo.setVisibility(View.VISIBLE);
 
+                        //Hahmon sijainti siirretään
                         RelativeLayout.LayoutParams hahmoRelativeLayout = new RelativeLayout.LayoutParams(1200, 1400);
                         hahmoRelativeLayout.leftMargin = 50;
                         hahmoRelativeLayout.topMargin = 120;
                         MainActivity.hahmo.setLayoutParams(hahmoRelativeLayout);
 
+                        //Tuotetaan näkyviin objekteja
                         hahmo.setImageResource(R.drawable.androidukko);
                         voiceBtn.setVisibility(View.VISIBLE);
                         kaunobtn.setVisibility(View.VISIBLE);
                         tietogabtn.setVisibility(View.VISIBLE);
 
+                        here.setVisibility(View.VISIBLE);
+                        herek.setVisibility(View.VISIBLE);
+                        where.setVisibility(View.VISIBLE);
 
-
-                        marker.setVisibility(View.VISIBLE);
-                        converBtn.setVisibility(View.INVISIBLE);
                         kartta.setVisibility(View.VISIBLE);
                         text1.setVisibility(View.VISIBLE);
 
+                        //Aloitetaan puheen kuuntelu puheen jälkeen.
                         speechRecognizer.startListening(speechRecognizerIntent);
-
                     }
-                }, 10000);
+                }, 10000); //10 sekunnin viive handlerin toimintaan.
             }
         });
-
+        //Restart nappula joka hakee restart methodin
         resButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 restart();
             }
         });
@@ -321,7 +356,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Yläkategorioiden nappien toiminnot
-
         kaunobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -335,6 +369,10 @@ public class MainActivity extends AppCompatActivity {
                 //Avataan alakategorianapit käyttöön.
                 fantasibtn.setVisibility(View.VISIBLE);
                 scifibtn.setVisibility(View.VISIBLE);
+                runobtn.setVisibility(View.VISIBLE);
+                rikojanbtn.setVisibility(View.VISIBLE);
+
+                ylakate.setVisibility(View.VISIBLE);
 
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
@@ -360,6 +398,8 @@ public class MainActivity extends AppCompatActivity {
                 //Avataan alakategorianapit käyttöön.
                 tietobtn.setVisibility(View.VISIBLE);
 
+                ylakate.setVisibility(View.VISIBLE);
+
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
@@ -371,6 +411,8 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Nappulat valitsevat eri kategorioita
+
+        //Fantasia nappi
         fantasibtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -380,16 +422,34 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        //Runo nappi
+        runobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                runo = true;
+                vertaa();
+            }
+        });
+        //Rikos ja jännitys nappi
+        rikojanbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                rikojanitus = true;
+                vertaa();
+            }
+        });
+        //Scifi nappi
         scifibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 speechRecognizer.stopListening();
-                //kuvaSeis();
                 scifi = true;
                 vertaa();
             }
         });
-
+        //Tietokirja nappi
         tietobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -400,14 +460,43 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        //Ylä kategoria nappulat
+        ylakate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                kaunobtn.setVisibility(View.VISIBLE);
+                tietogabtn.setVisibility(View.VISIBLE);
+
+
+                fantasibtn.setVisibility(View.INVISIBLE);
+                scifibtn.setVisibility(View.INVISIBLE);
+                tietobtn.setVisibility(View.INVISIBLE);
+                runobtn.setVisibility(View.INVISIBLE);
+                rikojanbtn.setVisibility(View.INVISIBLE);
+
+                ylakate.setVisibility(View.INVISIBLE);
+
+
+
+            }
+        });
     }
 
+
+
+
+    //Verrataan contain() methodilla avain sana stringeihin kuunneltua puhetta.
+    //Mikäli avain sana löytyy puheesta muuttuu sitä vastaava boolean true:ksi.
+    //True booleanin alta löytyvä toiminta toteutetaan.
     public void tunnistus() {
         //Contain con = new Contain();
 
         /*Thread thread = new Thread() {
 
             public void run() {*/
+
+                //Käytetään contains() methodia avain sana stringien läpiköymiseksi.
                 keskustelu0 = word.contains(getString(R.string.kesk0));
                 keskustelu1 = word.contains(getString(R.string.kesk1));
                 keskustelu2 = MainActivity.word.contains(getString(R.string.kesk2));
@@ -442,6 +531,18 @@ public class MainActivity extends AppCompatActivity {
                 tiede6 = MainActivity.word.contains(getString(R.string.tiet6));
                 tiede7 = MainActivity.word.contains(getString(R.string.tiet7));
 
+                runot0 = MainActivity.word.contains(getString(R.string.runo0));
+                runot1 = MainActivity.word.contains(getString(R.string.runo1));
+                runot2 = MainActivity.word.contains(getString(R.string.runo2));
+                runot3 = MainActivity.word.contains(getString(R.string.runo3));
+                runot4 = MainActivity.word.contains(getString(R.string.runo4));
+                runot5 = MainActivity.word.contains(getString(R.string.runo5));
+
+                rikoja0 = MainActivity.word.contains(getString(R.string.rikojan0));
+                rikoja1 = MainActivity.word.contains(getString(R.string.rikojan1));
+                rikoja2 = MainActivity.word.contains(getString(R.string.rikojan2));
+                rikoja3 = MainActivity.word.contains(getString(R.string.rikojan3));
+
                 kiitos1 = word.contains(getString(R.string.kiits1));
                 kiito = MainActivity.word.contains(getString(R.string.kiits0));
                 oli = MainActivity.word.contains(getString(R.string.kiits1));
@@ -455,7 +556,7 @@ public class MainActivity extends AppCompatActivity {
         };thread.start();*/
         //Log.e(LOG_TAG, "MyClass.getView() — get item number ");
 
-        //Valitsee toimintatavan löydetyn avainsanan perusteella.
+        //Mikäli boolean on true toteutetaan sen alla oleva toiminta.
         if (fantasia0 || fantasia1 || fantasia2 || fantasia3 || fantasia4|| fantasia5|| fantasia6|| fantasia7|| fantasia8|| fantasia9) {
 
             fantasia = true;
@@ -473,8 +574,15 @@ public class MainActivity extends AppCompatActivity {
             tiede = true;
             laskuri = 0;
             vertaa();
-        } else if (kiito || oli || kiitos1) {
-            //aloitus();
+        }else if (runot0 || runot1 || runot2 || runot3 || runot4 || runot5) {
+            runo = true;
+            laskuri = 0;
+            vertaa();
+        }else if(rikoja0 || rikoja1 || rikoja2 || rikoja3) {
+            rikojanitus = true;
+            laskuri = 0;
+            vertaa();
+        }else if (kiito || oli || kiitos1) {
             kiitoksia = true;
             vertaa();
         } else if (keskustelu0 || keskustelu1 || keskustelu2 || keskustelu3 ||
@@ -499,14 +607,18 @@ public class MainActivity extends AppCompatActivity {
             laskuri = 0;
 
         }else{
+            //Mikäli puuheesta ei löydetty avain sanoja lisätään int "laskuri" yksi arvo.
             ++laskuri;
             //String x = getString(R.string.enymr);
             //MainActivity.text1.setText("Anteeksi minä en ymmärtänyt sinua. Voitko kysyä uudelleen?");
 
+                //Mikäli int "laskuri" arvo on kaksi pysäytetään kuuntelu kierre ja annetaan uudet ohjeet.
             if (laskuri == 2) {
                 MainActivity.textToSpeech.speak(getString(R.string.kysyuu), TextToSpeech.QUEUE_FLUSH, null);
                 speechRecognizer.stopListening();
                 laskuri = 0;
+
+                //Mikäli int "laskuri" arvo on alle 2 pyydetään kysymään uudelleen.
             } else{
                 MainActivity.textToSpeech.speak(getString(R.string.enymr), TextToSpeech.QUEUE_FLUSH, null);
                 try {
@@ -514,36 +626,21 @@ public class MainActivity extends AppCompatActivity {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
+                //ALoitetaan uudelleen kuuntelu
                 speechRecognizer.startListening(speechRecognizerIntent);
             }
         }
     }
 
 
-
+    //Vertaa() methodissa toteutetaan toiminta mikö on valittu joko nappulalla tai avainsanan löytämisellä.
     public void vertaa() {
 
 
 
-       // RelativeLayout.LayoutParams karttaRelativeLayout = new RelativeLayout.LayoutParams(4000, 5000);
-        //karttaRelativeLayout.leftMargin = -200;
-        //karttaRelativeLayout.topMargin = 700;
-        //MainActivity.kartta.setLayoutParams(karttaRelativeLayout);
-
-       // RelativeLayout.LayoutParams hahmoRelativeLayout = new RelativeLayout.LayoutParams(500, 500);
-       // hahmoRelativeLayout.leftMargin = 500;
-      //  hahmoRelativeLayout.topMargin = 170;
-       // MainActivity.hahmo.setLayoutParams(hahmoRelativeLayout);
-
-
-        //MainActivity.button.setVisibility(View.INVISIBLE);
-        //MainActivity.button1.setVisibility(View.INVISIBLE);
-        //MainActivity.button2.setVisibility(View.INVISIBLE);
-        MainActivity.converBtn.setVisibility(View.INVISIBLE);
-        //MainActivity.text.setVisibility(View.INVISIBLE);
-
-
         if (MainActivity.sijainti) {
+
+            ylakate.setVisibility(View.VISIBLE);
 
             RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
             markerRelativeLayout.leftMargin = 1600;
@@ -574,6 +671,7 @@ public class MainActivity extends AppCompatActivity {
         if (MainActivity.fantasia) {
 
             //String x = getString(R.string.fantapuhe);
+            marker.setVisibility(View.VISIBLE);
 
             RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
@@ -605,10 +703,73 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
 
+        if (runo) {
+
+            //String x = getString(R.string.fantapuhe);
+
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 1050;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            MainActivity.textToSpeech.speak(getString(R.string.runopuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            runo = false;
+            runot0 = false;
+            runot1 = false;
+            runot2 = false;
+            runot3 = false;
+            runot4 = false;
+            runot5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+
+        if (rikojanitus) {
+
+            //String x = getString(R.string.fantapuhe);
+            marker.setVisibility(View.VISIBLE);
+
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 1050;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            MainActivity.textToSpeech.speak(getString(R.string.rikojanpuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            rikojanitus = false;
+            rikoja0 = false;
+            rikoja1 = false;
+            rikoja2 = false;
+            rikoja3 = false;
+
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+
+
 
         if (MainActivity.tiede) {
-
-
+            marker.setVisibility(View.VISIBLE);
             RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
             markerRelativeLayout.leftMargin = 2600;
@@ -640,7 +801,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (MainActivity.scifi) {
-
+            marker.setVisibility(View.VISIBLE);
             RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
             //markerRelativeLayout.bottomMargin = 235;
             markerRelativeLayout.leftMargin = 1700;
@@ -669,8 +830,6 @@ public class MainActivity extends AppCompatActivity {
         }
         if (MainActivity.kiitoksia) {
 
-            //MainActivity.lopetus = true;
-
             Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
             //String x = getString(R.string.kiitos);
             MainActivity.textToSpeech.speak(getString(R.string.kiitos), TextToSpeech.QUEUE_FLUSH, null);
@@ -696,18 +855,15 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     public void restart(){
 
         //Intent intent = getIntent()
-        finish();
-        startActivity(getIntent());
+        //finish();
+        //startActivity(getIntent());
+
+        recreate();
 
     }
-
-
-
-
 
     @Override
     protected void onPause(){
@@ -733,7 +889,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this,"Permission Granted",Toast.LENGTH_SHORT).show();
         }
     }
-
 
     private void showLanguageDialog(){
         final String[] listItems = {"English", "Suomi"};

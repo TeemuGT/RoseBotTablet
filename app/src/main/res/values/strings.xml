@@ -2,8 +2,8 @@
     <string name="app_name">RoseBotTablet</string>'
 
     <string name="fantapuhe"> If you go here you find fantasy books.</string>
-    <string name="scifipuhe">f you go here you find sci-fi books.</string>
-    <string name="mispuhe">You are here right now. What do you want to find??</string>
+    <string name="scifipuhe">If you go here you find sci-fi books.</string>
+    <string name="mispuhe">The red marker on the map shows your location in the store.</string>
     <string name="tiedpuhe">If you go here you will find science books.</string>
     <string name="terve">Hi, my name is Rose Bot. You can ask me where the different book categories are or press the ready button. What books are you looking for? </string>
     <string name="kiitos"> It was a great pleasure to help. Now I am going back to sleep.</string>
@@ -13,13 +13,21 @@
     <string name="kuuluu">Great to hear you are fine. How can I help you? </string>
     <string name="kaunospeak">Here you can select the category of fiction you are looking for.</string>
     <string name="tietospeak">Here you can select the non-fiction category you are looking for.</string>
+    <string name="runopuhe">If you go here you find poetry</string>
+    <string name="rikojanpuhe">If you go here you find crime and tension books.</string>
 
 
     <string name="ohje">Ask me what you want to know by clicking on me or select a ready button.</string>
     <string name="otsikko">Bookstore</string>
     <string name="kieli">Language</string>
+    <string name="where">You are here</string>
+
+    <!-- Nappien nimet -->
+    <string name="ylakate">Kirjallisuus kategoriat</string>
     <string name="alotusbtn">Press to start</string>
     <string name="fantabtn">Fantasy</string>
+    <string name="runobtn">Runot</string>
+    <string name="rikojanbtn">Rikos ja jännitys</string>
     <string name="scifibtn">Scifi</string>
     <string name="tietobtn">Science</string>
     <string name="kaunokirbtn">Fiction</string>
@@ -61,6 +69,17 @@
     <string name="tiet6">Scientific</string>
     <string name="tiet7">Nonfiction</string>
 
+    <string name="runo0">poem</string>
+    <string name="runo1">poetry</string>
+    <string name="runo2">poems</string>
+    <string name="runo3">Poem</string>
+    <string name="runo4">Poetry</string>
+    <string name="runo5">Poems</string>
+
+    <string name="rikojan0">criminal</string>
+    <string name="rikojan1">tension</string>
+    <string name="rikojan2">Criminal</string>
+    <string name="rikojan3">Tension</string>
 
     <string name="kiits0">thank you</string>
     <string name="kiits1">Thank you</string>
