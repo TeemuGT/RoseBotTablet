@@ -14,7 +14,7 @@
     <string name="kaunospeak">Here you can select the category of fiction you are looking for.</string>
     <string name="tietospeak">Here you can select the non-fiction category you are looking for.</string>
     <string name="runopuhe">If you go here you find poetry</string>
-    <string name="rikojanpuhe">If you go here you find crime and tension books.</string>
+    <string name="rikojanpuhe">If you go here you find crime and suspense books.</string>
 
 
     <string name="ohje">Ask me what you want to know by clicking on me or select a ready button.</string>
@@ -26,8 +26,8 @@
     <string name="ylakate">Kirjallisuus kategoriat</string>
     <string name="alotusbtn">Press to start</string>
     <string name="fantabtn">Fantasy</string>
-    <string name="runobtn">Runot</string>
-    <string name="rikojanbtn">Rikos ja jännitys</string>
+    <string name="runobtn">Poetry</string>
+    <string name="rikojanbtn">Crime and suspense</string>
     <string name="scifibtn">Scifi</string>
     <string name="tietobtn">Science</string>
     <string name="kaunokirbtn">Fiction</string>
