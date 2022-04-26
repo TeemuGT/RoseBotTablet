@@ -1,6 +1,8 @@
 package com.example.rosebottablet;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -10,18 +12,42 @@ import androidx.core.content.ContextCompat;
 import android.Manifest;
 import android.annotation.SuppressLint;
 import android.app.Activity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.content.res.Configuration;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.ImageFormat;
+import android.graphics.SurfaceTexture;
+import android.hardware.camera2.CameraAccessException;
+import android.hardware.camera2.CameraCaptureSession;
+import android.hardware.camera2.CameraCharacteristics;
+import android.hardware.camera2.CameraDevice;
+import android.hardware.camera2.CameraManager;
+import android.hardware.camera2.CameraMetadata;
+import android.hardware.camera2.CaptureRequest;
+import android.hardware.camera2.TotalCaptureResult;
+import android.hardware.camera2.params.StreamConfigurationMap;
+import android.location.GnssAntennaInfo;
+import android.media.Image;
+import android.media.ImageReader;
+import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.os.HandlerThread;
 import android.speech.RecognitionListener;
 import android.speech.RecognizerIntent;
 import android.speech.SpeechRecognizer;
 import android.speech.tts.TextToSpeech;
+import android.util.Log;
+import android.util.Size;
+import android.util.SparseIntArray;
+import android.view.Surface;
+import android.view.TextureView;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -34,9 +60,15 @@ import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 
+import java.io.File;
+import java.nio.ByteBuffer;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
+import java.util.Timer;
+import java.util.TimerTask;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -115,12 +147,57 @@ public class MainActivity extends AppCompatActivity {
     static ImageView gif;
     TextView otsikko;
 
+    //Kamera preview ja tallennuskohteet
+    private TextureView textureView;
+    private ImageView imageView;
+    private ImageView imageView2;
+
+    //Kamera bitmapit
+    static Bitmap bitmap;
+    static Bitmap bitmap2;
+    static Bitmap resized;
+    static Bitmap resized2;
+
+    Timer timer = new Timer();
+    Handler handler = new Handler();
+    Handler handler1 = new Handler();
+
+    //Logcat LOG ilmoitus
+    private static final Float LOG_TAG = compareEquivalance();
+
+
+    int kuva = 0;
+
+    private  static final SparseIntArray ORIENTATIONS = new SparseIntArray();
+    static {
+        ORIENTATIONS.append(Surface.ROTATION_0,90);
+        ORIENTATIONS.append(Surface.ROTATION_90, 0);
+        ORIENTATIONS.append(Surface.ROTATION_180, 270);
+        ORIENTATIONS.append(Surface.ROTATION_270, 180);
+    }
+
+    private String cameraId;
+    private CameraDevice cameraDevice;
+    private CameraCaptureSession cameraCaptureSessions;
+    private CaptureRequest.Builder captureRequestBuilder;
+    private Size imageDimension;
+    private ImageReader imageReader;
+
+    private File file;
+    private static final int REQUEST_CAMERA_PERMISSION = 200;
+    private boolean nFlashSupported;
+    private Handler mBackgroundHandler;
+    private HandlerThread mBackgroundThread;
+
+    boolean ihminen = false;
+
+
+    int kuvalasku;
     public int laskuri =  0;
 
     //Avain sana
     public static String word = "";
 
-    private static final String LOG_TAG = "LogActivity";
 
     @SuppressLint("StaticFieldLeak")
     public static ViewGroup mainLayout;
@@ -149,6 +226,27 @@ public class MainActivity extends AppCompatActivity {
     public static SpeechRecognizer speechRecognizer;
     public static Intent speechRecognizerIntent;
 
+
+
+    CameraDevice.StateCallback stateCallback = new CameraDevice.StateCallback() {
+        @Override
+        public void onOpened(@NonNull CameraDevice camera) {
+            cameraDevice =camera;
+            //creatCameraPreview();
+        }
+
+        @Override
+        public void onDisconnected(@NonNull CameraDevice cameraDevice) {
+            cameraDevice.close();
+        }
+
+        @Override
+        public void onError(@NonNull CameraDevice cameraDevice, int i) {
+            cameraDevice.close();
+            cameraDevice=null;
+        }
+    };
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -157,14 +255,15 @@ public class MainActivity extends AppCompatActivity {
         Objects.requireNonNull(getSupportActionBar()).hide();
         //Valitu kieli
         loadLocale();
+
+        otakuvia();
         setContentView(R.layout.activity_main);
 
 
         //Kysyy mikrofoonin käyttöoikeutta
-        if(ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED){
+        if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             checkPermission();
         }
-
 
 
         //Puheen tunnistuksen määrittelyä
@@ -209,11 +308,10 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void onResults(Bundle bundle)
-            {
+            public void onResults(Bundle bundle) {
                 ArrayList<String> matches = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
 
-                if(matches != null){
+                if (matches != null) {
                     //keeper = matches.get(0);
 
                     text.setText(matches.get(0));
@@ -236,6 +334,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Kameran objektien haku
+        imageView = (ImageView) findViewById(R.id.imageView);
+        imageView2 = (ImageView) findViewById(R.id.imageView2);
+
+        textureView = (TextureView) findViewById(R.id.textureView);
+        assert textureView != null;
+        textureView.setSurfaceTextureListener(textureListener);
 
 
         //Hakee objekteja id:n perusteella.
@@ -270,6 +375,7 @@ public class MainActivity extends AppCompatActivity {
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.app_name));
 
+
         //Kielen vaihto nappula
         shlang.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -284,64 +390,44 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onInit(int i) {
 
-                if(i != TextToSpeech.ERROR){
+                if (i != TextToSpeech.ERROR) {
                     textToSpeech.setLanguage(Locale.forLanguageTag(loadLocale()));
                 }
 
             }
         });
 
+       /* timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                //what you want to do
+                kuvalasku++;
+                takePicture();
+                Log.e(String.valueOf(LOG_TAG), "Kuva numero " + kuvalasku);
+
+
+
+            }
+        }, 0, 2000);
+        if(ihminen) {
+            converBtn.callOnClick();
+        }*/
+
         //Aloitus nappula joka aloittaa toiminnan
         converBtn.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClick(View v){
-                //Hakee stringin ja tuotaa sen puheeksi
-                String x = getString(R.string.terve);
-                textToSpeech.speak(x, TextToSpeech.QUEUE_FLUSH, null);
+            public void onClick(View v) {
 
-                converBtn.setVisibility(View.INVISIBLE);
+                    timer.cancel();
+                    aloita();
 
-                //Vaihtaa hahmo imagen tilalle gif animaation
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
-
-                //Handlerissä tuotetaan usempia toimintoja saman aikasesti
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-
-                        //gif.setVisibility(View.INVISIBLE);
-                        //hahmo.setVisibility(View.VISIBLE);
-
-                        //Hahmon sijainti siirretään
-                        RelativeLayout.LayoutParams hahmoRelativeLayout = new RelativeLayout.LayoutParams(1200, 1400);
-                        hahmoRelativeLayout.leftMargin = 50;
-                        hahmoRelativeLayout.topMargin = 120;
-                        MainActivity.hahmo.setLayoutParams(hahmoRelativeLayout);
-
-                        //Tuotetaan näkyviin objekteja
-                        hahmo.setImageResource(R.drawable.androidukko);
-                        voiceBtn.setVisibility(View.VISIBLE);
-                        kaunobtn.setVisibility(View.VISIBLE);
-                        tietogabtn.setVisibility(View.VISIBLE);
-
-                        here.setVisibility(View.VISIBLE);
-                        herek.setVisibility(View.VISIBLE);
-                        where.setVisibility(View.VISIBLE);
-
-                        kartta.setVisibility(View.VISIBLE);
-                        text1.setVisibility(View.VISIBLE);
-
-                        //Aloitetaan puheen kuuntelu puheen jälkeen.
-                        speechRecognizer.startListening(speechRecognizerIntent);
-                    }
-                }, 10000); //10 sekunnin viive handlerin toimintaan.
             }
         });
         //Restart nappula joka hakee restart methodin
         resButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 restart();
             }
         });
@@ -483,6 +569,266 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+
+    private void takePicture() {
+
+
+        if (cameraDevice == null)
+            return;
+        CameraManager manager = (CameraManager)getSystemService(Context.CAMERA_SERVICE);
+        try{
+            CameraCharacteristics characteristics = manager.getCameraCharacteristics(cameraDevice.getId());
+            Size[] jpegSizes = null;
+            if (characteristics !=null)
+                jpegSizes =characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP)
+                        .getOutputSizes(ImageFormat.JPEG);
+
+            int width = 640;
+            int height = 400;
+            if(jpegSizes != null && jpegSizes.length >  0){
+                width = jpegSizes[0].getWidth();
+                height = jpegSizes[0].getHeight();
+
+            }
+            ImageReader reader = ImageReader.newInstance(width,height,ImageFormat.JPEG, 1);
+            List<Surface> outputSurface = new ArrayList<>(2);
+            outputSurface.add(reader.getSurface());
+            outputSurface.add(new Surface(textureView.getSurfaceTexture()));
+
+            CaptureRequest.Builder captureBuilder = cameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_STILL_CAPTURE);
+            captureBuilder.addTarget(reader.getSurface());
+            captureBuilder.set(CaptureRequest.CONTROL_MODE, CameraMetadata.CONTROL_MODE_AUTO);
+
+            int rotation = getWindowManager().getDefaultDisplay().getRotation();
+            captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, ORIENTATIONS.get(rotation));
+
+
+            ImageReader.OnImageAvailableListener readerListener = new ImageReader.OnImageAvailableListener() {
+                @RequiresApi(api = Build.VERSION_CODES.O)
+                @Override
+                public void onImageAvailable(ImageReader imageReader) {
+                    Image image = null;
+                    try {
+
+                        image = reader.acquireLatestImage();
+                        ByteBuffer buffer = image.getPlanes()[0].getBuffer();
+                        byte[] bytes = new byte[buffer.capacity()];
+                        buffer.get(bytes);
+
+                        if(kuva == 0){
+                            bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+                            resized = Bitmap.createScaledBitmap(bitmap, 10, 10, true);
+                            resized.getColorSpace();
+
+                            imageView.setImageBitmap(bitmap);
+
+                            kuva++;
+                        }else if (kuva == 1){
+                            bitmap2 = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
+
+                            resized2 = Bitmap.createScaledBitmap(bitmap2, 10, 10, true);
+
+                            imageView2.setImageBitmap(bitmap2);
+
+
+                            kuva--;
+                        }
+
+                        int[] pixels1 = new int[resized.getWidth() * resized.getHeight()];
+                        int[] pixels2 = new int[resized2.getWidth() * resized2.getHeight()];
+                        resized.getPixels(pixels1, 0, resized.getWidth(), 0, 0, resized.getWidth(), resized.getHeight());
+                        resized2.getPixels(pixels2, 0, resized2.getWidth(), 0, 0, resized2.getWidth(), resized2.getHeight());
+
+
+                        Log.e(String.valueOf(LOG_TAG), "eroavaisuus on " + String.valueOf(compareEquivalance()));
+
+                        if (compareEquivalance() < 0.26){
+                            ihminen = true;
+                            text1.setText("Joku on muuttunut");
+                        }else {
+                            text1.setText("mikään ei ole muuttunut");
+                        }
+
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                    if(image !=null){
+                        image.close();
+                        //  }
+                    }
+                }
+            };
+            reader.setOnImageAvailableListener(readerListener, mBackgroundHandler);
+            CameraCaptureSession.CaptureCallback captureListener = new CameraCaptureSession.CaptureCallback() {
+                @Override
+                public void onCaptureCompleted(@NonNull CameraCaptureSession session, @NonNull CaptureRequest request, @NonNull TotalCaptureResult result) {
+                    super.onCaptureCompleted(session, request, result);
+                   // Toast.makeText(MainActivity.this, "Saved "+file, Toast.LENGTH_SHORT).show();
+                    //creatCameraPreview();
+                }
+            };
+
+            cameraDevice.createCaptureSession(outputSurface, new CameraCaptureSession.StateCallback() {
+                @Override
+                public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
+                    try {
+                        cameraCaptureSession.capture(captureBuilder.build(), captureListener,mBackgroundHandler);
+                    }catch (CameraAccessException e){
+                        e.printStackTrace();
+                    }
+                }
+
+                @Override
+                public void onConfigureFailed(@NonNull CameraCaptureSession cameraCaptureSession) {
+
+                }
+            },mBackgroundHandler);
+
+        } catch (CameraAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void otakuvia(){
+
+                    timer.schedule(new TimerTask() {
+                        @Override
+                        public void run() {
+                            //what you want to do
+                            if (!ihminen) {
+                                kuvalasku++;
+                                takePicture();
+                                Log.e(String.valueOf(LOG_TAG), "Kuva numero " + kuvalasku);
+                            }
+                        }
+
+
+
+                    }, 0, 2000);
+                }
+
+    public void aloita(){
+
+        //Hakee stringin ja tuotaa sen puheeksi
+        String x = getString(R.string.terve);
+        textToSpeech.speak(x, TextToSpeech.QUEUE_FLUSH, null);
+
+        converBtn.setVisibility(View.INVISIBLE);
+
+
+        //Vaihtaa hahmo imagen tilalle gif animaation
+        Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+
+        //Handlerissä tuotetaan usempia toimintoja saman aikasesti
+
+
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+                //gif.setVisibility(View.INVISIBLE);
+                //hahmo.setVisibility(View.VISIBLE);
+
+                //Hahmon sijainti siirretään
+                RelativeLayout.LayoutParams hahmoRelativeLayout = new RelativeLayout.LayoutParams(1200, 1400);
+                hahmoRelativeLayout.leftMargin = 50;
+                hahmoRelativeLayout.topMargin = 120;
+                MainActivity.hahmo.setLayoutParams(hahmoRelativeLayout);
+
+                //Tuotetaan näkyviin objekteja
+                hahmo.setImageResource(R.drawable.androidukko);
+                voiceBtn.setVisibility(View.VISIBLE);
+                kaunobtn.setVisibility(View.VISIBLE);
+                tietogabtn.setVisibility(View.VISIBLE);
+
+                here.setVisibility(View.VISIBLE);
+                herek.setVisibility(View.VISIBLE);
+                where.setVisibility(View.VISIBLE);
+
+                kartta.setVisibility(View.VISIBLE);
+                text1.setVisibility(View.VISIBLE);
+
+                //Aloitetaan puheen kuuntelu puheen jälkeen.
+                speechRecognizer.startListening(speechRecognizerIntent);
+            }
+        }, 10000); //10 sekunnin viive handlerin toimintaan.
+    }
+
+    public static float compareEquivalance() {
+
+        if (bitmap == null || bitmap2 == null || bitmap.getWidth() != bitmap2.getWidth()
+                || bitmap.getHeight() != bitmap2.getHeight()) {
+            return 0;
+        }
+
+        ByteBuffer buffer1 = ByteBuffer.allocate(bitmap.getHeight() * bitmap.getRowBytes());
+        bitmap.copyPixelsToBuffer(buffer1);
+
+        ByteBuffer buffer2 = ByteBuffer.allocate(bitmap2.getHeight() * bitmap2.getRowBytes());
+        bitmap2.copyPixelsToBuffer(buffer2);
+
+        byte[] array1 = buffer1.array();
+        byte[] array2 = buffer2.array();
+
+        int len = array1.length; // array1 and array2 will be of some length.
+        int count = 10;
+
+        for (int i = 0; i < len; i++) {
+            if (array1[i] == array2[i]) {
+                count++;
+            }
+        }
+        //return tulos = count / len;
+        return ((float) (count)) / len;
+    }
+
+
+    private void openCamera() {
+        CameraManager manager = (CameraManager)getSystemService(Context.CAMERA_SERVICE);
+        try{
+            cameraId = manager.getCameraIdList()[1];
+            CameraCharacteristics characteristics = manager.getCameraCharacteristics(cameraId);
+            StreamConfigurationMap map = characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP);
+            assert map != null;
+            imageDimension = map.getOutputSizes(SurfaceTexture.class)[0];
+            //Check realtime permission if run higher API 23
+            if(ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED)
+            {
+                ActivityCompat.requestPermissions(this,new String[]{
+                        Manifest.permission.CAMERA,
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE
+                },REQUEST_CAMERA_PERMISSION);
+                return;
+            }
+            manager.openCamera(cameraId,stateCallback,null);
+
+        } catch (CameraAccessException e) {
+            e.printStackTrace();
+        }
+    }
+
+    TextureView.SurfaceTextureListener textureListener = new TextureView.SurfaceTextureListener() {
+        @Override
+        public void onSurfaceTextureAvailable(@NonNull SurfaceTexture surfaceTexture, int i, int i1) {
+            openCamera();
+        }
+
+        @Override
+        public void onSurfaceTextureSizeChanged(@NonNull SurfaceTexture surfaceTexture, int i, int i1) {
+
+        }
+
+        @Override
+        public boolean onSurfaceTextureDestroyed(@NonNull SurfaceTexture surfaceTexture) {
+            return false;
+        }
+
+        @Override
+        public void onSurfaceTextureUpdated(@NonNull SurfaceTexture surfaceTexture) {
+
+        }
+    };
 
 
 
@@ -860,13 +1206,27 @@ public class MainActivity extends AppCompatActivity {
         //Intent intent = getIntent()
         //finish();
         //startActivity(getIntent());
-
+        speechRecognizer.stopListening();
+        textToSpeech.stop();
+        timer.cancel();
         recreate();
 
     }
 
     @Override
+    protected void onPostResume() {
+        super.onPostResume();
+        startBackgroundThread();
+        if(textureView.isAvailable())
+            openCamera();
+        else
+            textureView.setSurfaceTextureListener(textureListener);
+    }
+
+    @Override
     protected void onPause(){
+
+        stopBackgroundThread();
 
         if (textToSpeech != null){
             textToSpeech.stop();
@@ -887,6 +1247,12 @@ public class MainActivity extends AppCompatActivity {
         if (requestCode == RecordAudioRequestCode && grantResults.length > 0 ){
             if(grantResults[0] == PackageManager.PERMISSION_GRANTED)
                 Toast.makeText(this,"Permission Granted",Toast.LENGTH_SHORT).show();
+        }
+        if (requestCode == REQUEST_CAMERA_PERMISSION) {
+            if (grantResults[0] != PackageManager.PERMISSION_GRANTED) {
+                Toast.makeText(this, "You can't use camera without permission", Toast.LENGTH_SHORT).show();
+                finish();
+            }
         }
     }
 
@@ -930,5 +1296,22 @@ public class MainActivity extends AppCompatActivity {
         String language = prefs.getString("My_Lang", "");
         setLocale(language);
         return language;
+    }
+
+    private void stopBackgroundThread() {
+        mBackgroundThread.quitSafely();
+        try {
+            mBackgroundThread.join();
+            mBackgroundThread = null;
+            mBackgroundHandler = null;
+        }catch (InterruptedException e){
+            e.printStackTrace();
+        }
+    }
+
+    private void startBackgroundThread() {
+        mBackgroundThread = new HandlerThread("Camera Background");
+        mBackgroundThread.start();
+        mBackgroundHandler = new Handler(mBackgroundThread.getLooper());
     }
 }

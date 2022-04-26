@@ -6,7 +6,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
+    android:keepScreenOn="true"
     tools:context=".MainActivity">
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="207dp"
+        android:layout_marginBottom="-2dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:visibility="invisible"/>
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="400dp"
+        android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/otsikko"
@@ -226,7 +249,7 @@
         android:text="@string/ohje"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/text"
