@@ -25,13 +25,34 @@
 
     <string name="ylakate">Kirjallisuus kategoriat</string>
     <string name="alotusbtn">Paina aloittaaksesi</string>
+    <string name="kaunokirbtn">Kaunokirjallisuus</string>
+    <string name="tietokirbtn">Tietokirjallisuus</string>
+    <string name="lapsebtn">Lapset</string>
+    <string name="pokkaritbtn">Pokkarit</string>
+    <string name="sarjakuvbtn">Sarjakuvat</string>
+    <string name="elokuvbtn">Elokuvat</string>
+    <string name="lehdtbtn">Lehdet</string>
+    <string name="engkirjbtn">Englanninkieliset</string>
+
+    <!-- KAunokirjallisuus napit -->
+    <string name="baabelbtn">Baabel</string>
+    <string name="bundlebtn">Bundle</string>
+    <string name="esseetbtn">Esseet</string>
+    <string name="kaunokirjbtn">Kaunokirjallisuus</string>
+    <string name="keltainebtn">Keltainen kirjasto</string>
+    <string name="kotikaunokbtn">Kotimainen kaunokirjallisuus</string>
+    <string name="likbtn">Like</string>
+    <string name="otavabtn">Otavan kirjasto</string>
     <string name="fantabtn">Fantasia</string>
     <string name="runobtn">Runot</string>
     <string name="rikojanbtn">Rikos ja jännitys</string>
     <string name="scifibtn">Scifi</string>
+    <string name="aanikbtn">Äänikirjat</string>
+
+
     <string name="tietobtn">Tiede</string>
-    <string name="kaunokirbtn">Kaunokirjallisuus</string>
-    <string name="tietokirbtn">Tietokirjallisuus</string>
+
+
 
     <string name="kesk0">Mitä sinulle kuuluu</string>
     <string name="kesk1">Kuinka sinä voit</string>
@@ -45,6 +66,39 @@
     <string name="kuin3">Minulle kuuluu hyvää</string>
     <string name="kuin4">Kakki on hyvin</string>
 
+
+
+    <!-- Kaunokirjallisuuden avain sanat -->
+    <!-- Baabelit avainsanat -->
+    <string name="baabe0">Missä on baabeli</string>
+    <string name="baabe1">Onko missä baabeli</string>
+    <string name="baabe2">Missä baabeli</string>
+    <string name="baabe3">missä on baabeli</string>
+    <string name="baabe4">onko missä baabeli</string>
+    <string name="baabe5">missä baabeli</string>
+
+    <!-- Bundle avainsanat -->
+    <string name="bundl0">Missä on bundle</string>
+    <string name="bundl1">Onko missä bundle</string>
+    <string name="bundl2">Missä bundle</string>
+    <string name="bundl3">missä on bundle</string>
+    <string name="bundl4">onko missä bundle</string>
+    <string name="bundl5">missä bundle</string>
+
+
+    <!-- Avain sanat puuttuvat näiltä
+
+    esseet
+    kaunokirja
+    keltainen
+    kotimainenkauno
+    like
+    otava
+    äänikirja
+
+    -->
+
+    <!-- Fantasia -->
     <string name="fanta0">Missä fantasia</string>
     <string name="fanta1">Onko fantasia</string>
     <string name="fanta2">Mistä löydän fantasia</string>
@@ -52,7 +106,7 @@
     <string name="fanta4">Löytää fantasia</string>
     <string name="fanta5">missä fantasia</string>
     <string name="fanta6">onko fantasia</string>
-    <string name="fanta7">sistä löydän fantasia</string>
+    <string name="fanta7">mistä löydän fantasia</string>
     <string name="fanta8">missä on fantasia</string>
     <string name="fanta9">löytää fantasia</string>
 

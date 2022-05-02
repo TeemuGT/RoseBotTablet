@@ -25,13 +25,17 @@
     <!-- Nappien nimet -->
     <string name="ylakate">Kirjallisuus kategoriat</string>
     <string name="alotusbtn">Press to start</string>
+    <string name="kaunokirbtn">Fiction</string>
+    <string name="tietokirbtn">non-fiction</string>
+
+    <!-- KAunokirjallisuus napit -->
     <string name="fantabtn">Fantasy</string>
     <string name="runobtn">Poetry</string>
     <string name="rikojanbtn">Crime and suspense</string>
     <string name="scifibtn">Scifi</string>
+
+
     <string name="tietobtn">Science</string>
-    <string name="kaunokirbtn">Fiction</string>
-    <string name="tietokirbtn">non-fiction</string>
 
 
     <string name="kesk0">How are you</string>
@@ -89,4 +93,32 @@
     <string name="sijan1">where I am</string>
     <string name="sijan2">Where am I</string>
     <string name="sijan3">Where I am</string>
+    <string name="lapsebtn">Children</string>
+    <string name="sarjakuvbtn">Comics</string>
+    <string name="elokuvbtn">Movies</string>
+    <string name="engkirjbtn">In English</string>
+    <string name="lehdtbtn">Magazines</string>
+    <string name="pokkaritbtn">Pokkarit</string>
+    <string name="baabelbtn">Babylon</string>
+    <string name="bundlebtn">Bundle</string>
+    <string name="esseetbtn">Essay</string>
+    <string name="keltainebtn">Yellow Library</string>
+    <string name="kotikaunokbtn">Finnish fiction</string>
+    <string name="likbtn">Like</string>
+    <string name="otavabtn">Otava Library</string>
+    <string name="kaunokirjbtn">Fiction</string>
+    <string name="aanikbtn">Audiobooks</string>
+    <string name="baabe0">Where is Babel</string>
+    <string name="baabe3">where is Babel</string>
+    <string name="baabe1">Is where Babel</string>
+    <string name="baabe4">is where Babel</string>
+    <string name="baabe2">Where Babel</string>
+    <string name="baabe5">Where is Babel</string>
+    <string name="baabe5">where Babel</string>
+    <string name="bundl0">Where is the bundle</string>
+    <string name="bundl3">where is the bundle</string>
+    <string name="bundl1">Is where the bundle</string>
+    <string name="bundl4">is where the bundle</string>
+    <string name="bundl2">Where the bundle</string>
+    <string name="bundl5">where the bundle</string>
 </resources>

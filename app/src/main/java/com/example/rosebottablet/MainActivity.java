@@ -75,6 +75,24 @@ public class MainActivity extends AppCompatActivity {
     public static final Integer RecordAudioRequestCode = 1;
 
     //Avainsanojen Boolean
+
+    //Kaunokirjallisuuden avain sanat
+    //Baabel avainsanat
+    public  boolean baabel0 = false;
+    public  boolean baabel1 = false;
+    public  boolean baabel2 = false;
+    public  boolean baabel3 = false;
+    public  boolean baabel4 = false;
+    public  boolean baabel5 = false;
+
+    //Bundle avainsanat
+    public  boolean bundle0 = false;
+    public  boolean bundle1 = false;
+    public  boolean bundle2 = false;
+    public  boolean bundle3 = false;
+    public  boolean bundle4 = false;
+    public  boolean bundle5 = false;
+
     public boolean keskustelu0 = false;
     public boolean keskustelu1 = false;
     public boolean keskustelu2 = false;
@@ -202,6 +220,8 @@ public class MainActivity extends AppCompatActivity {
     @SuppressLint("StaticFieldLeak")
     public static ViewGroup mainLayout;
     //Boolean joka määrittää mikä kategoria on valittu
+    public static boolean baabel = false;
+    public static boolean bundle = false;
     public static boolean sijainti = false;
     public static boolean fantasia = false;
     public static boolean runo = false;
@@ -211,14 +231,36 @@ public class MainActivity extends AppCompatActivity {
     public static boolean kiitoksia = false;
     @SuppressLint("StaticFieldLeak")
     //Napit
+
+    //Kaunokirjallisuus napit
+    public Button baabebtn;
+    public Button bundlbtn;
+    public Button esseebtn;
+    public Button kaunokibtn;
+    public Button keltainbtn;
+    public Button kotikaunobtn;
+    public Button likebtn;
+    public Button otavabtn;
+    public Button aanikibtn;
     public Button fantasibtn;
     public Button runobtn;
     public Button rikojanbtn;
     public Button scifibtn;
+
     public Button tietobtn;
     public Button shlang;
+
+
     public Button kaunobtn;
     public Button tietogabtn;
+    public Button lapsetbtn;
+    public Button pokkarbtn;
+    public Button sarjabtn;
+    public Button elokuvbtn;
+    public Button lehdetbtn;
+    public Button englanbtn;
+
+
     public Button ylakate;
 
 
@@ -352,6 +394,15 @@ public class MainActivity extends AppCompatActivity {
         herek = (ImageView) findViewById(R.id.herek);
         where = findViewById(R.id.where);
 
+        baabebtn = findViewById(R.id.baabebtn);
+        bundlbtn = findViewById(R.id.bundlbtn);
+        esseebtn = findViewById(R.id.esseebtn);
+        kaunokibtn = findViewById(R.id.kaunokibtn);
+        keltainbtn = findViewById(R.id.keltainbtn);
+        kotikaunobtn = findViewById(R.id.kotikaunobtn);
+        likebtn = findViewById(R.id.likebtn);
+        otavabtn = findViewById(R.id.otavabtn);
+        aanikibtn = findViewById(R.id.aanikibtn);
         fantasibtn = findViewById(R.id.fantasibtn);
         runobtn = findViewById(R.id.runobtn);
         rikojanbtn = findViewById(R.id.rikojanbtn);
@@ -369,6 +420,14 @@ public class MainActivity extends AppCompatActivity {
         //Yläkategoriat napit
         kaunobtn = findViewById(R.id.kaunobtn);
         tietogabtn = findViewById(R.id.tietogabtn);
+        lapsetbtn = findViewById(R.id.lapsetbtn);
+        pokkarbtn = findViewById(R.id.pokkarbtn);
+        sarjabtn = findViewById(R.id.sarjabtn);
+        elokuvbtn = findViewById(R.id.elokuvbtn);
+        lehdetbtn = findViewById(R.id.lehdetbtn);
+        englanbtn = findViewById(R.id.englanbtn);
+
+
         ylakate = findViewById(R.id.ylakate);
 
         //Kielen vaihto bar
@@ -457,6 +516,15 @@ public class MainActivity extends AppCompatActivity {
                 scifibtn.setVisibility(View.VISIBLE);
                 runobtn.setVisibility(View.VISIBLE);
                 rikojanbtn.setVisibility(View.VISIBLE);
+                baabebtn.setVisibility(View.VISIBLE);
+                bundlbtn.setVisibility(View.VISIBLE);
+                esseebtn.setVisibility(View.VISIBLE);
+                kaunokibtn.setVisibility(View.VISIBLE);
+                keltainbtn.setVisibility(View.VISIBLE);
+                kotikaunobtn.setVisibility(View.VISIBLE);
+                likebtn.setVisibility(View.VISIBLE);
+                otavabtn.setVisibility(View.VISIBLE);
+                aanikibtn.setVisibility(View.VISIBLE);
 
                 ylakate.setVisibility(View.VISIBLE);
 
@@ -467,7 +535,6 @@ public class MainActivity extends AppCompatActivity {
                         hahmo.setImageResource(R.drawable.androidukko);
                     }
                 }, 3600);
-
             }
         });
 
@@ -496,7 +563,115 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        lapsetbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        pokkarbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        sarjabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        elokuvbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        lehdetbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        englanbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
         //Nappulat valitsevat eri kategorioita
+
+        //Kaunokirjallisuus napit.
+        //Baabel nappi
+        baabebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        //Bundle nappi
+        bundlbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        //Esseet nappi
+        esseebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        //Kaunokirjallisuus nappi
+        kaunokibtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        //Keltainen kirjasto nappi
+        keltainbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        //Kotimainen kaunokirjallisuus nappi
+        kotikaunobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        //Like nappi
+        likebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+        //Otavan kirjaston nappi
+        otavabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
 
         //Fantasia nappi
         fantasibtn.setOnClickListener(new View.OnClickListener() {
@@ -842,73 +1017,103 @@ public class MainActivity extends AppCompatActivity {
 
             public void run() {*/
 
-                //Käytetään contains() methodia avain sana stringien läpiköymiseksi.
-                keskustelu0 = word.contains(getString(R.string.kesk0));
-                keskustelu1 = word.contains(getString(R.string.kesk1));
-                keskustelu2 = MainActivity.word.contains(getString(R.string.kesk2));
-                keskustelu3 = MainActivity.word.contains(getString(R.string.kesk3));
-                keskustelu4 = MainActivity.word.contains(getString(R.string.kesk4));
+        //Käytetään contains() methodia avain sana stringien läpiköymiseksi.
+        keskustelu0 = word.contains(getString(R.string.kesk0));
+        keskustelu1 = word.contains(getString(R.string.kesk1));
+        keskustelu2 = MainActivity.word.contains(getString(R.string.kesk2));
+        keskustelu3 = MainActivity.word.contains(getString(R.string.kesk3));
+        keskustelu4 = MainActivity.word.contains(getString(R.string.kesk4));
 
-                kuinkaVoin0 = MainActivity.word.contains(getString(R.string.kuin0));
-                kuinkaVoin1 = MainActivity.word.contains(getString(R.string.kuin1));
-                kuinkaVoin2 = MainActivity.word.contains(getString(R.string.kuin2));
-                kuinkaVoin3 = MainActivity.word.contains(getString(R.string.kuin3));
-                kuinkaVoin4 = MainActivity.word.contains(getString(R.string.kuin4));
-
-                fantasia0 = MainActivity.word.contains(getString(R.string.fanta0));
-                fantasia1 = MainActivity.word.contains(getString(R.string.fanta1));
-                fantasia2 = MainActivity.word.contains(getString(R.string.fanta2));
-                fantasia3 = MainActivity.word.contains(getString(R.string.fanta3));
-                fantasia4 = MainActivity.word.contains(getString(R.string.fanta4));
-                fantasia5 = MainActivity.word.contains(getString(R.string.fanta5));
-                fantasia6 = MainActivity.word.contains(getString(R.string.fanta6));
-                fantasia7 = MainActivity.word.contains(getString(R.string.fanta7));
-                fantasia8 = MainActivity.word.contains(getString(R.string.fanta8));
-                fantasia9 = MainActivity.word.contains(getString(R.string.fanta9));
-
-                scifi0 = MainActivity.word.contains(getString(R.string.scif0));
-
-                tiede0 = MainActivity.word.contains(getString(R.string.tiet0));
-                tiede1 = MainActivity.word.contains(getString(R.string.tiet1));
-                tiede2 = MainActivity.word.contains(getString(R.string.tiet2));
-                tiede3 = MainActivity.word.contains(getString(R.string.tiet3));
-                tiede4 = MainActivity.word.contains(getString(R.string.tiet4));
-                tiede5 = MainActivity.word.contains(getString(R.string.tiet5));
-                tiede6 = MainActivity.word.contains(getString(R.string.tiet6));
-                tiede7 = MainActivity.word.contains(getString(R.string.tiet7));
-
-                runot0 = MainActivity.word.contains(getString(R.string.runo0));
-                runot1 = MainActivity.word.contains(getString(R.string.runo1));
-                runot2 = MainActivity.word.contains(getString(R.string.runo2));
-                runot3 = MainActivity.word.contains(getString(R.string.runo3));
-                runot4 = MainActivity.word.contains(getString(R.string.runo4));
-                runot5 = MainActivity.word.contains(getString(R.string.runo5));
-
-                rikoja0 = MainActivity.word.contains(getString(R.string.rikojan0));
-                rikoja1 = MainActivity.word.contains(getString(R.string.rikojan1));
-                rikoja2 = MainActivity.word.contains(getString(R.string.rikojan2));
-                rikoja3 = MainActivity.word.contains(getString(R.string.rikojan3));
-
-                kiitos1 = word.contains(getString(R.string.kiits1));
-                kiito = MainActivity.word.contains(getString(R.string.kiits0));
-                oli = MainActivity.word.contains(getString(R.string.kiits1));
+        kuinkaVoin0 = MainActivity.word.contains(getString(R.string.kuin0));
+        kuinkaVoin1 = MainActivity.word.contains(getString(R.string.kuin1));
+        kuinkaVoin2 = MainActivity.word.contains(getString(R.string.kuin2));
+        kuinkaVoin3 = MainActivity.word.contains(getString(R.string.kuin3));
+        kuinkaVoin4 = MainActivity.word.contains(getString(R.string.kuin4));
 
 
-                sijainti0 = MainActivity.word.contains(getString(R.string.sijan0));
-                sijainti1 = MainActivity.word.contains(getString(R.string.sijan1));
-                sijainti2 = MainActivity.word.contains(getString(R.string.sijan2));
-                sijainti3 = MainActivity.word.contains(getString(R.string.sijan3));
+        //Kaunokirjallisuus tunnistus
+
+
+        //Baabel
+        baabel0 = word.contains(getString(R.string.baabe0));
+        baabel1 = word.contains(getString(R.string.baabe1));
+        baabel2 = word.contains(getString(R.string.baabe2));
+        baabel3 = word.contains(getString(R.string.baabe3));
+        baabel4 = word.contains(getString(R.string.baabe4));
+        baabel5 = word.contains(getString(R.string.baabe5));
+
+        //Bundle
+        bundle0 = word.contains(getString(R.string.bundl0));
+        bundle1 = word.contains(getString(R.string.bundl1));
+        bundle2 = word.contains(getString(R.string.bundl2));
+        bundle3 = word.contains(getString(R.string.bundl3));
+        bundle4 = word.contains(getString(R.string.bundl4));
+        bundle5 = word.contains(getString(R.string.bundl5));
+
+
+        //Fantasia
+        fantasia0 = MainActivity.word.contains(getString(R.string.fanta0));
+        fantasia1 = MainActivity.word.contains(getString(R.string.fanta1));
+        fantasia2 = MainActivity.word.contains(getString(R.string.fanta2));
+        fantasia3 = MainActivity.word.contains(getString(R.string.fanta3));
+        fantasia4 = MainActivity.word.contains(getString(R.string.fanta4));
+        fantasia5 = MainActivity.word.contains(getString(R.string.fanta5));
+        fantasia6 = MainActivity.word.contains(getString(R.string.fanta6));
+        fantasia7 = MainActivity.word.contains(getString(R.string.fanta7));
+        fantasia8 = MainActivity.word.contains(getString(R.string.fanta8));
+        fantasia9 = MainActivity.word.contains(getString(R.string.fanta9));
+
+        scifi0 = MainActivity.word.contains(getString(R.string.scif0));
+
+        tiede0 = MainActivity.word.contains(getString(R.string.tiet0));
+        tiede1 = MainActivity.word.contains(getString(R.string.tiet1));
+        tiede2 = MainActivity.word.contains(getString(R.string.tiet2));
+        tiede3 = MainActivity.word.contains(getString(R.string.tiet3));
+        tiede4 = MainActivity.word.contains(getString(R.string.tiet4));
+        tiede5 = MainActivity.word.contains(getString(R.string.tiet5));
+        tiede6 = MainActivity.word.contains(getString(R.string.tiet6));
+        tiede7 = MainActivity.word.contains(getString(R.string.tiet7));
+
+        runot0 = MainActivity.word.contains(getString(R.string.runo0));
+        runot1 = MainActivity.word.contains(getString(R.string.runo1));
+        runot2 = MainActivity.word.contains(getString(R.string.runo2));
+        runot3 = MainActivity.word.contains(getString(R.string.runo3));
+        runot4 = MainActivity.word.contains(getString(R.string.runo4));
+        runot5 = MainActivity.word.contains(getString(R.string.runo5));
+
+        rikoja0 = MainActivity.word.contains(getString(R.string.rikojan0));
+        rikoja1 = MainActivity.word.contains(getString(R.string.rikojan1));
+        rikoja2 = MainActivity.word.contains(getString(R.string.rikojan2));
+        rikoja3 = MainActivity.word.contains(getString(R.string.rikojan3));
+
+        kiitos1 = word.contains(getString(R.string.kiits1));
+        kiito = MainActivity.word.contains(getString(R.string.kiits0));
+        oli = MainActivity.word.contains(getString(R.string.kiits1));
+
+
+        sijainti0 = MainActivity.word.contains(getString(R.string.sijan0));
+        sijainti1 = MainActivity.word.contains(getString(R.string.sijan1));
+        sijainti2 = MainActivity.word.contains(getString(R.string.sijan2));
+        sijainti3 = MainActivity.word.contains(getString(R.string.sijan3));
             /*}
         };thread.start();*/
         //Log.e(LOG_TAG, "MyClass.getView() — get item number ");
 
         //Mikäli boolean on true toteutetaan sen alla oleva toiminta.
-        if (fantasia0 || fantasia1 || fantasia2 || fantasia3 || fantasia4|| fantasia5|| fantasia6|| fantasia7|| fantasia8|| fantasia9) {
+        if (fantasia0 || fantasia1 || fantasia2 || fantasia3 || fantasia4 || fantasia5 || fantasia6 || fantasia7 || fantasia8 || fantasia9) {
 
             fantasia = true;
             laskuri = 0;
             vertaa();
-        } else if (scifi0) {
+        } else if (baabel0 || baabel1 || baabel2 || baabel3 || baabel4 || baabel5) {
+            baabel = true;
+            laskuri = 0;
+            vertaa();
+        } else if (bundle0 || bundle1 || bundle2 || bundle3 || bundle4 || bundle5){
+            bundle = true;
+            laskuri = 0;
+            vertaa();
+        }else if (scifi0) {
             scifi = true;
             laskuri = 0;
             vertaa();
@@ -1010,6 +1215,15 @@ public class MainActivity extends AppCompatActivity {
                     //speechRecognizer.startListening(speechRecognizerIntent);
                 }
             }, 4000);
+
+        }
+
+        if (baabel){
+
+        }
+
+        if (bundle){
+
 
         }
 
