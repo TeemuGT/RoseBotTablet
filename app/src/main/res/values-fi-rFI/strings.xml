@@ -17,6 +17,16 @@
     <string name="runopuhe">Jos menet tänne niin löydät runot.</string>
     <string name="rikojanpuhe">Jos menet tänne niin löydät rikos ja jännitys kirjat.</string>
 
+    <string name="baabelpuhe">Jos menet tänne niin löydät baabelit.</string>
+    <string name="bundlepuhe">Jos menet tänne niin löydät bundlet.</string>
+    <string name="esseepuhe">Jos menet tänne niin löydät esseet.</string>
+    <string name="kaunokirjallisuuspuhe">Jos menet tänne niin löydät kaunokirjallisuuden kirjat</string>
+    <string name="keltapuhe">Jos menet tänne niin löydät keltaisen kirjaston</string>
+    <string name="kotikaunopuhe">Jos menet tänne niin löydät kotimaiset kaunokirjallisuus kirjat.</string>
+    <string name="likpuhe">Jos menet tänne löydät Like kirjaston</string>
+    <string name="otavpuhe">Jos menet tänne niin löydät Otava kirjaston.</string>
+    <string name="aanipuhe">Jos menet tänne niin löydät äänikirjat.</string>
+
 
     <string name="ohje">Kysy minulta mitä halua tietää klikaamalla minua tai valitse valmis nappi.</string>
     <string name="otsikko">Kirjakauppa</string>
@@ -85,18 +95,62 @@
     <string name="bundl4">onko missä bundle</string>
     <string name="bundl5">missä bundle</string>
 
+    <!-- Essee avainsanat -->
+    <string name="essee0">Missä on essee</string>
+    <string name="essee1">Onko essee missä</string>
+    <string name="essee2">Missä essee</string>
+    <string name="essee3">missä on essee</string>
+    <string name="essee4">onko essee missä</string>
+    <string name="essee5">missä essee</string>
 
-    <!-- Avain sanat puuttuvat näiltä
+    <!-- Kaunokirjat avainsanat -->
+    <string name="kauno0">Missä on kaunokirjallisuus</string>
+    <string name="kauno1">Onko kaunokirjallusuus missä</string>
+    <string name="kauno2">Missä kaunokirjallisuus</string>
+    <string name="kauno3">missä on kaunokirjallisuus</string>
+    <string name="kauno4">onko kaunokirjallusuus missä</string>
+    <string name="kauno5">missä kaunokirjallisuus</string>
 
-    esseet
-    kaunokirja
-    keltainen
-    kotimainenkauno
-    like
-    otava
-    äänikirja
+    <!-- Keltainen kirjasto avainsanat -->
+    <string name="kelta0">Missä on keltainen kirjasto</string>
+    <string name="kelta1">Onko keltainenkirjasto missä</string>
+    <string name="kelta2">Missä keltainen kirjasto</string>
+    <string name="kelta3">missä on keltainen kirjasto</string>
+    <string name="kelta4">onko keltainenkirjasto missä</string>
+    <string name="kelta5">missä keltainen kirjasto</string>
 
-    -->
+    <!-- Kotimainen kaunokirjallisuus avainsanat -->
+    <string name="kotkauno0">Missä on kotimainen kaunokirjallisuus</string>
+    <string name="kotkauno1">Onko kotimainen kaunokirjallisuus missä</string>
+    <string name="kotkauno2">Missä kotimainen kaunokirjallisuus</string>
+    <string name="kotkauno3">missä on kotimainen kaunokirjallisuus</string>
+    <string name="kotkauno4">onko kotimainen kaunokirjallisuus missä</string>
+    <string name="kotkauno5">missä kotimainen kaunokirjallisuus</string>
+
+    <!-- Like kategorian avainsanat -->
+    <string name="lik0">Missä on like</string>
+    <string name="lik1">Onko like missä</string>
+    <string name="lik2">Missä like</string>
+    <string name="lik3">missä on like</string>
+    <string name="lik4">onko like missä</string>
+    <string name="lik5">missä like</string>
+
+    <!-- Otava kirjaston avainsanat -->
+    <string name="otav0">Missä on Otava</string>
+    <string name="otav1">Onko Otava missä</string>
+    <string name="otav2">Missä Otava</string>
+    <string name="otav3">missä on Otava</string>
+    <string name="otav4">onko Otava missä</string>
+    <string name="otav5">missä Otava</string>
+
+    <!-- Äänikirjojen avainsanat -->
+    <string name="aani0">Missä on äänikirja</string>
+    <string name="aani1">Onko äänikirjat missä</string>
+    <string name="aani2">Missä äänikirjat</string>
+    <string name="aani3">missä on äänikirja</string>
+    <string name="aani4">onko äänikirjat missä</string>
+    <string name="aani5">missä äänikirjat</string>
+
 
     <!-- Fantasia -->
     <string name="fanta0">Missä fantasia</string>

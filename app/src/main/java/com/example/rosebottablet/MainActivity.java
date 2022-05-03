@@ -93,6 +93,63 @@ public class MainActivity extends AppCompatActivity {
     public  boolean bundle4 = false;
     public  boolean bundle5 = false;
 
+    // Essee avain sanat
+    public boolean essee0 = false;
+    public boolean essee1 = false;
+    public boolean essee2 = false;
+    public boolean essee3 = false;
+    public boolean essee4 = false;
+    public boolean essee5 = false;
+
+    //Kaunokirjallisuuden avainsanat
+    public boolean kauno0 = false;
+    public boolean kauno1 = false;
+    public boolean kauno2 = false;
+    public boolean kauno3 = false;
+    public boolean kauno4 = false;
+    public boolean kauno5 = false;
+
+    //Keltainen kirjasto avainsanat
+    public boolean kelta0 =false;
+    public boolean kelta1 =false;
+    public boolean kelta2 =false;
+    public boolean kelta3 =false;
+    public boolean kelta4 =false;
+    public boolean kelta5 =false;
+
+    //Kotimainen kaunokirjallisuus avainsanat
+    public boolean kotkauno0 = false;
+    public boolean kotkauno1 = false;
+    public boolean kotkauno2 = false;
+    public boolean kotkauno3 = false;
+    public boolean kotkauno4 = false;
+    public boolean kotkauno5 = false;
+
+    //Like avainsanat
+    public boolean lik0 = false;
+    public boolean lik1 = false;
+    public boolean lik2 = false;
+    public boolean lik3 = false;
+    public boolean lik4 = false;
+    public boolean lik5 = false;
+
+    //Otava avainsanat
+    public boolean otav0 = false;
+    public boolean otav1 = false;
+    public boolean otav2 = false;
+    public boolean otav3 = false;
+    public boolean otav4 = false;
+    public boolean otav5 = false;
+
+    //Äänikirjojen avainsanat
+    public boolean aani0 = false;
+    public boolean aani1 = false;
+    public boolean aani2 = false;
+    public boolean aani3 = false;
+    public boolean aani4 = false;
+    public boolean aani5 = false;
+
+
     public boolean keskustelu0 = false;
     public boolean keskustelu1 = false;
     public boolean keskustelu2 = false;
@@ -222,6 +279,13 @@ public class MainActivity extends AppCompatActivity {
     //Boolean joka määrittää mikä kategoria on valittu
     public static boolean baabel = false;
     public static boolean bundle = false;
+    public static boolean essee = false;
+    public static boolean kaunokirjallisuus = false;
+    public static boolean keltainen = false;
+    public static boolean kotikaunokirjallisuus = false;
+    public static boolean like = false;
+    public static boolean otava = false;
+    public static boolean aanikirja = false;
     public static boolean sijainti = false;
     public static boolean fantasia = false;
     public static boolean runo = false;
@@ -510,6 +574,12 @@ public class MainActivity extends AppCompatActivity {
                 //Poistetaan pääkategotia napit käytöstä.
                 kaunobtn.setVisibility(View.INVISIBLE);
                 tietogabtn.setVisibility(View.INVISIBLE);
+                lapsetbtn.setVisibility(View.INVISIBLE);
+                pokkarbtn.setVisibility(View.INVISIBLE);
+                sarjabtn.setVisibility(View.INVISIBLE);
+                elokuvbtn.setVisibility(View.INVISIBLE);
+                lehdetbtn.setVisibility(View.INVISIBLE);
+                englanbtn.setVisibility(View.INVISIBLE);
 
                 //Avataan alakategorianapit käyttöön.
                 fantasibtn.setVisibility(View.VISIBLE);
@@ -547,6 +617,12 @@ public class MainActivity extends AppCompatActivity {
                 //Poistetaan pääkategotia napit käytöstä.
                 kaunobtn.setVisibility(View.INVISIBLE);
                 tietogabtn.setVisibility(View.INVISIBLE);
+                lapsetbtn.setVisibility(View.INVISIBLE);
+                pokkarbtn.setVisibility(View.INVISIBLE);
+                sarjabtn.setVisibility(View.INVISIBLE);
+                elokuvbtn.setVisibility(View.INVISIBLE);
+                lehdetbtn.setVisibility(View.INVISIBLE);
+                englanbtn.setVisibility(View.INVISIBLE);
 
                 //Avataan alakategorianapit käyttöön.
                 tietobtn.setVisibility(View.VISIBLE);
@@ -728,6 +804,12 @@ public class MainActivity extends AppCompatActivity {
 
                 kaunobtn.setVisibility(View.VISIBLE);
                 tietogabtn.setVisibility(View.VISIBLE);
+                lapsetbtn.setVisibility(View.VISIBLE);
+                pokkarbtn.setVisibility(View.VISIBLE);
+                sarjabtn.setVisibility(View.VISIBLE);
+                elokuvbtn.setVisibility(View.VISIBLE);
+                lehdetbtn.setVisibility(View.VISIBLE);
+                englanbtn.setVisibility(View.VISIBLE);
 
 
                 fantasibtn.setVisibility(View.INVISIBLE);
@@ -735,6 +817,15 @@ public class MainActivity extends AppCompatActivity {
                 tietobtn.setVisibility(View.INVISIBLE);
                 runobtn.setVisibility(View.INVISIBLE);
                 rikojanbtn.setVisibility(View.INVISIBLE);
+                baabebtn.setVisibility(View.INVISIBLE);
+                bundlbtn.setVisibility(View.INVISIBLE);
+                esseebtn.setVisibility(View.INVISIBLE);
+                kaunokibtn.setVisibility(View.INVISIBLE);
+                keltainbtn.setVisibility(View.INVISIBLE);
+                kotikaunobtn.setVisibility(View.INVISIBLE);
+                likebtn.setVisibility(View.INVISIBLE);
+                otavabtn.setVisibility(View.INVISIBLE);
+                aanikibtn.setVisibility(View.INVISIBLE);
 
                 ylakate.setVisibility(View.INVISIBLE);
 
@@ -916,6 +1007,12 @@ public class MainActivity extends AppCompatActivity {
                 voiceBtn.setVisibility(View.VISIBLE);
                 kaunobtn.setVisibility(View.VISIBLE);
                 tietogabtn.setVisibility(View.VISIBLE);
+                lapsetbtn.setVisibility(View.VISIBLE);
+                pokkarbtn.setVisibility(View.VISIBLE);
+                sarjabtn.setVisibility(View.VISIBLE);
+                elokuvbtn.setVisibility(View.VISIBLE);
+                lehdetbtn.setVisibility(View.VISIBLE);
+                englanbtn.setVisibility(View.VISIBLE);
 
                 here.setVisibility(View.VISIBLE);
                 herek.setVisibility(View.VISIBLE);
@@ -1050,6 +1147,61 @@ public class MainActivity extends AppCompatActivity {
         bundle4 = word.contains(getString(R.string.bundl4));
         bundle5 = word.contains(getString(R.string.bundl5));
 
+        //Essee
+        essee0 = word.contains(getString(R.string.essee0));
+        essee1 = word.contains(getString(R.string.essee1));
+        essee2 = word.contains(getString(R.string.essee2));
+        essee3 = word.contains(getString(R.string.essee3));
+        essee4 = word.contains(getString(R.string.essee4));
+        essee5 = word.contains(getString(R.string.essee5));
+
+        //Kaunokirjallisus
+        kauno0 = word.contains(getString(R.string.kauno0));
+        kauno1 = word.contains(getString(R.string.kauno1));
+        kauno2 = word.contains(getString(R.string.kauno2));
+        kauno3 = word.contains(getString(R.string.kauno3));
+        kauno4 = word.contains(getString(R.string.kauno4));
+        kauno5 = word.contains(getString(R.string.kauno5));
+
+        //Keltainen kirjasto
+        kelta0 = word.contains(getString(R.string.kelta0));
+        kelta1 = word.contains(getString(R.string.kelta1));
+        kelta2 = word.contains(getString(R.string.kelta2));
+        kelta3 = word.contains(getString(R.string.kelta3));
+        kelta4 = word.contains(getString(R.string.kelta4));
+        kelta5 = word.contains(getString(R.string.kelta5));
+
+        //Kotimainen kaunokirjallisuus
+        kotkauno0 = word.contains(getString(R.string.kotkauno0));
+        kotkauno1 = word.contains(getString(R.string.kotkauno1));
+        kotkauno2 = word.contains(getString(R.string.kotkauno2));
+        kotkauno3 = word.contains(getString(R.string.kotkauno3));
+        kotkauno4 = word.contains(getString(R.string.kotkauno4));
+        kotkauno5 = word.contains(getString(R.string.kotkauno5));
+
+        //Like
+        lik0 = word.contains(getString(R.string.lik0));
+        lik1 = word.contains(getString(R.string.lik1));
+        lik2 = word.contains(getString(R.string.lik2));
+        lik3 = word.contains(getString(R.string.lik3));
+        lik4 = word.contains(getString(R.string.lik4));
+        lik5 = word.contains(getString(R.string.lik5));
+
+        // Otava kirjasto
+        otav0 = word.contains(getString(R.string.otav0));
+        otav1 = word.contains(getString(R.string.otav1));
+        otav2 = word.contains(getString(R.string.otav2));
+        otav3 = word.contains(getString(R.string.otav3));
+        otav4 = word.contains(getString(R.string.otav4));
+        otav5 = word.contains(getString(R.string.otav5));
+
+        //Äänikirjat
+        aani0 = word.contains(getString(R.string.aani0));
+        aani1 = word.contains(getString(R.string.aani1));
+        aani2 = word.contains(getString(R.string.aani2));
+        aani3 = word.contains(getString(R.string.aani3));
+        aani4 = word.contains(getString(R.string.aani4));
+        aani5 = word.contains(getString(R.string.aani5));
 
         //Fantasia
         fantasia0 = MainActivity.word.contains(getString(R.string.fanta0));
@@ -1109,11 +1261,39 @@ public class MainActivity extends AppCompatActivity {
             baabel = true;
             laskuri = 0;
             vertaa();
-        } else if (bundle0 || bundle1 || bundle2 || bundle3 || bundle4 || bundle5){
+        } else if (bundle0 || bundle1 || bundle2 || bundle3 || bundle4 || bundle5) {
             bundle = true;
             laskuri = 0;
             vertaa();
-        }else if (scifi0) {
+        } else if (essee0 || essee1 || essee2 || essee3 || essee4 || essee5) {
+            essee = true;
+            laskuri = 0;
+            vertaa();
+        } else if (kauno0 || kauno1 || kauno2 || kauno3 || kauno4 || kauno5) {
+            kaunokirjallisuus = true;
+            laskuri = 0;
+            vertaa();
+        } else if (kelta0 || kelta1 || kelta2 || kelta3 || kelta4 || kelta5) {
+            keltainen = true;
+            laskuri = 0;
+            vertaa();
+        } else if (kotkauno0 || kotkauno1 || kotkauno2 || kotkauno3 || kotkauno4 || kotkauno5) {
+            kotikaunokirjallisuus = true;
+            laskuri = 0;
+            vertaa();
+        } else if (lik0 || lik1 || lik2 || lik3 || lik4 || lik5) {
+            like = true;
+            laskuri = 0;
+            vertaa();
+        } else if (otav0 || otav1 || otav2 || otav3 || otav4 || otav5) {
+            otava = true;
+            laskuri = 0;
+            vertaa();
+        } else if (aani0 || aani1 || aani2 || aani3 || aani4 || aani5){
+            aanikirja = true;
+            laskuri = 0;
+            vertaa();
+        } else if (scifi0) {
             scifi = true;
             laskuri = 0;
             vertaa();
@@ -1188,7 +1368,6 @@ public class MainActivity extends AppCompatActivity {
     public void vertaa() {
 
 
-
         if (MainActivity.sijainti) {
 
             ylakate.setVisibility(View.VISIBLE);
@@ -1218,203 +1397,472 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-        if (baabel){
+        if (baabel) {
 
-        }
-
-        if (bundle){
-
-
-        }
-
-
-        if (MainActivity.fantasia) {
-
-            //String x = getString(R.string.fantapuhe);
-            marker.setVisibility(View.VISIBLE);
+            ylakate.setVisibility(View.VISIBLE);
 
             RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 1050;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
-
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
-            MainActivity.textToSpeech.speak(getString(R.string.fantapuhe), TextToSpeech.QUEUE_FLUSH, null);
-
-            MainActivity.fantasia = false;
-            fantasia0 = false;
-            fantasia1 = false;
-            fantasia2 = false;
-            fantasia3 = false;
-            fantasia4 = false;
-            fantasia5 = false;
-            fantasia6 = false;
-            fantasia7 = false;
-            fantasia8 = false;
-            fantasia9 = false;
-
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
-                }
-            }, 3600);
-        }
-
-        if (runo) {
-
-            //String x = getString(R.string.fantapuhe);
-
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 1050;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
-
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
-            MainActivity.textToSpeech.speak(getString(R.string.runopuhe), TextToSpeech.QUEUE_FLUSH, null);
-
-            runo = false;
-            runot0 = false;
-            runot1 = false;
-            runot2 = false;
-            runot3 = false;
-            runot4 = false;
-            runot5 = false;
-
-
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
-                }
-            }, 3600);
-        }
-
-        if (rikojanitus) {
-
-            //String x = getString(R.string.fantapuhe);
-            marker.setVisibility(View.VISIBLE);
-
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 1050;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
-
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
-            MainActivity.textToSpeech.speak(getString(R.string.rikojanpuhe), TextToSpeech.QUEUE_FLUSH, null);
-
-            rikojanitus = false;
-            rikoja0 = false;
-            rikoja1 = false;
-            rikoja2 = false;
-            rikoja3 = false;
-
-
-
-            Handler handler = new Handler();
-            handler.postDelayed(new Runnable() {
-                @Override
-                public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
-                }
-            }, 3600);
-        }
-
-
-
-        if (MainActivity.tiede) {
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.leftMargin = 1600;
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
-            //String x = getString(R.string.tiedpuhe);
-            MainActivity.textToSpeech.speak(getString(R.string.tiedpuhe), TextToSpeech.QUEUE_FLUSH, null);
-
-            MainActivity.tiede = false;
-            tiede0 = false;
-            tiede1 = false;
-            tiede2 = false;
-            tiede3 = false;
-            tiede4 = false;
-            tiede5 = false;
-            tiede6 = false;
-            tiede7 = false;
+            //String x = getString(R.string.mispuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.baabelpuhe), TextToSpeech.QUEUE_FLUSH, null);
+            baabel = false;
+            baabel0 = false;
+            baabel1 = false;
+            baabel2 = false;
+            baabel3 = false;
+            baabel4 = false;
+            baabel5 = false;
 
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     hahmo.setImageResource(R.drawable.androidukko);
+                    //speechRecognizer.startListening(speechRecognizerIntent);
                 }
-            }, 3600);
+            }, 4000);
+
         }
 
+        if (bundle) {
 
-        if (MainActivity.scifi) {
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
-            //markerRelativeLayout.bottomMargin = 235;
-            markerRelativeLayout.leftMargin = 1700;
-            //markerRelativeLayout.rightMargin = 50;
-            markerRelativeLayout.topMargin = 900;
+            ylakate.setVisibility(View.VISIBLE);
 
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+            markerRelativeLayout.leftMargin = 1600;
+            markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            MainActivity.marker.getLayoutParams().height = 60;
-            MainActivity.marker.getLayoutParams().width = 60;
-            MainActivity.marker.requestLayout();
-
             Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
-            // String x = getString(R.string.scifipuhe);
-            MainActivity.textToSpeech.speak(getString(R.string.scifipuhe), TextToSpeech.QUEUE_FLUSH, null);
-            MainActivity.scifi = false;
-            scifi0 = false;
+            //String x = getString(R.string.mispuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.bundlepuhe), TextToSpeech.QUEUE_FLUSH, null);
+            bundle = false;
+            bundle0 = false;
+            bundle1 = false;
+            bundle2 = false;
+            bundle3 = false;
+            bundle4 = false;
+            bundle5 = false;
 
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     hahmo.setImageResource(R.drawable.androidukko);
+                    //speechRecognizer.startListening(speechRecognizerIntent);
                 }
-            }, 3600);
+            }, 4000);
+
         }
-        if (MainActivity.kiitoksia) {
+
+        if (essee) {
+
+            ylakate.setVisibility(View.VISIBLE);
+
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+            markerRelativeLayout.leftMargin = 1600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
-            //String x = getString(R.string.kiitos);
-            MainActivity.textToSpeech.speak(getString(R.string.kiitos), TextToSpeech.QUEUE_FLUSH, null);
+            //String x = getString(R.string.mispuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.esseepuhe), TextToSpeech.QUEUE_FLUSH, null);
+            essee = false;
+            essee0 = false;
+            essee1 = false;
+            essee2 = false;
+            essee3 = false;
+            essee4 = false;
+            essee5 = false;
 
-            MainActivity.kiitoksia = false;
-            kiito = false;
-            oli = false;
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
                     hahmo.setImageResource(R.drawable.androidukko);
+                    //speechRecognizer.startListening(speechRecognizerIntent);
                 }
-            }, 3600);
+            }, 4000);
 
+        }
 
-            try {
-                Thread.sleep(5000);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
+        if (kaunokirjallisuus) {
+
+            ylakate.setVisibility(View.VISIBLE);
+
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+            markerRelativeLayout.leftMargin = 1600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.mispuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.kaunokirjallisuuspuhe), TextToSpeech.QUEUE_FLUSH, null);
+            kaunokirjallisuus = false;
+            kauno0 = false;
+            kauno1 = false;
+            kauno2 = false;
+            kauno3 = false;
+            kauno4 = false;
+            kauno5 = false;
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                    //speechRecognizer.startListening(speechRecognizerIntent);
+                }
+            }, 4000);
+
+        }
+
+        if (keltainen) {
+
+            ylakate.setVisibility(View.VISIBLE);
+
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+            markerRelativeLayout.leftMargin = 1600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.mispuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.keltapuhe), TextToSpeech.QUEUE_FLUSH, null);
+            keltainen = false;
+            kelta0 = false;
+            kelta1 = false;
+            kelta2 = false;
+            kelta3 = false;
+            kelta4 = false;
+            kelta5 = false;
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                    //speechRecognizer.startListening(speechRecognizerIntent);
+                }
+            }, 4000);
+
+        }
+
+        if (kotikaunokirjallisuus) {
+
+            ylakate.setVisibility(View.VISIBLE);
+
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+            markerRelativeLayout.leftMargin = 1600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.mispuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.kotikaunopuhe), TextToSpeech.QUEUE_FLUSH, null);
+            kotikaunokirjallisuus = false;
+            kotkauno0 = false;
+            kotkauno1 = false;
+            kotkauno2 = false;
+            kotkauno3 = false;
+            kotkauno4 = false;
+            kotkauno5 = false;
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                    //speechRecognizer.startListening(speechRecognizerIntent);
+                }
+            }, 4000);
+
+        }
+
+        if (like) {
+
+            if (kotikaunokirjallisuus) {
+
+                ylakate.setVisibility(View.VISIBLE);
+
+                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+                markerRelativeLayout.leftMargin = 1600;
+                markerRelativeLayout.topMargin = 500;
+                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                //String x = getString(R.string.mispuhe);
+                MainActivity.textToSpeech.speak(getString(R.string.likpuhe), TextToSpeech.QUEUE_FLUSH, null);
+                like = false;
+                lik0 = false;
+                lik1 = false;
+                lik2 = false;
+                lik3 = false;
+                lik4 = false;
+                lik5 = false;
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                        //speechRecognizer.startListening(speechRecognizerIntent);
+                    }
+                }, 4000);
+
             }
-            restart();
+
+            if (otava) {
+
+                ylakate.setVisibility(View.VISIBLE);
+
+                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+                markerRelativeLayout.leftMargin = 1600;
+                markerRelativeLayout.topMargin = 500;
+                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                //String x = getString(R.string.mispuhe);
+                MainActivity.textToSpeech.speak(getString(R.string.otavpuhe), TextToSpeech.QUEUE_FLUSH, null);
+                otava = false;
+                otav0 = false;
+                otav1 = false;
+                otav2 = false;
+                otav3 = false;
+                otav4 = false;
+                otav5 = false;
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                        //speechRecognizer.startListening(speechRecognizerIntent);
+                    }
+                }, 4000);
+
+            }
+
+            if (aanikirja) {
+
+                ylakate.setVisibility(View.VISIBLE);
+
+                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+                markerRelativeLayout.leftMargin = 1600;
+                markerRelativeLayout.topMargin = 500;
+                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                //String x = getString(R.string.mispuhe);
+                MainActivity.textToSpeech.speak(getString(R.string.aanipuhe), TextToSpeech.QUEUE_FLUSH, null);
+                aanikirja = false;
+                aani0 = false;
+                aani1 = false;
+                aani2 = false;
+                aani3 = false;
+                aani4 = false;
+                aani5 = false;
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                        //speechRecognizer.startListening(speechRecognizerIntent);
+                    }
+                }, 4000);
+
+            }
+
+            if (MainActivity.fantasia) {
+
+                //String x = getString(R.string.fantapuhe);
+                marker.setVisibility(View.VISIBLE);
+
+                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+                markerRelativeLayout.leftMargin = 2600;
+                markerRelativeLayout.topMargin = 1050;
+                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                MainActivity.textToSpeech.speak(getString(R.string.fantapuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+                MainActivity.fantasia = false;
+                fantasia0 = false;
+                fantasia1 = false;
+                fantasia2 = false;
+                fantasia3 = false;
+                fantasia4 = false;
+                fantasia5 = false;
+                fantasia6 = false;
+                fantasia7 = false;
+                fantasia8 = false;
+                fantasia9 = false;
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
+            }
+
+            if (runo) {
+
+                //String x = getString(R.string.fantapuhe);
+
+                marker.setVisibility(View.VISIBLE);
+                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+                markerRelativeLayout.leftMargin = 2600;
+                markerRelativeLayout.topMargin = 1050;
+                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                MainActivity.textToSpeech.speak(getString(R.string.runopuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+                runo = false;
+                runot0 = false;
+                runot1 = false;
+                runot2 = false;
+                runot3 = false;
+                runot4 = false;
+                runot5 = false;
+
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
+            }
+
+            if (rikojanitus) {
+
+                //String x = getString(R.string.fantapuhe);
+                marker.setVisibility(View.VISIBLE);
+
+                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+                markerRelativeLayout.leftMargin = 2600;
+                markerRelativeLayout.topMargin = 1050;
+                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                MainActivity.textToSpeech.speak(getString(R.string.rikojanpuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+                rikojanitus = false;
+                rikoja0 = false;
+                rikoja1 = false;
+                rikoja2 = false;
+                rikoja3 = false;
+
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
+            }
+
+
+            if (MainActivity.tiede) {
+                marker.setVisibility(View.VISIBLE);
+                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+                markerRelativeLayout.leftMargin = 2600;
+                markerRelativeLayout.topMargin = 500;
+                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                //String x = getString(R.string.tiedpuhe);
+                MainActivity.textToSpeech.speak(getString(R.string.tiedpuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+                MainActivity.tiede = false;
+                tiede0 = false;
+                tiede1 = false;
+                tiede2 = false;
+                tiede3 = false;
+                tiede4 = false;
+                tiede5 = false;
+                tiede6 = false;
+                tiede7 = false;
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
+            }
+
+
+            if (MainActivity.scifi) {
+                marker.setVisibility(View.VISIBLE);
+                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
+                //markerRelativeLayout.bottomMargin = 235;
+                markerRelativeLayout.leftMargin = 1700;
+                //markerRelativeLayout.rightMargin = 50;
+                markerRelativeLayout.topMargin = 900;
+
+                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+                MainActivity.marker.getLayoutParams().height = 60;
+                MainActivity.marker.getLayoutParams().width = 60;
+                MainActivity.marker.requestLayout();
+
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                // String x = getString(R.string.scifipuhe);
+                MainActivity.textToSpeech.speak(getString(R.string.scifipuhe), TextToSpeech.QUEUE_FLUSH, null);
+                MainActivity.scifi = false;
+                scifi0 = false;
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
+            }
+            if (MainActivity.kiitoksia) {
+
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                //String x = getString(R.string.kiitos);
+                MainActivity.textToSpeech.speak(getString(R.string.kiitos), TextToSpeech.QUEUE_FLUSH, null);
+
+                MainActivity.kiitoksia = false;
+                kiito = false;
+                oli = false;
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
+
+
+                try {
+                    Thread.sleep(5000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                restart();
+            }
         }
     }
-
     public void restart(){
 
         //Intent intent = getIntent()
