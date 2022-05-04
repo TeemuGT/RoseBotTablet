@@ -447,11 +447,11 @@
 
     <Button
         android:id="@+id/ukravenabtn"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="320dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
         android:text="@string/ukravenabtn"
@@ -461,11 +461,11 @@
 
     <Button
         android:id="@+id/eloteatbtn"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="170dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
         android:text="@string/eloteatbtn"
@@ -475,12 +475,12 @@
 
     <Button
         android:id="@+id/elamankbtn"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="620dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
         android:text="@string/elamankbtn"
         android:textColor="@android:color/white"
@@ -489,12 +489,12 @@
 
     <Button
         android:id="@+id/elamanvbtn"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
         android:text="@string/elamanvbtn"
         android:textColor="@android:color/white"
@@ -503,12 +503,12 @@
 
     <Button
         android:id="@+id/filobtn"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
         android:text="@string/filobtn"
         android:textColor="@android:color/white"
@@ -517,12 +517,12 @@
 
     <Button
         android:id="@+id/histbtn"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
         android:text="@string/histbtn"
         android:textColor="@android:color/white"
@@ -531,12 +531,12 @@
 
     <Button
         android:id="@+id/musiibtn"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
         android:text="@string/musiibtn"
         android:textColor="@android:color/white"
@@ -545,11 +545,11 @@
 
     <Button
         android:id="@+id/politbtn"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="470dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
         android:text="@string/politbtn"
@@ -559,11 +559,11 @@
 
     <Button
         android:id="@+id/sanakbtn"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="620dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
         android:text="@string/sanakbtn"
@@ -573,7 +573,7 @@
 
     <Button
         android:id="@+id/tietobtn"
-        android:layout_width="100dp"
+        android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
@@ -597,7 +597,7 @@
         android:text="@string/ohje"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:visibility="visible" />
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/text"
@@ -610,7 +610,7 @@
         android:text=""
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:visibility="visible" />
+        android:visibility="invisible" />
 
     <ImageView
         android:id="@+id/here"
@@ -645,11 +645,11 @@
         android:layout_width="900dp"
         android:layout_height="550dp"
 
-        android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
 
-        android:layout_marginBottom="200dp"
         android:layout_marginEnd="15dp"
+        android:layout_marginBottom="200dp"
         android:background="@drawable/kartta2"
         android:visibility="invisible" />
 

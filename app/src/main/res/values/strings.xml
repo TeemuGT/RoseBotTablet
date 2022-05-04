@@ -4,7 +4,6 @@
     <string name="fantapuhe"> If you go here you find fantasy books.</string>
     <string name="scifipuhe">If you go here you find sci-fi books.</string>
     <string name="mispuhe">The red marker on the map shows your location in the store.</string>
-    <string name="tiedpuhe">If you go here you will find science books.</string>
     <string name="terve">Hi, my name is Rose Bot. You can ask me where the different book categories are or press the ready button. What books are you looking for? </string>
     <string name="kiitos"> It was a great pleasure to help. Now I am going back to sleep.</string>
     <string name="enymr">Sorry I didn\'t understand, can you ask again?</string>
@@ -16,6 +15,33 @@
     <string name="runopuhe">If you go here you find poetry</string>
     <string name="rikojanpuhe">If you go here you find crime and suspense books.</string>
 
+    <!-- Kaunokirjallisuus puheita -->
+    <string name="baabelpuhe">If you go here you will find the Babylonians.</string>
+    <string name="bundlepuhe">If you go here then you will find the Bundlet.</string>
+    <string name="esseepuhe">If you go here you will find essays.</string>
+    <string name="kaunokirjallisuuspuhe">If you go here you will find books on fiction</string>
+    <string name="keltapuhe">If you go here you will find the yellow library</string>
+    <string name="kotikaunopuhe">If you go here then you will find domestic fiction books.</string>
+    <string name="likpuhe">If you go here you will find the Like Library</string>
+    <string name="otavpuhe">If you go here you will find the Otava Library.</string>
+    <string name="aanipuhe">If you go here you will find audiobooks.</string>
+
+
+    <!-- Tietokirjallisuus puheet -->
+    <string name="ukrvenapuhe">If you go here you will find Ukraine and Russia books.</string>
+    <string name="elokteatpuhe">If you go here then you will find movie and theater books.</string>
+    <string name="elamankpuhe">If you go here then you will find biography books.</string>
+    <string name="elamanvpuhe">If you go here then you will find Life Wisdom books.</string>
+    <string name="filopuhe">If you go here then you will find philosophy books.</string>
+    <string name="histpuhe">If you go here then you will find history books.</string>
+    <string name="musiipuhe">If you go here then you will find music books.</string>
+    <string name="politpuhe">If you go here you will find policy books.</string>
+    <string name="sanakpuhe">If you go here you will find dictionaries.</string>
+    <string name="tiedpuhe">If you go here you will find science books.</string>
+
+    <string name="lehdpuhe">If you go here you will find magazines.</string>
+    <string name="sarjapuhe">If you go here you will find comics.</string>
+    <string name="pokkapuhe">If you go here you will find paperback</string>
 
     <string name="ohje">Ask me what you want to know by clicking on me or select a ready button.</string>
     <string name="otsikko">Bookstore</string>
@@ -27,14 +53,38 @@
     <string name="alotusbtn">Press to start</string>
     <string name="kaunokirbtn">Fiction</string>
     <string name="tietokirbtn">non-fiction</string>
+    <string name="lapsebtn">Children</string>
+    <string name="sarjakuvbtn">Comics</string>
+    <string name="elokuvbtn">Movies</string>
+    <string name="engkirjbtn">In English</string>
+    <string name="lehdtbtn">Magazines</string>
+    <string name="pokkaritbtn">Pokkarit</string>
 
     <!-- KAunokirjallisuus napit -->
+    <string name="baabelbtn">Babylon</string>
+    <string name="bundlebtn">Bundle</string>
+    <string name="esseetbtn">Essay</string>
+    <string name="kaunokirjbtn">Fiction</string>
+    <string name="keltainebtn">Yellow Library</string>
+    <string name="kotikaunokbtn">Finnish fiction</string>
+    <string name="likbtn">Like</string>
+    <string name="otavabtn">Otava Library</string>
     <string name="fantabtn">Fantasy</string>
     <string name="runobtn">Poetry</string>
     <string name="rikojanbtn">Crime and suspense</string>
     <string name="scifibtn">Scifi</string>
+    <string name="aanikbtn">Audiobooks</string>
 
-
+    <!-- Tietokirjallisuus napit -->
+    <string name="ukravenabtn">Ukraine and Russia</string>
+    <string name="eloteatbtn">Cinema and theater</string>
+    <string name="elamankbtn">Biographies</string>
+    <string name="elamanvbtn">The wisdom of life</string>
+    <string name="filobtn">Philosophy</string>
+    <string name="histbtn">History</string>
+    <string name="musiibtn">Music</string>
+    <string name="politbtn">Policy</string>
+    <string name="sanakbtn">Dictionaries</string>
     <string name="tietobtn">Science</string>
 
 
@@ -51,6 +101,80 @@
     <string name="kuin3">I\'m fine</string>
     <string name="kuin4">Everything is fine</string>
 
+    <!-- Kaunokirjallisuuden avain sanat -->
+    <!-- Baabelit avainsanat -->
+    <string name="baabe0">Babel</string>
+    <string name="baabe1">babel</string>
+    <string name="baabe2">Where Babel</string>
+    <string name="baabe3">where is Babel</string>
+    <string name="baabe4">is where Babel</string>
+    <string name="baabe5">where Babel</string>
+
+    <!-- Bundle avainsanat -->
+    <string name="bundl0">bundle</string>
+    <string name="bundl1">Bundle</string>
+    <string name="bundl2">Where the bundle</string>
+    <string name="bundl3">where is the bundle</string>
+    <string name="bundl4">is where the bundle</string>
+    <string name="bundl5">where the bundle</string>
+
+    <!-- Essee avainsanat -->
+    <string name="essee0">essay</string>
+    <string name="essee1">Essay</string>
+    <string name="essee2">Where\'s the essay</string>
+    <string name="essee3">where is the essay</string>
+    <string name="essee4">is the essay where</string>
+    <string name="essee5">where\'s the essay</string>
+
+    <!-- Kaunokirjat avainsanat -->
+    <string name="kauno0">fiction</string>
+    <string name="kauno1">Fiction</string>
+    <string name="kauno2">Where the fiction</string>
+    <string name="kauno3">where is the fiction</string>
+    <string name="kauno4">is fiction where</string>
+    <string name="kauno5">where the fiction</string>
+
+    <!-- Keltainen kirjasto avainsanat -->
+    <string name="kelta0">yellow library</string>
+    <string name="kelta1">Yellow library</string>
+    <string name="kelta2">Where the yellow library</string>
+    <string name="kelta3">where is the yellow library</string>
+    <string name="kelta4">is there a yellow library where</string>
+    <string name="kelta5">where the yellow library</string>
+
+    <!-- Kotimainen kaunokirjallisuus avainsanat -->
+    <string name="kotkauno0">domestic fiction</string>
+    <string name="kotkauno1">Domestic fiction</string>
+    <string name="kotkauno2">finnish fiction</string>
+    <string name="kotkauno3">Finnish fiction</string>
+    <string name="kotkauno4">is domestic fiction where</string>
+    <string name="kotkauno5">where domestic fiction</string>
+
+    <!-- Like kategorian avainsanat -->
+    <string name="lik0">like library</string>
+    <string name="lik1">Like library</string>
+    <string name="lik2">Where like</string>
+    <string name="lik3">where is like</string>
+    <string name="lik4">is like where</string>
+    <string name="lik5">where like</string>
+
+    <!-- Otava kirjaston avainsanat -->
+    <string name="otav0">Otava</string>
+    <string name="otav1">otava</string>
+    <string name="otav2">Where Ottawa</string>
+    <string name="otav3">where is Otava</string>
+    <string name="otav4">is Otava where</string>
+    <string name="otav5">where Ottawa</string>
+
+    <!-- Äänikirjojen avainsanat -->
+    <string name="aani0">audiobook</string>
+    <string name="aani1">Audiobook</string>
+    <string name="aani2">Where are the audiobooks</string>
+    <string name="aani3">where is the audiobook</string>
+    <string name="aani4">are audiobooks where</string>
+    <string name="aani5">where are the audiobooks</string>
+
+    <!-- Fantasia -->
     <string name="fanta0">Where is fantasy</string>
     <string name="fanta1">Is a fantasy</string>
     <string name="fanta2">Where do I find fantasy</string>
@@ -59,20 +183,13 @@
     <string name="fanta5">where is fantasy</string>
     <string name="fanta6">is a fantasy</string>
     <string name="fanta7">where do I find fantasy</string>
-    <string name="fanta8">where is the fantasy</string>
-    <string name="fanta9">find a fantasy</string>
+    <string name="fanta8">fantasy</string>
+    <string name="fanta9">Fantasy</string>
 
+    <!-- Scifi avainsanoja -->
     <string name="scif0">sci-fi</string>
 
-    <string name="tiet0">science</string>
-    <string name="tiet1">information</string>
-    <string name="tiet2">scientific</string>
-    <string name="tiet3">nonfiction</string>
-    <string name="tiet4">Science</string>
-    <string name="tiet5">Information</string>
-    <string name="tiet6">Scientific</string>
-    <string name="tiet7">Nonfiction</string>
-
+    <!-- Runojen avainsanoja -->
     <string name="runo0">poem</string>
     <string name="runo1">poetry</string>
     <string name="runo2">poems</string>
@@ -80,6 +197,7 @@
     <string name="runo4">Poetry</string>
     <string name="runo5">Poems</string>
 
+    <!-- Rikos ja jännitys avainsanoja -->
     <string name="rikojan0">criminal</string>
     <string name="rikojan1">tension</string>
     <string name="rikojan2">Criminal</string>
@@ -93,154 +211,118 @@
     <string name="sijan1">where I am</string>
     <string name="sijan2">Where am I</string>
     <string name="sijan3">Where I am</string>
-    <string name="lapsebtn">Children</string>
-    <string name="sarjakuvbtn">Comics</string>
-    <string name="elokuvbtn">Movies</string>
-    <string name="engkirjbtn">In English</string>
-    <string name="lehdtbtn">Magazines</string>
-    <string name="pokkaritbtn">Pokkarit</string>
-    <string name="baabelbtn">Babylon</string>
-    <string name="bundlebtn">Bundle</string>
-    <string name="esseetbtn">Essay</string>
-    <string name="keltainebtn">Yellow Library</string>
-    <string name="kotikaunokbtn">Finnish fiction</string>
-    <string name="likbtn">Like</string>
-    <string name="otavabtn">Otava Library</string>
-    <string name="kaunokirjbtn">Fiction</string>
-    <string name="aanikbtn">Audiobooks</string>
-    <string name="baabe0">Where is Babel</string>
-    <string name="baabe3">where is Babel</string>
-    <string name="baabe1">Is where Babel</string>
-    <string name="baabe4">is where Babel</string>
-    <string name="baabe2">Where Babel</string>
-    <string name="baabe5">where Babel</string>
-    <string name="bundl0">Where is the bundle</string>
-    <string name="bundl3">where is the bundle</string>
-    <string name="bundl1">Is where the bundle</string>
-    <string name="bundl4">is where the bundle</string>
-    <string name="bundl2">Where the bundle</string>
-    <string name="bundl5">where the bundle</string>
-    <string name="essee0">Where is the essay</string>
-    <string name="essee3">where is the essay</string>
-    <string name="essee1">Is the essay where</string>
-    <string name="essee4">is the essay where</string>
-    <string name="essee2">Where\'s the essay</string>
-    <string name="essee5">where\'s the essay</string>
-    <string name="kauno0">Where is the fiction</string>
-    <string name="kauno3">where is the fiction</string>
-    <string name="kauno1">Is fiction where</string>
-    <string name="kauno4">is fiction where</string>
-    <string name="kauno2">Where the fiction</string>
-    <string name="kauno5">where the fiction</string>
-    <string name="kelta0">Where is the yellow library</string>
-    <string name="kotkauno0">Where is the domestic fiction</string>
-    <string name="kotkauno1">Is domestic fiction where</string>
-    <string name="kotkauno2">Where domestic fiction</string>
-    <string name="kotkauno3">where is the domestic fiction</string>
-    <string name="kotkauno4">is domestic fiction where</string>
-    <string name="kotkauno5">where domestic fiction</string>
-    <string name="lik0">Where is like</string>
-    <string name="lik3">where is like</string>
-    <string name="lik1">Is like where</string>
-    <string name="lik4">is like where</string>
-    <string name="lik2">Where like</string>
-    <string name="lik5">where like</string>
-    <string name="otav0">Where is Otava</string>
-    <string name="otav3">where is Otava</string>
-    <string name="otav1">Is Otava where</string>
-    <string name="otav4">is Otava where</string>
-    <string name="otav2">Where Ottawa</string>
-    <string name="otav5">where Ottawa</string>
-    <string name="aani0">Where is the audiobook</string>
-    <string name="aani3">where is the audiobook</string>
-    <string name="aani1">Are audiobooks where</string>
-    <string name="aani4">are audiobooks where</string>
-    <string name="aani2">Where are the audiobooks</string>
-    <string name="aani5">where are the audiobooks</string>
-    <string name="kelta1">Is there a yellow library where</string>
-    <string name="kelta4">is there a yellow library where</string>
-    <string name="kelta2">Where the yellow library</string>
-    <string name="kelta5">where the yellow library</string>
-    <string name="kelta3">where is the yellow library</string>
-    <string name="ukrvena0">Where are Ukraine and Russia</string>
-    <string name="ukrvena1">Is where Ukraine and Russia</string>
+
+
+
+
+
+
+
+
+    <!-- Tietokirjallisuus avainsanat -->
+    <!-- Ukraina ja Venäjä avainsanat -->
+    <string name="ukrvena0">Ukraine</string>
+    <string name="ukrvena1">Russia</string>
     <string name="ukrvena2">Where is Ukraine and Russia</string>
     <string name="ukrvena3">where are Ukraine and Russia</string>
     <string name="ukrvena4">is where Ukraine and Russia</string>
     <string name="ukrvena5">where is Ukraine and Russia</string>
-    <string name="elokteat0">Where is the cinema and theater</string>
-    <string name="elokteat3">where is the cinema and theater</string>
-    <string name="elokteat1">Is where the cinema and theater</string>
+
+    <!-- Elokuva ja teatteri avainsanat -->
+    <string name="elokteat0">theater</string>
+    <string name="elokteat1">Theater</string>
+    <string name="elokteat2">cinema</string>
+    <string name="elokteat3">Cinema</string>
     <string name="elokteat4">is where the cinema and theater</string>
-    <string name="elokteat2">Where cinema and theater</string>
     <string name="elokteat5">where cinema and theater</string>
-    <string name="elamank0">Where are the biographies</string>
-    <string name="elamank3">where are the biographies</string>
+
+    <!-- Elämänkerta avainsanat -->
+    <string name="elamank0">biographies</string>
+    <string name="elamank1">Biographies</string>
     <string name="elamank2">Where biographies</string>
-    <string name="elamank5">where biographies</string>
-    <string name="elamank1">Is where the biographies</string>
+    <string name="elamank3">where are the biographies</string>
     <string name="elamank4">is where the biographies</string>
-    <string name="elamanv0">Where are the wisdoms of life</string>
-    <string name="elamanv3">where are the wisdoms of life</string>
+    <string name="elamank5">where biographies</string>
+
+    <!-- Elämänviisaus avainsanat -->
+    <string name="elamanv0">wisdoms of life</string>
+    <string name="elamanv1">Wisdom of life</string>
     <string name="elamanv2">Where the wisdom of life</string>
-    <string name="elamanv5">where the wisdom of life</string>
-    <string name="elamanv1">Is where the wisdom of life</string>
+    <string name="elamanv3">where are the wisdoms of life</string>
     <string name="elamanv4">is where the wisdom of life</string>
-    <string name="filo0">Where is the philosophy</string>
-    <string name="filo3">where is the philosophy</string>
+    <string name="elamanv5">where the wisdom of life</string>
+
+    <!-- Filosofia avainsanat -->
+    <string name="filo0">philosophy</string>
+    <string name="filo1">Philosophy</string>
     <string name="filo2">Where\'s the philosophy</string>
-    <string name="filo5">where\'s the philosophy</string>
-    <string name="filo1">Is where the philosophy</string>
+    <string name="filo3">where is the philosophy</string>
     <string name="filo4">is where the philosophy</string>
-    <string name="hist0">Where is the history</string>
-    <string name="hist3">where is the history</string>
+    <string name="filo5">where\'s the philosophy</string>
+
+    <!-- Historia avain sanat -->
+    <string name="hist0">history</string>
+    <string name="hist1">History</string>
     <string name="hist2">Where history</string>
-    <string name="hist5">where history</string>
-    <string name="hist1">Is where history</string>
+    <string name="hist3">where is the history</string>
     <string name="hist4">is where history</string>
-    <string name="musii0">Where is the music</string>
-    <string name="musii3">where is the music</string>
+    <string name="hist5">where history</string>
+
+    <!-- Musiikki avainsanat -->
+    <string name="musii0">music</string>
+    <string name="musii1">Music is</string>
     <string name="musii2">Where the music</string>
-    <string name="musii5">Where the music</string>
+    <string name="musii3">where is the music</string>
     <string name="musii4">is where the music is</string>
-    <string name="musii1">Is where the music is</string>
-    <string name="polit0">Where is the politics</string>
-    <string name="polit3">where is the politics</string>
+    <string name="musii5">Where the music</string>
+
+    <!-- Politiikka avainsanat -->
+    <string name="polit0">politics</string>
+    <string name="polit1">Policy</string>
     <string name="polit2">Where the politics</string>
-    <string name="polit5">where the politics</string>
-    <string name="polit1">Is there a policy</string>
+    <string name="polit3">where is the politics</string>
     <string name="polit4">is there a policy</string>
-    <string name="sanak0">Where is the dictionary</string>
-    <string name="sanak3">where is the dictionary</string>
-    <string name="sanak5">where\'s the dictionary</string>
+    <string name="polit5">where the politics</string>
+
+    <!-- Sanakirja avainsanat -->
+    <string name="sanak0">dictionary</string>
+    <string name="sanak1">Dictionary</string>
     <string name="sanak2">Where\'s the dictionary</string>
+    <string name="sanak3">where is the dictionary</string>
     <string name="sanak4">is there a dictionary</string>
-    <string name="sanak1">Is there a dictionary</string>
-    <string name="sanakpuhe">If you go here you will find dictionaries.</string>
-    <string name="baabelpuhe">If you go here you will find the Babylonians.</string>
-    <string name="bundlepuhe">If you go here then you will find the Bundlet.</string>
-    <string name="esseepuhe">If you go here you will find essays.</string>
-    <string name="kaunokirjallisuuspuhe">If you go here you will find books on fiction</string>
-    <string name="keltapuhe">If you go here you will find the yellow library</string>
-    <string name="kotikaunopuhe">If you go here then you will find domestic fiction books.</string>
-    <string name="likpuhe">If you go here you will find the Like Library</string>
-    <string name="otavpuhe">If you go here you will find the Otava Library.</string>
-    <string name="aanipuhe">If you go here you will find audiobooks.</string>
-    <string name="ukrvenapuhe">If you go here you will find Ukraine and Russia books.</string>
-    <string name="elokteatpuhe">If you go here then you will find movie and theater books.</string>
-    <string name="elamankpuhe">If you go here then you will find biography books.</string>
-    <string name="elamanvpuhe">If you go here then you will find Life Wisdom books.</string>
-    <string name="filopuhe">If you go here then you will find philosophy books.</string>
-    <string name="histpuhe">If you go here then you will find history books.</string>
-    <string name="musiipuhe">If you go here then you will find music books.</string>
-    <string name="politpuhe">If you go here you will find policy books.</string>
-    <string name="ukravenabtn">Ukraine and Russia</string>
-    <string name="eloteatbtn">Cinema and theater</string>
-    <string name="elamankbtn">Biographies</string>
-    <string name="elamanvbtn">The wisdom of life</string>
-    <string name="filobtn">Philosophy</string>
-    <string name="histbtn">History</string>
-    <string name="musiibtn">Music</string>
-    <string name="politbtn">Policy</string>
-    <string name="sanakbtn">Dictionaries</string>
+    <string name="sanak5">where\'s the dictionary</string>
+
+    <!-- Tietokirjat avainsanat -->
+    <string name="tiet0">science</string>
+    <string name="tiet1">information</string>
+    <string name="tiet2">scientific</string>
+    <string name="tiet3">nonfiction</string>
+    <string name="tiet4">Science</string>
+    <string name="tiet5">Information</string>
+    <string name="tiet6">Scientific</string>
+    <string name="tiet7">Nonfiction</string>
+
+    <!-- Lehdet avainsanat -->
+    <string name="lehd0">magazine</string>
+    <string name="lehd1">Magazine</string>
+    <string name="lehd2">Where the magazines</string>
+    <string name="lehd3">where are the magazines</string>
+    <string name="lehd4">is where the magazines</string>
+    <string name="lehd5">where the magazines</string>
+
+    <!-- Sarjakuvat avainsanat -->
+    <string name="sarja0">cartoon</string>
+    <string name="sarja1">Comics</string>
+    <string name="sarja2">Cartoon</string>
+    <string name="sarja3">where are the cartoons</string>
+    <string name="sarja4">comics</string>
+    <string name="sarja5">here the cartoons</string>
+
+    <!-- Pokkarit avainsanat -->
+    <string name="pokka0">paperback</string>
+    <string name="pokka1">Paperback</string>
+    <string name="pokka2">"Where the paperback "</string>
+    <string name="pokka3">where are the paperback</string>
+    <string name="pokka4">is where the paperback</string>
+    <string name="pokka5">"where the paperback "</string>
 </resources>

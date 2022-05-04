@@ -272,6 +272,27 @@ public class MainActivity extends AppCompatActivity {
     public boolean tiede6 = false;
     public boolean tiede7 = false;
 
+    public boolean lehd0 = false;
+    public boolean lehd1 = false;
+    public boolean lehd2 = false;
+    public boolean lehd3 = false;
+    public boolean lehd4 = false;
+    public boolean lehd5 = false;
+
+    public boolean sarja0 = false;
+    public boolean sarja1 = false;
+    public boolean sarja2 = false;
+    public boolean sarja3 = false;
+    public boolean sarja4 = false;
+    public boolean sarja5 = false;
+
+    public boolean pokka0 = false;
+    public boolean pokka1 = false;
+    public boolean pokka2 = false;
+    public boolean pokka3 = false;
+    public boolean pokka4 = false;
+    public boolean pokka5 = false;
+
     public boolean kiitos1 = false;
     public boolean oli = false;
     public boolean kiito = false;
@@ -379,6 +400,10 @@ public class MainActivity extends AppCompatActivity {
     public static boolean politiikka = false;
     public static boolean sanakirja = false;
     public static boolean tiede = false;
+
+    public static boolean lehdet = false;
+    public static boolean sarjakuvat = false;
+    public static boolean pokkarit = false;
 
     public static boolean kiitoksia = false;
     public static boolean sijainti = false;
@@ -773,14 +798,18 @@ public class MainActivity extends AppCompatActivity {
         pokkarbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                speechRecognizer.stopListening();
+                pokkarit = true;
+                vertaa();
             }
         });
 
         sarjabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                speechRecognizer.stopListening();
+                sarjakuvat = true;
+                vertaa();
             }
         });
 
@@ -794,7 +823,9 @@ public class MainActivity extends AppCompatActivity {
         lehdetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                speechRecognizer.stopListening();
+                lehdet = true;
+                vertaa();
             }
         });
 
@@ -889,6 +920,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Äänikirja nappi
+        aanikibtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                aanikirja = true;
+                vertaa();
+            }
+        });
         //Fantasia nappi
         fantasibtn.setOnClickListener(new View.OnClickListener() {
 
@@ -1047,7 +1087,6 @@ public class MainActivity extends AppCompatActivity {
 
                 fantasibtn.setVisibility(View.INVISIBLE);
                 scifibtn.setVisibility(View.INVISIBLE);
-                tietobtn.setVisibility(View.INVISIBLE);
                 runobtn.setVisibility(View.INVISIBLE);
                 rikojanbtn.setVisibility(View.INVISIBLE);
                 baabebtn.setVisibility(View.INVISIBLE);
@@ -1060,14 +1099,25 @@ public class MainActivity extends AppCompatActivity {
                 otavabtn.setVisibility(View.INVISIBLE);
                 aanikibtn.setVisibility(View.INVISIBLE);
 
+                tietobtn.setVisibility(View.INVISIBLE);
+                ukravenabtn.setVisibility(View.INVISIBLE);
+                eloteatbtn.setVisibility(View.INVISIBLE);
+                elamankbtn.setVisibility(View.INVISIBLE);
+                elamanvbtn.setVisibility(View.INVISIBLE);
+                filobtn.setVisibility(View.INVISIBLE);
+                histbtn.setVisibility(View.INVISIBLE);
+                musiibtn.setVisibility(View.INVISIBLE);
+                politbtn.setVisibility(View.INVISIBLE);
+                sanakbtn.setVisibility(View.INVISIBLE);
+
                 ylakate.setVisibility(View.INVISIBLE);
 
 
 
             }
         });
-    }
 
+    }
 
     private void takePicture() {
 
@@ -1252,7 +1302,7 @@ public class MainActivity extends AppCompatActivity {
                 where.setVisibility(View.VISIBLE);
 
                 kartta.setVisibility(View.VISIBLE);
-                text1.setVisibility(View.VISIBLE);
+                //text1.setVisibility(View.VISIBLE);
 
                 //Aloitetaan puheen kuuntelu puheen jälkeen.
                 speechRecognizer.startListening(speechRecognizerIntent);
@@ -1512,12 +1562,12 @@ public class MainActivity extends AppCompatActivity {
         filo5 = word.contains(getString(R.string.filo5));
 
         //Historia
-        hist0 = word.contains(getString(R.string.filo0));
-        hist1 = word.contains(getString(R.string.filo1));
-        hist2 = word.contains(getString(R.string.filo2));
-        hist3 = word.contains(getString(R.string.filo3));
-        hist4 = word.contains(getString(R.string.filo4));
-        hist5 = word.contains(getString(R.string.filo5));
+        hist0 = word.contains(getString(R.string.hist0));
+        hist1 = word.contains(getString(R.string.hist1));
+        hist2 = word.contains(getString(R.string.hist2));
+        hist3 = word.contains(getString(R.string.hist3));
+        hist4 = word.contains(getString(R.string.hist4));
+        hist5 = word.contains(getString(R.string.hist5));
 
         //Musiikki
         musii0 = word.contains(getString(R.string.musii0));
@@ -1553,13 +1603,33 @@ public class MainActivity extends AppCompatActivity {
         tiede6 = MainActivity.word.contains(getString(R.string.tiet6));
         tiede7 = MainActivity.word.contains(getString(R.string.tiet7));
 
+        lehd0 = word.contains(getString(R.string.lehd0));
+        lehd1 = word.contains(getString(R.string.lehd1));
+        lehd2 = word.contains(getString(R.string.lehd2));
+        lehd3 = word.contains(getString(R.string.lehd3));
+        lehd4 = word.contains(getString(R.string.lehd4));
+        lehd5 = word.contains(getString(R.string.lehd5));
+
+        sarja0 = word.contains(getString(R.string.sarja0));
+        sarja1 = word.contains(getString(R.string.sarja1));
+        sarja2 = word.contains(getString(R.string.sarja2));
+        sarja3 = word.contains(getString(R.string.sarja3));
+        sarja4 = word.contains(getString(R.string.sarja4));
+        sarja5 = word.contains(getString(R.string.sarja5));
+
+        pokka0 = word.contains(getString(R.string.pokka0));
+        pokka1 = word.contains(getString(R.string.pokka1));
+        pokka2 = word.contains(getString(R.string.pokka2));
+        pokka3 = word.contains(getString(R.string.pokka3));
+        pokka4 = word.contains(getString(R.string.pokka4));
+        pokka5 = word.contains(getString(R.string.pokka5));
+
             /*}
         };thread.start();*/
         //Log.e(LOG_TAG, "MyClass.getView() — get item number ");
 
         //Mikäli boolean on true toteutetaan sen alla oleva toiminta.
         if (fantasia0 || fantasia1 || fantasia2 || fantasia3 || fantasia4 || fantasia5 || fantasia6 || fantasia7 || fantasia8 || fantasia9) {
-
             fantasia = true;
             laskuri = 0;
             vertaa();
@@ -1611,44 +1681,56 @@ public class MainActivity extends AppCompatActivity {
             rikojanitus = true;
             laskuri = 0;
             vertaa();
-        } else if (ukrvena0 || ukrvena1 || ukrvena2 || ukrvena3 || ukrvena4 || ukrvena5){
+        } else if (ukrvena0 || ukrvena1 || ukrvena2 || ukrvena3 || ukrvena4 || ukrvena5) {
             ukrainajavenaja = true;
             laskuri = 0;
             vertaa();
-        } else if (elokteat0 || elokteat1 || elokteat2 || elokteat3 || elokteat4 || elokteat5){
+        } else if (elokteat0 || elokteat1 || elokteat2 || elokteat3 || elokteat4 || elokteat5) {
             elokuvajateatteri = true;
             laskuri = 0;
             vertaa();
-        } else if (elamank0 || elamank1 || elamank2 || elamank3 || elamank4 || elamank5){
+        } else if (elamank0 || elamank1 || elamank2 || elamank3 || elamank4 || elamank5) {
             elamankerta = true;
             laskuri = 0;
             vertaa();
-        } else if (elamanv0 || elamanv1 || elamanv2 || elamanv3 || elamanv4 || elamanv5){
+        } else if (elamanv0 || elamanv1 || elamanv2 || elamanv3 || elamanv4 || elamanv5) {
             elamanviisaus = true;
             laskuri = 0;
             vertaa();
-        } else if (filo0 || filo1 || filo2 || filo3 || filo4 || filo5){
+        } else if (filo0 || filo1 || filo2 || filo3 || filo4 || filo5) {
             filosofia = true;
             laskuri = 0;
             vertaa();
-        } else if (hist0 || hist1 || hist2 || hist3 || hist4 || hist5){
+        } else if (hist0 || hist1 || hist2 || hist3 || hist4 || hist5) {
             historia = true;
             laskuri = 0;
             vertaa();
-        } else if (musii0 || musii1 || musii2 || musii3 || musii4 || musii5){
+        } else if (musii0 || musii1 || musii2 || musii3 || musii4 || musii5) {
             musiikki = true;
             laskuri = 0;
             vertaa();
-        } else if (polit0 || polit1 || polit2 || polit3 || polit4 || polit5){
+        } else if (polit0 || polit1 || polit2 || polit3 || polit4 || polit5) {
             politiikka = true;
             laskuri = 0;
             vertaa();
-        } else if (sanak0 || sanak1 || sanak2 || sanak3 || sanak4 || sanak5){
+        } else if (sanak0 || sanak1 || sanak2 || sanak3 || sanak4 || sanak5) {
             sanakirja = true;
             laskuri = 0;
             vertaa();
-        } else if (tiede0 || tiede1 || tiede2|| tiede3|| tiede4|| tiede5|| tiede6|| tiede7) {
+        } else if (tiede0 || tiede1 || tiede2 || tiede3 || tiede4 || tiede5 || tiede6 || tiede7) {
             tiede = true;
+            laskuri = 0;
+            vertaa();
+        } else if (lehd0 || lehd1 || lehd2 || lehd3 || lehd4 || lehd5) {
+            lehdet = true;
+            laskuri = 0;
+            vertaa();
+        } else if (sarja0 || sarja1 || sarja2 || sarja3 || sarja4 || sarja5) {
+            sarjakuvat = true;
+            laskuri = 0;
+            vertaa();
+        } else if (pokka0 || pokka1 || pokka2 || pokka3 || pokka4 || pokka5){
+            pokkarit = true;
             laskuri = 0;
             vertaa();
         } else if (sijainti0 || sijainti1 || sijainti2 || sijainti3) {
@@ -1769,7 +1851,6 @@ public class MainActivity extends AppCompatActivity {
             }, 4000);
 
         }
-
         if (bundle) {
 
             ylakate.setVisibility(View.VISIBLE);
@@ -1800,7 +1881,6 @@ public class MainActivity extends AppCompatActivity {
             }, 4000);
 
         }
-
         if (essee) {
 
             ylakate.setVisibility(View.VISIBLE);
@@ -1831,7 +1911,6 @@ public class MainActivity extends AppCompatActivity {
             }, 4000);
 
         }
-
         if (kaunokirjallisuus) {
 
             ylakate.setVisibility(View.VISIBLE);
@@ -1862,7 +1941,6 @@ public class MainActivity extends AppCompatActivity {
             }, 4000);
 
         }
-
         if (keltainen) {
 
             ylakate.setVisibility(View.VISIBLE);
@@ -1893,7 +1971,6 @@ public class MainActivity extends AppCompatActivity {
             }, 4000);
 
         }
-
         if (kotikaunokirjallisuus) {
 
             ylakate.setVisibility(View.VISIBLE);
@@ -1924,41 +2001,36 @@ public class MainActivity extends AppCompatActivity {
             }, 4000);
 
         }
-
         if (like) {
 
-            if (kotikaunokirjallisuus) {
+            ylakate.setVisibility(View.VISIBLE);
 
-                ylakate.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+            markerRelativeLayout.leftMargin = 1600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-                markerRelativeLayout.leftMargin = 1600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.mispuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.likpuhe), TextToSpeech.QUEUE_FLUSH, null);
+            like = false;
+            lik0 = false;
+            lik1 = false;
+            lik2 = false;
+            lik3 = false;
+            lik4 = false;
+            lik5 = false;
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
-                //String x = getString(R.string.mispuhe);
-                MainActivity.textToSpeech.speak(getString(R.string.likpuhe), TextToSpeech.QUEUE_FLUSH, null);
-                like = false;
-                lik0 = false;
-                lik1 = false;
-                lik2 = false;
-                lik3 = false;
-                lik4 = false;
-                lik5 = false;
-
-                Handler handler = new Handler();
-                handler.postDelayed(new Runnable() {
-                    @Override
-                    public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
-                        //speechRecognizer.startListening(speechRecognizerIntent);
-                    }
-                }, 4000);
-
-            }
-
-            if (otava) {
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                    //speechRecognizer.startListening(speechRecognizerIntent);
+                }
+            }, 4000);
+        }
+        if (otava) {
 
                 ylakate.setVisibility(View.VISIBLE);
 
@@ -1988,8 +2060,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 4000);
 
             }
-
-            if (aanikirja) {
+        if (aanikirja) {
 
                 ylakate.setVisibility(View.VISIBLE);
 
@@ -2019,8 +2090,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 4000);
 
             }
-
-            if (MainActivity.fantasia) {
+        if (MainActivity.fantasia) {
 
                 //String x = getString(R.string.fantapuhe);
                 marker.setVisibility(View.VISIBLE);
@@ -2054,8 +2124,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-
-            if (runo) {
+        if (runo) {
 
                 //String x = getString(R.string.fantapuhe);
 
@@ -2086,8 +2155,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-
-            if (rikojanitus) {
+        if (rikojanitus) {
 
                 //String x = getString(R.string.fantapuhe);
                 marker.setVisibility(View.VISIBLE);
@@ -2116,8 +2184,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-
-            if (MainActivity.scifi) {
+        if (MainActivity.scifi) {
                 marker.setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, ViewGroup.LayoutParams.WRAP_CONTENT);
                 //markerRelativeLayout.bottomMargin = 235;
@@ -2146,9 +2213,8 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
 
-            //Tietokirjallisuuden katagorian toiminnot
-
-            if (ukrainajavenaja){
+        //Tietokirjallisuuden katagorian toiminnot
+        if (ukrainajavenaja){
                 marker.setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
@@ -2176,8 +2242,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-
-            if (elokuvajateatteri){
+        if (elokuvajateatteri){
                 marker.setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
@@ -2206,8 +2271,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-
-            if (elamankerta){
+        if (elamankerta){
                 marker.setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
@@ -2235,7 +2299,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-            if (elamanviisaus){
+        if (elamanviisaus){
                 marker.setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
@@ -2263,7 +2327,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-            if (filosofia){
+        if (filosofia){
                 marker.setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
@@ -2292,8 +2356,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-
-            if (historia){
+        if (historia){
                 marker.setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
@@ -2321,7 +2384,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-            if (musiikki){
+        if (musiikki){
                 marker.setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
@@ -2350,8 +2413,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-
-            if (politiikka){
+        if (politiikka){
                 marker.setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
@@ -2380,8 +2442,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-
-            if (sanakirja){
+        if (sanakirja){
                 marker.setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
@@ -2410,7 +2471,7 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-            if (MainActivity.tiede) {
+        if (MainActivity.tiede) {
                 marker.setVisibility(View.VISIBLE);
                 RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
@@ -2440,8 +2501,93 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
+        if (lehdet){
+                marker.setVisibility(View.VISIBLE);
+                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
-            if (MainActivity.kiitoksia) {
+                markerRelativeLayout.leftMargin = 2600;
+                markerRelativeLayout.topMargin = 500;
+                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                //String x = getString(R.string.tiedpuhe);
+                MainActivity.textToSpeech.speak(getString(R.string.lehdpuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+                lehdet = false;
+                lehd0 = false;
+                lehd1 = false;
+                lehd2 = false;
+                lehd3 = false;
+                lehd4 = false;
+                lehd5 = false;
+
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
+            }
+        if (sarjakuvat){
+                marker.setVisibility(View.VISIBLE);
+                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+                markerRelativeLayout.leftMargin = 2600;
+                markerRelativeLayout.topMargin = 500;
+                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                //String x = getString(R.string.tiedpuhe);
+                MainActivity.textToSpeech.speak(getString(R.string.sarjapuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+                sarjakuvat = false;
+                sarja0 = false;
+                sarja1 = false;
+                sarja2 = false;
+                sarja3 = false;
+                sarja4 = false;
+                sarja5 = false;
+
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
+            }
+        if (pokkarit){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.pokkapuhe), TextToSpeech.QUEUE_FLUSH, null);
+            pokkarit = false;
+            pokka0 = false;
+            pokka1 = false;
+            pokka2 = false;
+            pokka3 = false;
+            pokka4 = false;
+            pokka5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (MainActivity.kiitoksia) {
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
                 //String x = getString(R.string.kiitos);
@@ -2467,7 +2613,7 @@ public class MainActivity extends AppCompatActivity {
                 restart();
             }
         }
-    }
+
     public void restart(){
 
         //Intent intent = getIntent()
@@ -2475,6 +2621,7 @@ public class MainActivity extends AppCompatActivity {
         //startActivity(getIntent());
         speechRecognizer.stopListening();
         textToSpeech.stop();
+        handler.removeCallbacksAndMessages(null);
         timer.cancel();
         recreate();
 
@@ -2532,10 +2679,18 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if(i == 0){
                     //english
+                    speechRecognizer.stopListening();
+                    textToSpeech.stop();
+                    handler.removeCallbacksAndMessages(null);
+                    timer.cancel();
                     setLocale("en");
                     recreate();
                 }else if(i == 1){
                     //Suomi
+                    speechRecognizer.stopListening();
+                    textToSpeech.stop();
+                    handler.removeCallbacksAndMessages(null);
+                    timer.cancel();
                     setLocale("fi");
                     recreate();
                 }

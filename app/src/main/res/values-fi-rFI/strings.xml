@@ -27,7 +27,7 @@
     <string name="otavpuhe">Jos menet tänne niin löydät Otava kirjaston.</string>
     <string name="aanipuhe">Jos menet tänne niin löydät äänikirjat.</string>
 
-    //Tietokirjallisuus puheet
+    <!-- Tietokirjallisuus puheet -->
     <string name="ukrvenapuhe">Jos menet tänne niin löydät Ukraina ja Venäjä kirjoja.</string>
     <string name="elokteatpuhe">Jos menet tänne niin löydät elokuva ja teatteri kirjoja.</string>
     <string name="elamankpuhe">Jos menet tänne niin löydät elämänkerta kirjoja.</string>
@@ -38,6 +38,10 @@
     <string name="politpuhe">Jos menet tänne löydät politiikka kirjoja.</string>
     <string name="sanakpuhe">Jos menet tänne niin löydät sanakirjat.</string>
     <string name="tiedpuhe">Jos menet tänne niin löydät tietokirjat.</string>
+
+    <string name="lehdpuhe">Jos menet tänne löydät lehdet.</string>
+    <string name="sarjapuhe">Jos menet tänne niin löydät sarjakuvat.</string>
+    <string name="pokkapuhe">Jos menet tänne niin löydät pokkarit</string>
 
     <string name="ohje">Kysy minulta mitä halua tietää klikaamalla minua tai valitse valmis nappi.</string>
     <string name="otsikko">Kirjakauppa</string>
@@ -100,52 +104,52 @@
 
     <!-- Kaunokirjallisuuden avain sanat -->
     <!-- Baabelit avainsanat -->
-    <string name="baabe0">Missä on baabeli</string>
-    <string name="baabe1">Onko missä baabeli</string>
+    <string name="baabe0">baabeli</string>
+    <string name="baabe1">Baabeli</string>
     <string name="baabe2">Missä baabeli</string>
     <string name="baabe3">missä on baabeli</string>
     <string name="baabe4">onko missä baabeli</string>
     <string name="baabe5">missä baabeli</string>
 
     <!-- Bundle avainsanat -->
-    <string name="bundl0">Missä on bundle</string>
-    <string name="bundl1">Onko missä bundle</string>
+    <string name="bundl0">bundle</string>
+    <string name="bundl1">Bundle</string>
     <string name="bundl2">Missä bundle</string>
     <string name="bundl3">missä on bundle</string>
     <string name="bundl4">onko missä bundle</string>
     <string name="bundl5">missä bundle</string>
 
     <!-- Essee avainsanat -->
-    <string name="essee0">Missä on essee</string>
-    <string name="essee1">Onko essee missä</string>
+    <string name="essee0">essee</string>
+    <string name="essee1">Essee</string>
     <string name="essee2">Missä essee</string>
     <string name="essee3">missä on essee</string>
     <string name="essee4">onko essee missä</string>
     <string name="essee5">missä essee</string>
 
     <!-- Kaunokirjat avainsanat -->
-    <string name="kauno0">Missä on kaunokirjallisuus</string>
-    <string name="kauno1">Onko kaunokirjallusuus missä</string>
+    <string name="kauno0">kaunokirjallisuus</string>
+    <string name="kauno1">Kaunokirjallusuus</string>
     <string name="kauno2">Missä kaunokirjallisuus</string>
     <string name="kauno3">missä on kaunokirjallisuus</string>
     <string name="kauno4">onko kaunokirjallusuus missä</string>
     <string name="kauno5">missä kaunokirjallisuus</string>
 
     <!-- Keltainen kirjasto avainsanat -->
-    <string name="kelta0">Missä on keltainen kirjasto</string>
-    <string name="kelta1">Onko keltainenkirjasto missä</string>
+    <string name="kelta0">keltainen kirjasto</string>
+    <string name="kelta1">Keltainen kirjasto</string>
     <string name="kelta2">Missä keltainen kirjasto</string>
     <string name="kelta3">missä on keltainen kirjasto</string>
     <string name="kelta4">onko keltainenkirjasto missä</string>
     <string name="kelta5">missä keltainen kirjasto</string>
 
     <!-- Kotimainen kaunokirjallisuus avainsanat -->
-    <string name="kotkauno0">Missä on kotimainen kaunokirjallisuus</string>
-    <string name="kotkauno1">Onko kotimainen kaunokirjallisuus missä</string>
-    <string name="kotkauno2">Missä kotimainen kaunokirjallisuus</string>
-    <string name="kotkauno3">missä on kotimainen kaunokirjallisuus</string>
-    <string name="kotkauno4">onko kotimainen kaunokirjallisuus missä</string>
-    <string name="kotkauno5">missä kotimainen kaunokirjallisuus</string>
+    <string name="kotkauno0">kotimainen kaunokirjallisuus</string>
+    <string name="kotkauno1">Kotimainen kaunokirjallisuus</string>
+    <string name="kotkauno2">suomalainen kaunokirjallisuus</string>
+    <string name="kotkauno3">Suomalainen kaunokirjallisuus</string>
+    <string name="kotkauno4">koti kaunokirjallisuus</string>
+    <string name="kotkauno5">Koti kaunokirjallisuus</string>
 
     <!-- Like kategorian avainsanat -->
     <string name="lik0">Missä on like</string>
@@ -156,16 +160,16 @@
     <string name="lik5">missä like</string>
 
     <!-- Otava kirjaston avainsanat -->
-    <string name="otav0">Missä on Otava</string>
-    <string name="otav1">Onko Otava missä</string>
+    <string name="otav0">Otava</string>
+    <string name="otav1">otava</string>
     <string name="otav2">Missä Otava</string>
     <string name="otav3">missä on Otava</string>
     <string name="otav4">onko Otava missä</string>
     <string name="otav5">missä Otava</string>
 
     <!-- Äänikirjojen avainsanat -->
-    <string name="aani0">Missä on äänikirja</string>
-    <string name="aani1">Onko äänikirjat missä</string>
+    <string name="aani0">äänikirja</string>
+    <string name="aani1">Äänikirja</string>
     <string name="aani2">Missä äänikirjat</string>
     <string name="aani3">missä on äänikirja</string>
     <string name="aani4">onko äänikirjat missä</string>
@@ -181,13 +185,13 @@
     <string name="fanta5">missä fantasia</string>
     <string name="fanta6">onko fantasia</string>
     <string name="fanta7">mistä löydän fantasia</string>
-    <string name="fanta8">missä on fantasia</string>
-    <string name="fanta9">löytää fantasia</string>
+    <string name="fanta8">Fantasia</string>
+    <string name="fanta9">fantasia</string>
 
+    <!-- Scifi avainsanoja -->
     <string name="scif0">scifi</string>
 
-
-
+    <!-- Runojen avainsanoja -->
     <string name="runo0">runo</string>
     <string name="runo1">runot</string>
     <string name="runo2">runoja</string>
@@ -195,6 +199,7 @@
     <string name="runo4">Runot</string>
     <string name="runo5">Runoja</string>
 
+    <!-- Rikos ja jännitys avainsanoja -->
     <string name="rikojan0">rikos</string>
     <string name="rikojan1">jännitys</string>
     <string name="rikojan2">Rikos</string>
@@ -202,72 +207,72 @@
 
     <!-- Tietokirjallisuus avainsanat -->
     <!-- Ukraina ja Venäjä avainsanat -->
-    <string name="ukrvena0">Missä on ukraina ja venäjä</string>
-    <string name="ukrvena1">Onko missä ukraina ja venäjä</string>
-    <string name="ukrvena2">Missä ukraina ja venäjä</string>
-    <string name="ukrvena3">missä on ukraina ja venäjä</string>
-    <string name="ukrvena4">onko missä ukraina ja venäjä</string>
-    <string name="ukrvena5">missä ukraina ja venäjä</string>
+    <string name="ukrvena0">Ukraina</string>
+    <string name="ukrvena1">Venäjä</string>
+    <string name="ukrvena2">Ukrainaa</string>
+    <string name="ukrvena3">Venäjää</string>
+    <string name="ukrvena4">uukraina</string>
+    <string name="ukrvena5">venjäjä</string>
 
     <!-- Elokuva ja teatteri avainsanat -->
-    <string name="elokteat0">Missä on elokuva ja teatteri</string>
-    <string name="elokteat1">Onko missä elokuva ja teatteri</string>
-    <string name="elokteat2">Missä elokuva ja teatteri</string>
-    <string name="elokteat3">missä on elokuva ja teatteri</string>
-    <string name="elokteat4">onko missä elokuva ja teatteri</string>
-    <string name="elokteat5">missä elokuva ja teatteri</string>
+    <string name="elokteat0">elokuva</string>
+    <string name="elokteat1">elokuvat</string>
+    <string name="elokteat2">elokuv</string>
+    <string name="elokteat3">teatteri</string>
+    <string name="elokteat4">teatterit</string>
+    <string name="elokteat5">teatter</string>
 
     <!-- Elämänkerta avainsanat -->
-    <string name="elamank0">Missä on elämänkerat</string>
-    <string name="elamank1">Onko missä elämänkerat</string>
-    <string name="elamank2">Missä elämänkerat</string>
-    <string name="elamank3">missä on elämänkerat</string>
-    <string name="elamank4">onko missä elämänkerat</string>
-    <string name="elamank5">missä elämänkerat</string>
+    <string name="elamank0">elämänkerrat</string>
+    <string name="elamank1">Elämänkerrat</string>
+    <string name="elamank2">elämä kerra</string>
+    <string name="elamank3">Elämä kerra</string>
+    <string name="elamank4">elämäkerrat</string>
+    <string name="elamank5">Elämäkerrat</string>
 
     <!-- Elämänviisaus avainsanat -->
-    <string name="elamanv0">Missä on elämänviisaus</string>
-    <string name="elamanv1">Onko missä elämänviisaus</string>
-    <string name="elamanv2">Missä elämänviisaus</string>
-    <string name="elamanv3">missä on elämänviisaus</string>
-    <string name="elamanv4">onko missä elämänviisaus</string>
-    <string name="elamanv5">missä elämänviisaus</string>
+    <string name="elamanv0">elämänviisaus</string>
+    <string name="elamanv1">Elämänviisaus</string>
+    <string name="elamanv2">elämä viisaus</string>
+    <string name="elamanv3">Elämä viisaus</string>
+    <string name="elamanv4">elämäviisaus</string>
+    <string name="elamanv5">Elämäviisaus</string>
 
     <!-- Filosofia avainsanat -->
-    <string name="filo0">Missä on filosofia</string>
-    <string name="filo1">Onko missä filosofia</string>
-    <string name="filo2">Missä filosofia</string>
-    <string name="filo3">missä on filosofia</string>
-    <string name="filo4">onko missä filosofia</string>
-    <string name="filo5">missä filosofia</string>
+    <string name="filo0">filosofia</string>
+    <string name="filo1">Filosofia</string>
+    <string name="filo2">filosofi</string>
+    <string name="filo3">Filosofi</string>
+    <string name="filo4">ilosofia</string>
+    <string name="filo5">Ilosofia</string>
 
     <!-- Historia avain sanat -->
-    <string name="hist0">Missä on historia</string>
-    <string name="hist1">Onko missä historia</string>
-    <string name="hist2">Missä historia</string>
-    <string name="hist3">missä on historia</string>
+    <string name="hist0">historia</string>
+    <string name="hist1">Historia</string>
+    <string name="hist2">istoria</string>
+    <string name="hist3">Istoria</string>
     <string name="hist4">onko missä historia</string>
     <string name="hist5">missä historia</string>
 
     <!-- Musiikki avainsanat -->
-    <string name="musii0">Missä on musiikki</string>
-    <string name="musii1">Onko missä musiikki</string>
-    <string name="musii2">Missä musiikki</string>
-    <string name="musii3">missä on musiikki</string>
+    <string name="musii0">musiikki</string>
+    <string name="musii1">Musiikki</string>
+    <string name="musii2">Musa</string>
+    <string name="musii3">musa</string>
     <string name="musii4">onko missä musiikki</string>
     <string name="musii5">missä musiikki</string>
 
     <!-- Politiikka avainsanat -->
-    <string name="polit0">Missä on politiikka</string>
-    <string name="polit1">Onko missä politiikka</string>
+    <string name="polit0">politiikka</string>
+    <string name="polit1">Politiikka</string>
     <string name="polit2">Missä politiikka</string>
     <string name="polit3">missä on politiikka</string>
     <string name="polit4">onko missä politiikka</string>
     <string name="polit5">missä politiikka</string>
 
     <!-- Sanakirja avainsanat -->
-    <string name="sanak0">Missä on sanakirjat</string>
-    <string name="sanak1">Onko missä sanakirjat</string>
+    <string name="sanak0">sanakirjat</string>
+    <string name="sanak1">Sanakirjat</string>
     <string name="sanak2">Missä sanakirjat</string>
     <string name="sanak3">missä on sanakirjat</string>
     <string name="sanak4">onko missä sanakirjat</string>
@@ -283,6 +288,29 @@
     <string name="tiet6">Tietokirjoja</string>
     <string name="tiet7">Tiedekirjoja</string>
 
+    <!-- Lehdet avainsanat -->
+    <string name="lehd0">lehdet</string>
+    <string name="lehd1">Lehdet</string>
+    <string name="lehd2">Missä lehdet</string>
+    <string name="lehd3">missä on lehdet</string>
+    <string name="lehd4">onko missä lehdet</string>
+    <string name="lehd5">missä lehdet</string>
+
+    <!-- Sarjakuvat avainsanat -->
+    <string name="sarja0">Sarjakuvat</string>
+    <string name="sarja1">sarjakuvat</string>
+    <string name="sarja2">Missä sarjakuvat</string>
+    <string name="sarja3">missä on sarjakuvat</string>
+    <string name="sarja4">onko missä sarjakuvat</string>
+    <string name="sarja5">missä sarjakuvat</string>
+
+    <!-- Pokkarit avainsanat -->
+    <string name="pokka0">pokkarit</string>
+    <string name="pokka1">Pokkarit</string>
+    <string name="pokka2">taskukirjat</string>
+    <string name="pokka3">Taskukirjat</string>
+    <string name="pokka4">onko missä pokkarit</string>
+    <string name="pokka5">missä pokkarit</string>
 
     <string name="kiits0">Kiitos</string>
     <string name="kiits1">kiitos</string>
