@@ -1,7 +1,6 @@
 package com.example.rosebottablet;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
@@ -31,11 +30,8 @@ import android.hardware.camera2.CameraMetadata;
 import android.hardware.camera2.CaptureRequest;
 import android.hardware.camera2.TotalCaptureResult;
 import android.hardware.camera2.params.StreamConfigurationMap;
-import android.location.GnssAntennaInfo;
 import android.media.Image;
 import android.media.ImageReader;
-import android.media.audiofx.PresetReverb;
-import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -47,6 +43,7 @@ import android.speech.tts.TextToSpeech;
 import android.util.Log;
 import android.util.Size;
 import android.util.SparseIntArray;
+import android.view.MotionEvent;
 import android.view.Surface;
 import android.view.TextureView;
 import android.view.View;
@@ -394,6 +391,49 @@ public class MainActivity extends AppCompatActivity {
     public boolean tunne4 = false;
     public boolean tunne5 = false;
 
+    //Elokuva avainsanat
+    //blueray avainsanat
+    public boolean bluer0;
+    public boolean bluer1;
+    public boolean bluer2;
+    public boolean bluer3;
+    public boolean bluer4;
+    public boolean bluer5;
+
+    //DVD avainsanat
+    public boolean dvd0;
+    public boolean dvd1;
+    public boolean dvd2;
+    public boolean dvd3;
+    public boolean dvd4;
+    public boolean dvd5;
+
+    //Elokuva klassikot avainsanat
+    public boolean elokla0;
+    public boolean elokla1;
+    public boolean elokla2;
+    public boolean elokla3;
+    public boolean elokla4;
+    public boolean elokla5;
+
+    //Kotimaiset elokuvat avainsanat
+    public boolean kotielo0;
+    public boolean kotielo1;
+    public boolean kotielo2;
+    public boolean kotielo3;
+    public boolean kotielo4;
+    public boolean kotielo5;
+
+    //TV-sarjat avainsanat
+    public boolean tvsarja0;
+    public boolean tvsarja1;
+    public boolean tvsarja2;
+    public boolean tvsarja3;
+    public boolean tvsarja4;
+    public boolean tvsarja5;
+
+
+
 
     public boolean lehd0 = false;
     public boolean lehd1 = false;
@@ -485,6 +525,7 @@ public class MainActivity extends AppCompatActivity {
     private HandlerThread mBackgroundThread;
 
     boolean ihminen = false;
+    boolean aloitettu = true;
 
 
     int kuvalasku;
@@ -541,6 +582,13 @@ public class MainActivity extends AppCompatActivity {
     public static boolean puuhaalapsille = false;
     public static boolean tunnetaidot = false;
 
+    //Elokuva booleanit
+    public static boolean blueray = false;
+    public static boolean dvd = false;
+    public static boolean elokuvaklassikot = false;
+    public static boolean kotimaisetelokuvat = false;
+    public static boolean tvsarjat = false;
+
 
     public static boolean lehdet = false;
     public static boolean sarjakuvat = false;
@@ -595,6 +643,13 @@ public class MainActivity extends AppCompatActivity {
     public Button lastpuuhbtn;
     public Button lasttunnebtn;
 
+    //Elokuva napit
+    public Button blueraybtn;
+    public Button dvdbtn;
+    public Button eloklatn;
+    public Button kotielobtn;
+    public Button tvsarjabtn;
+
     public Button shlang;
 
 
@@ -610,12 +665,9 @@ public class MainActivity extends AppCompatActivity {
 
     public Button ylakate;
 
-
     //Puheen tunnistus
     public static SpeechRecognizer speechRecognizer;
     public static Intent speechRecognizerIntent;
-
-
 
     CameraDevice.StateCallback stateCallback = new CameraDevice.StateCallback() {
         @Override
@@ -801,6 +853,13 @@ public class MainActivity extends AppCompatActivity {
         lastpuuhbtn = findViewById(R.id.lastpuuhbtn);
         lasttunnebtn = findViewById(R.id.lasttunnebtn);
 
+        //Elokuva nappien objektien haku
+        blueraybtn = findViewById(R.id.blueraybtn);
+        dvdbtn = findViewById(R.id.dvdbtn);
+        eloklatn = findViewById(R.id.eloklasbtn);
+        kotielobtn = findViewById(R.id.kotielobtn);
+        tvsarjabtn = findViewById(R.id.tvsarjabtn);
+
 
         voiceBtn = findViewById(R.id.voiceBtn);
         text = findViewById(R.id.text);
@@ -981,7 +1040,44 @@ public class MainActivity extends AppCompatActivity {
         lapsetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                speechRecognizer.stopListening();
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                textToSpeech.speak(getString(R.string.lastenkatepuhe), TextToSpeech.QUEUE_FLUSH, null);
+                //Poistetaan pääkategotia napit käytöstä.
+                kaunobtn.setVisibility(View.INVISIBLE);
+                tietogabtn.setVisibility(View.INVISIBLE);
+                lapsetbtn.setVisibility(View.INVISIBLE);
+                pokkarbtn.setVisibility(View.INVISIBLE);
+                sarjabtn.setVisibility(View.INVISIBLE);
+                elokuvbtn.setVisibility(View.INVISIBLE);
+                lehdetbtn.setVisibility(View.INVISIBLE);
+                englanbtn.setVisibility(View.INVISIBLE);
 
+                djecobtn.setVisibility(View.VISIBLE);
+                kidsbtn.setVisibility(View.VISIBLE);
+                lastelobtn.setVisibility(View.VISIBLE);
+                lastenbtn.setVisibility(View.VISIBLE);
+                lasttietbtn.setVisibility(View.VISIBLE);
+                last0_3btn.setVisibility(View.VISIBLE);
+                last4_6btn.setVisibility(View.VISIBLE);
+                last7_9btn.setVisibility(View.VISIBLE);
+                last10_12btn.setVisibility(View.VISIBLE);
+                lastmaisbtn.setVisibility(View.VISIBLE);
+                nuoretbtn.setVisibility(View.VISIBLE);
+                oppilobtn.setVisibility(View.VISIBLE);
+                pipsabtn.setVisibility(View.VISIBLE);
+                lastpuuhbtn.setVisibility(View.VISIBLE);
+                lasttunnebtn.setVisibility(View.VISIBLE);
+
+                ylakate.setVisibility(View.VISIBLE);
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
             }
         });
 
@@ -1006,7 +1102,36 @@ public class MainActivity extends AppCompatActivity {
         elokuvbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                speechRecognizer.stopListening();
+                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                textToSpeech.speak(getString(R.string.tietospeak), TextToSpeech.QUEUE_FLUSH, null);
+                //Poistetaan pääkategotia napit käytöstä.
+                kaunobtn.setVisibility(View.INVISIBLE);
+                tietogabtn.setVisibility(View.INVISIBLE);
+                lapsetbtn.setVisibility(View.INVISIBLE);
+                pokkarbtn.setVisibility(View.INVISIBLE);
+                sarjabtn.setVisibility(View.INVISIBLE);
+                elokuvbtn.setVisibility(View.INVISIBLE);
+                lehdetbtn.setVisibility(View.INVISIBLE);
+                englanbtn.setVisibility(View.INVISIBLE);
 
+                //Avataan alakategorianapit käyttöön.
+                blueraybtn.setVisibility(View.VISIBLE);
+                dvdbtn.setVisibility(View.VISIBLE);
+                eloklatn.setVisibility(View.VISIBLE);
+                kotielobtn.setVisibility(View.VISIBLE);
+                tvsarjabtn.setVisibility(View.VISIBLE);
+                lastelobtn.setVisibility(View.VISIBLE);
+
+                ylakate.setVisibility(View.VISIBLE);
+
+                Handler handler = new Handler();
+                handler.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        hahmo.setImageResource(R.drawable.androidukko);
+                    }
+                }, 3600);
             }
         });
 
@@ -1397,10 +1522,60 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Elokuva napit
+        //Blue-ray nappi
+        blueraybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                blueray = true;
+                vertaa();
+            }
+        });
+        //Dvd nappi
+        dvdbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                dvd = true;
+                vertaa();
+            }
+        });
+        //Elokuva klassikot nappi
+        eloklatn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                elokuvaklassikot = true;
+                vertaa();
+            }
+        });
+        //Kotimaiset elokuvat nappi
+        kotielobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                kotimaisetelokuvat = true;
+                vertaa();
+            }
+        });
+        //Tv-sarjat nappi
+        tvsarjabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                tvsarjat = true;
+                vertaa();
+            }
+        });
+
         //Ylä kategoria nappulat
         ylakate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                speechRecognizer.stopListening();
+                textToSpeech.stop();
+                textToSpeech.speak(getString(R.string.ylakatepuhe), TextToSpeech.QUEUE_FLUSH, null);
 
                 kaunobtn.setVisibility(View.VISIBLE);
                 tietogabtn.setVisibility(View.VISIBLE);
@@ -1437,6 +1612,28 @@ public class MainActivity extends AppCompatActivity {
                 politbtn.setVisibility(View.INVISIBLE);
                 sanakbtn.setVisibility(View.INVISIBLE);
 
+                djecobtn.setVisibility(View.INVISIBLE);
+                kidsbtn.setVisibility(View.INVISIBLE);
+                lastelobtn.setVisibility(View.INVISIBLE);
+                lastenbtn.setVisibility(View.INVISIBLE);
+                lasttietbtn.setVisibility(View.INVISIBLE);
+                last0_3btn.setVisibility(View.INVISIBLE);
+                last4_6btn.setVisibility(View.INVISIBLE);
+                last7_9btn.setVisibility(View.INVISIBLE);
+                last10_12btn.setVisibility(View.INVISIBLE);
+                lastmaisbtn.setVisibility(View.INVISIBLE);
+                nuoretbtn.setVisibility(View.INVISIBLE);
+                oppilobtn.setVisibility(View.INVISIBLE);
+                pipsabtn.setVisibility(View.INVISIBLE);
+                lastpuuhbtn.setVisibility(View.INVISIBLE);
+                lasttunnebtn.setVisibility(View.INVISIBLE);
+
+                blueraybtn.setVisibility(View.INVISIBLE);
+                dvdbtn.setVisibility(View.INVISIBLE);
+                eloklatn.setVisibility(View.INVISIBLE);
+                kotielobtn.setVisibility(View.INVISIBLE);
+                tvsarjabtn.setVisibility(View.INVISIBLE);
+
                 ylakate.setVisibility(View.INVISIBLE);
 
 
@@ -1444,6 +1641,24 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+
+
+        mainLayout.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View view, MotionEvent motionEvent) {
+                handler.removeCallbacksAndMessages(null);
+                if (aloitettu) {
+                    Handler handler1 = new Handler();
+                    handler1.postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            restart();
+                        }
+                    }, 2000);
+                }
+                return false;
+            }
+        });
 
     }
 
@@ -1568,7 +1783,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-
     /*public void otakuvia(){
 
                     timer.schedule(new TimerTask() {
@@ -1592,6 +1806,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void aloita() {
 
+            aloitettu = true;
             //Hakee stringin ja tuotaa sen puheeksi
             String x = getString(R.string.terve);
             textToSpeech.speak(x, TextToSpeech.QUEUE_FLUSH, null);
@@ -2054,6 +2269,48 @@ public class MainActivity extends AppCompatActivity {
         tunne4 = word.contains(getString(R.string.tunne4));
         tunne5 = word.contains(getString(R.string.tunne5));
 
+        //Elokuvat
+        //Blueray
+        bluer0 = word.contains(getString(R.string.bluer0));
+        bluer1 = word.contains(getString(R.string.bluer1));
+        bluer2 = word.contains(getString(R.string.bluer2));
+        bluer3 = word.contains(getString(R.string.bluer3));
+        bluer4 = word.contains(getString(R.string.bluer4));
+        bluer5 = word.contains(getString(R.string.bluer5));
+
+        //DVD
+        dvd0 = word.contains(getString(R.string.dvd0));
+        dvd1 = word.contains(getString(R.string.dvd1));
+        dvd2 = word.contains(getString(R.string.dvd2));
+        dvd3 = word.contains(getString(R.string.dvd3));
+        dvd4 = word.contains(getString(R.string.dvd4));
+        dvd5 = word.contains(getString(R.string.dvd5));
+
+        //Elokuva klassikot
+        elokla0 = word.contains(getString(R.string.elokla0));
+        elokla1 = word.contains(getString(R.string.elokla1));
+        elokla2 = word.contains(getString(R.string.elokla2));
+        elokla3 = word.contains(getString(R.string.elokla3));
+        elokla4 = word.contains(getString(R.string.elokla4));
+        elokla5 = word.contains(getString(R.string.elokla5));
+
+        //Kotimaiset elokuvat
+        kotielo0 = word.contains(getString(R.string.kotielo0));
+        kotielo1 = word.contains(getString(R.string.kotielo1));
+        kotielo2 = word.contains(getString(R.string.kotielo2));
+        kotielo3 = word.contains(getString(R.string.kotielo3));
+        kotielo4 = word.contains(getString(R.string.kotielo4));
+        kotielo5 = word.contains(getString(R.string.kotielo5));
+
+        //TV-sarjat
+        tvsarja0 = word.contains(getString(R.string.tvsarja0));
+        tvsarja1 = word.contains(getString(R.string.tvsarja1));
+        tvsarja2 = word.contains(getString(R.string.tvsarja2));
+        tvsarja3 = word.contains(getString(R.string.tvsarja3));
+        tvsarja4 = word.contains(getString(R.string.tvsarja4));
+        tvsarja5 = word.contains(getString(R.string.tvsarja5));
+
+        //Lehdet
         lehd0 = word.contains(getString(R.string.lehd0));
         lehd1 = word.contains(getString(R.string.lehd1));
         lehd2 = word.contains(getString(R.string.lehd2));
@@ -2061,6 +2318,7 @@ public class MainActivity extends AppCompatActivity {
         lehd4 = word.contains(getString(R.string.lehd4));
         lehd5 = word.contains(getString(R.string.lehd5));
 
+        //Sarjakuvat
         sarja0 = word.contains(getString(R.string.sarja0));
         sarja1 = word.contains(getString(R.string.sarja1));
         sarja2 = word.contains(getString(R.string.sarja2));
@@ -2068,6 +2326,7 @@ public class MainActivity extends AppCompatActivity {
         sarja4 = word.contains(getString(R.string.sarja4));
         sarja5 = word.contains(getString(R.string.sarja5));
 
+        //Pokkarit
         pokka0 = word.contains(getString(R.string.pokka0));
         pokka1 = word.contains(getString(R.string.pokka1));
         pokka2 = word.contains(getString(R.string.pokka2));
@@ -2242,6 +2501,26 @@ public class MainActivity extends AppCompatActivity {
             vertaa();
         } else if (tunne0 || tunne1 || tunne2 || tunne3 || tunne4 || tunne5) {
             tunnetaidot = true;
+            laskuri = 0;
+            vertaa();
+        } else if (bluer0 || bluer1 || bluer2 || bluer3 || bluer4 || bluer5){
+            blueray = true;
+            laskuri = 0;
+            vertaa();
+        } else if (dvd0 || dvd1 || dvd2 || dvd3 || dvd4 || dvd5){
+            dvd = true;
+            laskuri = 0;
+            vertaa();
+        } else if (elokla0 || elokla1 || elokla2 || elokla3 || elokla4 || elokla5){
+            elokuvaklassikot = true;
+            laskuri = 0;
+            vertaa();
+        } else if (kotielo0 || kotielo1 || kotielo2 || kotielo3 || kotielo4 || kotielo5){
+            kotimaisetelokuvat = true;
+            laskuri = 0;
+            vertaa();
+        } else if (tvsarja0 || tvsarja1 || tvsarja2 || tvsarja3 || tvsarja4 || tvsarja5){
+            tvsarjat = true;
             laskuri = 0;
             vertaa();
         } else if (sijainti0 || sijainti1 || sijainti2 || sijainti3) {
@@ -3545,6 +3824,148 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 3600);
         }
+
+        //Elokuva kategoria toiminnot
+        if (blueray){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.blueraypuhe), TextToSpeech.QUEUE_FLUSH, null);
+            blueray = false;
+            bluer0 = false;
+            bluer1 = false;
+            bluer2 = false;
+            bluer3 = false;
+            bluer4 = false;
+            bluer5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (dvd){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.dvdpuhe), TextToSpeech.QUEUE_FLUSH, null);
+            dvd = false;
+            dvd0 = false;
+            dvd1 = false;
+            dvd2 = false;
+            dvd3 = false;
+            dvd4 = false;
+            dvd5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (elokuvaklassikot){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.eloklapuhe), TextToSpeech.QUEUE_FLUSH, null);
+            elokuvaklassikot = false;
+            elokla0 = false;
+            elokla1 = false;
+            elokla2 = false;
+            elokla3 = false;
+            elokla4 = false;
+            elokla5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (kotimaisetelokuvat){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.kotielopuhe), TextToSpeech.QUEUE_FLUSH, null);
+            kotimaisetelokuvat = false;
+            kotielo0 = false;
+            kotielo1 = false;
+            kotielo2 = false;
+            kotielo3 = false;
+            kotielo4 = false;
+            kotielo5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (tvsarjat){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.tvsarjapuhe), TextToSpeech.QUEUE_FLUSH, null);
+            tvsarjat = false;
+            tvsarja0 = false;
+            tvsarja1 = false;
+            tvsarja2 = false;
+            tvsarja3 = false;
+            tvsarja4 = false;
+            tvsarja5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
         }
 
     public void restart(){
@@ -3556,6 +3977,7 @@ public class MainActivity extends AppCompatActivity {
         textToSpeech.stop();
         handler.removeCallbacksAndMessages(null);
         timer.cancel();
+        aloitettu = false;
         recreate();
 
     }

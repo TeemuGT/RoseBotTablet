@@ -45,10 +45,10 @@
     <string name="lastelopuhe">Jos menet tänne niin löydät lasten elokuvat.</string>
     <string name="lastenpuhe">Jos menet tänne niin löydät lastenkirjat.</string>
     <string name="lasttiepuhe">Jos menet tänne niin löydät lasten tietokirjat.</string>
-    <string name="last0_3puhe">Jos menet tänne niin löydät lastenkirjat 0–3 vuotiaille.</string>
-    <string name="last4_6puhe">Jos menet tänne niin löydät lastenkirjat 4–6 vuotiaille.</string>
-    <string name="last7_9puhe">Jos menet tänne niin löydät lastenkirjat 7–9 vuotiaille.</string>
-    <string name="last10_12puhe">Jos menet tänne niin löydät lastenkirjat 10–12 vuotiaille.</string>
+    <string name="last0_3puhe">Jos menet tänne niin löydät lastenkirjat vauvasta kolmeen vuotiaille.</string>
+    <string name="last4_6puhe">Jos menet tänne niin löydät lastenkirjat neljästä kuuteen vuotiaille.</string>
+    <string name="last7_9puhe">Jos menet tänne niin löydät lastenkirjat seitsemästä yhdeksään vuotiaille.</string>
+    <string name="last10_12puhe">Jos menet tänne niin löydät lastenkirjat kymmenestä kahteentoista vuotiaille.</string>
     <string name="maisapuhe">Jos menet tänne niin löydät Maisa lastenkirjat.</string>
     <string name="nuoretpuhe">Jos menet tänne niin löydät nuorten kirjat.</string>
     <string name="oppilopuhe">Jos menet tänne niin löydät lasten oppimis kirjat.</string>
@@ -56,9 +56,19 @@
     <string name="laptpuuhpuhe">Jos menet tänne niin löydät lapsille puuhaa.</string>
     <string name="tunnepuhe">Jos menet tänne niin löydät lasten tunnetaitoihin liittyviä kirjoja.</string>
 
+    <!-- Elokuva puheet -->
+    <string name="blueraypuhe">Jos menet tänne niin löydät Blueray elokuvat.</string>
+    <string name="dvdpuhe">Jos menet tänne niin löydät DVD elokuvat.</string>
+    <string name="eloklapuhe">Jos menet tänne niin löydät elokuva klassikot.</string>
+    <string name="kotielopuhe">Jos menet tänne niin löydät kotimaiset elokuvat.</string>
+    <string name="tvsarjapuhe">Jos menet tänne niin löydät TV-sarjat.</string>
+
     <string name="lehdpuhe">Jos menet tänne löydät lehdet.</string>
     <string name="sarjapuhe">Jos menet tänne niin löydät sarjakuvat.</string>
     <string name="pokkapuhe">Jos menet tänne niin löydät pokkarit</string>
+    <string name="lastenkatepuhe">Täältä voit valita haluamasi lastenkirjallisuus kategorian.</string>
+
+    <string name="ylakatepuhe">Täältä voit valita haluamasi yläkategorian tai aiheen.</string>
 
     <string name="ohje">Kysy minulta mitä halua tietää klikaamalla minua tai valitse valmis nappi.</string>
     <string name="otsikko">Kirjakauppa</string>
@@ -119,6 +129,13 @@
     <string name="pipsabtn">Pipsa Possu</string>
     <string name="lastpuuhbtn">Puuhaa lapisille</string>
     <string name="lasttunnebtn">Tunnetaidot</string>
+
+    <!-- Elokuva napit -->
+    <string name="blueraybtn">Blue-Ray</string>
+    <string name="dvdbtn">DVD</string>
+    <string name="eloklasbtn">Elokuva klassikot</string>
+    <string name="kotielobtn">Kotimaiset elokuvat</string>
+    <string name="tvsarjabtn">TV-sarjat</string>
 
 
     <string name="kesk0">Mitä sinulle kuuluu</string>
@@ -447,8 +464,8 @@
     <string name="pipsa1">pipsa possu</string>
     <string name="pipsa2">possu pipsa</string>
     <string name="pipsa3">Possu pipsa</string>
-    <string name="pipsa4">pipsa possu</string>
-    <string name="pipsa5">possu pipsa</string>
+    <string name="pipsa4">Pipsa Possu</string>
+    <string name="pipsa5">possu Pipsa</string>
 
     <!-- Puuhaa lapsille avainsanat -->
     <string name="lastpuuh0">Puuhaa lapsi</string>
@@ -466,6 +483,46 @@
     <string name="tunne4">Käsitellä tunteita</string>
     <string name="tunne5">käsitellä tunteita</string>
 
+    <!--Elokuvien avaisanat -->
+    <!-- Blueray avainsanat -->
+    <string name="bluer0">Blueray</string>
+    <string name="bluer1">blueray</string>
+    <string name="bluer2">Blueray</string>
+    <string name="bluer3">Blueray</string>
+    <string name="bluer4">Blueray</string>
+    <string name="bluer5">Blueray</string>
+
+    <!-- DVD avainsanat -->
+    <string name="dvd0">DVD</string>
+    <string name="dvd1">dvd</string>
+    <string name="dvd2">Dvd</string>
+    <string name="dvd3">DVd</string>
+    <string name="dvd4">dDV</string>
+    <string name="dvd5">DvD</string>
+
+    <!-- Elokuva klassikot avainsanat -->
+    <string name="elokla0">Klassikko elokuva</string>
+    <string name="elokla1">klassikko elokuva</string>
+    <string name="elokla2">Elokuva klassikko</string>
+    <string name="elokla3">elokuva klassikko</string>
+    <string name="elokla4">Elokuva klassikko</string>
+    <string name="elokla5">Elokuva klassikko</string>
+
+    <!-- Kotimaiset elokuvat avainsanat -->
+    <string name="kotielo0">Kotimainen elokuva</string>
+    <string name="kotielo1">kotimainen elokuva</string>
+    <string name="kotielo2">Kotimaiset elokuva</string>
+    <string name="kotielo3">kotimaiset elokuva</string>
+    <string name="kotielo4">suomalainen elokuva</string>
+    <string name="kotielo5">Suomalainen elokuva</string>
+
+    <!-- TV-sarja avainsanat -->
+    <string name="tvsarja0">TV sarja</string>
+    <string name="tvsarja1">tv sarja</string>
+    <string name="tvsarja2">Tv sarja</string>
+    <string name="tvsarja3">TV-sarja</string>
+    <string name="tvsarja4">tv-sarja</string>
+    <string name="tvsarja5">Tv-sarja</string>
 
 
     <string name="kiits0">Kiitos</string>
