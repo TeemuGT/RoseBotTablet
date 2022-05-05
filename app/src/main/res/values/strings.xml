@@ -39,6 +39,23 @@
     <string name="sanakpuhe">If you go here you will find dictionaries.</string>
     <string name="tiedpuhe">If you go here you will find science books.</string>
 
+    <!-- Lastenkirjat puheet -->
+    <string name="djecopuhe">If you go here you will find Djeco children\'s books.</string>
+    <string name="kidspuhe">If you go here you will find children\'s books in English.</string>
+    <string name="lastelopuhe">If you go here you will find children\'s movies.</string>
+    <string name="lastenpuhe">If you go here you will find children\'s books.</string>
+    <string name="lasttiepuhe">If you go here you will find Children\'s Nonfiction.</string>
+    <string name="last0_3puhe">If you go here you will find children\'s books for 0–3 year olds.</string>
+    <string name="last4_6puhe">If you go here you will find children\'s books for 4–6 year olds.</string>
+    <string name="last7_9puhe">If you go here you will find children\'s books for 7–9 year olds.</string>
+    <string name="last10_12puhe">If you go here you will find children\'s books for 10–12 year olds.</string>
+    <string name="maisapuhe">If you go here you will find Maisa\'s children's books.</string>
+    <string name="nuoretpuhe">If you go here you will find books for young people.</string>
+    <string name="oppilopuhe">If you go here you will find children’s learning books.</string>
+    <string name="pipsapuhe">If you go here then you will find children\'s Pipsa Possu books.</string>
+    <string name="laptpuuhpuhe">If you go here you will find something to do for the kids.</string>
+    <string name="tunnepuhe">If you go here you will find books related to children\'s emotional skills.</string>
+
     <string name="lehdpuhe">If you go here you will find magazines.</string>
     <string name="sarjapuhe">If you go here you will find comics.</string>
     <string name="pokkapuhe">If you go here you will find paperback</string>
@@ -60,7 +77,7 @@
     <string name="lehdtbtn">Magazines</string>
     <string name="pokkaritbtn">Pokkarit</string>
 
-    <!-- KAunokirjallisuus napit -->
+    <!-- Kaunokirjallisuus napit -->
     <string name="baabelbtn">Babylon</string>
     <string name="bundlebtn">Bundle</string>
     <string name="esseetbtn">Essay</string>
@@ -86,6 +103,23 @@
     <string name="politbtn">Policy</string>
     <string name="sanakbtn">Dictionaries</string>
     <string name="tietobtn">Science</string>
+
+    <!-- Lastenkirjat napit -->
+    <string name="djecobtn">Djeco</string>
+    <string name="kidsbtn">Children\'s books in English</string>
+    <string name="lastelobtn">Kids\' movies</string>
+    <string name="lastenbtn">Children\'s books</string>
+    <string name="lasttietbtn">Children\'s Nonfiction</string>
+    <string name="last0_3btn">Children\'s books for 0-3 year olds</string>
+    <string name="last4_6btn">Children\'s books for 4-6 year olds</string>
+    <string name="last7_9btn">Children\'s books for 7-9 year olds</string>
+    <string name="last10_12btn">Children\'s books for 10-12 year olds</string>
+    <string name="lastmaisbtn">Maisa</string>
+    <string name="nuoretbtn">Young people</string>
+    <string name="oppilobtn">Learning with joy</string>
+    <string name="pipsabtn">Pipsa Possu</string>
+    <string name="lastpuuhbtn">Fun for children</string>
+    <string name="lasttunnebtn">Emotional skills</string>
 
 
     <string name="kesk0">How are you</string>
@@ -325,4 +359,125 @@
     <string name="pokka3">where are the paperback</string>
     <string name="pokka4">is where the paperback</string>
     <string name="pokka5">"where the paperback "</string>
+
+    <!-- Lasten kirjat avainsanat -->
+    <!-- Djeco avainsanat -->
+    <string name="djeco0">Djeco</string>
+    <string name="djeco1">djeco</string>
+    <string name="djeco2">Djeko</string>
+    <string name="djeco3">djeko</string>
+    <string name="djeco4">jeko</string>
+    <string name="djeco5">Jeko</string>
+
+    <!-- Englanninkieliset lastenkirjat avainsanat -->
+    <string name="kids0">englanninkieliset lasten</string>
+    <string name="kids1">Englenninkieliset lasten</string>
+    <string name="kids2">lastenkirjat englanniksi</string>
+    <string name="kids3">Lastenkirjat Englanniksi</string>
+    <string name="kids4">Lasten englanti</string>
+    <string name="kids5">lasten englanti</string>
+
+    <!-- Lasten elokuvat avainsanat -->
+    <string name="lastelo0">Lasten elokuva</string>
+    <string name="lastelo1">lasten elokuva</string>
+    <string name="lastelo2">Lasten leffa</string>
+    <string name="lastelo3">lasten leffa</string>
+    <string name="lastelo4">Lapsien elokuva</string>
+    <string name="lastelo5">lapsien elokuva</string>
+
+    <!-- Lasten kirjat avainsanat -->
+    <string name="lasten0">Lasten</string>
+    <string name="lasten1">lasten</string>
+    <string name="lasten2">Lapsien</string>
+    <string name="lasten3">lapsien</string>
+    <string name="lasten4">Lapislle</string>
+    <string name="lasten5">lapsille</string>
+
+    <!-- Lasten tietokirjat avainsanat -->
+    <string name="lasttiet0">Lasten tieto</string>
+    <string name="lasttiet1">lasten tieto</string>
+    <string name="lasttiet2">Lapsien tieto</string>
+    <string name="lasttiet3">lapsien tieto</string>
+    <string name="lasttiet4">Tietokirjoja lapsi</string>
+    <string name="lasttiet5">tietokirjoja lapsi</string>
+
+    <!-- Lasten kirjat 0-3 vuotiaille aviansanat-->
+    <string name="last0_30">0–3 vuotiaiden</string>
+    <string name="last0_31">0–3 vuotiaille</string>
+    <string name="last0_32">1 vuotia</string>
+    <string name="last0_33">2 vuotia</string>
+    <string name="last0_34">3 vuotia</string>
+    <string name="last0_35">alle 3 vuotia</string>
+
+    <!-- Lastenkirjat 4-6 vuotiaille avainsanat -->
+    <string name="last4_60">4–6 vuotiaiden</string>
+    <string name="last4_61">4–6 vuotiaille</string>
+    <string name="last4_62">4 vuotia</string>
+    <string name="last4_63">5 vuotia</string>
+    <string name="last4_64">6 vuotia</string>
+    <string name="last4_65">alle 6 vuotia</string>
+
+    <!-- Lasten kirjat 7-9 vuotiaille avainsanat -->
+    <string name="last7_90">7–9 vuotiaiden</string>
+    <string name="last7_91">7–9 vuotialle</string>
+    <string name="last7_92">7 vuotia</string>
+    <string name="last7_93">8 vuotia</string>
+    <string name="last7_94">9 vuotia</string>
+    <string name="last7_95">alle 9 vuotia</string>
+
+    <!-- Lastenkirjat 10-12 vuotiaille avainsanat -->
+    <string name="last10_120">10–12 vuotiaiden</string>
+    <string name="last10_121">10–12 vuotiaille</string>
+    <string name="last10_122">10 vuotia</string>
+    <string name="last10_123">11 vuotia</string>
+    <string name="last10_124">12 vuotia</string>
+    <string name="last10_125">alle 12 vuotia</string>
+
+    <!-- Lasten kirjat Maisa avainsanat -->
+    <string name="maisa0">Maisa</string>
+    <string name="maisa1">maisa</string>
+    <string name="maisa2">Maisa</string>
+    <string name="maisa3">Maisa</string>
+    <string name="maisa4">maisa</string>
+    <string name="maisa5">maisa</string>
+
+    <!-- Nuorten kirjat avainsanat -->
+    <string name="nuoret0">Nuoret</string>
+    <string name="nuoret1">nuoret</string>
+    <string name="nuoret2">Nuorille</string>
+    <string name="nuoret3">nuorille</string>
+    <string name="nuoret4">Nuorten</string>
+    <string name="nuoret5">nuorten</string>
+
+    <!-- Oppi ja ilo avainsanat -->
+    <string name="oppilo0">Lasten oppiminen</string>
+    <string name="oppilo1">lasten oppiminen</string>
+    <string name="oppilo2">oppi kirja</string>
+    <string name="oppilo3">Oppi kirja</string>
+    <string name="oppilo4">ilolla oppi</string>
+    <string name="oppilo5">Illolla oppi</string>
+
+    <!-- Pipsa possu avainsanat -->
+    <string name="pipsa0">Pipsa possu</string>
+    <string name="pipsa1">pipsa possu</string>
+    <string name="pipsa2">possu pipsa</string>
+    <string name="pipsa3">Possu pipsa</string>
+    <string name="pipsa4">pipsa possu</string>
+    <string name="pipsa5">possu pipsa</string>
+
+    <!-- Puuhaa lapsille avainsanat -->
+    <string name="lastpuuh0">Puuhaa lapsi</string>
+    <string name="lastpuuh1">puuhaa lapsi</string>
+    <string name="lastpuuh2">lapsille puuha</string>
+    <string name="lastpuuh3">Lapsille puuha</string>
+    <string name="lastpuuh4">Lapsien puuha</string>
+    <string name="lastpuuh5">lapsien puuha</string>
+
+    <!-- Tunnetaidot lapset avainsanat -->
+    <string name="tunne0">Tunnetaidot</string>
+    <string name="tunne1">tunnetaidot</string>
+    <string name="tunne2">Tunteiden käsittely</string>
+    <string name="tunne3">tunteiden käsittely</string>
+    <string name="tunne4">Käsitellä tunteita</string>
+    <string name="tunne5">käsitellä tunteita</string>
 </resources>

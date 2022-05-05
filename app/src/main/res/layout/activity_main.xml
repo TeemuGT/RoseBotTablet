@@ -96,11 +96,12 @@
 
     <ImageView
         android:id="@+id/hahmo"
-
         android:layout_width="800dp"
         android:layout_height="900dp"
-
-        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-7dp"
+        android:layout_marginEnd="350dp"
         android:src="@drawable/androidukko"
         android:visibility="visible" />
 
@@ -585,6 +586,216 @@
         android:textSize="12sp"
         android:visibility="invisible" />
 
+    <!-- Lastenkirjat napit -->
+    <Button
+        android:id="@+id/djecobtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="920dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/djecobtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/kidsbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="770dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/kidsbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/lastelobtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="620dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/lastelobtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/lastenbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/lastenbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/lasttietbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/lasttietbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/last0_3btn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/last0_3btn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/last4_6btn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/last4_6btn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/last7_9btn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="920dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/last7_9btn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/last10_12btn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/last10_12btn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/lastmaisbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/lastmaisbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/nuoretbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="620dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/nuoretbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/oppilobtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/oppilobtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/pipsabtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="770dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/pipsabtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/lastpuuhbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="770dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/lastpuuhbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/lasttunnebtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="770dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/lasttunnebtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+
     <TextView
         android:id="@+id/text1"
         android:layout_width="291dp"
@@ -597,7 +808,7 @@
         android:text="@string/ohje"
         android:textColor="@color/black"
         android:textSize="20dp"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/text"

@@ -34,6 +34,7 @@ import android.hardware.camera2.params.StreamConfigurationMap;
 import android.location.GnssAntennaInfo;
 import android.media.Image;
 import android.media.ImageReader;
+import android.media.audiofx.PresetReverb;
 import android.net.wifi.p2p.WifiP2pManager;
 import android.os.Build;
 import android.os.Bundle;
@@ -272,6 +273,128 @@ public class MainActivity extends AppCompatActivity {
     public boolean tiede6 = false;
     public boolean tiede7 = false;
 
+    //Lastenkirjat avainsanat
+    //Djeco avainsanat
+    public boolean djeco0 = false;
+    public boolean djeco1 = false;
+    public boolean djeco2 = false;
+    public boolean djeco3 = false;
+    public boolean djeco4 = false;
+    public boolean djeco5 = false;
+
+    //englannin kieliset lastenkirjat avainsanat
+    public boolean kids0 = false;
+    public boolean kids1 = false;
+    public boolean kids2 = false;
+    public boolean kids3 = false;
+    public boolean kids4 = false;
+    public boolean kids5 = false;
+
+    //Lasten elokuvat avainsanat
+    public boolean lastelo0 = false;
+    public boolean lastelo1 = false;
+    public boolean lastelo2 = false;
+    public boolean lastelo3 = false;
+    public boolean lastelo4 = false;
+    public boolean lastelo5 = false;
+
+    //Lastenkirjat avainsanat
+    public boolean lasten0 = false;
+    public boolean lasten1 = false;
+    public boolean lasten2 = false;
+    public boolean lasten3 = false;
+    public boolean lasten4 = false;
+    public boolean lasten5 = false;
+
+    //Lastentietokirjat avainsanat
+    public boolean lasttiet0 = false;
+    public boolean lasttiet1 = false;
+    public boolean lasttiet2 = false;
+    public boolean lasttiet3 = false;
+    public boolean lasttiet4 = false;
+    public boolean lasttiet5 = false;
+
+    //Lastenkirjat 0-3 vuotiaille avainsanat
+    public boolean last0_30 = false;
+    public boolean last0_31 = false;
+    public boolean last0_32 = false;
+    public boolean last0_33 = false;
+    public boolean last0_34 = false;
+    public boolean last0_35 = false;
+
+    //Lastenkirjat 4-6 vuotiaille avainsanat
+    public boolean last4_60 = false;
+    public boolean last4_61 = false;
+    public boolean last4_62 = false;
+    public boolean last4_63 = false;
+    public boolean last4_64 = false;
+    public boolean last4_65 = false;
+
+    //Lasten kirjat 7-9 vuotiaille avainsanat
+    public boolean last7_90 = false;
+    public boolean last7_91 = false;
+    public boolean last7_92 = false;
+    public boolean last7_93 = false;
+    public boolean last7_94 = false;
+    public boolean last7_95 = false;
+
+    //Lastenkirjat 10-12 vuotiaille avainsanat
+    public boolean last10_120 = false;
+    public boolean last10_121 = false;
+    public boolean last10_122 = false;
+    public boolean last10_123 = false;
+    public boolean last10_124 = false;
+    public boolean last10_125 = false;
+
+    //Lasten kirjat Maisa avainsanat
+    public boolean maisa0 = false;
+    public boolean maisa1 = false;
+    public boolean maisa2 = false;
+    public boolean maisa3 = false;
+    public boolean maisa4 = false;
+    public boolean maisa5 = false;
+
+    //Nuorten kirjat avainsanat
+    public boolean nuoret0 = false;
+    public boolean nuoret1 = false;
+    public boolean nuoret2 = false;
+    public boolean nuoret3 = false;
+    public boolean nuoret4 = false;
+    public boolean nuoret5 = false;
+
+    //Oppi ja ilo avainsanat
+    public boolean oppilo0 = false;
+    public boolean oppilo1 = false;
+    public boolean oppilo2 = false;
+    public boolean oppilo3 = false;
+    public boolean oppilo4 = false;
+    public boolean oppilo5 = false;
+
+    //Pipsa possu avainsanat
+    public boolean pipsa0 = false;
+    public boolean pipsa1 = false;
+    public boolean pipsa2 = false;
+    public boolean pipsa3 = false;
+    public boolean pipsa4 = false;
+    public boolean pipsa5 = false;
+
+    //Puuhaa lapsille avainsanat
+    public boolean lastpuuh0 = false;
+    public boolean lastpuuh1 = false;
+    public boolean lastpuuh2 = false;
+    public boolean lastpuuh3 = false;
+    public boolean lastpuuh4 = false;
+    public boolean lastpuuh5 = false;
+
+    //Tunnetaidot lapset avainsanat
+    public boolean tunne0 = false;
+    public boolean tunne1 = false;
+    public boolean tunne2 = false;
+    public boolean tunne3 = false;
+    public boolean tunne4 = false;
+    public boolean tunne5 = false;
+
+
     public boolean lehd0 = false;
     public boolean lehd1 = false;
     public boolean lehd2 = false;
@@ -401,6 +524,24 @@ public class MainActivity extends AppCompatActivity {
     public static boolean sanakirja = false;
     public static boolean tiede = false;
 
+    //Lastenkirjat booleanit
+    public static boolean djeco = false;
+    public static boolean kids = false;
+    public static boolean lastenelokuvat = false;
+    public static boolean lastenkirjat = false;
+    public static boolean lastentietikirjat = false;
+    public static boolean lastenkirjat0_3 = false;
+    public static boolean lastenkirjat4_6= false;
+    public static boolean lastenkirjat7_9 = false;
+    public static boolean lastenkirjat10_12 = false;
+    public static boolean maisa = false;
+    public static boolean nuoret = false;
+    public static boolean oppijailo = false;
+    public static boolean pipsapossu = false;
+    public static boolean puuhaalapsille = false;
+    public static boolean tunnetaidot = false;
+
+
     public static boolean lehdet = false;
     public static boolean sarjakuvat = false;
     public static boolean pokkarit = false;
@@ -437,6 +578,22 @@ public class MainActivity extends AppCompatActivity {
     public Button sanakbtn;
     public Button tietobtn;
 
+    //Lastenkirjat napit
+    public Button djecobtn;
+    public Button kidsbtn;
+    public Button lastelobtn;
+    public Button lastenbtn;
+    public Button lasttietbtn;
+    public Button last0_3btn;
+    public Button last4_6btn;
+    public Button last7_9btn;
+    public Button last10_12btn;
+    public Button lastmaisbtn;
+    public Button nuoretbtn;
+    public Button oppilobtn;
+    public Button pipsabtn;
+    public Button lastpuuhbtn;
+    public Button lasttunnebtn;
 
     public Button shlang;
 
@@ -488,7 +645,23 @@ public class MainActivity extends AppCompatActivity {
         //Valitu kieli
         loadLocale();
 
-        otakuvia();
+        timer.schedule(new TimerTask() {
+            @Override
+            public void run() {
+                //what you want to do
+                if (!ihminen) {
+                    kuvalasku++;
+                    takePicture();
+                    Log.e(String.valueOf(LOG_TAG), "Kuva numero " + kuvalasku);
+                }if (ihminen) {
+                    timer.cancel();
+                }
+            }
+        }, 0, 2000);
+
+
+
+        //otakuvia();
         setContentView(R.layout.activity_main);
 
 
@@ -610,6 +783,23 @@ public class MainActivity extends AppCompatActivity {
         politbtn = findViewById(R.id.politbtn);
         sanakbtn = findViewById(R.id.sanakbtn);
         tietobtn = findViewById(R.id.tietobtn);
+
+        //Lastenkirja nappien objektien haku
+        djecobtn = findViewById(R.id.djecobtn);
+        kidsbtn = findViewById(R.id.kidsbtn);
+        lastelobtn = findViewById(R.id.lastelobtn);
+        lastenbtn = findViewById(R.id.lastenbtn);
+        lasttietbtn = findViewById(R.id.lasttietbtn);
+        last0_3btn = findViewById(R.id.last0_3btn);
+        last4_6btn = findViewById(R.id.last4_6btn);
+        last7_9btn = findViewById(R.id.last7_9btn);
+        last10_12btn = findViewById(R.id.last10_12btn);
+        lastmaisbtn = findViewById(R.id.lastmaisbtn);
+        nuoretbtn = findViewById(R.id.nuoretbtn);
+        oppilobtn = findViewById(R.id.oppilobtn);
+        pipsabtn = findViewById(R.id.pipsabtn);
+        lastpuuhbtn = findViewById(R.id.lastpuuhbtn);
+        lasttunnebtn = findViewById(R.id.lasttunnebtn);
 
 
         voiceBtn = findViewById(R.id.voiceBtn);
@@ -1070,6 +1260,143 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Lastenkirjat napit
+        //Djeco nappi
+        djecobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                djeco = true;
+                vertaa();
+            }
+        });
+        //Englanninkieliset lastenkirjat nappi
+        kidsbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                kids = true;
+                vertaa();
+            }
+        });
+        //Lasten elokuvat nappi
+        lastelobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                lastenelokuvat = true;
+                vertaa();
+            }
+        });
+        //Lasten kirjat nappi
+        lastenbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                lastenkirjat = true;
+                vertaa();
+            }
+        });
+        //Lasten tietokirjat nappi
+        lasttietbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                lastentietikirjat = true;
+                vertaa();
+            }
+        });
+        //Lasten kirjat 0-3 vuotiaille nappi
+        last0_3btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                lastenkirjat0_3 = true;
+                vertaa();
+            }
+        });
+        //Lasten kirjat 4-6 vuotiaille nappi
+        last4_6btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                lastenkirjat4_6 = true;
+                vertaa();
+            }
+        });
+        //Lastenkirjat 7-9 vuotiaille nappi
+        last7_9btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                lastenkirjat7_9 = true;
+                vertaa();
+            }
+        });
+        //Lastenkirjat 10-12 vuotiaille nappi
+        last10_12btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                lastenkirjat10_12 = true;
+                vertaa();
+            }
+        });
+        //Maisa lastenkirjat nappi
+        lastmaisbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                maisa = true;
+                vertaa();
+            }
+        });
+        //Nuorten kirjat nappi
+        nuoretbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                nuoret = true;
+                vertaa();
+            }
+        });
+        //Lastenkirjat oppi ja ilo nappi
+        oppilobtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                oppijailo = true;
+                vertaa();
+            }
+        });
+        //Pipsa possu lastenkirjat nappi
+        pipsabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                pipsapossu = true;
+                vertaa();
+            }
+        });
+        //Puuhaa lapsille nappi
+        lastpuuhbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                puuhaalapsille = true;
+                vertaa();
+            }
+        });
+        //Lasten tunnetaidot kirjat nappi
+        lasttunnebtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                speechRecognizer.stopListening();
+                tunnetaidot = true;
+                vertaa();
+            }
+        });
+
         //Ylä kategoria nappulat
         ylakate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1116,6 +1443,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
     }
 
@@ -1194,6 +1522,7 @@ public class MainActivity extends AppCompatActivity {
                         if (compareEquivalance() < 0.26){
                             ihminen = true;
                             text1.setText("Joku on muuttunut");
+
                         }else {
                             text1.setText("mikään ei ole muuttunut");
                         }
@@ -1239,7 +1568,8 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    public void otakuvia(){
+
+    /*public void otakuvia(){
 
                     timer.schedule(new TimerTask() {
                         @Override
@@ -1255,60 +1585,63 @@ public class MainActivity extends AppCompatActivity {
 
 
                     }, 0, 2000);
+                    if (ihminen){
+                        aloita();
+                    }
+                }*/
+
+    public void aloita() {
+
+            //Hakee stringin ja tuotaa sen puheeksi
+            String x = getString(R.string.terve);
+            textToSpeech.speak(x, TextToSpeech.QUEUE_FLUSH, null);
+
+            converBtn.setVisibility(View.INVISIBLE);
+
+
+            //Vaihtaa hahmo imagen tilalle gif animaation
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+
+            //Handlerissä tuotetaan usempia toimintoja saman aikasesti
+
+
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+
+                    //gif.setVisibility(View.INVISIBLE);
+                    //hahmo.setVisibility(View.VISIBLE);
+
+                    //Hahmon sijainti siirretään
+                    RelativeLayout.LayoutParams hahmoRelativeLayout = new RelativeLayout.LayoutParams(1200, 1400);
+                    hahmoRelativeLayout.leftMargin = 50;
+                    hahmoRelativeLayout.topMargin = 120;
+                    MainActivity.hahmo.setLayoutParams(hahmoRelativeLayout);
+
+                    //Tuotetaan näkyviin objekteja
+                    hahmo.setImageResource(R.drawable.androidukko);
+                    voiceBtn.setVisibility(View.VISIBLE);
+                    kaunobtn.setVisibility(View.VISIBLE);
+                    tietogabtn.setVisibility(View.VISIBLE);
+                    lapsetbtn.setVisibility(View.VISIBLE);
+                    pokkarbtn.setVisibility(View.VISIBLE);
+                    sarjabtn.setVisibility(View.VISIBLE);
+                    elokuvbtn.setVisibility(View.VISIBLE);
+                    lehdetbtn.setVisibility(View.VISIBLE);
+                    englanbtn.setVisibility(View.VISIBLE);
+
+                    here.setVisibility(View.VISIBLE);
+                    herek.setVisibility(View.VISIBLE);
+                    where.setVisibility(View.VISIBLE);
+
+                    kartta.setVisibility(View.VISIBLE);
+                    //text1.setVisibility(View.VISIBLE);
+
+                    //Aloitetaan puheen kuuntelu puheen jälkeen.
+                    speechRecognizer.startListening(speechRecognizerIntent);
                 }
-
-    public void aloita(){
-
-        //Hakee stringin ja tuotaa sen puheeksi
-        String x = getString(R.string.terve);
-        textToSpeech.speak(x, TextToSpeech.QUEUE_FLUSH, null);
-
-        converBtn.setVisibility(View.INVISIBLE);
-
-
-        //Vaihtaa hahmo imagen tilalle gif animaation
-        Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
-
-        //Handlerissä tuotetaan usempia toimintoja saman aikasesti
-
-
-        handler.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-                //gif.setVisibility(View.INVISIBLE);
-                //hahmo.setVisibility(View.VISIBLE);
-
-                //Hahmon sijainti siirretään
-                RelativeLayout.LayoutParams hahmoRelativeLayout = new RelativeLayout.LayoutParams(1200, 1400);
-                hahmoRelativeLayout.leftMargin = 50;
-                hahmoRelativeLayout.topMargin = 120;
-                MainActivity.hahmo.setLayoutParams(hahmoRelativeLayout);
-
-                //Tuotetaan näkyviin objekteja
-                hahmo.setImageResource(R.drawable.androidukko);
-                voiceBtn.setVisibility(View.VISIBLE);
-                kaunobtn.setVisibility(View.VISIBLE);
-                tietogabtn.setVisibility(View.VISIBLE);
-                lapsetbtn.setVisibility(View.VISIBLE);
-                pokkarbtn.setVisibility(View.VISIBLE);
-                sarjabtn.setVisibility(View.VISIBLE);
-                elokuvbtn.setVisibility(View.VISIBLE);
-                lehdetbtn.setVisibility(View.VISIBLE);
-                englanbtn.setVisibility(View.VISIBLE);
-
-                here.setVisibility(View.VISIBLE);
-                herek.setVisibility(View.VISIBLE);
-                where.setVisibility(View.VISIBLE);
-
-                kartta.setVisibility(View.VISIBLE);
-                //text1.setVisibility(View.VISIBLE);
-
-                //Aloitetaan puheen kuuntelu puheen jälkeen.
-                speechRecognizer.startListening(speechRecognizerIntent);
-            }
-        }, 10000); //10 sekunnin viive handlerin toimintaan.
-    }
+            }, 10000); //10 sekunnin viive handlerin toimintaan.
+        }
 
     public static float compareEquivalance() {
 
@@ -1337,7 +1670,6 @@ public class MainActivity extends AppCompatActivity {
         //return tulos = count / len;
         return ((float) (count)) / len;
     }
-
 
     private void openCamera() {
         CameraManager manager = (CameraManager)getSystemService(Context.CAMERA_SERVICE);
@@ -1384,8 +1716,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
     };
-
-
 
     //Verrataan contain() methodilla avain sana stringeihin kuunneltua puhetta.
     //Mikäli avain sana löytyy puheesta muuttuu sitä vastaava boolean true:ksi.
@@ -1603,6 +1933,127 @@ public class MainActivity extends AppCompatActivity {
         tiede6 = MainActivity.word.contains(getString(R.string.tiet6));
         tiede7 = MainActivity.word.contains(getString(R.string.tiet7));
 
+        //Lastenkirjat
+        //Djeco
+        djeco0 = word.contains(getString(R.string.djeco0));
+        djeco1 = word.contains(getString(R.string.djeco1));
+        djeco2 = word.contains(getString(R.string.djeco2));
+        djeco3 = word.contains(getString(R.string.djeco3));
+        djeco4 = word.contains(getString(R.string.djeco4));
+        djeco5 = word.contains(getString(R.string.djeco5));
+
+        //Englanninkieliset lastenkirjat
+        kids0 = word.contains(getString(R.string.kids0));
+        kids1 = word.contains(getString(R.string.kids1));
+        kids2 = word.contains(getString(R.string.kids2));
+        kids3 = word.contains(getString(R.string.kids3));
+        kids4 = word.contains(getString(R.string.kids4));
+        kids5 = word.contains(getString(R.string.kids5));
+
+        //Lasten elokuvat
+        lastelo0 = word.contains(getString(R.string.lastelo0));
+        lastelo1 = word.contains(getString(R.string.lastelo1));
+        lastelo2 = word.contains(getString(R.string.lastelo2));
+        lastelo3 = word.contains(getString(R.string.lastelo3));
+        lastelo4 = word.contains(getString(R.string.lastelo4));
+        lastelo5 = word.contains(getString(R.string.lastelo5));
+
+        //Lastenkirjat
+        lasten0 = word.contains(getString(R.string.lasten0));
+        lasten1 = word.contains(getString(R.string.lasten1));
+        lasten2 = word.contains(getString(R.string.lasten2));
+        lasten3 = word.contains(getString(R.string.lasten3));
+        lasten4 = word.contains(getString(R.string.lasten4));
+        lasten5 = word.contains(getString(R.string.lasten5));
+
+        //Lasten tietokirjat
+        lasttiet0 = word.contains(getString(R.string.lasttiet0));
+        lasttiet1 = word.contains(getString(R.string.lasttiet1));
+        lasttiet2 = word.contains(getString(R.string.lasttiet2));
+        lasttiet3 = word.contains(getString(R.string.lasttiet3));
+        lasttiet4 = word.contains(getString(R.string.lasttiet4));
+        lasttiet5 = word.contains(getString(R.string.lasttiet5));
+
+        //Lastenkirjat 0-3 vuotiaat
+        last0_30 = word.contains(getString(R.string.last0_30));
+        last0_31 = word.contains(getString(R.string.last0_31));
+        last0_32 = word.contains(getString(R.string.last0_32));
+        last0_33 = word.contains(getString(R.string.last0_33));
+        last0_34 = word.contains(getString(R.string.last0_34));
+        last0_35 = word.contains(getString(R.string.last0_35));
+
+        //Lastenkirjat 4-6 vuotiaat
+        last4_60 = word.contains(getString(R.string.last4_60));
+        last4_61 = word.contains(getString(R.string.last4_61));
+        last4_62 = word.contains(getString(R.string.last4_62));
+        last4_63 = word.contains(getString(R.string.last4_63));
+        last4_64 = word.contains(getString(R.string.last4_64));
+        last4_65 = word.contains(getString(R.string.last4_65));
+
+        //Lastenkirjat 7-9 vuotiaat
+        last7_90 = word.contains(getString(R.string.last7_90));
+        last7_91 = word.contains(getString(R.string.last7_91));
+        last7_92 = word.contains(getString(R.string.last7_92));
+        last7_93 = word.contains(getString(R.string.last7_93));
+        last7_94 = word.contains(getString(R.string.last7_94));
+        last7_95 = word.contains(getString(R.string.last7_95));
+
+        //Lstenkirjat 10-12 vuotiaat
+        last10_120 = word.contains(getString(R.string.last10_120));
+        last10_121 = word.contains(getString(R.string.last10_121));
+        last10_122 = word.contains(getString(R.string.last10_122));
+        last10_123 = word.contains(getString(R.string.last10_123));
+        last10_124 = word.contains(getString(R.string.last10_124));
+        last10_125 = word.contains(getString(R.string.last10_125));
+
+        //Maisa
+        maisa0 = word.contains(getString(R.string.maisa0));
+        maisa1 = word.contains(getString(R.string.maisa1));
+        maisa2 = word.contains(getString(R.string.maisa2));
+        maisa3 = word.contains(getString(R.string.maisa3));
+        maisa4 = word.contains(getString(R.string.maisa4));
+        maisa5 = word.contains(getString(R.string.maisa5));
+
+        //Nuoret
+        nuoret0 = word.contains(getString(R.string.nuoret0));
+        nuoret1 = word.contains(getString(R.string.nuoret1));
+        nuoret2 = word.contains(getString(R.string.nuoret2));
+        nuoret3 = word.contains(getString(R.string.nuoret3));
+        nuoret4 = word.contains(getString(R.string.nuoret4));
+        nuoret5 = word.contains(getString(R.string.nuoret5));
+
+        //Oppi ja ilo
+        oppilo0 = word.contains(getString(R.string.oppilo0));
+        oppilo1 = word.contains(getString(R.string.oppilo1));
+        oppilo2 = word.contains(getString(R.string.oppilo2));
+        oppilo3 = word.contains(getString(R.string.oppilo3));
+        oppilo4 = word.contains(getString(R.string.oppilo4));
+        oppilo5 = word.contains(getString(R.string.oppilo5));
+
+        //Pipsa Possu
+        pipsa0 = word.contains(getString(R.string.pipsa0));
+        pipsa1 = word.contains(getString(R.string.pipsa1));
+        pipsa2 = word.contains(getString(R.string.pipsa2));
+        pipsa3 = word.contains(getString(R.string.pipsa3));
+        pipsa4 = word.contains(getString(R.string.pipsa4));
+        pipsa5 = word.contains(getString(R.string.pipsa5));
+
+        //Puuhaa lapsille
+        lastpuuh0 = word.contains(getString(R.string.lastpuuh0));
+        lastpuuh1 = word.contains(getString(R.string.lastpuuh1));
+        lastpuuh2 = word.contains(getString(R.string.lastpuuh2));
+        lastpuuh3 = word.contains(getString(R.string.lastpuuh3));
+        lastpuuh4 = word.contains(getString(R.string.lastpuuh4));
+        lastpuuh5 = word.contains(getString(R.string.lastpuuh5));
+
+        //Tunnetaidot
+        tunne0 = word.contains(getString(R.string.tunne0));
+        tunne1 = word.contains(getString(R.string.tunne1));
+        tunne2 = word.contains(getString(R.string.tunne2));
+        tunne3 = word.contains(getString(R.string.tunne3));
+        tunne4 = word.contains(getString(R.string.tunne4));
+        tunne5 = word.contains(getString(R.string.tunne5));
+
         lehd0 = word.contains(getString(R.string.lehd0));
         lehd1 = word.contains(getString(R.string.lehd1));
         lehd2 = word.contains(getString(R.string.lehd2));
@@ -1729,8 +2180,68 @@ public class MainActivity extends AppCompatActivity {
             sarjakuvat = true;
             laskuri = 0;
             vertaa();
-        } else if (pokka0 || pokka1 || pokka2 || pokka3 || pokka4 || pokka5){
+        } else if (pokka0 || pokka1 || pokka2 || pokka3 || pokka4 || pokka5) {
             pokkarit = true;
+            laskuri = 0;
+            vertaa();
+        } else if (djeco0 || djeco1 || djeco2 || djeco3 || djeco4 || djeco5) {
+            djeco = true;
+            laskuri = 0;
+            vertaa();
+        } else if (kids0 || kids1 || kids2 || kids3 || kids4 || kids5) {
+            kids = true;
+            laskuri = 0;
+            vertaa();
+        } else if (lastelo0 || lastelo1 || lastelo2 || lastelo3 || lastelo4 || lastelo5) {
+            lastenelokuvat = true;
+            laskuri = 0;
+            vertaa();
+        } else if (lasten0 || lasten1 || lasten2 || lasten3 || lasten4 || lasten5) {
+            lastenkirjat = true;
+            laskuri = 0;
+            vertaa();
+        } else if (lasttiet0 || lasttiet1 || lasttiet2 || lasttiet3 || lasttiet4 || lasttiet5) {
+            lastentietikirjat = true;
+            laskuri = 0;
+            vertaa();
+        } else if (last0_30 || last0_31 || last0_32 || last0_33 || last0_34 || last0_35) {
+            lastenkirjat0_3 = true;
+            laskuri = 0;
+            vertaa();
+        } else if (last4_60 || last4_61 || last4_62 || last4_63 || last4_64 || last4_65) {
+            lastenkirjat4_6 = true;
+            laskuri = 0;
+            vertaa();
+        } else if (last7_90 || last7_91 || last7_92 || last7_93 || last7_94 || last7_95) {
+            lastenkirjat7_9 = true;
+            laskuri = 0;
+            vertaa();
+        } else if (last10_120 || last10_121 || last10_122 || last10_123 || last10_124 || last10_125) {
+            lastenkirjat10_12 = true;
+            laskuri = 0;
+            vertaa();
+        } else if (maisa0 || maisa1 || maisa2 || maisa3 || maisa4 || maisa5) {
+            maisa = true;
+            laskuri = 0;
+            vertaa();
+        } else if (nuoret0 || nuoret1 || nuoret2 || nuoret3 || nuoret4 || nuoret5) {
+            nuoret = true;
+            laskuri = 0;
+            vertaa();
+        } else if (oppilo0 || oppilo1 || oppilo2 || oppilo3 || oppilo4 || oppilo5) {
+            oppijailo = true;
+            laskuri = 0;
+            vertaa();
+        } else if (pipsa0 || pipsa1 || pipsa2 || pipsa3 || pipsa4 || pipsa5) {
+            pipsapossu = true;
+            laskuri = 0;
+            vertaa();
+        } else if (lastpuuh0 || lastpuuh1 || lastpuuh2 || lastpuuh3 || lastpuuh4 || lastpuuh5) {
+            puuhaalapsille = true;
+            laskuri = 0;
+            vertaa();
+        } else if (tunne0 || tunne1 || tunne2 || tunne3 || tunne4 || tunne5) {
+            tunnetaidot = true;
             laskuri = 0;
             vertaa();
         } else if (sijainti0 || sijainti1 || sijainti2 || sijainti3) {
@@ -2612,6 +3123,428 @@ public class MainActivity extends AppCompatActivity {
                 }
                 restart();
             }
+
+        //Lastenkirjat kategorian toiminnot
+        if (djeco){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.djecopuhe), TextToSpeech.QUEUE_FLUSH, null);
+            djeco = false;
+            djeco0 = false;
+            djeco1 = false;
+            djeco2 = false;
+            djeco3 = false;
+            djeco4 = false;
+            djeco5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (kids){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.kidspuhe), TextToSpeech.QUEUE_FLUSH, null);
+            kids = false;
+            kids0 = false;
+            kids1 = false;
+            kids2 = false;
+            kids3 = false;
+            kids4 = false;
+            kids5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (lastenelokuvat){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.lastelopuhe), TextToSpeech.QUEUE_FLUSH, null);
+            lastenelokuvat = false;
+            lastelo0 = false;
+            lastelo1 = false;
+            lastelo2 = false;
+            lastelo3 = false;
+            lastelo4 = false;
+            lastelo5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (lastenkirjat){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.lastenpuhe), TextToSpeech.QUEUE_FLUSH, null);
+            lastenkirjat = false;
+            lasten0 = false;
+            lasten1 = false;
+            lasten2 = false;
+            lasten3 = false;
+            lasten4 = false;
+            lasten5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (lastentietikirjat){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.lasttiepuhe), TextToSpeech.QUEUE_FLUSH, null);
+            lastentietikirjat = false;
+            lasttiet0 = false;
+            lasttiet1 = false;
+            lasttiet2 = false;
+            lasttiet3 = false;
+            lasttiet4 = false;
+            lasttiet5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (lastenkirjat0_3){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.last0_3puhe), TextToSpeech.QUEUE_FLUSH, null);
+            lastenkirjat0_3 = false;
+            last0_30 = false;
+            last0_31 = false;
+            last0_32 = false;
+            last0_33 = false;
+            last0_34 = false;
+            last0_35 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (lastenkirjat4_6){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.last4_6puhe), TextToSpeech.QUEUE_FLUSH, null);
+            lastenkirjat4_6 = false;
+            last4_60 = false;
+            last4_61 = false;
+            last4_62 = false;
+            last4_63 = false;
+            last4_64 = false;
+            last4_65 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (lastenkirjat7_9){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.last7_9puhe), TextToSpeech.QUEUE_FLUSH, null);
+            lastenkirjat7_9 = false;
+            last7_90 = false;
+            last7_91 = false;
+            last7_92 = false;
+            last7_93 = false;
+            last7_94 = false;
+            last7_95 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (lastenkirjat10_12){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.last10_12puhe), TextToSpeech.QUEUE_FLUSH, null);
+            lastenkirjat10_12 = false;
+            last10_120 = false;
+            last10_121 = false;
+            last10_122 = false;
+            last10_123 = false;
+            last10_124 = false;
+            last10_125 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (maisa){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.maisapuhe), TextToSpeech.QUEUE_FLUSH, null);
+            maisa = false;
+            maisa0 = false;
+            maisa1 = false;
+            maisa2 = false;
+            maisa3 = false;
+            maisa4 = false;
+            maisa5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (nuoret){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.nuoretpuhe), TextToSpeech.QUEUE_FLUSH, null);
+            nuoret = false;
+            nuoret0 = false;
+            nuoret1 = false;
+            nuoret2 = false;
+            nuoret3 = false;
+            nuoret4 = false;
+            nuoret5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (oppijailo){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.oppilopuhe), TextToSpeech.QUEUE_FLUSH, null);
+            oppijailo = false;
+            oppilo0 = false;
+            oppilo1 = false;
+            oppilo2 = false;
+            oppilo3 = false;
+            oppilo4 = false;
+            oppilo5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (pipsapossu){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.pipsapuhe), TextToSpeech.QUEUE_FLUSH, null);
+            pipsapossu = false;
+            pipsa0 = false;
+            pipsa1 = false;
+            pipsa2 = false;
+            pipsa3 = false;
+            pipsa4 = false;
+            pipsa5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (puuhaalapsille){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.laptpuuhpuhe), TextToSpeech.QUEUE_FLUSH, null);
+            puuhaalapsille = false;
+            lastpuuh0 = false;
+            lastpuuh1 = false;
+            lastpuuh2 = false;
+            lastpuuh3 = false;
+            lastpuuh4 = false;
+            lastpuuh5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
+        if (tunnetaidot){
+            marker.setVisibility(View.VISIBLE);
+            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+
+            markerRelativeLayout.leftMargin = 2600;
+            markerRelativeLayout.topMargin = 500;
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.tunnepuhe), TextToSpeech.QUEUE_FLUSH, null);
+            tunnetaidot = false;
+            tunne0 = false;
+            tunne1 = false;
+            tunne2 = false;
+            tunne3 = false;
+            tunne4 = false;
+            tunne5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo.setImageResource(R.drawable.androidukko);
+                }
+            }, 3600);
+        }
         }
 
     public void restart(){
