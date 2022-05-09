@@ -9,6 +9,7 @@
     android:keepScreenOn="true"
     tools:context=".MainActivity">
 
+
     <TextureView
         android:id="@+id/textureView"
         android:layout_width="400dp"
@@ -50,18 +51,16 @@
         android:background="?android:attr/selectableItemBackground"
         android:src="@drawable/ic_baseline_replay_24" />
 
-    <!--  <pl.droidsonroids.gif.GifImageView
-          android:id="@+id/gif"
-          android:gravity="center"
-          android:layout_width="250dp"
-          android:layout_height="300dp"
-          android:layout_alignParentStart="true"
-          android:layout_alignParentTop="true"
-          android:layout_marginStart="112dp"
-          android:layout_marginTop="165dp"
-          android:visibility="invisible"
-          android:src="@drawable/androidspeak"
-          />-->
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/hahmo"
+        android:layout_width="1100dp"
+        android:layout_height="1200dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="-7dp"
+        android:layout_marginEnd="190dp"
+        android:src="@drawable/nukkuvarobotti"
+        android:visibility="visible" />
 
 
     <Button
@@ -94,7 +93,7 @@
         android:text="@string/alotusbtn"
         android:textColor="@android:color/white" />
 
-    <ImageView
+    <!-- <ImageView
         android:id="@+id/hahmo"
         android:layout_width="800dp"
         android:layout_height="900dp"
@@ -102,8 +101,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="-7dp"
         android:layout_marginEnd="350dp"
-        android:src="@drawable/androidukko"
-        android:visibility="visible" />
+        android:src="@drawable/nukkuvarobotti"
+        android:visibility="visible" /> -->
 
     <ImageButton
         android:id="@+id/voiceBtn"

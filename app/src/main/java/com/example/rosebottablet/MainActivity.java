@@ -52,6 +52,7 @@ import android.view.Window;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.NumberPicker;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -482,6 +483,8 @@ public class MainActivity extends AppCompatActivity {
     static ImageView gif;
     TextView otsikko;
 
+    NumberPicker picker;
+
     //Kamera preview ja tallennuskohteet
     private TextureView textureView;
     private ImageView imageView;
@@ -493,8 +496,10 @@ public class MainActivity extends AppCompatActivity {
     static Bitmap resized;
     static Bitmap resized2;
 
+    Timer timerlopetus = new Timer();
     Timer timer = new Timer();
     Handler handler = new Handler();
+    Handler handlerloppu = new Handler();
     Handler handler1 = new Handler();
 
     //Logcat LOG ilmoitus
@@ -530,6 +535,8 @@ public class MainActivity extends AppCompatActivity {
 
     int kuvalasku;
     public int laskuri =  0;
+
+    int i = 0;
 
     //Avain sana
     public static String word = "";
@@ -664,6 +671,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     public Button ylakate;
+    private RelativeLayout mylayout = null;
 
     //Puheen tunnistus
     public static SpeechRecognizer speechRecognizer;
@@ -697,20 +705,27 @@ public class MainActivity extends AppCompatActivity {
         //Valitu kieli
         loadLocale();
 
+
+
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
-                //what you want to do
-                if (!ihminen) {
-                    kuvalasku++;
-                    takePicture();
-                    Log.e(String.valueOf(LOG_TAG), "Kuva numero " + kuvalasku);
-                }if (ihminen) {
-                    timer.cancel();
-                }
+                MainActivity.this.runOnUiThread(new Runnable() {
+                    public void run() {
+                        //what you want to do
+                        if (!ihminen) {
+                            kuvalasku++;
+                            takePicture();
+                            Log.e(String.valueOf(LOG_TAG), "Kuva numero " + kuvalasku);
+                        }
+                        if (ihminen) {
+                            timer.cancel();
+                            aloita();
+                        }
+                    }
+                });
             }
         }, 0, 2000);
-
 
 
         //otakuvia();
@@ -739,6 +754,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onBeginningOfSpeech() {
+                hahmo.setImageResource(R.drawable.kuuntelevarobo);
                 text1.setText("");
                 text1.setHint("Listening...");
 
@@ -756,6 +772,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onEndOfSpeech() {
+                hahmo.setImageResource(R.drawable.kuvarobo);
 
             }
 
@@ -766,6 +783,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onResults(Bundle bundle) {
+
                 ArrayList<String> matches = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
 
                 if (matches != null) {
@@ -799,6 +817,8 @@ public class MainActivity extends AppCompatActivity {
         assert textureView != null;
         textureView.setSurfaceTextureListener(textureListener);
 
+
+        mylayout = (RelativeLayout) findViewById(R.id.main);
 
         //Hakee objekteja id:n perusteella.
         mainLayout = (RelativeLayout) findViewById(R.id.main);
@@ -881,6 +901,7 @@ public class MainActivity extends AppCompatActivity {
         englanbtn = findViewById(R.id.englanbtn);
 
 
+
         ylakate = findViewById(R.id.ylakate);
 
         //Kielen vaihto bar
@@ -926,12 +947,11 @@ public class MainActivity extends AppCompatActivity {
         }*/
 
         //Aloitus nappula joka aloittaa toiminnan
-        converBtn.setOnClickListener(new View.OnClickListener(){
+        converBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                    timer.cancel();
-                    aloita();
+                timer.cancel();
+                aloita();
 
             }
         });
@@ -946,8 +966,9 @@ public class MainActivity extends AppCompatActivity {
 
 
         //Kuva painike josta aukeaa puheen kuuntelu
-        voiceBtn.setOnClickListener(new View.OnClickListener(){
+        voiceBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                lopetus();
                 speechRecognizer.startListening(speechRecognizerIntent);
             }
         });
@@ -957,8 +978,9 @@ public class MainActivity extends AppCompatActivity {
         kaunobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 textToSpeech.speak(getString(R.string.kaunospeak), TextToSpeech.QUEUE_FLUSH, null);
                 //Poistetaan pääkategotia napit käytöstä.
                 kaunobtn.setVisibility(View.INVISIBLE);
@@ -991,17 +1013,18 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
         });
 
-       tietogabtn.setOnClickListener(new View.OnClickListener() {
+        tietogabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 textToSpeech.speak(getString(R.string.tietospeak), TextToSpeech.QUEUE_FLUSH, null);
                 //Poistetaan pääkategotia napit käytöstä.
                 kaunobtn.setVisibility(View.INVISIBLE);
@@ -1031,7 +1054,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -1040,8 +1063,9 @@ public class MainActivity extends AppCompatActivity {
         lapsetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 textToSpeech.speak(getString(R.string.lastenkatepuhe), TextToSpeech.QUEUE_FLUSH, null);
                 //Poistetaan pääkategotia napit käytöstä.
                 kaunobtn.setVisibility(View.INVISIBLE);
@@ -1075,7 +1099,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -1084,6 +1108,7 @@ public class MainActivity extends AppCompatActivity {
         pokkarbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 pokkarit = true;
                 vertaa();
@@ -1093,6 +1118,7 @@ public class MainActivity extends AppCompatActivity {
         sarjabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 sarjakuvat = true;
                 vertaa();
@@ -1102,8 +1128,9 @@ public class MainActivity extends AppCompatActivity {
         elokuvbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 textToSpeech.speak(getString(R.string.tietospeak), TextToSpeech.QUEUE_FLUSH, null);
                 //Poistetaan pääkategotia napit käytöstä.
                 kaunobtn.setVisibility(View.INVISIBLE);
@@ -1129,7 +1156,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -1138,6 +1165,7 @@ public class MainActivity extends AppCompatActivity {
         lehdetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 lehdet = true;
                 vertaa();
@@ -1147,7 +1175,7 @@ public class MainActivity extends AppCompatActivity {
         englanbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                lopetus();
             }
         });
 
@@ -1159,6 +1187,7 @@ public class MainActivity extends AppCompatActivity {
         baabebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 baabel = true;
                 vertaa();
@@ -1169,6 +1198,7 @@ public class MainActivity extends AppCompatActivity {
         bundlbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 bundle = true;
                 vertaa();
@@ -1179,6 +1209,7 @@ public class MainActivity extends AppCompatActivity {
         esseebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 essee = true;
                 vertaa();
@@ -1189,6 +1220,7 @@ public class MainActivity extends AppCompatActivity {
         kaunokibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 kaunokirjallisuus = true;
                 vertaa();
@@ -1199,6 +1231,7 @@ public class MainActivity extends AppCompatActivity {
         keltainbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 keltainen = true;
                 vertaa();
@@ -1209,6 +1242,7 @@ public class MainActivity extends AppCompatActivity {
         kotikaunobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 kotikaunokirjallisuus = true;
                 vertaa();
@@ -1219,6 +1253,7 @@ public class MainActivity extends AppCompatActivity {
         likebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 like = true;
                 vertaa();
@@ -1229,6 +1264,7 @@ public class MainActivity extends AppCompatActivity {
         otavabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 otava = true;
                 vertaa();
@@ -1239,6 +1275,7 @@ public class MainActivity extends AppCompatActivity {
         aanikibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 aanikirja = true;
                 vertaa();
@@ -1249,6 +1286,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                lopetus();
                 speechRecognizer.stopListening();
                 fantasia = true;
                 vertaa();
@@ -1258,6 +1296,7 @@ public class MainActivity extends AppCompatActivity {
         runobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 runo = true;
                 vertaa();
@@ -1267,6 +1306,7 @@ public class MainActivity extends AppCompatActivity {
         rikojanbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 rikojanitus = true;
                 vertaa();
@@ -1276,6 +1316,7 @@ public class MainActivity extends AppCompatActivity {
         scifibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                lopetus();
                 speechRecognizer.stopListening();
                 scifi = true;
                 vertaa();
@@ -1287,6 +1328,7 @@ public class MainActivity extends AppCompatActivity {
         ukravenabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 ukrainajavenaja = true;
                 vertaa();
@@ -1297,6 +1339,7 @@ public class MainActivity extends AppCompatActivity {
         eloteatbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 elokuvajateatteri = true;
                 vertaa();
@@ -1307,6 +1350,7 @@ public class MainActivity extends AppCompatActivity {
         elamankbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 elamankerta = true;
                 vertaa();
@@ -1317,6 +1361,7 @@ public class MainActivity extends AppCompatActivity {
         elamanvbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 elamanviisaus = true;
                 vertaa();
@@ -1327,6 +1372,7 @@ public class MainActivity extends AppCompatActivity {
         filobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 filosofia = true;
                 vertaa();
@@ -1337,6 +1383,7 @@ public class MainActivity extends AppCompatActivity {
         histbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 historia = true;
                 vertaa();
@@ -1347,6 +1394,7 @@ public class MainActivity extends AppCompatActivity {
         musiibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 musiikki = true;
                 vertaa();
@@ -1357,6 +1405,7 @@ public class MainActivity extends AppCompatActivity {
         politbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 politiikka = true;
                 vertaa();
@@ -1367,6 +1416,7 @@ public class MainActivity extends AppCompatActivity {
         sanakbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 sanakirja = true;
                 vertaa();
@@ -1377,6 +1427,7 @@ public class MainActivity extends AppCompatActivity {
         tietobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                lopetus();
                 speechRecognizer.stopListening();
                 tiede = true;
                 vertaa();
@@ -1390,6 +1441,7 @@ public class MainActivity extends AppCompatActivity {
         djecobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 djeco = true;
                 vertaa();
@@ -1399,6 +1451,7 @@ public class MainActivity extends AppCompatActivity {
         kidsbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 kids = true;
                 vertaa();
@@ -1408,6 +1461,7 @@ public class MainActivity extends AppCompatActivity {
         lastelobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 lastenelokuvat = true;
                 vertaa();
@@ -1417,6 +1471,7 @@ public class MainActivity extends AppCompatActivity {
         lastenbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 lastenkirjat = true;
                 vertaa();
@@ -1426,6 +1481,7 @@ public class MainActivity extends AppCompatActivity {
         lasttietbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 lastentietikirjat = true;
                 vertaa();
@@ -1435,6 +1491,7 @@ public class MainActivity extends AppCompatActivity {
         last0_3btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 lastenkirjat0_3 = true;
                 vertaa();
@@ -1444,6 +1501,7 @@ public class MainActivity extends AppCompatActivity {
         last4_6btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 lastenkirjat4_6 = true;
                 vertaa();
@@ -1453,6 +1511,7 @@ public class MainActivity extends AppCompatActivity {
         last7_9btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 lastenkirjat7_9 = true;
                 vertaa();
@@ -1462,6 +1521,7 @@ public class MainActivity extends AppCompatActivity {
         last10_12btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 lastenkirjat10_12 = true;
                 vertaa();
@@ -1471,6 +1531,7 @@ public class MainActivity extends AppCompatActivity {
         lastmaisbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 maisa = true;
                 vertaa();
@@ -1480,6 +1541,7 @@ public class MainActivity extends AppCompatActivity {
         nuoretbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 nuoret = true;
                 vertaa();
@@ -1489,6 +1551,7 @@ public class MainActivity extends AppCompatActivity {
         oppilobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 oppijailo = true;
                 vertaa();
@@ -1498,6 +1561,7 @@ public class MainActivity extends AppCompatActivity {
         pipsabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 pipsapossu = true;
                 vertaa();
@@ -1507,6 +1571,7 @@ public class MainActivity extends AppCompatActivity {
         lastpuuhbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 puuhaalapsille = true;
                 vertaa();
@@ -1516,6 +1581,7 @@ public class MainActivity extends AppCompatActivity {
         lasttunnebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 tunnetaidot = true;
                 vertaa();
@@ -1527,6 +1593,7 @@ public class MainActivity extends AppCompatActivity {
         blueraybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 blueray = true;
                 vertaa();
@@ -1536,6 +1603,7 @@ public class MainActivity extends AppCompatActivity {
         dvdbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 dvd = true;
                 vertaa();
@@ -1545,6 +1613,7 @@ public class MainActivity extends AppCompatActivity {
         eloklatn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 elokuvaklassikot = true;
                 vertaa();
@@ -1554,6 +1623,7 @@ public class MainActivity extends AppCompatActivity {
         kotielobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 kotimaisetelokuvat = true;
                 vertaa();
@@ -1563,6 +1633,7 @@ public class MainActivity extends AppCompatActivity {
         tvsarjabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 tvsarjat = true;
                 vertaa();
@@ -1573,6 +1644,7 @@ public class MainActivity extends AppCompatActivity {
         ylakate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                lopetus();
                 speechRecognizer.stopListening();
                 textToSpeech.stop();
                 textToSpeech.speak(getString(R.string.ylakatepuhe), TextToSpeech.QUEUE_FLUSH, null);
@@ -1637,30 +1709,66 @@ public class MainActivity extends AppCompatActivity {
                 ylakate.setVisibility(View.INVISIBLE);
 
 
-
             }
         });
 
 
-
-        mainLayout.setOnTouchListener(new View.OnTouchListener() {
+        mylayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-                handler.removeCallbacksAndMessages(null);
-                if (aloitettu) {
-                    Handler handler1 = new Handler();
-                    handler1.postDelayed(new Runnable() {
-                        @Override
-                        public void run() {
-                            restart();
-                        }
-                    }, 2000);
-                }
+
+                lopetus();
+
                 return false;
             }
         });
 
+
+
+
+        }
+
+
+
+        /*handlerloppu.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        },4000);*/
+
+
+
+
+    public void lopetus(){
+        if (i != 0) {
+            i = 1;
+            Log.e(String.valueOf(LOG_TAG), "Lopetus on valittu uudestaan ");
+        }
+
+
+        if (i == 0) {
+            timerlopetus.schedule(new TimerTask() {
+                @Override
+                public void run() {
+                    MainActivity.this.runOnUiThread(new Runnable() {
+                        public void run () {
+
+                            i++;
+                            Log.e(String.valueOf(LOG_TAG), "I on tällähetkellä " + i);
+                            if (i > 5) {
+                                restart();
+                            }
+                        }
+                    });
+                }
+
+            }, 0, 5000);
+        }
+
+
     }
+
 
     private void takePicture() {
 
@@ -1805,7 +1913,7 @@ public class MainActivity extends AppCompatActivity {
                 }*/
 
     public void aloita() {
-
+            lopetus();
             aloitettu = true;
             //Hakee stringin ja tuotaa sen puheeksi
             String x = getString(R.string.terve);
@@ -1815,7 +1923,7 @@ public class MainActivity extends AppCompatActivity {
 
 
             //Vaihtaa hahmo imagen tilalle gif animaation
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
 
             //Handlerissä tuotetaan usempia toimintoja saman aikasesti
 
@@ -1834,7 +1942,7 @@ public class MainActivity extends AppCompatActivity {
                     MainActivity.hahmo.setLayoutParams(hahmoRelativeLayout);
 
                     //Tuotetaan näkyviin objekteja
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                     voiceBtn.setVisibility(View.VISIBLE);
                     kaunobtn.setVisibility(View.VISIBLE);
                     tietogabtn.setVisibility(View.VISIBLE);
@@ -2591,7 +2699,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.mispuhe);
             MainActivity.textToSpeech.speak(getString(R.string.mispuhe), TextToSpeech.QUEUE_FLUSH, null);
             MainActivity.sijainti = false;
@@ -2604,7 +2712,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                     //speechRecognizer.startListening(speechRecognizerIntent);
                 }
             }, 4000);
@@ -2620,7 +2728,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.mispuhe);
             MainActivity.textToSpeech.speak(getString(R.string.baabelpuhe), TextToSpeech.QUEUE_FLUSH, null);
             baabel = false;
@@ -2635,7 +2743,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                     //speechRecognizer.startListening(speechRecognizerIntent);
                 }
             }, 4000);
@@ -2650,7 +2758,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.mispuhe);
             MainActivity.textToSpeech.speak(getString(R.string.bundlepuhe), TextToSpeech.QUEUE_FLUSH, null);
             bundle = false;
@@ -2665,7 +2773,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                     //speechRecognizer.startListening(speechRecognizerIntent);
                 }
             }, 4000);
@@ -2680,7 +2788,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.mispuhe);
             MainActivity.textToSpeech.speak(getString(R.string.esseepuhe), TextToSpeech.QUEUE_FLUSH, null);
             essee = false;
@@ -2695,7 +2803,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                     //speechRecognizer.startListening(speechRecognizerIntent);
                 }
             }, 4000);
@@ -2710,7 +2818,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.mispuhe);
             MainActivity.textToSpeech.speak(getString(R.string.kaunokirjallisuuspuhe), TextToSpeech.QUEUE_FLUSH, null);
             kaunokirjallisuus = false;
@@ -2725,7 +2833,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                     //speechRecognizer.startListening(speechRecognizerIntent);
                 }
             }, 4000);
@@ -2740,7 +2848,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.mispuhe);
             MainActivity.textToSpeech.speak(getString(R.string.keltapuhe), TextToSpeech.QUEUE_FLUSH, null);
             keltainen = false;
@@ -2755,7 +2863,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                     //speechRecognizer.startListening(speechRecognizerIntent);
                 }
             }, 4000);
@@ -2770,7 +2878,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.mispuhe);
             MainActivity.textToSpeech.speak(getString(R.string.kotikaunopuhe), TextToSpeech.QUEUE_FLUSH, null);
             kotikaunokirjallisuus = false;
@@ -2785,7 +2893,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                     //speechRecognizer.startListening(speechRecognizerIntent);
                 }
             }, 4000);
@@ -2800,7 +2908,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.mispuhe);
             MainActivity.textToSpeech.speak(getString(R.string.likpuhe), TextToSpeech.QUEUE_FLUSH, null);
             like = false;
@@ -2815,7 +2923,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                     //speechRecognizer.startListening(speechRecognizerIntent);
                 }
             }, 4000);
@@ -2829,7 +2937,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.mispuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.otavpuhe), TextToSpeech.QUEUE_FLUSH, null);
                 otava = false;
@@ -2844,7 +2952,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                         //speechRecognizer.startListening(speechRecognizerIntent);
                     }
                 }, 4000);
@@ -2859,7 +2967,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.mispuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.aanipuhe), TextToSpeech.QUEUE_FLUSH, null);
                 aanikirja = false;
@@ -2874,7 +2982,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                         //speechRecognizer.startListening(speechRecognizerIntent);
                     }
                 }, 4000);
@@ -2891,7 +2999,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 1050;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 MainActivity.textToSpeech.speak(getString(R.string.fantapuhe), TextToSpeech.QUEUE_FLUSH, null);
 
                 MainActivity.fantasia = false;
@@ -2910,7 +3018,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -2925,7 +3033,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 1050;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 MainActivity.textToSpeech.speak(getString(R.string.runopuhe), TextToSpeech.QUEUE_FLUSH, null);
 
                 runo = false;
@@ -2941,7 +3049,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -2956,7 +3064,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 1050;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 MainActivity.textToSpeech.speak(getString(R.string.rikojanpuhe), TextToSpeech.QUEUE_FLUSH, null);
 
                 rikojanitus = false;
@@ -2970,7 +3078,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -2988,7 +3096,7 @@ public class MainActivity extends AppCompatActivity {
                 MainActivity.marker.getLayoutParams().width = 60;
                 MainActivity.marker.requestLayout();
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 // String x = getString(R.string.scifipuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.scifipuhe), TextToSpeech.QUEUE_FLUSH, null);
                 MainActivity.scifi = false;
@@ -2998,7 +3106,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3012,7 +3120,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.ukrvenapuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3028,7 +3136,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3040,7 +3148,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.elokteatpuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3057,7 +3165,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3069,7 +3177,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.elamankpuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3085,7 +3193,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3097,7 +3205,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.elamanvpuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3113,7 +3221,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3125,7 +3233,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.filopuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3142,7 +3250,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3154,7 +3262,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.histpuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3170,7 +3278,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3182,7 +3290,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.musiipuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3199,7 +3307,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3211,7 +3319,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.politpuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3228,7 +3336,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3240,7 +3348,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.sanakpuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3257,7 +3365,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3269,7 +3377,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.tiedpuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3287,7 +3395,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3299,7 +3407,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.lehdpuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3316,7 +3424,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3328,7 +3436,7 @@ public class MainActivity extends AppCompatActivity {
                 markerRelativeLayout.topMargin = 500;
                 MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.tiedpuhe);
                 MainActivity.textToSpeech.speak(getString(R.string.sarjapuhe), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3345,7 +3453,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
             }
@@ -3357,7 +3465,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.pokkapuhe), TextToSpeech.QUEUE_FLUSH, null);
             pokkarit = false;
@@ -3373,13 +3481,13 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
         if (MainActivity.kiitoksia) {
 
-                Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+                Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
                 //String x = getString(R.string.kiitos);
                 MainActivity.textToSpeech.speak(getString(R.string.kiitos), TextToSpeech.QUEUE_FLUSH, null);
 
@@ -3390,7 +3498,7 @@ public class MainActivity extends AppCompatActivity {
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        hahmo.setImageResource(R.drawable.androidukko);
+                        hahmo.setImageResource(R.drawable.kuvarobo);
                     }
                 }, 3600);
 
@@ -3412,7 +3520,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.djecopuhe), TextToSpeech.QUEUE_FLUSH, null);
             djeco = false;
@@ -3428,7 +3536,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3440,7 +3548,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.kidspuhe), TextToSpeech.QUEUE_FLUSH, null);
             kids = false;
@@ -3456,7 +3564,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3468,7 +3576,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.lastelopuhe), TextToSpeech.QUEUE_FLUSH, null);
             lastenelokuvat = false;
@@ -3484,7 +3592,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3496,7 +3604,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.lastenpuhe), TextToSpeech.QUEUE_FLUSH, null);
             lastenkirjat = false;
@@ -3512,7 +3620,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3524,7 +3632,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.lasttiepuhe), TextToSpeech.QUEUE_FLUSH, null);
             lastentietikirjat = false;
@@ -3540,7 +3648,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3552,7 +3660,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.last0_3puhe), TextToSpeech.QUEUE_FLUSH, null);
             lastenkirjat0_3 = false;
@@ -3568,7 +3676,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3580,7 +3688,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.last4_6puhe), TextToSpeech.QUEUE_FLUSH, null);
             lastenkirjat4_6 = false;
@@ -3596,7 +3704,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3608,7 +3716,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.last7_9puhe), TextToSpeech.QUEUE_FLUSH, null);
             lastenkirjat7_9 = false;
@@ -3624,7 +3732,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3636,7 +3744,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.last10_12puhe), TextToSpeech.QUEUE_FLUSH, null);
             lastenkirjat10_12 = false;
@@ -3652,7 +3760,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3664,7 +3772,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.maisapuhe), TextToSpeech.QUEUE_FLUSH, null);
             maisa = false;
@@ -3680,7 +3788,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3692,7 +3800,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.nuoretpuhe), TextToSpeech.QUEUE_FLUSH, null);
             nuoret = false;
@@ -3708,7 +3816,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3720,7 +3828,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.oppilopuhe), TextToSpeech.QUEUE_FLUSH, null);
             oppijailo = false;
@@ -3736,7 +3844,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3748,7 +3856,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.pipsapuhe), TextToSpeech.QUEUE_FLUSH, null);
             pipsapossu = false;
@@ -3764,7 +3872,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3776,7 +3884,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.laptpuuhpuhe), TextToSpeech.QUEUE_FLUSH, null);
             puuhaalapsille = false;
@@ -3792,7 +3900,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3804,7 +3912,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.tunnepuhe), TextToSpeech.QUEUE_FLUSH, null);
             tunnetaidot = false;
@@ -3820,7 +3928,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3834,7 +3942,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.blueraypuhe), TextToSpeech.QUEUE_FLUSH, null);
             blueray = false;
@@ -3850,7 +3958,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3862,7 +3970,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.dvdpuhe), TextToSpeech.QUEUE_FLUSH, null);
             dvd = false;
@@ -3878,7 +3986,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3890,7 +3998,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.eloklapuhe), TextToSpeech.QUEUE_FLUSH, null);
             elokuvaklassikot = false;
@@ -3906,7 +4014,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3918,7 +4026,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.kotielopuhe), TextToSpeech.QUEUE_FLUSH, null);
             kotimaisetelokuvat = false;
@@ -3934,7 +4042,7 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
@@ -3946,7 +4054,7 @@ public class MainActivity extends AppCompatActivity {
             markerRelativeLayout.topMargin = 500;
             MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
-            Glide.with(MainActivity.mainLayout).load(R.drawable.androidspeak).into(MainActivity.hahmo);
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
             //String x = getString(R.string.tiedpuhe);
             MainActivity.textToSpeech.speak(getString(R.string.tvsarjapuhe), TextToSpeech.QUEUE_FLUSH, null);
             tvsarjat = false;
@@ -3962,13 +4070,15 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    hahmo.setImageResource(R.drawable.androidukko);
+                    hahmo.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
         }
         }
 
-    public void restart(){
+
+
+    private void restart(){
 
         //Intent intent = getIntent()
         //finish();
@@ -3977,7 +4087,9 @@ public class MainActivity extends AppCompatActivity {
         textToSpeech.stop();
         handler.removeCallbacksAndMessages(null);
         timer.cancel();
+        timerlopetus.cancel();
         aloitettu = false;
+        ihminen = false;
         recreate();
 
     }
