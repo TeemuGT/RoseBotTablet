@@ -961,6 +961,7 @@ public class MainActivity extends AppCompatActivity {
                         //display file saved message
                         Toast.makeText(getBaseContext(), "File saved successfully! " + getFilesDir(),
                                 Toast.LENGTH_SHORT).show();
+
                     }
                     catch (IOException e) {
                         Log.e("Exception", "File write failed: " + e.toString());

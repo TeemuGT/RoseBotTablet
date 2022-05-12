@@ -991,6 +991,7 @@
         android:textSize="12sp"
         android:visibility="invisible" />
 
+
     <Button
         android:id="@+id/newfictionbtn"
         android:layout_width="130dp"
