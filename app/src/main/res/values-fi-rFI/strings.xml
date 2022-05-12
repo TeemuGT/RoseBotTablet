@@ -17,6 +17,8 @@
     <string name="runopuhe">Jos menet tänne niin löydät runot.</string>
     <string name="rikojanpuhe">Jos menet tänne niin löydät rikos ja jännitys kirjat.</string>
 
+    <string name="pokkaritpuhe">Täältä voit valita haluamasi pokkari kategorian.</string>
+
     <string name="baabelpuhe">Jos menet tänne niin löydät baabelit.</string>
     <string name="bundlepuhe">Jos menet tänne niin löydät bundlet.</string>
     <string name="esseepuhe">Jos menet tänne niin löydät esseet.</string>
@@ -56,13 +58,28 @@
     <string name="laptpuuhpuhe">Jos menet tänne niin löydät lapsille puuhaa.</string>
     <string name="tunnepuhe">Jos menet tänne niin löydät lasten tunnetaitoihin liittyviä kirjoja.</string>
 
-    <!-- Elokuva puheet -->
+    <!-- Rikoskirja puheet -->
     <string name="crimeNovEngpuhe">Jos menet tänne niin löydät Englanninkieliset rikoskirjat.</string>
     <string name="rikosuudetpuhe">Jos menet tänne niin löydät uudet rikoskirjat.</string>
     <string name="rikospokkapuhe">Jos menet tänne niin löydät rikospokkarit, aakkosittain.</string>
     <string name="rikosromaanipuhe">Jos menet tänne niin löydät rikosromaanit, aakkosittain.</string>
-    <string name="truecrimepuhe">Jos menet tänne niin löydät TV-sarjat.</string>
+    <string name="truecrimepuhe">Jos menet tänne niin löydät True Crime kirjat.</string>
 
+    <!-- Pokkarit puheet -->
+    <string name="kaunopokkaritpuhe">Jos menet tänne niin löydät kaunopokkarit.</string>
+    <string name="scifijafantasiapokkaritpuhe">Jos menet tänne niin löydät scifi ja fantasia pokkarit.</string>
+    <string name="tietopokkaritpuhe">Jos menet tänne niin löydät tietopokkarit.</string>
+
+    <!-- Englanninkieliset alakategoria puheet -->
+    <string name="crimepuhe">Jos menet tänne niin löydät englanninkieliset rikoskirjat.</string>
+    <string name="fictionpuhe">Jos menet tänne niin löydät englanninkielistä kaunokirjallisuutta.</string>
+    <string name="nonfictionpuhe">Jos menet tänne niin löydät englanninkielistä tietokirjallisuutta.</string>
+    <string name="poetrypuhe">Jos menet tänne niin löydät englanninkielistä runoutta.</string>
+    <string name="engscifipuhe">Jos menet tänne niin löydät englanninkieliset scifikirjat.</string>
+    <string name="newfictionpuhe">Jos menet tänne niin löydät englanninkieliset uudet kaunokirjat.</string>
+    <string name="newnonfictionpuhe">Jos menet tänne niin löydät englanninkieliset uudet tietokirjat.</string>
+    
+    
     <string name="lehdpuhe">Jos menet tänne löydät True Crime kirjat.</string>
     <string name="sarjapuhe">Jos menet tänne niin löydät sarjakuvat.</string>
     <string name="pokkapuhe">Jos menet tänne niin löydät pokkarit</string>
@@ -131,12 +148,26 @@
     <string name="lastpuuhbtn">Puuhaa lapisille</string>
     <string name="lasttunnebtn">Tunnetaidot</string>
 
-    <!-- Elokuva napit -->
+    <!-- Rikoskirjallisuus napit -->
     <string name="crimeNovEngbtn">Englanninkieliset rikosnovellit</string>
     <string name="rikosuudetbtn">Rikoskirja uutuudet</string>
     <string name="rikospokkabtn">Rikospokkarit</string>
     <string name="rikosromaanibtn">Rikosromaanit</string>
     <string name="truecrimebtn">True Crime</string>
+
+    <!-- Pokkarit napit -->
+    <string name="kaunopokkaritbtn">Kaunopokkarit</string>
+    <string name="scifijafantasiapokkaritbtn">Scifi ja fantasia pokkarit</string>
+    <string name="tietopokkaritbtn">Tietopokkarit</string>
+
+    <!-- Englanninkieliset kirjat napit -->
+    <string name="crimebtn">Englanninkieliset rikos</string>
+    <string name="fictionbnt">Englanninkieliset kaunokirjallisuus</string>
+    <string name="nonfictionbtn">Englanninkieliset tietokirjallisuus</string>
+    <string name="poetrybtn">Englanninkieliset runous</string>
+    <string name="engscifibtn">Englanninkieliset scifi</string>
+    <string name="newfictionbtn">Englanninkieliset uudet kaunokirjallisuus</string>
+    <string name="newnonfictionbtn">Englanninkieliset uudet tietokirjallisuus</string>
 
 
     <string name="kesk0">Mitä sinulle kuuluu</string>
@@ -532,6 +563,88 @@
     <string name="truecrime3">true Crime</string>
     <string name="truecrime4">Oikea rikos</string>
     <string name="truecrime5">oikea rikos</string>
+
+    <!-- Pokkarit avainsanat -->
+    <!-- Kaunopokkarit -->
+    <string name="kaunopokkarit0">True Crime</string>
+    <string name="kaunopokkarit1">true crime</string>
+    <string name="kaunopokkarit2">True crime</string>
+    <string name="kaunopokkarit3">true Crime</string>
+    <string name="kaunopokkarit4">Oikea rikos</string>
+    <string name="kaunopokkarit5">oikea rikos</string>
+
+    <!-- Scifi ja fantasia pokkarit -->
+    <string name="scifijafantasiapokkarit0">True Crime</string>
+    <string name="scifijafantasiapokkarit1">true crime</string>
+    <string name="scifijafantasiapokkarit2">True crime</string>
+    <string name="scifijafantasiapokkarit3">true Crime</string>
+    <string name="scifijafantasiapokkarit4">Oikea rikos</string>
+    <string name="scifijafantasiapokkarit5">oikea rikos</string>
+
+    <!-- Tietopokkarit -->
+    <string name="tietopokkarit0">True Crime</string>
+    <string name="tietopokkarit1">true crime</string>
+    <string name="tietopokkarit2">True crime</string>
+    <string name="tietopokkarit3">true Crime</string>
+    <string name="tietopokkarit4">Oikea rikos</string>
+    <string name="tietopokkarit5">oikea rikos</string>
+
+    <!-- Englanninkieliset kirjat avainsanat -->
+    <!-- Crime -->
+    <string name="crime0">Englanninkieliset rikos</string>
+    <string name="crime1">englanninkieliset rikos</string>
+    <string name="crime2">Englanninkielinen rikos</string>
+    <string name="crime3">englanninkielinen rikos</string>
+    <string name="crime4">Rikos englanni</string>
+    <string name="crime5">Rikos englanni</string>
+
+    <!-- Fiction -->
+    <string name="fiction0">Englanninkieliset kaunokirjalli</string>
+    <string name="fiction1">englanninkieliset kaunokirjalli</string>
+    <string name="fiction2">Englanninkielinen kaunokirjalli</string>
+    <string name="fiction3">englanninkielinen kaunokirjalli</string>
+    <string name="fiction4">Kaunokirjallisuus englanni</string>
+    <string name="fiction5">kaunokirjallisuus englanni</string>
+
+    <!-- Non-fiction -->
+    <string name="nonfiction0">Englanninkieliset tietokirja</string>
+    <string name="nonfiction1">englanninkieliset tietokirja</string>
+    <string name="nonfiction2">Englanninkielinen tietokirja</string>
+    <string name="nonfiction3">englanninkielinen tietokirja</string>
+    <string name="nonfiction4">Tietokirjallisuus englanni</string>
+    <string name="nonfiction5">tietokirjallisuus englanni</string>
+
+    <!-- Poetry -->
+    <string name="poetry0">Englanninkieliset runo</string>
+    <string name="poetry1">englanninkieliset runo</string>
+    <string name="poetry2">Englanninkielinen runo</string>
+    <string name="poetry3">englanninkielinen runo</string>
+    <string name="poetry4">Runous englanni</string>
+    <string name="poetry5">runous englanni</string>
+
+    <!-- Enganninkielinen scifi -->
+    <string name="engscifi0">Englanninkieliset scifi</string>
+    <string name="engscifi1">englanninkieliset scifi</string>
+    <string name="engscifi2">Englanninkielinen scifi</string>
+    <string name="engscifi3">englanninkielinen scifi</string>
+    <string name="engscifi4">Scifi englanni</string>
+    <string name="engscifi5">scifi englanni</string>
+
+    <!-- Uudet fiction -->
+    <string name="newfiction0">Uudet englanninkieliset kaunokirjalli</string>
+    <string name="newfiction1">uudet englanninkieliset kaunokirjalli</string>
+    <string name="newfiction2">Uudet englanninkielinen kaunokirjalli</string>
+    <string name="newfiction3">uudet englanninkielinen kaunokirjalli</string>
+    <string name="newfiction4">Uudet kaunokirjallisuus englanni</string>
+    <string name="newfiction5">uudet kaunokirjalli englanni</string>
+
+    <!-- Uudet Non-fiction -->
+    <string name="newnonfiction0">Uudet englanninkieliset tietokirja</string>
+    <string name="newnonfiction1">uudet englanninkieliset tietokirja</string>
+    <string name="newnonfiction2">Uudet englanninkielinen tietokirja</string>
+    <string name="newnonfiction3">uudet englanninkielinen tietokirja</string>
+    <string name="newnonfiction4">Uudet tietokirjallisuus englanni</string>
+    <string name="newnonfiction5">uudet tietokirjalli englanni</string>
 
 
     <string name="kiits0">Kiitos</string>

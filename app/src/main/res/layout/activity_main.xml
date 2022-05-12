@@ -213,7 +213,7 @@
         />
 
     <Button
-        android:id="@+id/elokuvbtn"
+        android:id="@+id/rikosbtn"
         android:layout_width="200dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -871,23 +871,23 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
         android:text="@string/kaunopokkaritbtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
     <Button
-        android:id="@+id/rikosjajännityspokkaritbtn"
+        android:id="@+id/rikosjajannityspokkaritbtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="320dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
-        android:text="@string/rikosjajännityspokkaritbtn"
+        android:text="@string/rikospokkabtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
@@ -897,8 +897,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
         android:text="@string/scifijafantasiapokkaritbtn"
         android:textColor="@android:color/white"
@@ -910,13 +910,117 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
         android:text="@string/tietopokkaritbtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
+
+    <!-- Englanninkieliset kirjat napit -->
+
+    <Button
+        android:id="@+id/crimebtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/crimebtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+
+    <Button
+        android:id="@+id/fictionbnt"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/fictionbnt"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/nonfictionbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/nonfictionbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/poetrybtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/poetrybtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/engscifibtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/engscifibtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/newfictionbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/newfictionbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/newnonfictionbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/newnonfictionbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+
+
 
     <TextView
         android:id="@+id/text1"
