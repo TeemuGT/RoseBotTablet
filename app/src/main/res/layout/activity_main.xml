@@ -221,7 +221,7 @@
         android:layout_marginEnd="250dp"
         android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
-        android:text="@string/elokuvbtn"
+        android:text="@string/rikoskirjallisuusbtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible"
@@ -248,8 +248,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="1530dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="710dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
         android:text="@string/engkirjbtn"
         android:textColor="@android:color/white"
@@ -258,8 +258,7 @@
         />
 
     <!-- Alakategoria napit -->
-
-            <!-- Kaunokirjallisuus napit -->
+    <!-- Kaunokirjallisuus napit -->
 
     <Button
     android:id="@+id/baabebtn"
@@ -796,7 +795,7 @@
 
     <!-- Elokuvat kategorian napit -->
     <Button
-        android:id="@+id/blueraybtn"
+        android:id="@+id/crimeNovEngbtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -804,13 +803,13 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
-        android:text="@string/blueraybtn"
+        android:text="@string/crimeNovEngbtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/dvdbtn"
+        android:id="@+id/rikosuudetbtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -818,13 +817,13 @@
         android:layout_marginEnd="170dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
-        android:text="@string/dvdbtn"
+        android:text="@string/rikosuudetbtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/eloklasbtn"
+        android:id="@+id/rikospokkabtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -832,13 +831,13 @@
         android:layout_marginEnd="170dp"
         android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
-        android:text="@string/eloklasbtn"
+        android:text="@string/rikospokkabtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/kotielobtn"
+        android:id="@+id/rikosromaanibtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -846,12 +845,12 @@
         android:layout_marginEnd="320dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
-        android:text="@string/kotielobtn"
+        android:text="@string/rikosromaanibtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
     <Button
-        android:id="@+id/tvsarjabtn"
+        android:id="@+id/truecrimebtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -859,12 +858,65 @@
         android:layout_marginEnd="320dp"
         android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
-        android:text="@string/tvsarjabtn"
+        android:text="@string/truecrimebtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
 
+    <!-- Pokkarit alakategorian napit -->
 
+    <Button
+        android:id="@+id/kaunopokkaritbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/kaunopokkaritbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/rikosjajännityspokkaritbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/rikosjajännityspokkaritbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/scifijafantasiapokkaritbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/scifijafantasiapokkaritbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/tietopokkaritbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/tietopokkaritbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
 
     <TextView
         android:id="@+id/text1"

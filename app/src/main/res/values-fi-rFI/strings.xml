@@ -57,16 +57,17 @@
     <string name="tunnepuhe">Jos menet tänne niin löydät lasten tunnetaitoihin liittyviä kirjoja.</string>
 
     <!-- Elokuva puheet -->
-    <string name="blueraypuhe">Jos menet tänne niin löydät Blueray elokuvat.</string>
-    <string name="dvdpuhe">Jos menet tänne niin löydät DVD elokuvat.</string>
-    <string name="eloklapuhe">Jos menet tänne niin löydät elokuva klassikot.</string>
-    <string name="kotielopuhe">Jos menet tänne niin löydät kotimaiset elokuvat.</string>
-    <string name="tvsarjapuhe">Jos menet tänne niin löydät TV-sarjat.</string>
+    <string name="crimeNovEngpuhe">Jos menet tänne niin löydät Englanninkieliset rikoskirjat.</string>
+    <string name="rikosuudetpuhe">Jos menet tänne niin löydät uudet rikoskirjat.</string>
+    <string name="rikospokkapuhe">Jos menet tänne niin löydät rikospokkarit, aakkosittain.</string>
+    <string name="rikosromaanipuhe">Jos menet tänne niin löydät rikosromaanit, aakkosittain.</string>
+    <string name="truecrimepuhe">Jos menet tänne niin löydät TV-sarjat.</string>
 
-    <string name="lehdpuhe">Jos menet tänne löydät lehdet.</string>
+    <string name="lehdpuhe">Jos menet tänne löydät True Crime kirjat.</string>
     <string name="sarjapuhe">Jos menet tänne niin löydät sarjakuvat.</string>
     <string name="pokkapuhe">Jos menet tänne niin löydät pokkarit</string>
     <string name="lastenkatepuhe">Täältä voit valita haluamasi lastenkirjallisuus kategorian.</string>
+    <string name="englanpuhe">Jos menet tänne nii löydät englannin kieliset kirjat.</string>
 
     <string name="ylakatepuhe">Täältä voit valita haluamasi yläkategorian tai aiheen.</string>
 
@@ -82,7 +83,7 @@
     <string name="lapsebtn">Lapset</string>
     <string name="pokkaritbtn">Pokkarit</string>
     <string name="sarjakuvbtn">Sarjakuvat</string>
-    <string name="elokuvbtn">Elokuvat</string>
+    <string name="rikoskirjallisuusbtn">Rikoskirjallisuus</string>
     <string name="lehdtbtn">Lehdet</string>
     <string name="engkirjbtn">Englanninkieliset</string>
 
@@ -131,11 +132,11 @@
     <string name="lasttunnebtn">Tunnetaidot</string>
 
     <!-- Elokuva napit -->
-    <string name="blueraybtn">Blue-Ray</string>
-    <string name="dvdbtn">DVD</string>
-    <string name="eloklasbtn">Elokuva klassikot</string>
-    <string name="kotielobtn">Kotimaiset elokuvat</string>
-    <string name="tvsarjabtn">TV-sarjat</string>
+    <string name="crimeNovEngbtn">Englanninkieliset rikosnovellit</string>
+    <string name="rikosuudetbtn">Rikoskirja uutuudet</string>
+    <string name="rikospokkabtn">Rikospokkarit</string>
+    <string name="rikosromaanibtn">Rikosromaanit</string>
+    <string name="truecrimebtn">True Crime</string>
 
 
     <string name="kesk0">Mitä sinulle kuuluu</string>
@@ -362,6 +363,14 @@
     <string name="pokka4">onko missä pokkarit</string>
     <string name="pokka5">missä pokkarit</string>
 
+    <!-- Englannin kieliset avainsanat -->
+    <string name="engl0">Englannin</string>
+    <string name="engl1">englannin</string>
+    <string name="engl2">Enkun</string>
+    <string name="engl3">enkun</string>
+    <string name="engl4">englanni</string>
+    <string name="engl5">Englanni</string>
+
     <!-- Lasten kirjat avainsanat -->
     <!-- Djeco avainsanat -->
     <string name="djeco0">Djeco</string>
@@ -483,46 +492,46 @@
     <string name="tunne4">Käsitellä tunteita</string>
     <string name="tunne5">käsitellä tunteita</string>
 
-    <!--Elokuvien avaisanat -->
-    <!-- Blueray avainsanat -->
-    <string name="bluer0">Blueray</string>
-    <string name="bluer1">blueray</string>
-    <string name="bluer2">Blueray</string>
-    <string name="bluer3">Blueray</string>
-    <string name="bluer4">Blueray</string>
-    <string name="bluer5">Blueray</string>
+    <!--Rikoskirjallisuus avainsanat -->
+    <!-- Crime novels, in English avainsanat -->
+    <string name="crimeNovEng0">Rikoskirjat englanniksi</string>
+    <string name="crimeNovEng1">rikoskirjat englanniksi</string>
+    <string name="crimeNovEng2">Englanninkieliset rikos</string>
+    <string name="crimeNovEng3">englanninkieliset rikos</string>
+    <string name="crimeNovEng4">Rikos englanniksi</string>
+    <string name="crimeNovEng5">rikos englanniksi</string>
 
-    <!-- DVD avainsanat -->
-    <string name="dvd0">DVD</string>
-    <string name="dvd1">dvd</string>
-    <string name="dvd2">Dvd</string>
-    <string name="dvd3">DVd</string>
-    <string name="dvd4">dDV</string>
-    <string name="dvd5">DvD</string>
+    <!-- Rikoskirjat uutuudet avainsanat -->
+    <string name="rikosuudet0">Rikoskirja uutuu</string>
+    <string name="rikosuudet1">rikoskirja uutuu</string>
+    <string name="rikosuudet2">Rikos uutuu</string>
+    <string name="rikosuudet3">rikos uuttuu</string>
+    <string name="rikosuudet4">Uudet rikos</string>
+    <string name="rikosuudet5">uudet rikos</string>
 
-    <!-- Elokuva klassikot avainsanat -->
-    <string name="elokla0">Klassikko elokuva</string>
-    <string name="elokla1">klassikko elokuva</string>
-    <string name="elokla2">Elokuva klassikko</string>
-    <string name="elokla3">elokuva klassikko</string>
-    <string name="elokla4">Elokuva klassikko</string>
-    <string name="elokla5">Elokuva klassikko</string>
+    <!-- Rikospokkarit avainsanat-->
+    <string name="rikospokka0">Rikospokkari</string>
+    <string name="rikospokka1">rikospokkari</string>
+    <string name="rikospokka2">Pokkarit rikos</string>
+    <string name="rikospokka3">pokkarit rikos</string>
+    <string name="rikospokka4">Pokkari rikos</string>
+    <string name="rikospokka5">pokkari rikos</string>
 
-    <!-- Kotimaiset elokuvat avainsanat -->
-    <string name="kotielo0">Kotimainen elokuva</string>
-    <string name="kotielo1">kotimainen elokuva</string>
-    <string name="kotielo2">Kotimaiset elokuva</string>
-    <string name="kotielo3">kotimaiset elokuva</string>
-    <string name="kotielo4">suomalainen elokuva</string>
-    <string name="kotielo5">Suomalainen elokuva</string>
+    <!-- Rikosromaanit avainsanat -->
+    <string name="rikosromaani0">Rikosromaani</string>
+    <string name="rikosromaani1">rikosromaani</string>
+    <string name="rikosromaani2">Romaani rikos</string>
+    <string name="rikosromaani3">romaani rikos</string>
+    <string name="rikosromaani4">Rikosromaani</string>
+    <string name="rikosromaani5">Rikosromaani</string>
 
-    <!-- TV-sarja avainsanat -->
-    <string name="tvsarja0">TV sarja</string>
-    <string name="tvsarja1">tv sarja</string>
-    <string name="tvsarja2">Tv sarja</string>
-    <string name="tvsarja3">TV-sarja</string>
-    <string name="tvsarja4">tv-sarja</string>
-    <string name="tvsarja5">Tv-sarja</string>
+    <!-- True Crime avainsanat -->
+    <string name="truecrime0">True Crime</string>
+    <string name="truecrime1">true crime</string>
+    <string name="truecrime2">True crime</string>
+    <string name="truecrime3">true Crime</string>
+    <string name="truecrime4">Oikea rikos</string>
+    <string name="truecrime5">oikea rikos</string>
 
 
     <string name="kiits0">Kiitos</string>
