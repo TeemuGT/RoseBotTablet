@@ -35,12 +35,19 @@
     <TextView
         android:id="@+id/otsikko"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="81dp"
         android:background="#990600"
-        android:text="@string/otsikko"
+        android:text=""
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="30sp" />
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="400dp"
+        android:layout_height="80dp"
+        android:src="@drawable/sivullinen_logo"
+        android:layout_marginTop="0dp"
+        android:layout_centerHorizontal="true"/>
 
     <ImageButton
         android:id="@+id/resButton"
@@ -62,6 +69,17 @@
         android:src="@drawable/nukkuvarobotti"
         android:visibility="visible" />
 
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/hahmo1"
+        android:layout_width="500dp"
+        android:layout_height="700dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="900dp"
+        android:layout_marginTop="50dp"
+        android:src="@drawable/kuvarobo"
+        android:visibility="invisible" />
+
 
     <Button
         android:id="@+id/shlang"
@@ -69,8 +87,9 @@
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:backgroundTint="@color/black"
-        android:textColor="@color/white"
+
+        android:backgroundTint="@color/white"
+        android:textColor="@color/black"
         android:text="@string/kieli"
 
 
@@ -256,8 +275,107 @@
         android:textSize="12sp"
         android:visibility="invisible"
         />
+    <Button
+        android:id="@+id/svenFranDeutsbtn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="940dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/svenFranDeutsbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        />
+
+    <Button
+        android:id="@+id/elokuvatbtn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="1180dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/elokuvatbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/ajankohtaistabtn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="1420dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/ajankohtaistabtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/paperituotteetbtn"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="940dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/paperituotteetbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
 
     <!-- Alakategoria napit -->
+    <!-- Ruotsin, Ranskan ja Saksankieliset kirjat napit -->
+    <Button
+        android:id="@+id/ruotsinkielibtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/ruotsinkielibtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        />
+    <Button
+        android:id="@+id/ranskankielibtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/ranskankielibtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        />
+    <Button
+        android:id="@+id/saksankielibtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="50dp"
+        android:backgroundTint="#990600"
+        android:text="@string/saksankielibtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible"
+        />
+
     <!-- Kaunokirjallisuus napit -->
 
     <Button
@@ -275,7 +393,7 @@
     android:visibility="invisible" />
 
     <Button
-        android:id="@+id/bundlbtn"
+        android:id="@+id/antikvaarisetbtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -283,12 +401,12 @@
         android:layout_marginEnd="770dp"
         android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
-        android:text="@string/bundlebtn"
+        android:text="@string/antikvaarisetbtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
 
-    <Button
+    <!--<Button
         android:id="@+id/esseebtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
@@ -300,7 +418,7 @@
         android:text="@string/esseetbtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
-        android:visibility="invisible" />
+        android:visibility="invisible" />-->
 
     <Button
         android:id="@+id/kaunokibtn"
@@ -331,7 +449,7 @@
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/kotikaunobtn"
+        android:id="@+id/uudetkaunobtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -339,13 +457,13 @@
         android:layout_marginEnd="170dp"
         android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
-        android:text="@string/kotikaunokbtn"
+        android:text="@string/uudetkaunobtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/likebtn"
+        android:id="@+id/klassikotbtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -353,7 +471,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
-        android:text="@string/likbtn"
+        android:text="@string/klassikotbtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
@@ -415,7 +533,7 @@
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/scifibtn"
+        android:id="@+id/uudetrikosbtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -423,7 +541,7 @@
         android:layout_marginEnd="170dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
-        android:text="@string/scifibtn"
+        android:text="@string/rikosuudetbtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
@@ -487,7 +605,7 @@
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/elamanvbtn"
+        android:id="@+id/antiikkikirjallisuusbtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -495,7 +613,34 @@
         android:layout_marginEnd="470dp"
         android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
-        android:text="@string/elamanvbtn"
+        android:text="@string/antiikkikirjallisuusbtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+    <Button
+        android:id="@+id/holokaustibtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/holokaustibtn"
+        android:textColor="@android:color/white"
+        android:textSize="12sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/ilmastonmuutosbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="140dp"
+        android:backgroundTint="#990600"
+        android:text="@string/ilmastonmuutosbtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
@@ -586,7 +731,7 @@
 
     <!-- Lastenkirjat napit -->
     <Button
-        android:id="@+id/djecobtn"
+        android:id="@+id/lastenromaanibtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -594,7 +739,7 @@
         android:layout_marginEnd="920dp"
         android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
-        android:text="@string/djecobtn"
+        android:text="@string/lastenromaanibtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
@@ -656,7 +801,7 @@
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/last0_3btn"
+        android:id="@+id/lastenkuvakirjabtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -664,13 +809,13 @@
         android:layout_marginEnd="770dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
-        android:text="@string/last0_3btn"
+        android:text="@string/lastenkuvakirjabtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/last4_6btn"
+        android:id="@+id/ruotsilastenbtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -678,13 +823,13 @@
         android:layout_marginEnd="620dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
-        android:text="@string/last4_6btn"
+        android:text="@string/ruotsilastenbtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
 
     <Button
-        android:id="@+id/last7_9btn"
+        android:id="@+id/vauvojenkirjabtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -692,35 +837,7 @@
         android:layout_marginEnd="470dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
-        android:text="@string/last7_9btn"
-        android:textColor="@android:color/white"
-        android:textSize="12sp"
-        android:visibility="invisible" />
-
-    <Button
-        android:id="@+id/last10_12btn"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="#990600"
-        android:text="@string/last10_12btn"
-        android:textColor="@android:color/white"
-        android:textSize="12sp"
-        android:visibility="invisible" />
-
-    <Button
-        android:id="@+id/lastmaisbtn"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="920dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="#990600"
-        android:text="@string/lastmaisbtn"
+        android:text="@string/vauvojenkirjabtn"
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
@@ -739,33 +856,7 @@
         android:textSize="12sp"
         android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/oppilobtn"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="#990600"
-        android:text="@string/oppilobtn"
-        android:textColor="@android:color/white"
-        android:textSize="12sp"
-        android:visibility="invisible" />
 
-    <Button
-        android:id="@+id/pipsabtn"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="#990600"
-        android:text="@string/pipsabtn"
-        android:textColor="@android:color/white"
-        android:textSize="12sp"
-        android:visibility="invisible" />
     <Button
         android:id="@+id/lastpuuhbtn"
         android:layout_width="130dp"
@@ -779,19 +870,7 @@
         android:textColor="@android:color/white"
         android:textSize="12sp"
         android:visibility="invisible" />
-    <Button
-        android:id="@+id/lasttunnebtn"
-        android:layout_width="130dp"
-        android:layout_height="60dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="1070dp"
-        android:layout_marginBottom="50dp"
-        android:backgroundTint="#990600"
-        android:text="@string/lasttunnebtn"
-        android:textColor="@android:color/white"
-        android:textSize="12sp"
-        android:visibility="invisible" />
+
 
     <!-- Elokuvat kategorian napit -->
     <Button
@@ -926,8 +1005,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
         android:text="@string/crimebtn"
         android:textColor="@android:color/white"
@@ -941,8 +1020,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
         android:text="@string/fictionbnt"
         android:textColor="@android:color/white"
@@ -956,7 +1035,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="140dp"
         android:backgroundTint="#990600"
         android:text="@string/nonfictionbtn"
         android:textColor="@android:color/white"
@@ -969,7 +1048,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="470dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
         android:text="@string/poetrybtn"
@@ -983,7 +1062,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="320dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
         android:text="@string/engscifibtn"
@@ -998,7 +1077,7 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="170dp"
         android:layout_marginBottom="50dp"
         android:backgroundTint="#990600"
         android:text="@string/newfictionbtn"

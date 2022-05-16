@@ -1,10 +1,12 @@
 <resources>
     <string name="app_name">RoseBotTablet</string>'
 
-    <string name="fantapuhe"> If you go here you find fantasy books.</string>
+    <string name="kielivalinta">Valitse kieli.</string>
+
+    <string name="fantapuhe"> If you go here you find Scifi, Fantasy and Horror books.</string>
     <string name="scifipuhe">If you go here you find sci-fi books.</string>
     <string name="mispuhe">The red marker on the map shows your location in the store.</string>
-    <string name="terve">Hi, my name is Rose Bot. You can ask me where the different book categories are or press the ready button. What books are you looking for? </string>
+    <string name="terve">Hi, my name is Rose Bot. You can ask me where the different book categories are or press the ready button.I record all the speech for research and development. What books are you looking for? </string>
     <string name="kiitos"> It was a great pleasure to help. Now I am going back to sleep.</string>
     <string name="enymr">Sorry I didn\'t understand, can you ask again?</string>
     <string name="kysyuu">Sorry, I don\'t understand you. You can also press the ready button, or click on me and try asking again.</string>
@@ -12,28 +14,39 @@
     <string name="kuuluu">Great to hear you are fine. How can I help you? </string>
     <string name="kaunospeak">Here you can select the category of fiction you are looking for.</string>
     <string name="tietospeak">Here you can select the non-fiction category you are looking for.</string>
+    <string name="svenFranDeutspuhe">Here you can choose from books in Swedish, French or German.</string>
     <string name="runopuhe">If you go here you find poetry</string>
     <string name="rikojanpuhe">If you go here you find crime and suspense books.</string>
+    <string name="elokuvatpuhe">If you go here you find movies.</string>
+    <string name="ajankohtaistapuhe">If you go here you will find topical books.</string>
+    <string name="paperituotteetpuhe">If you go here you will find paper products.</string>
 
     <string name="pokkaritpuhe">Täältä voit valita haluamasi pokkari kategorian.</string>
 
+    <!-- Ruotsi, Ranska ja Saksa puheet -->
+    <string name="ruotsinkielipuhe">If you go here you will find books in Swedish.</string>
+    <string name="ranskankielipuhe">If you go here you will find books in French.</string>
+    <string name="saksankielipuhe">If you go here you will find books in German.</string>
+
     <!-- Kaunokirjallisuus puheita -->
     <string name="baabelpuhe">If you go here you will find the Babylonians.</string>
-    <string name="bundlepuhe">If you go here then you will find the Bundlet.</string>
+    <string name="antikvaarisetpuhe">If you go here then you will find the Antiquarian books.</string>
     <string name="esseepuhe">If you go here you will find essays.</string>
     <string name="kaunokirjallisuuspuhe">If you go here you will find books on fiction</string>
     <string name="keltapuhe">If you go here you will find the yellow library</string>
-    <string name="kotikaunopuhe">If you go here then you will find domestic fiction books.</string>
-    <string name="likpuhe">If you go here you will find the Like Library</string>
+    <string name="uudetkaunopuhe">If you go here then you will find new fiction books.</string>
+    <string name="klassikotpuhe">If you go here you will find the classics fiction.</string>
     <string name="otavpuhe">If you go here you will find the Otava Library.</string>
     <string name="aanipuhe">If you go here you will find audiobooks.</string>
 
 
     <!-- Tietokirjallisuus puheet -->
-    <string name="ukrvenapuhe">If you go here you will find Ukraine and Russia books.</string>
+    <string name="ukrvenapuhe">If you go here you will find Russia books.</string>
     <string name="elokteatpuhe">If you go here then you will find movie and theater books.</string>
     <string name="elamankpuhe">If you go here then you will find biography books.</string>
-    <string name="elamanvpuhe">If you go here then you will find Life Wisdom books.</string>
+    <string name="antiikkikirjallisuuspuhe">If you go here then you will find antik litteratur books.</string>
+    <string name="holokaustipuhe">If you go here then you will find holocaust books.</string>
+    <string name="ilmastonmuutospuhe">If you go here then you will find climate change books.</string>
     <string name="filopuhe">If you go here then you will find philosophy books.</string>
     <string name="histpuhe">If you go here then you will find history books.</string>
     <string name="musiipuhe">If you go here then you will find music books.</string>
@@ -42,21 +55,18 @@
     <string name="tiedpuhe">If you go here you will find science books.</string>
 
     <!-- Lastenkirjat puheet -->
-    <string name="djecopuhe">If you go here you will find Djeco children\'s books.</string>
+    <string name="lastenromaanipuhe">If you go here you will find children\'s novels.</string>
     <string name="kidspuhe">If you go here you will find children\'s books in English.</string>
     <string name="lastelopuhe">If you go here you will find children\'s movies.</string>
     <string name="lastenpuhe">If you go here you will find children\'s books.</string>
     <string name="lasttiepuhe">If you go here you will find Children\'s Nonfiction.</string>
-    <string name="last0_3puhe">If you go here you will find children\'s books for 0–3 year olds.</string>
-    <string name="last4_6puhe">If you go here you will find children\'s books for 4–6 year olds.</string>
-    <string name="last7_9puhe">If you go here you will find children\'s books for 7–9 year olds.</string>
-    <string name="last10_12puhe">If you go here you will find children\'s books for 10–12 year olds.</string>
-    <string name="maisapuhe">If you go here you will find Maisa children\'s books.</string>
+    <string name="lastenkuvakirjapuhe">If you go here you will find children\'s picture books.</string>
+    <string name="ruotsilastenpuhe">If you go here you will find children\'s books in Swedish.</string>
+    <string name="vauvojenkirjapuhe">If you go here you will find babies and toddlers books.</string>
+
     <string name="nuoretpuhe">If you go here you will find books for young people.</string>
-    <string name="oppilopuhe">If you go here you will find children’s learning books.</string>
-    <string name="pipsapuhe">If you go here then you will find children\'s Pipsa Possu books.</string>
+
     <string name="laptpuuhpuhe">If you go here you will find something to do for the kids.</string>
-    <string name="tunnepuhe">If you go here you will find books related to children\'s emotional skills.</string>
 
     <!-- Rikoskirja puheet -->
     <string name="crimeNovEngpuhe">If you go here then you will find Crime novels, in English.</string>
@@ -84,13 +94,13 @@
     <string name="sarjapuhe">If you go here you will find comics.</string>
     <string name="pokkapuhe">If you go here you will find paperback</string>
     <string name="lastenkatepuhe">Here you can select the desired children\'s literature category.</string>
-    <string name="englanpuhe">If you go here you will find books in English.</string>
+    <string name="englanpuhe">Here you can select the desired category from the English books.</string>
 
     <string name="ylakatepuhe">Here you can select the top category or topic you want.</string>
 
     <string name="ohje">Ask me what you want to know by clicking on me or select a ready button.</string>
     <string name="otsikko">Bookstore</string>
-    <string name="kieli">Language</string>
+    <string name="kieli">Kieli</string>
     <string name="where">You are here</string>
 
     <!-- Nappien nimet -->
@@ -104,27 +114,38 @@
     <string name="engkirjbtn">In English</string>
     <string name="lehdtbtn">Magazines</string>
     <string name="pokkaritbtn">Pokkarit</string>
+    <string name="svenFranDeutsbtn">Sweden, France and Germany</string>
+    <string name="elokuvatbtn">Movies</string>
+    <string name="ajankohtaistabtn">Topical</string>
+    <string name="paperituotteetbtn">Paper products</string>
+
+    <!-- Ruotsi, Ranska ja Saksa napit -->
+    <string name="ruotsinkielibtn">Books in Swedish</string>
+    <string name="ranskankielibtn">Books in French</string>
+    <string name="saksankielibtn">Books in German</string>
 
     <!-- Kaunokirjallisuus napit -->
     <string name="baabelbtn">Babylon</string>
-    <string name="bundlebtn">Bundle</string>
+    <string name="antikvaarisetbtn">Antiquarian</string>
     <string name="esseetbtn">Essay</string>
     <string name="kaunokirjbtn">Fiction</string>
     <string name="keltainebtn">Yellow Library</string>
-    <string name="kotikaunokbtn">Finnish fiction</string>
-    <string name="likbtn">Like</string>
+    <string name="uudetkaunobtn">New fiction</string>
+    <string name="klassikotbtn">Classics</string>
     <string name="otavabtn">Otava Library</string>
-    <string name="fantabtn">Fantasy</string>
+    <string name="fantabtn">Scifi, Fantasy and Horror</string>
     <string name="runobtn">Poetry</string>
     <string name="rikojanbtn">Crime and suspense</string>
     <string name="scifibtn">Scifi</string>
     <string name="aanikbtn">Audiobooks</string>
 
     <!-- Tietokirjallisuus napit -->
-    <string name="ukravenabtn">Ukraine and Russia</string>
+    <string name="ukravenabtn">Russia</string>
     <string name="eloteatbtn">Cinema and theater</string>
     <string name="elamankbtn">Biographies</string>
-    <string name="elamanvbtn">The wisdom of life</string>
+    <string name="antiikkikirjallisuusbtn">Antik litteratur</string>
+    <string name="holokaustibtn">Holocaust</string>
+    <string name="ilmastonmuutosbtn">Climate change</string>
     <string name="filobtn">Philosophy</string>
     <string name="histbtn">History</string>
     <string name="musiibtn">Music</string>
@@ -133,21 +154,19 @@
     <string name="tietobtn">Science</string>
 
     <!-- Lastenkirjat napit -->
-    <string name="djecobtn">Djeco</string>
+    <string name="lastenromaanibtn">Children\'s novel</string>
     <string name="kidsbtn">Children\'s books in English</string>
     <string name="lastelobtn">Kids\' movies</string>
     <string name="lastenbtn">Children\'s books</string>
     <string name="lasttietbtn">Children\'s Nonfiction</string>
-    <string name="last0_3btn">Children\'s books for 0–3 year olds</string>
-    <string name="last4_6btn">Children\'s books for 4–6 year olds</string>
-    <string name="last7_9btn">Children\'s books for 7–9 year olds</string>
-    <string name="last10_12btn">Children\'s books for 10–12 year olds</string>
-    <string name="lastmaisbtn">Maisa</string>
+    <string name="lastenkuvakirjabtn">Children\'s picture books</string>
+    <string name="ruotsilastenbtn">Children\'s books in Swedish</string>
+    <string name="vauvojenkirjabtn">Babies and toddlers</string>
+
     <string name="nuoretbtn">Young people</string>
-    <string name="oppilobtn">Learning with joy</string>
-    <string name="pipsabtn">Pipsa Possu</string>
+
+
     <string name="lastpuuhbtn">Fun for children</string>
-    <string name="lasttunnebtn">Emotional skills</string>
 
     <!-- Rikoskirja napit napit -->
     <string name="crimeNovEngbtn">Crime novels, in English</string>
@@ -184,6 +203,31 @@
     <string name="kuin3">I\'m fine</string>
     <string name="kuin4">Everything is fine</string>
 
+    <!-- Ruotsi, Ranska ja Saksa -->
+    <!-- Ruotsi -->
+    <string name="ruotsinkieli0">Swedish</string>
+    <string name="ruotsinkieli1">swedish</string>
+    <string name="ruotsinkieli2">Swedish</string>
+    <string name="ruotsinkieli3">Swedish</string>
+    <string name="ruotsinkieli4">Sweden</string>
+    <string name="ruotsinkieli5">sweden</string>
+
+    <!-- Ranska -->
+    <string name="ranskankieli0">France</string>
+    <string name="ranskankieli1">france</string>
+    <string name="ranskankieli2">French</string>
+    <string name="ranskankieli3">french</string>
+    <string name="ranskankieli4">France</string>
+    <string name="ranskankieli5">France</string>
+
+    <!-- Saksa -->
+    <string name="saksankieli0">Germany</string>
+    <string name="saksankieli1">germany</string>
+    <string name="saksankieli2">German</string>
+    <string name="saksankieli3">german</string>
+    <string name="saksankieli4">Germany</string>
+    <string name="saksankieli5">Germany</string>
+
     <!-- Kaunokirjallisuuden avain sanat -->
     <!-- Baabelit avainsanat -->
     <string name="baabe0">Babel</string>
@@ -193,13 +237,13 @@
     <string name="baabe4">is where Babel</string>
     <string name="baabe5">where Babel</string>
 
-    <!-- Bundle avainsanat -->
-    <string name="bundl0">bundle</string>
-    <string name="bundl1">Bundle</string>
-    <string name="bundl2">Where the bundle</string>
-    <string name="bundl3">where is the bundle</string>
-    <string name="bundl4">is where the bundle</string>
-    <string name="bundl5">where the bundle</string>
+    <!-- Antikvaariset avainsanat -->
+    <string name="antikvaariset0">Antiquarian</string>
+    <string name="antikvaariset1">antiquarian</string>
+    <string name="antikvaariset2">Antiquaria</string>
+    <string name="antikvaariset3">antiquaria</string>
+    <string name="antikvaariset4">Antiquarian</string>
+    <string name="antikvaariset5">Antiquarian</string>
 
     <!-- Essee avainsanat -->
     <string name="essee0">essay</string>
@@ -225,21 +269,21 @@
     <string name="kelta4">is there a yellow library where</string>
     <string name="kelta5">where the yellow library</string>
 
-    <!-- Kotimainen kaunokirjallisuus avainsanat -->
-    <string name="kotkauno0">domestic fiction</string>
-    <string name="kotkauno1">Domestic fiction</string>
-    <string name="kotkauno2">finnish fiction</string>
-    <string name="kotkauno3">Finnish fiction</string>
-    <string name="kotkauno4">is domestic fiction where</string>
-    <string name="kotkauno5">where domestic fiction</string>
+    <!-- Uutuudet kaunokirjallisuus avainsanat -->
+    <string name="uudetkauno0">New fiction</string>
+    <string name="uudetkauno1">new fiction</string>
+    <string name="uudetkauno2">Fiction new</string>
+    <string name="uudetkauno3">fiction new</string>
+    <string name="uudetkauno4">New fictio</string>
+    <string name="uudetkauno5">new fictio</string>
 
-    <!-- Like kategorian avainsanat -->
-    <string name="lik0">like library</string>
-    <string name="lik1">Like library</string>
-    <string name="lik2">Where like</string>
-    <string name="lik3">where is like</string>
-    <string name="lik4">is like where</string>
-    <string name="lik5">where like</string>
+    <!-- Klassikko kaunokirjallisuus kategorian avainsanat -->
+    <string name="klassikot0">Classics fiction</string>
+    <string name="klassikot1">classics fiction</string>
+    <string name="klassikot2">Fiction classics</string>
+    <string name="klassikot3">fiction classics</string>
+    <string name="klassikot4">Classics fiction</string>
+    <string name="klassikot5">Classics fiction</string>
 
     <!-- Otava kirjaston avainsanat -->
     <string name="otav0">Otava</string>
@@ -258,16 +302,16 @@
     <string name="aani5">where are the audiobooks</string>
 
     <!-- Fantasia -->
-    <string name="fanta0">Where is fantasy</string>
-    <string name="fanta1">Is a fantasy</string>
-    <string name="fanta2">Where do I find fantasy</string>
-    <string name="fanta3">Where is the fantasy</string>
-    <string name="fanta4">Find a fantasy</string>
-    <string name="fanta5">where is fantasy</string>
-    <string name="fanta6">is a fantasy</string>
-    <string name="fanta7">where do I find fantasy</string>
-    <string name="fanta8">fantasy</string>
-    <string name="fanta9">Fantasy</string>
+    <string name="fanta0">Fantasy</string>
+    <string name="fanta1">fantasy</string>
+    <string name="fanta2">Scifi</string>
+    <string name="fanta3">scifi</string>
+    <string name="fanta4">Horror</string>
+    <string name="fanta5">horror</string>
+    <string name="fanta6">Sci-fi</string>
+    <string name="fanta7">sci-fi</string>
+    <string name="fanta8">Scary</string>
+    <string name="fanta9">scary</string>
 
     <!-- Scifi avainsanoja -->
     <string name="scif0">sci-fi</string>
@@ -304,12 +348,12 @@
 
     <!-- Tietokirjallisuus avainsanat -->
     <!-- Ukraina ja Venäjä avainsanat -->
-    <string name="ukrvena0">Ukraine</string>
-    <string name="ukrvena1">Russia</string>
-    <string name="ukrvena2">Where is Ukraine and Russia</string>
-    <string name="ukrvena3">where are Ukraine and Russia</string>
-    <string name="ukrvena4">is where Ukraine and Russia</string>
-    <string name="ukrvena5">where is Ukraine and Russia</string>
+    <string name="ukrvena0">Russia</string>
+    <string name="ukrvena1">russia</string>
+    <string name="ukrvena2">Moscow</string>
+    <string name="ukrvena3">moscow</string>
+    <string name="ukrvena4">Russia</string>
+    <string name="ukrvena5">Russia</string>
 
     <!-- Elokuva ja teatteri avainsanat -->
     <string name="elokteat0">theater</string>
@@ -327,13 +371,29 @@
     <string name="elamank4">is where the biographies</string>
     <string name="elamank5">where biographies</string>
 
-    <!-- Elämänviisaus avainsanat -->
-    <string name="elamanv0">wisdoms of life</string>
-    <string name="elamanv1">Wisdom of life</string>
-    <string name="elamanv2">Where the wisdom of life</string>
-    <string name="elamanv3">where are the wisdoms of life</string>
-    <string name="elamanv4">is where the wisdom of life</string>
-    <string name="elamanv5">where the wisdom of life</string>
+    <!-- Antiikkikirjallisuus avainsanat -->
+    <string name="antiikkikirjallisuus0">Antik litteratur</string>
+    <string name="antiikkikirjallisuus1">antik litteratur</string>
+    <string name="antiikkikirjallisuus2">Antik</string>
+    <string name="antiikkikirjallisuus3">antik</string>
+    <string name="antiikkikirjallisuus4">antik</string>
+    <string name="antiikkikirjallisuus5">antik</string>
+
+    <!-- Holokausti avainsanat -->
+    <string name="holokausti0">Holocaust</string>
+    <string name="holokausti1">holocaust</string>
+    <string name="holokausti2">Autzwitz</string>
+    <string name="holokausti3">autzwitz</string>
+    <string name="holokausti4">Genocide</string>
+    <string name="holokausti5">genocide</string>
+
+    <!-- Ilmastonmuutos -->
+    <string name="ilmastonmuutos0">Climate change</string>
+    <string name="ilmastonmuutos1">climate change</string>
+    <string name="ilmastonmuutos2">Greenhouse effect</string>
+    <string name="ilmastonmuutos3">greenhouse effect</string>
+    <string name="ilmastonmuutos4">Global warming</string>
+    <string name="ilmastonmuutos5">global warming</string>
 
     <!-- Filosofia avainsanat -->
     <string name="filo0">philosophy</string>
@@ -401,6 +461,30 @@
     <string name="sarja4">comics</string>
     <string name="sarja5">here the cartoons</string>
 
+    <!-- Elokuvat avainsanat -->
+    <string name="elokuvat0">Movie</string>
+    <string name="elokuvat1">movie</string>
+    <string name="elokuvat2">Film</string>
+    <string name="elokuvat3">film</string>
+    <string name="elokuvat4">DVD</string>
+    <string name="elokuvat5">Blueray</string>
+
+    <!-- Ajankohtaista -->
+    <string name="ajankohtaista0">Topic</string>
+    <string name="ajankohtaista1">topic</string>
+    <string name="ajankohtaista2">Timely</string>
+    <string name="ajankohtaista3">timely</string>
+    <string name="ajankohtaista4">Current</string>
+    <string name="ajankohtaista5">current</string>
+
+    <!-- Paperituotteet -->
+    <string name="paperituotteet0">Paper</string>
+    <string name="paperituotteet1">paper</string>
+    <string name="paperituotteet2">Write</string>
+    <string name="paperituotteet3">write</string>
+    <string name="paperituotteet4">Pen</string>
+    <string name="paperituotteet5">pen</string>
+
     <!-- Pokkarit avainsanat -->
     <string name="pokka0">paperback</string>
     <string name="pokka1">Paperback</string>
@@ -418,13 +502,13 @@
     <string name="engl5">English</string>
 
     <!-- Lasten kirjat avainsanat -->
-    <!-- Djeco avainsanat -->
-    <string name="djeco0">Djeco</string>
-    <string name="djeco1">djeco</string>
-    <string name="djeco2">Djeco</string>
-    <string name="djeco3">djeco</string>
-    <string name="djeco4">jeko</string>
-    <string name="djeco5">Jeko</string>
+    <!-- Lasten romaanit avainsanat -->
+    <string name="lastenromaani0">Children\'s novel</string>
+    <string name="lastenromaani1">children\'s novel</string>
+    <string name="lastenromaani2">Novels for children</string>
+    <string name="lastenromaani3">novels for children</string>
+    <string name="lastenromaani4">Children novels</string>
+    <string name="lastenromaani5">children novels</string>
 
     <!-- Englanninkieliset lastenkirjat avainsanat -->
     <string name="kids0">children\'s books in English</string>
@@ -458,45 +542,29 @@
     <string name="lasttiet4">Nonfiction children</string>
     <string name="lasttiet5">nonfiction children</string>
 
-    <!-- Lasten kirjat 0-3 vuotiaille aviansanat-->
-    <string name="last0_30">0–3 years old</string>
-    <string name="last0_31">0–3 year old</string>
-    <string name="last0_32">1 year</string>
-    <string name="last0_33">2 year</string>
-    <string name="last0_34">3 year</string>
-    <string name="last0_35">under 3 year</string>
+    <!-- Lastenkuvakirjat aviansanat-->
+    <string name="lastenkuvakirja0">Children\'s picture book</string>
+    <string name="lastenkuvakirja1">children\'s picture book</string>
+    <string name="lastenkuvakirja2">Picture book</string>
+    <string name="lastenkuvakirja3">picture book</string>
+    <string name="lastenkuvakirja4">Children picture</string>
+    <string name="lastenkuvakirja5">children picture</string>
 
     <!-- Lastenkirjat 4-6 vuotiaille avainsanat -->
-    <string name="last4_60">4–6 years old</string>
-    <string name="last4_61">4–6 year old</string>
-    <string name="last4_62">4 year</string>
-    <string name="last4_63">5 year</string>
-    <string name="last4_64">6 year</string>
-    <string name="last4_65">under 6 year</string>
+    <string name="ruotsilasten0">Children\'s books in Swedish</string>
+    <string name="ruotsilasten1">children\'s books in Swedish</string>
+    <string name="ruotsilasten2">Swedish children\'s book </string>
+    <string name="ruotsilasten3">swedish children\'s book</string>
+    <string name="ruotsilasten4">Swedish children</string>
+    <string name="ruotsilasten5">swedish children</string>
 
     <!-- Lasten kirjat 7-9 vuotiaille avainsanat -->
-    <string name="last7_90">7–9 years old</string>
-    <string name="last7_91">7–9 year old</string>
-    <string name="last7_92">7 year</string>
-    <string name="last7_93">8 year</string>
-    <string name="last7_94">9 year</string>
-    <string name="last7_95">under 9 year</string>
-
-    <!-- Lastenkirjat 10-12 vuotiaille avainsanat -->
-    <string name="last10_120">10–12 years old</string>
-    <string name="last10_121">10–12 year old</string>
-    <string name="last10_122">10 year</string>
-    <string name="last10_123">11 year</string>
-    <string name="last10_124">12 year</string>
-    <string name="last10_125">under 12 year</string>
-
-    <!-- Lasten kirjat Maisa avainsanat -->
-    <string name="maisa0">Maisa</string>
-    <string name="maisa1">maisa</string>
-    <string name="maisa2">Maisa</string>
-    <string name="maisa3">Maisa</string>
-    <string name="maisa4">maisa</string>
-    <string name="maisa5">maisa</string>
+    <string name="vauvojenkirja0">Babie</string>
+    <string name="vauvojenkirja1">babie</string>
+    <string name="vauvojenkirja2">Baby</string>
+    <string name="vauvojenkirja3">baby</string>
+    <string name="vauvojenkirja4">Toddler</string>
+    <string name="vauvojenkirja5">toddler</string>
 
     <!-- Nuorten kirjat avainsanat -->
     <string name="nuoret0">youth</string>
@@ -506,21 +574,7 @@
     <string name="nuoret4">young</string>
     <string name="nuoret5">young</string>
 
-    <!-- Oppi ja ilo avainsanat -->
-    <string name="oppilo0">Children\'s learning</string>
-    <string name="oppilo1">children\'s learning</string>
-    <string name="oppilo2">children learning</string>
-    <string name="oppilo3">Children learning</string>
-    <string name="oppilo4">child learning</string>
-    <string name="oppilo5">Child learning</string>
 
-    <!-- Pipsa possu avainsanat -->
-    <string name="pipsa0">Pipsa possu</string>
-    <string name="pipsa1">pipsa possu</string>
-    <string name="pipsa2">possu pipsa</string>
-    <string name="pipsa3">Possu pipsa</string>
-    <string name="pipsa4">Pipsa Possu</string>
-    <string name="pipsa5">pipsa Possu</string>
 
     <!-- Puuhaa lapsille avainsanat -->
     <string name="lastpuuh0">fun for kids</string>
@@ -530,13 +584,6 @@
     <string name="lastpuuh4">Children activities</string>
     <string name="lastpuuh5">children activities</string>
 
-    <!-- Tunnetaidot lapset avainsanat -->
-    <string name="tunne0">Emotional skills</string>
-    <string name="tunne1">emotional skills</string>
-    <string name="tunne2">Sense of skills</string>
-    <string name="tunne3">sense of skills</string>
-    <string name="tunne4">Sense skills</string>
-    <string name="tunne5">sense skills</string>
 
     <!--Elokuvien avaisanat -->
     <!-- Crime novels, in English avainsanat -->
