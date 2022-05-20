@@ -35,28 +35,22 @@
     <TextView
         android:id="@+id/otsikko"
         android:layout_width="match_parent"
-        android:layout_height="81dp"
+        android:layout_height="45dp"
         android:background="#990600"
         android:text=""
         android:textAlignment="center"
         android:textColor="@android:color/white"
+        android:visibility="invisible"
         android:textSize="30sp" />
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="400dp"
-        android:layout_height="80dp"
+        android:layout_width="480dp"
+        android:layout_height="96dp"
         android:src="@drawable/sivullinen_logo"
         android:layout_marginTop="0dp"
-        android:layout_centerHorizontal="true"/>
+        android:layout_marginStart="-140dp"/>
 
-    <ImageButton
-        android:id="@+id/resButton"
-        android:layout_width="46dp"
-        android:layout_height="48dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:background="?android:attr/selectableItemBackground"
-        android:src="@drawable/ic_baseline_replay_24" />
+
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/hahmo"
@@ -72,13 +66,39 @@
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/hahmo1"
         android:layout_width="500dp"
-        android:layout_height="700dp"
+        android:layout_height="500dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="900dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginEnd="1000dp"
+        android:layout_marginTop="150dp"
         android:src="@drawable/kuvarobo"
         android:visibility="invisible" />
+    <ImageButton
+        android:id="@+id/voiceBtn"
+        android:layout_width="239dp"
+        android:layout_height="286dp"
+        android:layout_alignStart="@+id/hahmo1"
+        android:layout_alignTop="@+id/hahmo1"
+        android:layout_alignEnd="@+id/hahmo1"
+        android:layout_alignBottom="@+id/hahmo1"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="0dp"
+        android:layout_marginBottom="0dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_baseline_insert_emoticon_24_lapinakyva"
+        android:visibility="invisible" />
+
+    <ImageButton
+        android:id="@+id/resButton"
+        android:layout_width="46dp"
+        android:layout_height="48dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="380dp"
+        android:layout_marginTop="1dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:src="@drawable/ic_baseline_replay_24" />
 
 
     <Button
@@ -87,15 +107,12 @@
         android:layout_height="50dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-
-        android:backgroundTint="@color/white"
+        android:backgroundTint="@color/cardview_shadow_end_color"
         android:textColor="@color/black"
+
         android:text="@string/kieli"
-
-
-        android:layout_marginStart="10dp"
-
-        android:layout_marginTop="1dp" />
+        android:layout_marginStart="220dp"
+        android:layout_marginTop="0dp" />
 
     <Button
         android:id="@+id/converBtn"
@@ -123,23 +140,7 @@
         android:src="@drawable/nukkuvarobotti"
         android:visibility="visible" /> -->
 
-    <ImageButton
-        android:id="@+id/voiceBtn"
-        android:layout_width="239dp"
-        android:layout_height="286dp"
-        android:layout_alignStart="@+id/hahmo"
-        android:layout_alignTop="@+id/hahmo"
-        android:layout_alignEnd="@+id/hahmo"
 
-        android:layout_alignBottom="@+id/hahmo"
-
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="-23dp"
-        android:layout_marginEnd="-4dp"
-        android:layout_marginBottom="23dp"
-        android:background="?android:attr/selectableItemBackground"
-        android:src="@drawable/ic_baseline_insert_emoticon_24_lapinakyva"
-        android:visibility="invisible" />
 
     <Button
         android:id="@+id/ylakate"
@@ -147,8 +148,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="270dp"
-        android:layout_marginBottom="730dp"
+        android:layout_marginEnd="600dp"
+        android:layout_marginBottom="250dp"
         android:backgroundTint="#990600"
         android:text="@string/ylakate"
         android:textColor="@android:color/white"
@@ -163,8 +164,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="480dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/kaunokirbtn"
         android:textColor="@android:color/white"
@@ -177,8 +178,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="250dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/tietokirbtn"
         android:textColor="@android:color/white"
@@ -192,8 +193,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="480dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/lapsebtn"
         android:textColor="@android:color/white"
@@ -207,8 +208,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="710dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="940dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/pokkaritbtn"
         android:textColor="@android:color/white"
@@ -222,8 +223,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="480dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/sarjakuvbtn"
         android:textColor="@android:color/white"
@@ -237,8 +238,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="250dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="710dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/rikoskirjallisuusbtn"
         android:textColor="@android:color/white"
@@ -252,8 +253,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="480dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/lehdtbtn"
         android:textColor="@android:color/white"
@@ -267,8 +268,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="710dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="940dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/engkirjbtn"
         android:textColor="@android:color/white"
@@ -281,8 +282,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="940dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="250dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/svenFranDeutsbtn"
         android:textColor="@android:color/white"
@@ -296,8 +297,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="1180dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="710dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/elokuvatbtn"
         android:textColor="@android:color/white"
@@ -309,8 +310,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="1420dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="1170dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/ajankohtaistabtn"
         android:textColor="@android:color/white"
@@ -323,8 +324,8 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="940dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="1170dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/paperituotteetbtn"
         android:textColor="@android:color/white"
@@ -339,12 +340,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/ruotsinkielibtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible"
         />
     <Button
@@ -353,12 +354,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/ranskankielibtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible"
         />
     <Button
@@ -367,12 +368,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/saksankielibtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible"
         />
 
@@ -384,12 +385,12 @@
     android:layout_height="60dp"
     android:layout_alignParentBottom="true"
     android:layout_alignParentEnd="true"
-    android:layout_marginEnd="920dp"
-    android:layout_marginBottom="140dp"
+    android:layout_marginEnd="620dp"
+    android:layout_marginBottom="110dp"
     android:backgroundTint="#990600"
     android:text="@string/baabelbtn"
     android:textColor="@android:color/white"
-    android:textSize="12sp"
+    android:textSize="10sp"
     android:visibility="invisible" />
 
     <Button
@@ -399,11 +400,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="770dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/antikvaarisetbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <!--<Button
@@ -427,11 +428,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="470dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/kaunokirjbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -441,11 +442,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="320dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/keltainebtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -454,12 +455,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/uudetkaunobtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -468,12 +469,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/klassikotbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -482,12 +483,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="920dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/otavabtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -496,12 +497,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/fantabtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -510,12 +511,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="470dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="620dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/runobtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -524,12 +525,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="620dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="770dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/rikojanbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -539,11 +540,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="170dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/rikosuudetbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -552,12 +553,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="770dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/aanikbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <!-- Tietokirjallisuus napit -->
@@ -568,12 +569,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="#990600"
         android:text="@string/ukravenabtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -582,12 +583,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="920dp"
+        android:layout_marginBottom="130dp"
         android:backgroundTint="#990600"
         android:text="@string/eloteatbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -596,12 +597,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="620dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="770dp"
+        android:layout_marginBottom="130dp"
         android:backgroundTint="#990600"
         android:text="@string/elamankbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -610,12 +611,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="470dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="1070dp"
+        android:layout_marginBottom="130dp"
         android:backgroundTint="#990600"
         android:text="@string/antiikkikirjallisuusbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
     <Button
         android:id="@+id/holokaustibtn"
@@ -623,12 +624,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="470dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="130dp"
         android:backgroundTint="#990600"
         android:text="@string/holokaustibtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -637,12 +638,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="470dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="130dp"
         android:backgroundTint="#990600"
         android:text="@string/ilmastonmuutosbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -651,12 +652,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="620dp"
+        android:layout_marginBottom="130dp"
         android:backgroundTint="#990600"
         android:text="@string/filobtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -665,12 +666,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="130dp"
         android:backgroundTint="#990600"
         android:text="@string/histbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -679,12 +680,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/musiibtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -693,12 +694,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="470dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="#990600"
         android:text="@string/politbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -707,12 +708,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="620dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="1220dp"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="#990600"
         android:text="@string/sanakbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -721,13 +722,196 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="620dp"
+        android:layout_marginBottom="10dp"
         android:backgroundTint="#990600"
         android:text="@string/tietobtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/kieletbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="130dp"
+        android:backgroundTint="#990600"
+        android:text="@string/kieletbtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/kasityojarakentaminenbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="1070dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#990600"
+        android:text="@string/kasityojarakentaminenbtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/luonnontieteetbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="920dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#990600"
+        android:text="@string/luonnontieteetbtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/luontokasvitelaimetbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="770dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#990600"
+        android:text="@string/luontokasvitelaimetbtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/maatjakulttuuribtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="620dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#990600"
+        android:text="@string/maatjakulttuuribtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/matkailubtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#990600"
+        android:text="@string/matkailubtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/puutarhabtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#990600"
+        android:text="@string/puutarhabtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/ruokabtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="70dp"
+        android:backgroundTint="#990600"
+        android:text="@string/ruokabtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/taidejadesignbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="1070dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#990600"
+        android:text="@string/taidejadesignbtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/terveysbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="920dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#990600"
+        android:text="@string/terveysbtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <Button
+    android:id="@+id/tieteellinenkirjoittaminenbtn"
+    android:layout_width="130dp"
+    android:layout_height="60dp"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentEnd="true"
+    android:layout_marginEnd="770dp"
+    android:layout_marginBottom="10dp"
+    android:backgroundTint="#990600"
+    android:text="@string/tieteellinenkirjoittaminenbtn"
+    android:textColor="@android:color/white"
+    android:textSize="10sp"
+    android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/urheilubtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#990600"
+        android:text="@string/urheilubtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
+    <Button
+        android:id="@+id/uskonnotbtn"
+        android:layout_width="130dp"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#990600"
+        android:text="@string/uskonnotbtn"
+        android:textColor="@android:color/white"
+        android:textSize="10sp"
+        android:visibility="invisible" />
+
 
     <!-- Lastenkirjat napit -->
     <Button
@@ -736,12 +920,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="920dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/lastenromaanibtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -750,12 +934,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="770dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="620dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/kidsbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -764,12 +948,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/lastelobtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -778,12 +962,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="470dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/lastenbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -792,12 +976,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/lasttietbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -806,12 +990,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="770dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="620dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/lastenkuvakirjabtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -820,12 +1004,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="620dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/ruotsilastenbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -834,12 +1018,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="470dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/vauvojenkirjabtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -848,12 +1032,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="620dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/nuoretbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
 
@@ -863,28 +1047,28 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/lastpuuhbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
 
-    <!-- Elokuvat kategorian napit -->
+    <!-- Rikoskirjallisuus kategorian napit -->
     <Button
         android:id="@+id/crimeNovEngbtn"
         android:layout_width="130dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="620dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/crimeNovEngbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -893,12 +1077,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="470dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/rikosuudetbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -907,12 +1091,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="170dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="320dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/rikospokkabtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -921,12 +1105,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/rikosromaanibtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
     <Button
         android:id="@+id/truecrimebtn"
@@ -934,12 +1118,12 @@
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginEnd="320dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/truecrimebtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <!-- Pokkarit alakategorian napit -->
@@ -951,11 +1135,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="470dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/kaunopokkaritbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
     <Button
         android:id="@+id/rikosjajannityspokkaritbtn"
@@ -964,11 +1148,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="320dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/rikospokkabtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
     <Button
         android:id="@+id/scifijafantasiapokkaritbtn"
@@ -977,11 +1161,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="170dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/scifijafantasiapokkaritbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
     <Button
         android:id="@+id/tietopokkaritbtn"
@@ -990,11 +1174,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="70dp"
         android:backgroundTint="#990600"
         android:text="@string/tietopokkaritbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <!-- Englanninkieliset kirjat napit -->
@@ -1006,11 +1190,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="320dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/crimebtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
 
@@ -1021,11 +1205,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="170dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/fictionbnt"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -1035,11 +1219,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="140dp"
+        android:layout_marginBottom="110dp"
         android:backgroundTint="#990600"
         android:text="@string/nonfictionbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -1049,11 +1233,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="470dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/poetrybtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -1063,11 +1247,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="320dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/engscifibtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
 
@@ -1078,11 +1262,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="170dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/newfictionbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
     <Button
@@ -1092,11 +1276,11 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="20dp"
         android:backgroundTint="#990600"
         android:text="@string/newnonfictionbtn"
         android:textColor="@android:color/white"
-        android:textSize="12sp"
+        android:textSize="10sp"
         android:visibility="invisible" />
 
 
@@ -1129,71 +1313,577 @@
         android:textSize="20dp"
         android:visibility="invisible" />
 
-    <ImageView
-        android:id="@+id/here"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
 
-        android:layout_marginEnd="1350dp"
-        android:layout_marginBottom="50dp"
 
-        android:src="@drawable/ic_baseline_circle_24"
-        android:visibility="invisible"/>
 
-    <TextView
-        android:id="@+id/where"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginEnd="1220dp"
-        android:layout_marginBottom="42dp"
-        android:text="@string/where"
-        android:textSize="20sp"
-        android:visibility="invisible"
-
-        />
 
 
     <ImageView
         android:id="@+id/kartta"
-        android:layout_width="900dp"
-        android:layout_height="550dp"
+        android:layout_width="2000px"
+        android:layout_height="1400px"
 
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-
+    android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
-        android:layout_marginBottom="200dp"
-        android:background="@drawable/kartta2"
+        android:layout_marginBottom="190dp"
+        android:background="@drawable/pohjakuva_rosebud"
         android:visibility="invisible" />
-
-
-    <ImageView
-        android:id="@+id/marker"
+    <TextView
+        android:id="@+id/where"
         android:layout_width="40dp"
         android:layout_height="40dp"
-
-
-        android:layout_alignEnd="@+id/kartta"
-        android:layout_alignBottom="@+id/kartta"
-
-        android:layout_marginEnd="650dp"
-        android:layout_marginBottom="365dp"
-        android:src="@drawable/marker"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="495dp"
+        android:layout_marginBottom="503dp"
+        android:text="@string/where"
+        android:gravity="center"
+        android:textSize="10sp"
+        android:background="@drawable/circle"
+        android:textColor="@color/black"
+        android:visibility="invisible" />
+<!-- Markerit -->
+    <ImageView
+        android:id="@+id/marker1"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1250px"
+        android:layout_marginTop="1200px"
+        android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
 
     <ImageView
-        android:id="@+id/herek"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-
-        android:layout_marginEnd="646dp"
-        android:layout_marginBottom="565dp"
-        android:src="@drawable/ic_baseline_circle_24"
-        android:visibility="invisible"/>
+        android:id="@+id/marker2"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1250px"
+        android:layout_marginTop="1000px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker3"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1100px"
+        android:layout_marginTop="1050px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker4"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1430px"
+        android:layout_marginTop="820px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker5"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1250px"
+        android:layout_marginTop="820px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker6"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1100px"
+        android:layout_marginTop="820px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker7"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="965px"
+        android:layout_marginTop="820px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker8"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="800px"
+        android:layout_marginTop="820px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker9"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="450px"
+        android:layout_marginTop="820px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker10"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="530px"
+        android:layout_marginTop="980px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker11"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="300px"
+        android:layout_marginTop="950px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker12"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="110px"
+        android:layout_marginTop="980px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker13"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="-30px"
+        android:layout_marginTop="850px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker14"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="-30px"
+        android:layout_marginTop="710px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker15"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="-30px"
+        android:layout_marginTop="565px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker16"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="-30px"
+        android:layout_marginTop="180px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker17"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="90px"
+        android:layout_marginTop="290px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker18"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="90px"
+        android:layout_marginTop="545px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker19"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="90px"
+        android:layout_marginTop="700px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker20"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="235px"
+        android:layout_marginTop="345px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker21"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="235px"
+        android:layout_marginTop="700px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker22"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="340px"
+        android:layout_marginTop="345px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker23"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="340px"
+        android:layout_marginTop="630px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker24"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="480px"
+        android:layout_marginTop="290px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker25"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="480px"
+        android:layout_marginTop="443px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker26"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="480px"
+        android:layout_marginTop="700px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker27"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="622px"
+        android:layout_marginTop="340px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker28"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="622px"
+        android:layout_marginTop="700px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker29"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="780px"
+        android:layout_marginTop="290px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker30"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="780px"
+        android:layout_marginTop="443px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker31"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="780px"
+        android:layout_marginTop="700px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker32"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="945px"
+        android:layout_marginTop="220px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker33"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="945px"
+        android:layout_marginTop="460px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker34"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="945px"
+        android:layout_marginTop="625px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker35"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1070px"
+        android:layout_marginTop="280px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker36"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1070px"
+        android:layout_marginTop="495px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker37"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1095px"
+        android:layout_marginTop="660px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker38"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1185px"
+        android:layout_marginTop="280px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker39"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1185px"
+        android:layout_marginTop="495px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker40"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1310px"
+        android:layout_marginTop="280px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker41"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1310px"
+        android:layout_marginTop="485px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker42"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1260px"
+        android:layout_marginTop="650px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker43"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1550px"
+        android:layout_marginTop="550px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker44"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1700px"
+        android:layout_marginTop="600px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker45"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1650px"
+        android:layout_marginTop="400px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker46"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1650px"
+        android:layout_marginTop="250px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker47"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1780px"
+        android:layout_marginTop="400px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker48"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1880px"
+        android:layout_marginTop="650px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker49"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1880px"
+        android:layout_marginTop="350px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker50"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="780px"
+        android:layout_marginTop="5px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker51"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="370px"
+        android:layout_marginTop="5px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker52"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1100px"
+        android:layout_marginTop="1150px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker53"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="1480px"
+        android:layout_marginTop="780px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
+    <ImageView
+        android:id="@+id/marker54"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_alignStart="@+id/kartta"
+        android:layout_alignTop="@+id/kartta"
+        android:layout_marginStart="30px"
+        android:layout_marginTop="5px"
+        android:src="@drawable/ic_baseline_forward_24"
+        android:visibility="invisible" />
 </RelativeLayout>

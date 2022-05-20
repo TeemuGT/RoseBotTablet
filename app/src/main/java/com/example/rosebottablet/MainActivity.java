@@ -320,6 +320,110 @@ public class MainActivity extends AppCompatActivity {
     public boolean tiede6 = false;
     public boolean tiede7 = false;
 
+    //Kielet avainsanat
+    public boolean kielet0 = false;
+    public boolean kielet1 = false;
+    public boolean kielet2 = false;
+    public boolean kielet3 = false;
+    public boolean kielet4 = false;
+    public boolean kielet5 = false;
+
+    //Käsityö ja rakentaminen
+    public boolean kasityojarakentaminen0 = false;
+    public boolean kasityojarakentaminen1 = false;
+    public boolean kasityojarakentaminen2 = false;
+    public boolean kasityojarakentaminen3 = false;
+    public boolean kasityojarakentaminen4 = false;
+    public boolean kasityojarakentaminen5 = false;
+
+    //Luonnontieteet
+    public boolean luonnontieteet0 = false;
+    public boolean luonnontieteet1 = false;
+    public boolean luonnontieteet2 = false;
+    public boolean luonnontieteet3 = false;
+    public boolean luonnontieteet4 = false;
+    public boolean luonnontieteet5 = false;
+
+    //Luonto, Kasvit ja eläimet
+    public boolean luontokasvitelaimet0 = false;
+    public boolean luontokasvitelaimet1 = false;
+    public boolean luontokasvitelaimet2 = false;
+    public boolean luontokasvitelaimet3 = false;
+    public boolean luontokasvitelaimet4 = false;
+    public boolean luontokasvitelaimet5 = false;
+
+    // Maat ja Kulttuuri
+    public boolean maatjakulttuuri0 = false;
+    public boolean maatjakulttuuri1 = false;
+    public boolean maatjakulttuuri2 = false;
+    public boolean maatjakulttuuri3 = false;
+    public boolean maatjakulttuuri4 = false;
+    public boolean maatjakulttuuri5 = false;
+
+    //Matkailu
+    public boolean matkailu0 = false;
+    public boolean matkailu1 = false;
+    public boolean matkailu2 = false;
+    public boolean matkailu3 = false;
+    public boolean matkailu4 = false;
+    public boolean matkailu5 = false;
+
+    // Puutarha
+    public boolean puutarha0 = false;
+    public boolean puutarha1 = false;
+    public boolean puutarha2 = false;
+    public boolean puutarha3 = false;
+    public boolean puutarha4 = false;
+    public boolean puutarha5 = false;
+
+    // Ruoka
+    public boolean ruoka0 = false;
+    public boolean ruoka1 = false;
+    public boolean ruoka2 = false;
+    public boolean ruoka3 = false;
+    public boolean ruoka4 = false;
+    public boolean ruoka5 = false;
+
+    // Taide ja Design
+    public boolean taidejadesign0 = false;
+    public boolean taidejadesign1 = false;
+    public boolean taidejadesign2 = false;
+    public boolean taidejadesign3 = false;
+    public boolean taidejadesign4 = false;
+    public boolean taidejadesign5 = false;
+
+    //Terveys
+    public boolean terveys0 = false;
+    public boolean terveys1 = false;
+    public boolean terveys2 = false;
+    public boolean terveys3 = false;
+    public boolean terveys4 = false;
+    public boolean terveys5 = false;
+
+    // Tieteellinenkirjoittaminen ja kirjallisuus
+    public boolean tieteellinenkirjoittaminen0 = false;
+    public boolean tieteellinenkirjoittaminen1 = false;
+    public boolean tieteellinenkirjoittaminen2 = false;
+    public boolean tieteellinenkirjoittaminen3 = false;
+    public boolean tieteellinenkirjoittaminen4 = false;
+    public boolean tieteellinenkirjoittaminen5 = false;
+
+    // Urheilu
+    public boolean urheilu0 = false;
+    public boolean urheilu1 = false;
+    public boolean urheilu2 = false;
+    public boolean urheilu3 = false;
+    public boolean urheilu4 = false;
+    public boolean urheilu5 = false;
+
+    // Uskonnot
+    public boolean uskonnot0 = false;
+    public boolean uskonnot1 = false;
+    public boolean uskonnot2 = false;
+    public boolean uskonnot3 = false;
+    public boolean uskonnot4 = false;
+    public boolean uskonnot5 = false;
+
     //Lastenkirjat avainsanat
     //Lasten romaanit avainsanat
     public boolean lastenromaani0 = false;
@@ -586,13 +690,12 @@ public class MainActivity extends AppCompatActivity {
     public boolean sijainti3 = false;
 
 
+    // Marker layout objektit
+    static ImageView marker1, marker2, marker3, marker4, marker5, marker6, marker7,marker8, marker9, marker10, marker11, marker12, marker13, marker14, marker15, marker16, marker17,marker18, marker19, marker20, marker21, marker22, marker23, marker24, marker25, marker26, marker27,marker28, marker29, marker30, marker31, marker32, marker33, marker34, marker35, marker36, marker37,marker38, marker39, marker40, marker41, marker42, marker43, marker44, marker45, marker46, marker47,marker48, marker49, marker50, marker51, marker52, marker53, marker54;
     //Layout Objekteja
-    static ImageView marker;
     static ImageView kartta;
     static ImageView hahmo;
     static ImageView hahmo1;
-    ImageView here;
-    ImageView herek;
     TextView where;
     ImageButton voiceBtn;
     public static TextView text;
@@ -705,6 +808,19 @@ public class MainActivity extends AppCompatActivity {
     public static boolean politiikka = false;
     public static boolean sanakirja = false;
     public static boolean tiede = false;
+    public static boolean kielet = false;
+    public static boolean kasityojarakentaminen = false;
+    public static boolean luonnontieteet = false;
+    public static boolean luontokasvitelaimet = false;
+    public static boolean maatjakulttuuri = false;
+    public static boolean matkailu = false;
+    public static boolean puutarha = false;
+    public static boolean ruoka = false;
+    public static boolean taidejadesign = false;
+    public static boolean terveys = false;
+    public static boolean tieteellinenkirjoittaminen = false;
+    public static boolean urheilu = false;
+    public static boolean uskonnot = false;
 
     //Lastenkirjat booleanit
     public static boolean lastenromaani = false;
@@ -789,6 +905,19 @@ public class MainActivity extends AppCompatActivity {
     public Button politbtn;
     public Button sanakbtn;
     public Button tietobtn;
+    public Button kieletbtn;
+    public Button kasityojarakentaminenbtn;
+    public Button luonnontieteetbtn;
+    public Button luontokasvitelaimetbtn;
+    public Button maatjakulttuuribtn;
+    public Button matkailubtn;
+    public Button puutarhabtn;
+    public Button ruokabtn;
+    public Button taidejadesignbtn;
+    public Button terveysbtn;
+    public Button tieteellinenkirjoittaminenbtn;
+    public Button urheilubtn;
+    public Button uskonnotbtn;
 
     //Lastenkirjat napit
     public Button lastenromaanibtn;
@@ -1054,14 +1183,71 @@ public class MainActivity extends AppCompatActivity {
 
         mylayout = (RelativeLayout) findViewById(R.id.main);
 
+        // Haetaan marker objektit id:n perusteella.
+        marker1 = (ImageView) findViewById(R.id.marker1);
+        marker2 = (ImageView) findViewById(R.id.marker2);
+        marker3 = (ImageView) findViewById(R.id.marker3);
+        marker4 = (ImageView) findViewById(R.id.marker4);
+        marker5 = (ImageView) findViewById(R.id.marker5);
+        marker6 = (ImageView) findViewById(R.id.marker6);
+        marker7 = (ImageView) findViewById(R.id.marker7);
+        marker8 = (ImageView) findViewById(R.id.marker8);
+        marker9 = (ImageView) findViewById(R.id.marker9);
+        marker10 = (ImageView) findViewById(R.id.marker10);
+        marker11 = (ImageView) findViewById(R.id.marker11);
+        marker12 = (ImageView) findViewById(R.id.marker12);
+        marker13 = (ImageView) findViewById(R.id.marker13);
+        marker14 = (ImageView) findViewById(R.id.marker14);
+        marker15 = (ImageView) findViewById(R.id.marker15);
+        marker16 = (ImageView) findViewById(R.id.marker16);
+        marker17 = (ImageView) findViewById(R.id.marker17);
+        marker18 = (ImageView) findViewById(R.id.marker18);
+        marker19 = (ImageView) findViewById(R.id.marker19);
+        marker20 = (ImageView) findViewById(R.id.marker20);
+        marker21 = (ImageView) findViewById(R.id.marker21);
+        marker22 = (ImageView) findViewById(R.id.marker22);
+        marker23 = (ImageView) findViewById(R.id.marker23);
+        marker24 = (ImageView) findViewById(R.id.marker24);
+        marker25 = (ImageView) findViewById(R.id.marker25);
+        marker26 = (ImageView) findViewById(R.id.marker26);
+        marker27 = (ImageView) findViewById(R.id.marker27);
+        marker28 = (ImageView) findViewById(R.id.marker28);
+        marker29 = (ImageView) findViewById(R.id.marker29);
+        marker30 = (ImageView) findViewById(R.id.marker30);
+        marker31 = (ImageView) findViewById(R.id.marker31);
+        marker32 = (ImageView) findViewById(R.id.marker32);
+        marker33 = (ImageView) findViewById(R.id.marker33);
+        marker34 = (ImageView) findViewById(R.id.marker34);
+        marker35 = (ImageView) findViewById(R.id.marker35);
+        marker36 = (ImageView) findViewById(R.id.marker36);
+        marker37 = (ImageView) findViewById(R.id.marker37);
+        marker38 = (ImageView) findViewById(R.id.marker38);
+        marker39 = (ImageView) findViewById(R.id.marker39);
+        marker40 = (ImageView) findViewById(R.id.marker40);
+        marker41 = (ImageView) findViewById(R.id.marker41);
+        marker42 = (ImageView) findViewById(R.id.marker42);
+        marker43 = (ImageView) findViewById(R.id.marker43);
+        marker44 = (ImageView) findViewById(R.id.marker44);
+        marker45 = (ImageView) findViewById(R.id.marker45);
+        marker46 = (ImageView) findViewById(R.id.marker46);
+        marker47 = (ImageView) findViewById(R.id.marker47);
+        marker48 = (ImageView) findViewById(R.id.marker48);
+        marker49 = (ImageView) findViewById(R.id.marker49);
+        marker50 = (ImageView) findViewById(R.id.marker50);
+        marker51 = (ImageView) findViewById(R.id.marker51);
+        marker52 = (ImageView) findViewById(R.id.marker52);
+        marker53 = (ImageView) findViewById(R.id.marker53);
+        marker54 = (ImageView) findViewById(R.id.marker54);
+
+
+
+
+
         //Hakee objekteja id:n perusteella.
         mainLayout = (RelativeLayout) findViewById(R.id.main);
-        marker = (ImageView) findViewById(R.id.marker);
         kartta = (ImageView) findViewById(R.id.kartta);
         hahmo = (ImageView) findViewById(R.id.hahmo);
         hahmo1 = (ImageView) findViewById(R.id.hahmo1);
-        here = (ImageView) findViewById(R.id.here);
-        herek = (ImageView) findViewById(R.id.herek);
         where = findViewById(R.id.where);
 
         //Ruotsi, Ransaka ja Saksa nappien objektien haku
@@ -1097,6 +1283,19 @@ public class MainActivity extends AppCompatActivity {
         politbtn = findViewById(R.id.politbtn);
         sanakbtn = findViewById(R.id.sanakbtn);
         tietobtn = findViewById(R.id.tietobtn);
+        kieletbtn = findViewById(R.id.kieletbtn);
+        kasityojarakentaminenbtn = findViewById(R.id.kasityojarakentaminenbtn);
+        luonnontieteetbtn = findViewById(R.id.luonnontieteetbtn);
+        luontokasvitelaimetbtn = findViewById(R.id.luontokasvitelaimetbtn);
+        maatjakulttuuribtn = findViewById(R.id.maatjakulttuuribtn);
+        matkailubtn = findViewById(R.id.matkailubtn);
+        puutarhabtn = findViewById(R.id.puutarhabtn);
+        ruokabtn = findViewById(R.id.ruokabtn);
+        taidejadesignbtn = findViewById(R.id.taidejadesignbtn);
+        terveysbtn = findViewById(R.id.terveysbtn);
+        tieteellinenkirjoittaminenbtn = findViewById(R.id.tieteellinenkirjoittaminenbtn);
+        urheilubtn = findViewById(R.id.urheilubtn);
+        uskonnotbtn = findViewById(R.id.uskonnotbtn);
 
         //Lastenkirja nappien objektien haku
         lastenromaanibtn = findViewById(R.id.lastenromaanibtn);
@@ -1318,6 +1517,19 @@ public class MainActivity extends AppCompatActivity {
                 musiibtn.setVisibility(View.VISIBLE);
                 politbtn.setVisibility(View.VISIBLE);
                 sanakbtn.setVisibility(View.VISIBLE);
+                kieletbtn.setVisibility(View.VISIBLE);
+                kasityojarakentaminenbtn.setVisibility(View.VISIBLE);
+                luonnontieteetbtn.setVisibility(View.VISIBLE);
+                luontokasvitelaimetbtn.setVisibility(View.VISIBLE);
+                maatjakulttuuribtn.setVisibility(View.VISIBLE);
+                matkailubtn.setVisibility(View.VISIBLE);
+                puutarhabtn.setVisibility(View.VISIBLE);
+                ruokabtn.setVisibility(View.VISIBLE);
+                taidejadesignbtn.setVisibility(View.VISIBLE);
+                terveysbtn.setVisibility(View.VISIBLE);
+                tieteellinenkirjoittaminenbtn.setVisibility(View.VISIBLE);
+                urheilubtn.setVisibility(View.VISIBLE);
+                uskonnotbtn.setVisibility(View.VISIBLE);
 
                 ylakate.setVisibility(View.VISIBLE);
 
@@ -1435,7 +1647,7 @@ public class MainActivity extends AppCompatActivity {
                 lopetus();
                 speechRecognizer.stopListening();
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
-                textToSpeech.speak(getString(R.string.tietospeak), TextToSpeech.QUEUE_FLUSH, null);
+                textToSpeech.speak(getString(R.string.rikospuhe), TextToSpeech.QUEUE_FLUSH, null);
                 //Poistetaan pääkategotia napit käytöstä.
                 kaunobtn.setVisibility(View.INVISIBLE);
                 tietogabtn.setVisibility(View.INVISIBLE);
@@ -1456,7 +1668,7 @@ public class MainActivity extends AppCompatActivity {
                 rikospokkabtn.setVisibility(View.VISIBLE);
                 rikosromaanibtn.setVisibility(View.VISIBLE);
                 truecrimebtn.setVisibility(View.VISIBLE);
-                lastelobtn.setVisibility(View.VISIBLE);
+
 
                 ylakate.setVisibility(View.VISIBLE);
 
@@ -1896,6 +2108,124 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+        //Kielet nappi
+        kieletbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                kielet = true;
+                vertaa();
+            }
+        });
+        kasityojarakentaminenbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                kasityojarakentaminen = true;
+                vertaa();
+            }
+        });
+        luonnontieteetbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                luonnontieteet = true;
+                vertaa();
+            }
+        });
+        luontokasvitelaimetbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                luontokasvitelaimet = true;
+                vertaa();
+            }
+        });
+        maatjakulttuuribtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                maatjakulttuuri = true;
+                vertaa();
+            }
+        });
+        matkailubtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                matkailu = true;
+                vertaa();
+            }
+        });
+        puutarhabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                matkailu = true;
+                vertaa();
+            }
+        });
+        ruokabtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                ruoka = true;
+                vertaa();
+            }
+        });
+        taidejadesignbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                taidejadesign = true;
+                vertaa();
+            }
+        });
+        terveysbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                terveys = true;
+                vertaa();
+            }
+        });
+        tieteellinenkirjoittaminenbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                tieteellinenkirjoittaminen = true;
+                vertaa();
+            }
+        });
+        urheilubtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                urheilu = true;
+                vertaa();
+            }
+        });
+        uskonnotbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                lopetus();
+                speechRecognizer.stopListening();
+                uskonnot = true;
+                vertaa();
+            }
+        });
 
         //Lastenkirjat napit
         //Lasten romaanit nappi
@@ -2221,6 +2551,19 @@ public class MainActivity extends AppCompatActivity {
                 musiibtn.setVisibility(View.INVISIBLE);
                 politbtn.setVisibility(View.INVISIBLE);
                 sanakbtn.setVisibility(View.INVISIBLE);
+                kieletbtn.setVisibility(View.INVISIBLE);
+                kasityojarakentaminenbtn.setVisibility(View.INVISIBLE);
+                luonnontieteetbtn.setVisibility(View.INVISIBLE);
+                luontokasvitelaimetbtn.setVisibility(View.INVISIBLE);
+                maatjakulttuuribtn.setVisibility(View.INVISIBLE);
+                matkailubtn.setVisibility(View.INVISIBLE);
+                puutarhabtn.setVisibility(View.INVISIBLE);
+                ruokabtn.setVisibility(View.INVISIBLE);
+                taidejadesignbtn.setVisibility(View.INVISIBLE);
+                terveysbtn.setVisibility(View.INVISIBLE);
+                tieteellinenkirjoittaminenbtn .setVisibility(View.INVISIBLE);
+                urheilubtn.setVisibility(View.INVISIBLE);
+                uskonnotbtn.setVisibility(View.INVISIBLE);
 
                 lastenromaanibtn.setVisibility(View.INVISIBLE);
                 kidsbtn.setVisibility(View.INVISIBLE);
@@ -2277,18 +2620,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
-
-
-        /*handlerloppu.postDelayed(new Runnable() {
-            @Override
-            public void run() {
-
-            }
-        },4000);*/
-
-
-
-
     public void lopetus(){
         if (i != 0) {
             i = 1;
@@ -2305,14 +2636,14 @@ public class MainActivity extends AppCompatActivity {
 
                             i++;
                             Log.e(String.valueOf(LOG_TAG), "I on tällähetkellä " + i);
-                            if (i > 5) {
+                            if (i > 10) {
                                 restart();
                             }
                         }
                     });
                 }
 
-            }, 0, 5000);
+            }, 0, 10000);
         }
 
 
@@ -2526,10 +2857,10 @@ public class MainActivity extends AppCompatActivity {
                     ajankohtaistabtn.setVisibility(View.VISIBLE);
                     paperituotteetbtn.setVisibility(View.VISIBLE);
 
-                    here.setVisibility(View.VISIBLE);
-                    herek.setVisibility(View.VISIBLE);
+
                     where.setVisibility(View.VISIBLE);
 
+                    //marker.setVisibility(View.VISIBLE);
                     kartta.setVisibility(View.VISIBLE);
                     //text1.setVisibility(View.VISIBLE);
 
@@ -2539,7 +2870,7 @@ public class MainActivity extends AppCompatActivity {
 
 
                 }
-            }, 13000); //13 sekunnin viive handlerin toimintaan.
+            }, 15000); //15 sekunnin viive handlerin toimintaan.
 
 
         }
@@ -2874,6 +3205,109 @@ public class MainActivity extends AppCompatActivity {
         tiede6 = MainActivity.word.contains(getString(R.string.tiet6));
         tiede7 = MainActivity.word.contains(getString(R.string.tiet7));
 
+        kielet0 = word.contains(getString(R.string.kielet0));
+        kielet1 = word.contains(getString(R.string.kielet1));
+        kielet2 = word.contains(getString(R.string.kielet2));
+        kielet3 = word.contains(getString(R.string.kielet3));
+        kielet4 = word.contains(getString(R.string.kielet4));
+        kielet5 = word.contains(getString(R.string.kielet5));
+
+        //Käsityö ja rakentaminen
+        kasityojarakentaminen0 = word.contains(getString(R.string.kasityojarakentaminen0));
+        kasityojarakentaminen1 = word.contains(getString(R.string.kasityojarakentaminen1));
+        kasityojarakentaminen2 = word.contains(getString(R.string.kasityojarakentaminen2));
+        kasityojarakentaminen3 = word.contains(getString(R.string.kasityojarakentaminen3));
+        kasityojarakentaminen4 = word.contains(getString(R.string.kasityojarakentaminen4));
+        kasityojarakentaminen5 = word.contains(getString(R.string.kasityojarakentaminen5));
+
+        //Luonnontieteet
+        luonnontieteet0 = word.contains(getString(R.string.luonnontieteet0));
+        luonnontieteet1 = word.contains(getString(R.string.luonnontieteet1));
+        luonnontieteet2 = word.contains(getString(R.string.luonnontieteet2));
+        luonnontieteet3 = word.contains(getString(R.string.luonnontieteet3));
+        luonnontieteet4 = word.contains(getString(R.string.luonnontieteet4));
+        luonnontieteet5 = word.contains(getString(R.string.luonnontieteet5));
+
+        //Luonto, Kasvit ja eläimet
+        luontokasvitelaimet0 = word.contains(getString(R.string.luontokasvitelaimet0));
+        luontokasvitelaimet1 = word.contains(getString(R.string.luontokasvitelaimet1));
+        luontokasvitelaimet2 = word.contains(getString(R.string.luontokasvitelaimet2));
+        luontokasvitelaimet3 = word.contains(getString(R.string.luontokasvitelaimet3));
+        luontokasvitelaimet4 = word.contains(getString(R.string.luontokasvitelaimet4));
+        luontokasvitelaimet5 = word.contains(getString(R.string.luontokasvitelaimet5));
+
+        // Maat ja kulttuuri
+        maatjakulttuuri0 = word.contains(getString(R.string.maatjakulttuuri0));
+        maatjakulttuuri1 = word.contains(getString(R.string.maatjakulttuuri1));
+        maatjakulttuuri2 = word.contains(getString(R.string.maatjakulttuuri2));
+        maatjakulttuuri3 = word.contains(getString(R.string.maatjakulttuuri3));
+        maatjakulttuuri4 = word.contains(getString(R.string.maatjakulttuuri4));
+        maatjakulttuuri5 = word.contains(getString(R.string.maatjakulttuuri5));
+
+        // Matkailu
+        matkailu0 = word.contains(getString(R.string.matkailu0));
+        matkailu1 = word.contains(getString(R.string.matkailu1));
+        matkailu2 = word.contains(getString(R.string.matkailu2));
+        matkailu3 = word.contains(getString(R.string.matkailu3));
+        matkailu4 = word.contains(getString(R.string.matkailu4));
+        matkailu5 = word.contains(getString(R.string.matkailu5));
+
+        // Puutarha
+        puutarha0 = word.contains(getString(R.string.puutarha0));
+        puutarha1 = word.contains(getString(R.string.puutarha1));
+        puutarha2 = word.contains(getString(R.string.puutarha2));
+        puutarha3 = word.contains(getString(R.string.puutarha3));
+        puutarha4 = word.contains(getString(R.string.puutarha4));
+        puutarha5 = word.contains(getString(R.string.puutarha5));
+
+        // Ruoka
+        ruoka0 = word.contains(getString(R.string.ruoka0));
+        ruoka1 = word.contains(getString(R.string.ruoka1));
+        ruoka2 = word.contains(getString(R.string.ruoka2));
+        ruoka3 = word.contains(getString(R.string.ruoka3));
+        ruoka4 = word.contains(getString(R.string.ruoka4));
+        ruoka5 = word.contains(getString(R.string.ruoka5));
+
+        // Taide ja Design
+        taidejadesign0 = word.contains(getString(R.string.taidejadesign0));
+        taidejadesign1 = word.contains(getString(R.string.taidejadesign1));
+        taidejadesign2 = word.contains(getString(R.string.taidejadesign2));
+        taidejadesign3 = word.contains(getString(R.string.taidejadesign3));
+        taidejadesign4 = word.contains(getString(R.string.taidejadesign4));
+        taidejadesign5 = word.contains(getString(R.string.taidejadesign5));
+
+        // Terveys
+        terveys0 = word.contains(getString(R.string.terveys0));
+        terveys1 = word.contains(getString(R.string.terveys1));
+        terveys2 = word.contains(getString(R.string.terveys2));
+        terveys3 = word.contains(getString(R.string.terveys3));
+        terveys4 = word.contains(getString(R.string.terveys4));
+        terveys5 = word.contains(getString(R.string.terveys5));
+
+        // Tieteellinenkirjoittaminen ja kirjallisuus
+        tieteellinenkirjoittaminen0 = word.contains(getString(R.string.tieteellinenkirjoittaminen0));
+        tieteellinenkirjoittaminen1 = word.contains(getString(R.string.tieteellinenkirjoittaminen1));
+        tieteellinenkirjoittaminen2 = word.contains(getString(R.string.tieteellinenkirjoittaminen2));
+        tieteellinenkirjoittaminen3 = word.contains(getString(R.string.tieteellinenkirjoittaminen3));
+        tieteellinenkirjoittaminen4 = word.contains(getString(R.string.tieteellinenkirjoittaminen4));
+        tieteellinenkirjoittaminen5 = word.contains(getString(R.string.tieteellinenkirjoittaminen5));
+
+        // Urheilu
+        urheilu0 = word.contains(getString(R.string.urheilu0));
+        urheilu1 = word.contains(getString(R.string.urheilu1));
+        urheilu2 = word.contains(getString(R.string.urheilu2));
+        urheilu3 = word.contains(getString(R.string.urheilu3));
+        urheilu4 = word.contains(getString(R.string.urheilu4));
+        urheilu5 = word.contains(getString(R.string.urheilu5));
+
+        // Uskonnot
+        uskonnot0 = word.contains(getString(R.string.uskonnot0));
+        uskonnot1 = word.contains(getString(R.string.uskonnot1));
+        uskonnot2 = word.contains(getString(R.string.uskonnot2));
+        uskonnot3 = word.contains(getString(R.string.uskonnot3));
+        uskonnot4 = word.contains(getString(R.string.uskonnot4));
+        uskonnot5 = word.contains(getString(R.string.uskonnot5));
+
         //Lastenkirjat
         //Lasten romaanit
         lastenromaani0 = word.contains(getString(R.string.lastenromaani0));
@@ -3153,6 +3587,10 @@ public class MainActivity extends AppCompatActivity {
             saksankieli = true;
             laskuri = 0;
             vertaa();
+        } else if (tiede0 || tiede1 || tiede2 || tiede3 || tiede4 || tiede5 || tiede6 || tiede7) {
+            tiede = true;
+            laskuri = 0;
+            vertaa();
         } else if (fantasia0 || fantasia1 || fantasia2 || fantasia3 || fantasia4 || fantasia5 || fantasia6 || fantasia7 || fantasia8 || fantasia9) {
             fantasia = true;
             laskuri = 0;
@@ -3221,7 +3659,7 @@ public class MainActivity extends AppCompatActivity {
             holokausti = true;
             laskuri = 0;
             vertaa();
-        } else if (ilmastonmuutos0 || ilmastonmuutos1 || ilmastonmuutos2 || ilmastonmuutos3 || ilmastonmuutos4 || ilmastonmuutos5){
+        } else if (ilmastonmuutos0 || ilmastonmuutos1 || ilmastonmuutos2 || ilmastonmuutos3 || ilmastonmuutos4 || ilmastonmuutos5) {
             ilmastonmuutos = true;
             laskuri = 0;
             vertaa();
@@ -3245,8 +3683,56 @@ public class MainActivity extends AppCompatActivity {
             sanakirja = true;
             laskuri = 0;
             vertaa();
-        } else if (tiede0 || tiede1 || tiede2 || tiede3 || tiede4 || tiede5 || tiede6 || tiede7) {
-            tiede = true;
+        } else if (kielet0 || kielet1 || kielet2 || kielet3 || kielet4 || kielet5) {
+            kielet = true;
+            laskuri = 0;
+            vertaa();
+        } else if (kasityojarakentaminen0 || kasityojarakentaminen1 || kasityojarakentaminen2 || kasityojarakentaminen3 || kasityojarakentaminen4 || kasityojarakentaminen5) {
+            kasityojarakentaminen = true;
+            laskuri = 0;
+            vertaa();
+        } else if (luonnontieteet0 || luonnontieteet1 || luonnontieteet2 || luonnontieteet3 || luonnontieteet4 || luonnontieteet5) {
+            luonnontieteet = false;
+            laskuri = 0;
+            vertaa();
+        } else if (luontokasvitelaimet0 || luontokasvitelaimet1 || luontokasvitelaimet2 || luontokasvitelaimet3 || luontokasvitelaimet4 || luontokasvitelaimet5) {
+            luontokasvitelaimet = true;
+            laskuri = 0;
+            vertaa();
+        } else if (maatjakulttuuri0 || maatjakulttuuri1 || maatjakulttuuri2 || maatjakulttuuri3 || maatjakulttuuri4 || maatjakulttuuri5) {
+            maatjakulttuuri = true;
+            laskuri = 0;
+            vertaa();
+        } else if (matkailu0 || matkailu1 || matkailu2 || matkailu3 || matkailu4 || matkailu5) {
+            matkailu = true;
+            laskuri = 0;
+            vertaa();
+        } else if (puutarha0 || puutarha1 || puutarha2 || puutarha3 || puutarha4 || puutarha5) {
+            puutarha = true;
+            laskuri = 0;
+            vertaa();
+        } else if (ruoka0 || ruoka1 || ruoka2 || ruoka3 || ruoka4 || ruoka5) {
+            ruoka = true;
+            laskuri = 0;
+            vertaa();
+        } else if (taidejadesign0 || taidejadesign1 || taidejadesign2 || taidejadesign3 || taidejadesign4 || taidejadesign5) {
+            taidejadesign = true;
+            laskuri = 0;
+            vertaa();
+        } else if (terveys0 || terveys1 || terveys2 || terveys3 || terveys4 || terveys5) {
+            terveys = true;
+            laskuri = 0;
+            vertaa();
+        } else if (tieteellinenkirjoittaminen0 || tieteellinenkirjoittaminen1 || tieteellinenkirjoittaminen2 || tieteellinenkirjoittaminen3 || tieteellinenkirjoittaminen4 || tieteellinenkirjoittaminen5) {
+            tieteellinenkirjoittaminen = true;
+            laskuri = 0;
+            vertaa();
+        } else if (urheilu0 || urheilu1 || urheilu2 || urheilu3 || urheilu4 || urheilu5) {
+            urheilu = true;
+            laskuri = 0;
+            vertaa();
+        } else if (uskonnot0 || uskonnot1 || uskonnot2 || uskonnot3 || uskonnot4 || uskonnot5){
+            uskonnot = true;
             laskuri = 0;
             vertaa();
         } else if (lehd0 || lehd1 || lehd2 || lehd3 || lehd4 || lehd5) {
@@ -3341,12 +3827,12 @@ public class MainActivity extends AppCompatActivity {
             crime = true;
             laskuri = 0;
             vertaa();
-        } else if (fiction0 || fiction1 || fiction2 || fiction3 || fiction4 || fiction5) {
-            fiction = true;
-            laskuri = 0;
-            vertaa();
         } else if (nonfiction0 || nonfiction1 || nonfiction2 || nonfiction3 || nonfiction4 || nonfiction5) {
             nonfiction = true;
+            laskuri = 0;
+            vertaa();
+        } else if (fiction0 || fiction1 || fiction2 || fiction3 || fiction4 || fiction5) {
+            fiction = true;
             laskuri = 0;
             vertaa();
         } else if (poetry0 || poetry1 || poetry2 || poetry3 || poetry4 || poetry5) {
@@ -3435,15 +3921,70 @@ public class MainActivity extends AppCompatActivity {
     //Vertaa() methodissa toteutetaan toiminta mikö on valittu joko nappulalla tai avainsanan löytämisellä.
     public void vertaa() {
 
+        marker1.setVisibility(View.INVISIBLE);
+        marker2.setVisibility(View.INVISIBLE);
+        marker3.setVisibility(View.INVISIBLE);
+        marker4.setVisibility(View.INVISIBLE);
+        marker5.setVisibility(View.INVISIBLE);
+        marker6.setVisibility(View.INVISIBLE);
+        marker7.setVisibility(View.INVISIBLE);
+        marker8.setVisibility(View.INVISIBLE);
+        marker9.setVisibility(View.INVISIBLE);
+        marker10.setVisibility(View.INVISIBLE);
+        marker11.setVisibility(View.INVISIBLE);
+        marker12.setVisibility(View.INVISIBLE);
+        marker13.setVisibility(View.INVISIBLE);
+        marker14.setVisibility(View.INVISIBLE);
+        marker15.setVisibility(View.INVISIBLE);
+        marker16.setVisibility(View.INVISIBLE);
+        marker17.setVisibility(View.INVISIBLE);
+        marker18.setVisibility(View.INVISIBLE);
+        marker19.setVisibility(View.INVISIBLE);
+        marker20.setVisibility(View.INVISIBLE);
+        marker21.setVisibility(View.INVISIBLE);
+        marker22.setVisibility(View.INVISIBLE);
+        marker23.setVisibility(View.INVISIBLE);
+        marker24.setVisibility(View.INVISIBLE);
+        marker25.setVisibility(View.INVISIBLE);
+        marker26.setVisibility(View.INVISIBLE);
+        marker27.setVisibility(View.INVISIBLE);
+        marker28.setVisibility(View.INVISIBLE);
+        marker29.setVisibility(View.INVISIBLE);
+        marker30.setVisibility(View.INVISIBLE);
+        marker31.setVisibility(View.INVISIBLE);
+        marker32.setVisibility(View.INVISIBLE);
+        marker33.setVisibility(View.INVISIBLE);
+        marker34.setVisibility(View.INVISIBLE);
+        marker35.setVisibility(View.INVISIBLE);
+        marker36.setVisibility(View.INVISIBLE);
+        marker37.setVisibility(View.INVISIBLE);
+        marker38.setVisibility(View.INVISIBLE);
+        marker39.setVisibility(View.INVISIBLE);
+        marker40.setVisibility(View.INVISIBLE);
+        marker41.setVisibility(View.INVISIBLE);
+        marker42.setVisibility(View.INVISIBLE);
+        marker43.setVisibility(View.INVISIBLE);
+        marker44.setVisibility(View.INVISIBLE);
+        marker45.setVisibility(View.INVISIBLE);
+        marker46.setVisibility(View.INVISIBLE);
+        marker47.setVisibility(View.INVISIBLE);
+        marker48.setVisibility(View.INVISIBLE);
+        marker49.setVisibility(View.INVISIBLE);
+        marker50.setVisibility(View.INVISIBLE);
+        marker51.setVisibility(View.INVISIBLE);
+        marker52.setVisibility(View.INVISIBLE);
+        marker53.setVisibility(View.INVISIBLE);
+        marker54.setVisibility(View.INVISIBLE);
+
 
         if (MainActivity.sijainti) {
 
             ylakate.setVisibility(View.VISIBLE);
 
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+            /*RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
             markerRelativeLayout.leftMargin = 1600;
             markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            MainActivity.marker.setLayoutParams(markerRelativeLayout);*/
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -3467,10 +4008,7 @@ public class MainActivity extends AppCompatActivity {
         else if (ruotsinkieli){
             ylakate.setVisibility(View.VISIBLE);
 
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-            markerRelativeLayout.leftMargin = 1600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker30.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -3495,10 +4033,7 @@ public class MainActivity extends AppCompatActivity {
         else if (ranskankieli){
             ylakate.setVisibility(View.VISIBLE);
 
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-            markerRelativeLayout.leftMargin = 1600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker20.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -3523,10 +4058,7 @@ public class MainActivity extends AppCompatActivity {
         else if (saksankieli){
             ylakate.setVisibility(View.VISIBLE);
 
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-            markerRelativeLayout.leftMargin = 1600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker20.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -3553,10 +4085,7 @@ public class MainActivity extends AppCompatActivity {
 
             ylakate.setVisibility(View.VISIBLE);
 
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-            markerRelativeLayout.leftMargin = 1600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker10.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -3583,10 +4112,7 @@ public class MainActivity extends AppCompatActivity {
 
             ylakate.setVisibility(View.VISIBLE);
 
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-            markerRelativeLayout.leftMargin = 1600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker10.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -3643,10 +4169,9 @@ public class MainActivity extends AppCompatActivity {
 
             ylakate.setVisibility(View.VISIBLE);
 
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-            markerRelativeLayout.leftMargin = 1600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker24.setVisibility(View.VISIBLE);
+            marker27.setVisibility(View.VISIBLE);
+            marker28.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -3673,10 +4198,7 @@ public class MainActivity extends AppCompatActivity {
 
             ylakate.setVisibility(View.VISIBLE);
 
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-            markerRelativeLayout.leftMargin = 1600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker10.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -3703,10 +4225,7 @@ public class MainActivity extends AppCompatActivity {
 
             ylakate.setVisibility(View.VISIBLE);
 
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-            markerRelativeLayout.leftMargin = 1600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker28.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -3733,10 +4252,7 @@ public class MainActivity extends AppCompatActivity {
 
             ylakate.setVisibility(View.VISIBLE);
 
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-            markerRelativeLayout.leftMargin = 1600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker26.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -3762,10 +4278,7 @@ public class MainActivity extends AppCompatActivity {
 
                 ylakate.setVisibility(View.VISIBLE);
 
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-                markerRelativeLayout.leftMargin = 1600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker24.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.mispuhe);
@@ -3792,10 +4305,7 @@ public class MainActivity extends AppCompatActivity {
 
                 ylakate.setVisibility(View.VISIBLE);
 
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-                markerRelativeLayout.leftMargin = 1600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker22.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.mispuhe);
@@ -3821,13 +4331,9 @@ public class MainActivity extends AppCompatActivity {
         else if (MainActivity.fantasia) {
 
                 //String x = getString(R.string.fantapuhe);
-                marker.setVisibility(View.VISIBLE);
 
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 1050;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+                marker12.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 MainActivity.textToSpeech.speak(getString(R.string.fantapuhe), TextToSpeech.QUEUE_FLUSH, null);
@@ -3856,12 +4362,7 @@ public class MainActivity extends AppCompatActivity {
 
                 //String x = getString(R.string.fantapuhe);
 
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 1050;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker21.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 MainActivity.textToSpeech.speak(getString(R.string.runopuhe), TextToSpeech.QUEUE_FLUSH, null);
@@ -3886,13 +4387,7 @@ public class MainActivity extends AppCompatActivity {
         else if (rikojanitus) {
 
                 //String x = getString(R.string.fantapuhe);
-                marker.setVisibility(View.VISIBLE);
-
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 1050;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker10.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 MainActivity.textToSpeech.speak(getString(R.string.rikojanpuhe), TextToSpeech.QUEUE_FLUSH, null);
@@ -3915,12 +4410,8 @@ public class MainActivity extends AppCompatActivity {
 
         //Tietokirjallisuuden katagorian toiminnot
         else if (ukrainajavenaja){
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+                marker36.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -3943,12 +4434,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         else if (elokuvajateatteri){
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker34.setVisibility(View.VISIBLE);;
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -3972,12 +4458,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         else if (elamankerta){
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker32.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -4000,12 +4481,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         else if (antiikkikirjallisuus){
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker39.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -4028,12 +4504,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         else if (holokausti){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker39.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4056,12 +4527,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (ilmastonmuutos){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker33.setVisibility(View.VISIBLE);;
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4084,12 +4550,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (filosofia){
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker39.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -4113,12 +4574,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         else if (historia){
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker36.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -4141,12 +4597,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         else if (musiikki){
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker33.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -4170,12 +4621,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         else if (politiikka){
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker35.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -4199,12 +4645,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         else if (sanakirja){
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker41.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -4228,12 +4669,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         else if (MainActivity.tiede) {
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker9.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -4257,15 +4693,322 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
+        else if (kielet){
+            marker41.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.kieletpuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            kielet = false;
+            kielet0 = false;
+            kielet1 = false;
+            kielet2 = false;
+            kielet3 = false;
+            kielet4 = false;
+            kielet5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (kasityojarakentaminen){
+            marker54.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.kasityojarakentaminenpuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            kasityojarakentaminen = false;
+            kasityojarakentaminen0 = false;
+            kasityojarakentaminen1 = false;
+            kasityojarakentaminen2 = false;
+            kasityojarakentaminen3 = false;
+            kasityojarakentaminen4 = false;
+            kasityojarakentaminen5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (luonnontieteet){
+            marker36.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.luonnontieteetpuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            luonnontieteet = false;
+            luonnontieteet0 = false;
+            luonnontieteet1 = false;
+            luonnontieteet2 = false;
+            luonnontieteet3 = false;
+            luonnontieteet4 = false;
+            luonnontieteet5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (luontokasvitelaimet){
+            marker16.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.luontokasvitelaimetpuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            luontokasvitelaimet = false;
+            luontokasvitelaimet0 = false;
+            luontokasvitelaimet1 = false;
+            luontokasvitelaimet2 = false;
+            luontokasvitelaimet3 = false;
+            luontokasvitelaimet4 = false;
+            luontokasvitelaimet5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (maatjakulttuuri){
+            marker39.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.maatjakulttuuripuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            maatjakulttuuri = false;
+            maatjakulttuuri0 = false;
+            maatjakulttuuri1 = false;
+            maatjakulttuuri2 = false;
+            maatjakulttuuri3 = false;
+            maatjakulttuuri4 = false;
+            maatjakulttuuri5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (matkailu){
+            marker41.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.matkailupuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            matkailu = false;
+            matkailu0 = false;
+            matkailu1 = false;
+            matkailu2 = false;
+            matkailu3 = false;
+            matkailu4 = false;
+            matkailu5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (puutarha){
+            marker16.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.puutarhapuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            puutarha = false;
+            puutarha0 = false;
+            puutarha1 = false;
+            puutarha2 = false;
+            puutarha3 = false;
+            puutarha4 = false;
+            puutarha5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (ruoka){
+            marker54.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.ruokapuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            ruoka = false;
+            ruoka0 = false;
+            ruoka1 = false;
+            ruoka2 = false;
+            ruoka3 = false;
+            ruoka4 = false;
+            ruoka5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (taidejadesign){
+            marker51.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.taidejadesignpuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            taidejadesign = false;
+            taidejadesign0 = false;
+            taidejadesign1 = false;
+            taidejadesign2 = false;
+            taidejadesign3 = false;
+            taidejadesign4 = false;
+            taidejadesign5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (terveys){
+            marker40.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.terveyspuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            terveys = false;
+            terveys0 = false;
+            terveys1 = false;
+            terveys2 = false;
+            terveys3 = false;
+            terveys4 = false;
+            terveys5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (tieteellinenkirjoittaminen){
+            marker33.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.tieteellinenkirjoittaminenpuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            tieteellinenkirjoittaminen = false;
+            tieteellinenkirjoittaminen0 = false;
+            tieteellinenkirjoittaminen1 = false;
+            tieteellinenkirjoittaminen2 = false;
+            tieteellinenkirjoittaminen3 = false;
+            tieteellinenkirjoittaminen4 = false;
+            tieteellinenkirjoittaminen5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (urheilu){
+            marker16.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.urheilupuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            urheilu = false;
+            urheilu0 = false;
+            urheilu1 = false;
+            urheilu2 = false;
+            urheilu3 = false;
+            urheilu4 = false;
+            urheilu5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
+        else if (uskonnot){
+            marker39.setVisibility(View.VISIBLE);
+
+            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            //String x = getString(R.string.tiedpuhe);
+            MainActivity.textToSpeech.speak(getString(R.string.uskonnotpuhe), TextToSpeech.QUEUE_FLUSH, null);
+
+            uskonnot = false;
+            uskonnot0 = false;
+            uskonnot1 = false;
+            uskonnot2 = false;
+            uskonnot3 = false;
+            uskonnot4 = false;
+            uskonnot5 = false;
+
+
+            Handler handler = new Handler();
+            handler.postDelayed(new Runnable() {
+                @Override
+                public void run() {
+                    hahmo1.setImageResource(R.drawable.kuvarobo);
+                }
+            }, 3600);
+        }
 
         //Ylakategorian yksittäis kategoriat
         else if (lehdet){
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker52.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -4289,12 +5032,7 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         else if (sarjakuvat){
-                marker.setVisibility(View.VISIBLE);
-                RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-                markerRelativeLayout.leftMargin = 2600;
-                markerRelativeLayout.topMargin = 500;
-                MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker50.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.tiedpuhe);
@@ -4317,13 +5055,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-        else if (pokkarit){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+       /* else if (pokkarit){
 
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4346,12 +5080,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (englanti){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4372,7 +5101,7 @@ public class MainActivity extends AppCompatActivity {
                     hahmo1.setImageResource(R.drawable.kuvarobo);
                 }
             }, 3600);
-        }
+        }*/
         else if (MainActivity.kiitoksia) {
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
@@ -4399,12 +5128,7 @@ public class MainActivity extends AppCompatActivity {
                 restart();
             }
         else if (elokuvat){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker31.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4427,12 +5151,12 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (ajankohtaista){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker1.setVisibility(View.VISIBLE);
+            marker3.setVisibility(View.VISIBLE);
+            marker6.setVisibility(View.VISIBLE);
+            marker7.setVisibility(View.VISIBLE);
+            marker8.setVisibility(View.VISIBLE);
+            marker52.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4455,12 +5179,9 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (paperituotteet){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker2.setVisibility(View.VISIBLE);
+            marker4.setVisibility(View.VISIBLE);
+            marker5.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4485,12 +5206,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Lastenkirjat kategorian toiminnot
         else if (lastenromaani){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker41.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4513,12 +5229,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (kids){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4541,12 +5252,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (lastenelokuvat){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker53.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4569,12 +5275,8 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (lastenkirjat){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+            marker41.setVisibility(View.VISIBLE);
 
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4597,12 +5299,8 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (lastentietikirjat){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker47.setVisibility(View.VISIBLE);
+            marker49.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4625,12 +5323,9 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (lastenkuvakirja){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker43.setVisibility(View.VISIBLE);
+            marker48.setVisibility(View.VISIBLE);
+            marker53.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4653,12 +5348,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (ruotsinkielisetlastenkirjat){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
 
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4681,12 +5371,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (vauvojenkirja){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker44.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4709,12 +5394,8 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (nuoret){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
+            marker40.setVisibility(View.VISIBLE);
 
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4739,12 +5420,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         else if (puuhaalapsille){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker45.setVisibility(View.VISIBLE);
+            marker46.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4770,12 +5447,7 @@ public class MainActivity extends AppCompatActivity {
 
         //Rikoskirja kategoria toiminnot
         else if (CrimeNovelsInEnglish){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker15.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4798,12 +5470,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (RikoskirjaUutuudet){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker25.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4826,12 +5493,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (RikosPokkarit){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker23.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4854,12 +5516,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (Rikosromaanit){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker21.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4882,12 +5539,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (TrueCrime){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker21.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4909,13 +5561,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 3600);
         }
+        //Pokkarit
         else if (kaunopokkarit){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker22.setVisibility(View.VISIBLE);
+            marker23.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4938,12 +5587,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (scifijafantasiapokkarit){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker23.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4966,12 +5610,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (tietopokkarit){
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker22.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -4995,12 +5634,7 @@ public class MainActivity extends AppCompatActivity {
         }
         //Ennglanninkieliset kirja kategoriat
         else if (crime) {
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker15.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -5023,12 +5657,9 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (fiction) {
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker15.setVisibility(View.VISIBLE);
+            marker16.setVisibility(View.VISIBLE);
+            marker18.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -5051,12 +5682,9 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (nonfiction) {
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker13.setVisibility(View.VISIBLE);
+            marker14.setVisibility(View.VISIBLE);
+            marker19.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -5079,12 +5707,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (poetry) {
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker12.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -5107,12 +5730,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (engscifi) {
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker15.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -5135,12 +5753,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (newfiction) {
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker18.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -5163,12 +5776,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (newnonfiction) {
-            marker.setVisibility(View.VISIBLE);
-            RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
-
-            markerRelativeLayout.leftMargin = 2600;
-            markerRelativeLayout.topMargin = 500;
-            MainActivity.marker.setLayoutParams(markerRelativeLayout);
+            marker19.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -5307,20 +5915,22 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(DialogInterface dialogInterface, int i) {
                 if(i == 0){
                     //english
-                    speechRecognizer.stopListening();
+                    /*speechRecognizer.stopListening();
                     textToSpeech.stop();
                     handler.removeCallbacksAndMessages(null);
-                    timer.cancel();
+                    timer.cancel();*/
                     setLocale("en");
-                    recreate();
+                    //recreate();
+                    restart();
                 }else if(i == 1){
                     //Suomi
-                    speechRecognizer.stopListening();
+                    /*speechRecognizer.stopListening();
                     textToSpeech.stop();
                     handler.removeCallbacksAndMessages(null);
-                    timer.cancel();
+                    timer.cancel();*/
                     setLocale("fi");
-                    recreate();
+                    //recreate();
+                    restart();
                 }
                 dialogInterface.dismiss();
 

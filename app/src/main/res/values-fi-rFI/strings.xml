@@ -8,7 +8,7 @@
     <string name="scifipuhe">Jos menet tänne niin löydät scifi kirjat.?</string>
     <string name="mispuhe">Punainen pallo näyttää kartalla sinun sijaintisi myymälässä.</string>
 
-    <string name="terve">Hei minun nimeni on RoseBotti. Voit kysyä minulta missä eri kirja kategoriat ovat tai painaa valmista nappia. Tallennan kaiken puheen tutkimus ja kehitystyötä varten. Mitä kirjoja etsit?</string>
+    <string name="terve">Hei minun nimeni on RoseBotti. Voit kysyä minulta missä eri kirja kategoriat ovat tai painaa valmista nappia. Tallennan kaiken puheen tutkimus ja kehitystyötä varten. Voit esittää kategoria kysymyksen äänimerkin jälkeen?</string>
     <string name="kiitos">Mahtavaa oli ilo olla avuksi. Nyt menen takaisin nukkumaan.</string>
     <string name="enymr">Anteeki en ymmärtänyt, voitko kysyä uudelleen?</string>
     <string name="kysyuu">En valitettavasti ymmärrä sinua. Voit myös painaa valmista nappia, tai sitten klikata minua ja yrittää kysyä uudelleen.</string>
@@ -22,7 +22,7 @@
     <string name="elokuvatpuhe">Jos menet tänne niin löydät elokuvat.</string>
     <string name="ajankohtaistapuhe">Jos menet tänne niin löydät ajankohtaiset kirjat.</string>
     <string name="paperituotteetpuhe">Jos menet tänne niin löydät paperituotteet.</string>
-
+    <string name="rikospuhe">Tästä voit valita etsimäsi rikoskirjallisuuden kategorian.</string>
     <string name="pokkaritpuhe">Täältä voit valita haluamasi pokkari kategorian.</string>
 
     <!-- Ruotsi, Ranska ja Saksa puheet -->
@@ -53,7 +53,20 @@
     <string name="musiipuhe">Jos menet tänne niin löydät musiikki kirjoja.</string>
     <string name="politpuhe">Jos menet tänne löydät politiikka kirjoja.</string>
     <string name="sanakpuhe">Jos menet tänne niin löydät sanakirjat.</string>
-    <string name="tiedpuhe">Jos menet tänne niin löydät tietokirjat.</string>
+    <string name="tiedpuhe">Jos menet tänne niin löydät uudet tietokirjat.</string>
+    <string name="kieletpuhe">Jos menet tänne niin löydät kielikirjoja.</string>
+    <string name="kasityojarakentaminenpuhe">Jos menet tänne niin löydät käsityö ja rakentamis kirjoja.</string>
+    <string name="luonnontieteetpuhe">Jos menet tänne niin löydät luonnontieteet.</string>
+    <string name="luontokasvitelaimetpuhe">Jos menet tänne nii löydät kirjat Luonnosta, Kasveista ja eläimistä.</string>
+    <string name="maatjakulttuuripuhe">Jos menet tänne niin löydät kirjat maista ja kulttuurista.</string>
+    <string name="matkailupuhe">Jos menet tänne niin löydät matkailu kirjoja.</string>
+    <string name="puutarhapuhe">Jos menet tänne niin löydät puutarha kirjat.</string>
+    <string name="ruokapuhe">Jos menet tänne niin löydät ruoka aiheiset kirjat.</string>
+    <string name="taidejadesignpuhe">Jos menet tänne niin löydät taide ja design kirjat.</string>
+    <string name="terveyspuhe">Jos menet tänne niin löydät terveys kirjoja.</string>
+    <string name="tieteellinenkirjoittaminenpuhe">Jos menet tänne niin löydät kirjoja tieteellisestä kirjoittamisesta ja kirjallisuudesta.</string>
+    <string name="urheilupuhe">Jos menet tänne niin löydät urheilu kirjat.</string>
+    <string name="uskonnotpuhe">Jos menet tänne niin löydät uskonto kirjat.</string>
 
     <!-- Lastenkirjat puheet -->
     <string name="lastenromaanipuhe">Jos menet tänne niin löydät lasten romaanit.</string>
@@ -102,7 +115,7 @@
     <string name="ohje">Kysy minulta mitä halua tietää klikaamalla minua tai valitse valmis nappi.</string>
     <string name="otsikko">Kirjakauppa</string>
     <string name="kieli">Language</string>
-    <string name="where">Olet täällä</string>
+    <string name="where">Olet <br/>täällä</string>
 
     <string name="ylakate">Kirjallisuus kategoriat</string>
     <string name="alotusbtn">Paina aloittaaksesi</string>
@@ -121,16 +134,16 @@
 
     <!-- Ruotsi, Ranska ja Saksa napit -->
     <string name="ruotsinkielibtn">Ruotsinkieliset</string>
-    <string name="ranskankielibtn">Ranskankieliset</string>
+    <string name="ranskankielibtn">Ranskan- <br/>kieliset</string>
     <string name="saksankielibtn">Saksankieliset</string>
 
     <!-- Kaunokirjallisuus napit -->
     <string name="baabelbtn">Baabel</string>
     <string name="antikvaarisetbtn">Antikvaariset</string>
     <string name="esseetbtn">Esseet</string>
-    <string name="kaunokirjbtn">Kaunokirjallisuus</string>
+    <string name="kaunokirjbtn">Kauno- <br/>kirjallisuus</string>
     <string name="keltainebtn">Keltainen kirjasto</string>
-    <string name="uudetkaunobtn">Uutuudet kaunokirjallisuus</string>
+    <string name="uudetkaunobtn">Uutuudet kauno- <br/>kirjallisuus</string>
     <string name="klassikotbtn">Klassikot</string>
     <string name="otavabtn">Otavan kirjasto</string>
     <string name="fantabtn">Scifi, Fantasia ja Kauhu</string>
@@ -143,24 +156,37 @@
     <string name="ukravenabtn">Venäjä</string>
     <string name="eloteatbtn">Elokuva ja teatteri</string>
     <string name="elamankbtn">Elämänkerrat</string>
-    <string name="antiikkikirjallisuusbtn">Antiikkikirjallisuus</string>
+    <string name="antiikkikirjallisuusbtn">Antiikin- <br/>kirjallisuus</string>
     <string name="holokaustibtn">Holokausti</string>
-    <string name="ilmastonmuutosbtn">Ilmastonmuutos</string>
+    <string name="ilmastonmuutosbtn">Ilmaston- <br/>muutos</string>
     <string name="filobtn">Filosofia</string>
     <string name="histbtn">Historia</string>
     <string name="musiibtn">Musiikki</string>
     <string name="politbtn">Politiikka</string>
     <string name="sanakbtn">Sanakirjat</string>
-    <string name="tietobtn">Tiede</string>
+    <string name="tietobtn">Uudet tietokirjat</string>
+    <string name="kieletbtn">Kielet</string>
+    <string name="kasityojarakentaminenbtn">Käsityö ja rakentaminen</string>
+    <string name="luonnontieteetbtn">Luonnontieteet</string>
+    <string name="luontokasvitelaimetbtn">Luonto, Kasvit ja Eläimet</string>
+    <string name="maatjakulttuuribtn">Maat ja Kulttuuri</string>
+    <string name="matkailubtn">Matkailu</string>
+    <string name="puutarhabtn">Puutarha</string>
+    <string name="ruokabtn">Ruoka</string>
+    <string name="taidejadesignbtn">Taide ja Design</string>
+    <string name="terveysbtn">Terveys</string>
+    <string name="tieteellinenkirjoittaminenbtn">Tieteellinen kirjoittaminen</string>
+    <string name="urheilubtn">Urheilu</string>
+    <string name="uskonnotbtn">Uskonto</string>
 
     <!-- Lastenkirjat napit -->
     <string name="lastenromaanibtn">Lasten romaanit</string>
-    <string name="kidsbtn">Englanninkieliset lastenkirjat</string>
+    <string name="kidsbtn">Lastenkirjat englanniksi</string>
     <string name="lastelobtn">Lasten elokuvat</string>
     <string name="lastenbtn">Lasten kirjat</string>
     <string name="lasttietbtn">Lasten tietokirjat</string>
-    <string name="lastenkuvakirjabtn">Lastenkuvakirjat</string>
-    <string name="ruotsilastenbtn">Ruotsinkieliset lastenkirjat</string>
+    <string name="lastenkuvakirjabtn">Lasten- <br/>kuvakirjat</string>
+    <string name="ruotsilastenbtn">Lastenkirjat ruotsiksi</string>
     <string name="vauvojenkirjabtn">Vauvat ja taaperot</string>
 
     <string name="nuoretbtn">Nuoret</string>
@@ -170,7 +196,7 @@
 
 
     <!-- Rikoskirjallisuus napit -->
-    <string name="crimeNovEngbtn">Englanninkieliset rikosnovellit</string>
+    <string name="crimeNovEngbtn">Rikosnovellit englanniksi</string>
     <string name="rikosuudetbtn">Rikoskirja uutuudet</string>
     <string name="rikospokkabtn">Rikospokkarit</string>
     <string name="rikosromaanibtn">Rikosromaanit</string>
@@ -182,13 +208,13 @@
     <string name="tietopokkaritbtn">Tietopokkarit</string>
 
     <!-- Englanninkieliset kirjat napit -->
-    <string name="crimebtn">Englanninkieliset rikos</string>
-    <string name="fictionbnt">Englanninkieliset kaunokirjallisuus</string>
-    <string name="nonfictionbtn">Englanninkieliset tietokirjallisuus</string>
-    <string name="poetrybtn">Englanninkieliset runous</string>
-    <string name="engscifibtn">Englanninkieliset scifi</string>
-    <string name="newfictionbtn">Englanninkieliset uudet kaunokirjallisuus</string>
-    <string name="newnonfictionbtn">Englanninkieliset uudet tietokirjallisuus</string>
+    <string name="crimebtn">Rikoskirjat englanniksi</string>
+    <string name="fictionbnt">Kauno- <br/>kirjallisuus englanniksi</string>
+    <string name="nonfictionbtn">Tieto- <br/>kirjallisuus englanniksi</string>
+    <string name="poetrybtn">Runous englanniksi</string>
+    <string name="engscifibtn">Scifi englanniksi</string>
+    <string name="newfictionbtn">Uudet kaunokirjat englanniksi</string>
+    <string name="newnonfictionbtn">Uudet tietokirjat englanniksi</string>
 
 
     <string name="kesk0">Mitä sinulle kuuluu</string>
@@ -422,14 +448,118 @@
     <string name="sanak5">missä sanakirjat</string>
 
     <!-- Tietokirjat avainsanat -->
-    <string name="tiet0">tietokirja</string>
-    <string name="tiet1">tiedekirja</string>
-    <string name="tiet2">tietokirjoja</string>
-    <string name="tiet3">tiedekirjoja</string>
-    <string name="tiet4">Tietokirja</string>
-    <string name="tiet5">Tiedekirja</string>
-    <string name="tiet6">Tietokirjoja</string>
-    <string name="tiet7">Tiedekirjoja</string>
+    <string name="tiet0">Uudet tietokir</string>
+    <string name="tiet1">uudet tietokir</string>
+    <string name="tiet2">Tietokirja</string>
+    <string name="tiet3">tietokirja</string>
+    <string name="tiet4">Uusia tietokir</string>
+    <string name="tiet5">uusia tietokir</string>
+    <string name="tiet6">Uutuus tietokir</string>
+    <string name="tiet7">uutuus tietokir</string>
+
+    <!-- Kielet avainsanat -->
+    <string name="kielet0">Kieli</string>
+    <string name="kielet1">kieli</string>
+    <string name="kielet2">Kielet</string>
+    <string name="kielet3">kielet</string>
+    <string name="kielet4">Kieli</string>
+    <string name="kielet5">Kieli</string>
+
+    <!-- Käsityö ja rakentaminen avaninsanat -->
+    <string name="kasityojarakentaminen0">Käsityö</string>
+    <string name="kasityojarakentaminen1">käsityö</string>
+    <string name="kasityojarakentaminen2">Rakenta</string>
+    <string name="kasityojarakentaminen3">rakenta</string>
+    <string name="kasityojarakentaminen4">Rakennus</string>
+    <string name="kasityojarakentaminen5">rakennus</string>
+
+    <!-- Luonnoniteteet avainsanat -->
+    <string name="luonnontieteet0">Luonnontie</string>
+    <string name="luonnontieteet1">luonnontie</string>
+    <string name="luonnontieteet2">Luontotiede</string>
+    <string name="luonnontieteet3">luontotiede</string>
+    <string name="luonnontieteet4">Luontotieto</string>
+    <string name="luonnontieteet5">luontotieto</string>
+
+    <!-- Luonto, Kasvit ja Eläimet avainsanat -->
+    <string name="luontokasvitelaimet0">Luonto</string>
+    <string name="luontokasvitelaimet1">luonto</string>
+    <string name="luontokasvitelaimet2">Kasvi</string>
+    <string name="luontokasvitelaimet3">kasvi</string>
+    <string name="luontokasvitelaimet4">Eläim</string>
+    <string name="luontokasvitelaimet5">eläim</string>
+
+    <!-- Maat ja kulttuuri -->
+    <string name="maatjakulttuuri0">Maa</string>
+    <string name="maatjakulttuuri1">maa</string>
+    <string name="maatjakulttuuri2">Valtio</string>
+    <string name="maatjakulttuuri3">valtio</string>
+    <string name="maatjakulttuuri4">Kulttuuri</string>
+    <string name="maatjakulttuuri5">kulttuuri</string>
+
+    <!-- Matkailu -->
+    <string name="matkailu0">Matkailu</string>
+    <string name="matkailu1">matkailu</string>
+    <string name="matkailu2">Matkusta</string>
+    <string name="matkailu3">matkusta</string>
+    <string name="matkailu4">Reissa</string>
+    <string name="matkailu5">reissa</string>
+
+    <!-- Puutarha -->
+    <string name="puutarha0">Puutarha</string>
+    <string name="puutarha1">puutarha</string>
+    <string name="puutarha2">Kasvimaa</string>
+    <string name="puutarha3">kasvimaa</string>
+    <string name="puutarha4">Viljely</string>
+    <string name="puutarha5">viljely</string>
+
+    <!-- Ruoka -->
+    <string name="ruoka0">Ruoka</string>
+    <string name="ruoka1">ruoka</string>
+    <string name="ruoka2">Ruuan</string>
+    <string name="ruoka3">ruuan</string>
+    <string name="ruoka4">Kokk</string>
+    <string name="ruoka5">kokk</string>
+
+    <!-- Taide ja Design -->
+    <string name="taidejadesign0">Taide</string>
+    <string name="taidejadesign1">taide</string>
+    <string name="taidejadesign2">Suunnittelu</string>
+    <string name="taidejadesign3">suunnittelu</string>
+    <string name="taidejadesign4">Design</string>
+    <string name="taidejadesign5">design</string>
+
+    <!-- Terveys -->
+    <string name="terveys0">Terveys</string>
+    <string name="terveys1">terveys</string>
+    <string name="terveys2">Hyvinvointi</string>
+    <string name="terveys3">hyvinvointi</string>
+    <string name="terveys4">Itsehoito</string>
+    <string name="terveys5">itsehoito</string>
+
+    <!-- Tieteellinen kirjoittaminen ja kirjallisuus -->
+    <string name="tieteellinenkirjoittaminen0">Tieteellinen kirjoittam</string>
+    <string name="tieteellinenkirjoittaminen1">tieteellinen kirjoittam</string>
+    <string name="tieteellinenkirjoittaminen2">Tieteellinen kirjalli</string>
+    <string name="tieteellinenkirjoittaminen3">tieteellinen kirjalli</string>
+    <string name="tieteellinenkirjoittaminen4">Tieteellinen artikkeli</string>
+    <string name="tieteellinenkirjoittaminen5">tieteellinen artikkeli</string>
+
+    <!-- Urheilu -->
+    <string name="urheilu0">Urheilu</string>
+    <string name="urheilu1">urheilu</string>
+    <string name="urheilu2">Urheilu</string>
+    <string name="urheilu3">Urheilu</string>
+    <string name="urheilu4">Urheilu</string>
+    <string name="urheilu5">Urheilu</string>
+
+    <!-- Uskonto -->
+    <string name="uskonnot0">Uskonto</string>
+    <string name="uskonnot1">uskonto</string>
+    <string name="uskonnot2">Usko</string>
+    <string name="uskonnot3">usko</string>
+    <string name="uskonnot4">Uskonto</string>
+    <string name="uskonnot5">Uskonto</string>
 
     <!-- Lehdet avainsanat -->
     <string name="lehd0">lehdet</string>
