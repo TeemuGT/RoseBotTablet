@@ -2757,12 +2757,6 @@ public class MainActivity extends AppCompatActivity {
     //Mikäli avain sana löytyy puheesta muuttuu sitä vastaava boolean true:ksi.
     //True booleanin alta löytyvä toiminta toteutetaan.
     public void tunnistus() {
-        //Contain con = new Contain();
-
-        /*Thread thread = new Thread() {
-
-            public void run() {*/
-
         //Käytetään contains() methodia avain sana stringien läpiköymiseksi.
         keskustelu0 = word.contains(getString(R.string.kesk0));
         keskustelu1 = word.contains(getString(R.string.kesk1));

@@ -45,7 +45,7 @@
     <!-- Tietokirjallisuus puheet -->
     <string name="ukrvenapuhe">Jos menet tänne niin löydät Venäjä kirjoja.</string>
     <string name="elokteatpuhe">Jos menet tänne niin löydät elokuva ja teatteri kirjoja.</string>
-    <string name="elamankpuhe">Jos menet tänne niin löydät elämänkerta kirjoja.</string>
+    <string name="elamankpuhe">Jos menet tänne niin löydät elämäkerta kirjoja.</string>
     <string name="antiikkikirjallisuuspuhe">Jos menet tänne niin löydät antiikkikirjallisuus kirjoja.</string>
     <string name="holokaustipuhe">Jos menet tänne niin löydät holokausti kirjoja.</string>
     <string name="ilmastonmuutospuhe">Jos menet tänne niin löydät ilmastonmuutos kirjoja.</string>
@@ -156,7 +156,7 @@
     <!-- Tietokirjallisuus napit -->
     <string name="ukravenabtn">Venäjä</string>
     <string name="eloteatbtn">Elokuva ja teatteri</string>
-    <string name="elamankbtn">Elämänkerrat</string>
+    <string name="elamankbtn">Elämäkerrat</string>
     <string name="antiikkikirjallisuusbtn">Antiikin- <br/>kirjallisuus</string>
     <string name="holokaustibtn">Holokausti</string>
     <string name="ilmastonmuutosbtn">Ilmaston- <br/>muutos</string>
@@ -197,7 +197,7 @@
 
 
     <!-- Rikoskirjallisuus napit -->
-    <string name="crimeNovEngbtn">Rikosnovellit englanniksi</string>
+    <string name="crimeNovEngbtn">Rikosromaanit englanniksi</string>
     <string name="rikosuudetbtn">Rikoskirja uutuudet</string>
     <string name="rikospokkabtn">Rikospokkarit</string>
     <string name="rikosromaanibtn">Rikosromaanit</string>
