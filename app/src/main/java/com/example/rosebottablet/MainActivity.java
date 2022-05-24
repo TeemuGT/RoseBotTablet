@@ -53,6 +53,7 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -928,10 +929,7 @@ public class MainActivity extends AppCompatActivity {
     public Button lastenkuvakirjabtn;
     public Button ruotsilastenbtn;
     public Button vauvojenkirjabtn;
-
-
     public Button nuoretbtn;
-
     public Button lastpuuhbtn;
 
     //Rikoskirjallisuus
@@ -956,9 +954,7 @@ public class MainActivity extends AppCompatActivity {
     public Button newfictionbtn;
     public Button newnonfictionbtn;
 
-
     public Button shlang;
-
 
     public Button kaunobtn;
     public Button tietogabtn;
@@ -973,7 +969,6 @@ public class MainActivity extends AppCompatActivity {
     public Button ajankohtaistabtn;
     public Button paperituotteetbtn;
 
-
     public Button ylakate;
     private RelativeLayout mylayout = null;
 
@@ -985,7 +980,6 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onOpened(@NonNull CameraDevice camera) {
             cameraDevice =camera;
-            //creatCameraPreview();
         }
 
         @Override
@@ -1004,13 +998,14 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //Ylä bannerin piilpitus
+        //Ylä bannerin piilotus
         Objects.requireNonNull(getSupportActionBar()).hide();
-        //Valitu kieli
+        //Valitu kieli löytyy metodin takaa joka tarkistaa valinnan.
         loadLocale();
 
 
-
+        //Taimeri joka pyörii robotin ollessa nukkumistilassa.
+        // Hakee takePicture metodin tietyn väliajoin jossa otetaan kuvia ja verrataan niitä toisiinsa eroavuuden etsimiseksi.
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
@@ -1034,16 +1029,12 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 0, 5000);
 
-
-        //otakuvia();
         setContentView(R.layout.activity_main);
-
 
         //Kysyy mikrofoonin käyttöoikeutta
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             checkPermission();
         }
-
 
         //Puheen tunnistuksen määrittelyä
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
@@ -1064,9 +1055,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onBeginningOfSpeech() {
                 hahmo1.setImageResource(R.drawable.kuuntelevarobo);
-                text1.setText("");
-                text1.setHint("Listening...");
-
             }
 
             @Override
@@ -1092,86 +1080,25 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onResults(Bundle bundle) {
-
                 ArrayList<String> matches = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
-
                 if (matches != null) {
                     //keeper = matches.get(0);
                     text.setText(matches.get(0));
                     word = text.getText().toString();
-                    //Toast.makeText(MainActivity.this, "Result = " + keeper, Toast.LENGTH_LONG).show();
-
-
 
                     DatabaseReference myRef = database.getReference("text");
                     myRef.push().setValue(millisInString + " " + word);
 
-
-
-
-                   /* File path = new File("Sisäinen muisti\\Documents\\text.txt");
-
-                    //File output = new File(path,FILE_NAME);
-
-                    try {
-                        FileOutputStream fileout = new FileOutputStream(path.getAbsolutePath());
-                        //FileOutputStream fileout = openFileOutput("Sisäinen muisti\\Documents\\text.txt", MODE_PRIVATE);
-                        OutputStreamWriter outputWriter=new OutputStreamWriter(fileout);
-                        outputWriter.write(word);
-                        outputWriter.close();
-                        //display file saved message
-                        Toast.makeText(getBaseContext(), "File saved successfully! " + getFilesDir(),
-                                Toast.LENGTH_SHORT).show();
-
-                    }
-                    catch (IOException e) {
-                        Log.e("Exception", "File write failed: " + e.toString());
-                    }*/
-
-
-
-
-
-                    //writeToFile("text.txt", word);
-
-                    /*FileOutputStream fos = null;
-                    try {
-                        fos = openFileOutput(FILE_NAME, MODE_PRIVATE);
-                        fos.write(word.getBytes());
-                        Toast.makeText(getApplicationContext(), "Saved to " + getFilesDir() + "/" + FILE_NAME, Toast.LENGTH_LONG).show();
-                    } catch (FileNotFoundException e) {
-                        e.printStackTrace();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                    finally{
-                        if(fos != null){
-                            try {
-                                fos.close();
-                            } catch (IOException e) {
-                                e.printStackTrace();
-                            }
-                        }
-
-                    }*/
-
-
-
                     tunnistus();
                 }
             }
-
             @Override
             public void onPartialResults(Bundle bundle) {
-
             }
-
             @Override
             public void onEvent(int i, Bundle bundle) {
-
             }
         });
-
         //Kameran objektien haku
         imageView = (ImageView) findViewById(R.id.imageView);
         imageView2 = (ImageView) findViewById(R.id.imageView2);
@@ -1179,7 +1106,6 @@ public class MainActivity extends AppCompatActivity {
         textureView = (TextureView) findViewById(R.id.textureView);
         assert textureView != null;
         textureView.setSurfaceTextureListener(textureListener);
-
 
         mylayout = (RelativeLayout) findViewById(R.id.main);
 
@@ -1238,10 +1164,6 @@ public class MainActivity extends AppCompatActivity {
         marker52 = (ImageView) findViewById(R.id.marker52);
         marker53 = (ImageView) findViewById(R.id.marker53);
         marker54 = (ImageView) findViewById(R.id.marker54);
-
-
-
-
 
         //Hakee objekteja id:n perusteella.
         mainLayout = (RelativeLayout) findViewById(R.id.main);
@@ -1306,12 +1228,8 @@ public class MainActivity extends AppCompatActivity {
         lastenkuvakirjabtn = findViewById(R.id.lastenkuvakirjabtn);
         ruotsilastenbtn = findViewById(R.id.ruotsilastenbtn);
         vauvojenkirjabtn = findViewById(R.id.vauvojenkirjabtn);
-
-
         nuoretbtn = findViewById(R.id.nuoretbtn);
-
         lastpuuhbtn = findViewById(R.id.lastpuuhbtn);
-
 
         //Rikoskirjojen objektien haku
         crimeNovEngbtn = findViewById(R.id.crimeNovEngbtn);
@@ -1334,7 +1252,6 @@ public class MainActivity extends AppCompatActivity {
         engscifibtn = findViewById(R.id.engscifibtn);
         newfictionbtn = findViewById(R.id.newfictionbtn);
         newnonfictionbtn = findViewById(R.id.newnonfictionbtn);
-
 
         voiceBtn = findViewById(R.id.voiceBtn);
         text = findViewById(R.id.text);
@@ -1359,8 +1276,6 @@ public class MainActivity extends AppCompatActivity {
         elokuvatbtn = findViewById(R.id.elokuvatbtn);
         ajankohtaistabtn = findViewById(R.id.ajankohtaistabtn);
         paperituotteetbtn = findViewById(R.id.paperituotteetbtn);
-
-
 
         ylakate = findViewById(R.id.ylakate);
 
@@ -1389,23 +1304,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-
-       /* timer.schedule(new TimerTask() {
-            @Override
-            public void run() {
-                //what you want to do
-                kuvalasku++;
-                takePicture();
-                Log.e(String.valueOf(LOG_TAG), "Kuva numero " + kuvalasku);
-
-
-
-            }
-        }, 0, 2000);
-        if(ihminen) {
-            converBtn.callOnClick();
-        }*/
-
         //Aloitus nappula joka aloittaa toiminnan
         converBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1423,16 +1321,15 @@ public class MainActivity extends AppCompatActivity {
                 restart();
             }
         });
-
-
         //Kuva painike josta aukeaa puheen kuuntelu
         voiceBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                timer.cancel();
                 lopetus();
+                textToSpeech.stop();
                 speechRecognizer.startListening(speechRecognizerIntent);
             }
         });
-
 
         //Yläkategorioiden nappien toiminnot
         kaunobtn.setOnClickListener(new View.OnClickListener() {
@@ -1482,7 +1379,6 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         });
-
         tietogabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1542,7 +1438,6 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         });
-
         lapsetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1591,7 +1486,6 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         });
-
         pokkarbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1630,7 +1524,6 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         });
-
         sarjabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1640,7 +1533,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         rikosbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1681,7 +1573,6 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         });
-
         lehdetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1691,7 +1582,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         englanbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1770,7 +1660,6 @@ public class MainActivity extends AppCompatActivity {
                 }, 3600);
             }
         });
-
         elokuvatbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1800,7 +1689,6 @@ public class MainActivity extends AppCompatActivity {
         });
 
         //Nappulat valitsevat eri kategorioita
-
         //Ruotsi, Ranska ja Saksa napit
         //Ruotsi nappi
         ruotsinkielibtn.setOnClickListener(new View.OnClickListener() {
@@ -1812,7 +1700,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         ranskankielibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1822,7 +1709,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         saksankielibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1844,7 +1730,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         // Antikvaariset nappi
         antikvaarisetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1855,7 +1740,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Esseet nappi
         /*esseebtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1866,7 +1750,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });*/
-
         //Kaunokirjallisuus nappi
         kaunokibtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1877,7 +1760,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Keltainen kirjasto nappi
         keltainbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1888,7 +1770,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Uudet kaunokirjallisuus nappi
         uudetkaunobtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1899,7 +1780,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         // Klassikot kaunokirjallisuus nappi
         klassikotbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1910,7 +1790,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Otavan kirjaston nappi
         otavabtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1921,7 +1800,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Äänikirja nappi
         aanikibtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1985,7 +1863,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Elokuva ja teatteri nappi
         eloteatbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -1996,7 +1873,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Elämänkerrat nappi
         elamankbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2007,7 +1883,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Antiikkikirjallisuus nappi
         antiikkikirjallisuusbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2028,7 +1903,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Ilmastonmuutos nappi
         ilmastonmuutosbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2039,8 +1913,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
-
         //Filosofia nappi
         filobtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2051,7 +1923,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Historia nappi
         histbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2062,7 +1933,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Musiikki nappi
         musiibtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2073,7 +1943,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Politiikka nappi
         politbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2084,7 +1953,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Sanakirja nappi
         sanakbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2095,7 +1963,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Tietokirja nappi
         tietobtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2168,7 +2035,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 lopetus();
                 speechRecognizer.stopListening();
-                matkailu = true;
+                puutarha = true;
                 vertaa();
             }
         });
@@ -2308,7 +2175,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Nuorten kirjat nappi
         nuoretbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2319,8 +2185,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
-
         //Puuhaa lapsille nappi
         lastpuuhbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2364,7 +2228,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         //Rikosromaanit nappi
-
         rikosromaanibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2385,7 +2248,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-
         // Pokkarit napit
         kaunopokkaritbtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2396,7 +2258,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         rikosjajannityspokkaritbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2406,7 +2267,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         scifijafantasiapokkaritbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2416,7 +2276,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         tietopokkaritbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2426,11 +2285,7 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
-
         //Englanninkieliset kirjat napit
-
-
         crimebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2440,7 +2295,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         fictionbnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2450,7 +2304,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         nonfictionbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2496,7 +2349,6 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
         //Ylä kategoria nappulat
         ylakate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -2614,10 +2466,6 @@ public class MainActivity extends AppCompatActivity {
                 return false;
             }
         });
-
-
-
-
         }
 
     public void lopetus(){
@@ -2625,8 +2473,6 @@ public class MainActivity extends AppCompatActivity {
             i = 1;
             Log.e(String.valueOf(LOG_TAG), "Lopetus on valittu uudestaan ");
         }
-
-
         if (i == 0) {
             timerlopetus.schedule(new TimerTask() {
                 @Override
@@ -2636,7 +2482,7 @@ public class MainActivity extends AppCompatActivity {
 
                             i++;
                             Log.e(String.valueOf(LOG_TAG), "I on tällähetkellä " + i);
-                            if (i > 10) {
+                            if (i > 15) {
                                 restart();
                             }
                         }
@@ -2722,7 +2568,7 @@ public class MainActivity extends AppCompatActivity {
 
                         Log.e(String.valueOf(LOG_TAG), "eroavaisuus on " + String.valueOf(compareEquivalance()));
 
-                        if (compareEquivalance() < 0.28){
+                        if (compareEquivalance() < 0.285){
                             ihminen = true;
                             text1.setText("Joku on muuttunut");
 
@@ -2771,26 +2617,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    /*public void otakuvia(){
 
-                    timer.schedule(new TimerTask() {
-                        @Override
-                        public void run() {
-                            //what you want to do
-                            if (!ihminen) {
-                                kuvalasku++;
-                                takePicture();
-                                Log.e(String.valueOf(LOG_TAG), "Kuva numero " + kuvalasku);
-                            }
-                        }
-
-
-
-                    }, 0, 2000);
-                    if (ihminen){
-                        aloita();
-                    }
-                }*/
 
     private void aloita() {
             lopetus();
@@ -2811,36 +2638,19 @@ public class MainActivity extends AppCompatActivity {
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
-                    //Hahmon sijainti siirretään
-
                     handler2.postAtFrontOfQueue(new Runnable() {
                         @Override
                         public void run() {
                             MainActivity.this.runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-
+                                    //Hahmon sijainti siirretään
                                 hahmo.setVisibility(View.INVISIBLE);
                                 hahmo1.setVisibility(View.VISIBLE);
-
-
-                                /*RelativeLayout.LayoutParams hahmoRelativeLayout = new RelativeLayout.LayoutParams(1200, 1400);
-                                    hahmoRelativeLayout.leftMargin = 50;
-                                    hahmoRelativeLayout.topMargin = 120;
-                                    hahmo.setLayoutParams(hahmoRelativeLayout);*/
                                 }
                             });
-
                         }
                     });
-
-
-
-                    //gif.setVisibility(View.INVISIBLE);
-                    //hahmo.setVisibility(View.VISIBLE);
-
-
-
                     //Tuotetaan näkyviin objekteja
                     //hahmo.setImageResource(R.drawable.kuvarobo);
                     voiceBtn.setVisibility(View.VISIBLE);
@@ -2857,7 +2667,6 @@ public class MainActivity extends AppCompatActivity {
                     ajankohtaistabtn.setVisibility(View.VISIBLE);
                     paperituotteetbtn.setVisibility(View.VISIBLE);
 
-
                     where.setVisibility(View.VISIBLE);
 
                     //marker.setVisibility(View.VISIBLE);
@@ -2866,13 +2675,8 @@ public class MainActivity extends AppCompatActivity {
 
                     //Aloitetaan puheen kuuntelu puheen jälkeen.
                     speechRecognizer.startListening(speechRecognizerIntent);
-
-
-
                 }
             }, 15000); //15 sekunnin viive handlerin toimintaan.
-
-
         }
 
     public static float compareEquivalance() {
@@ -3587,14 +3391,6 @@ public class MainActivity extends AppCompatActivity {
             saksankieli = true;
             laskuri = 0;
             vertaa();
-        } else if (tiede0 || tiede1 || tiede2 || tiede3 || tiede4 || tiede5 || tiede6 || tiede7) {
-            tiede = true;
-            laskuri = 0;
-            vertaa();
-        } else if (fantasia0 || fantasia1 || fantasia2 || fantasia3 || fantasia4 || fantasia5 || fantasia6 || fantasia7 || fantasia8 || fantasia9) {
-            fantasia = true;
-            laskuri = 0;
-            vertaa();
         } else if (baabel0 || baabel1 || baabel2 || baabel3 || baabel4 || baabel5) {
             baabel = true;
             laskuri = 0;
@@ -3683,24 +3479,16 @@ public class MainActivity extends AppCompatActivity {
             sanakirja = true;
             laskuri = 0;
             vertaa();
-        } else if (kielet0 || kielet1 || kielet2 || kielet3 || kielet4 || kielet5) {
-            kielet = true;
-            laskuri = 0;
-            vertaa();
         } else if (kasityojarakentaminen0 || kasityojarakentaminen1 || kasityojarakentaminen2 || kasityojarakentaminen3 || kasityojarakentaminen4 || kasityojarakentaminen5) {
             kasityojarakentaminen = true;
             laskuri = 0;
             vertaa();
         } else if (luonnontieteet0 || luonnontieteet1 || luonnontieteet2 || luonnontieteet3 || luonnontieteet4 || luonnontieteet5) {
-            luonnontieteet = false;
+            luonnontieteet = true;
             laskuri = 0;
             vertaa();
         } else if (luontokasvitelaimet0 || luontokasvitelaimet1 || luontokasvitelaimet2 || luontokasvitelaimet3 || luontokasvitelaimet4 || luontokasvitelaimet5) {
             luontokasvitelaimet = true;
-            laskuri = 0;
-            vertaa();
-        } else if (maatjakulttuuri0 || maatjakulttuuri1 || maatjakulttuuri2 || maatjakulttuuri3 || maatjakulttuuri4 || maatjakulttuuri5) {
-            maatjakulttuuri = true;
             laskuri = 0;
             vertaa();
         } else if (matkailu0 || matkailu1 || matkailu2 || matkailu3 || matkailu4 || matkailu5) {
@@ -3761,10 +3549,6 @@ public class MainActivity extends AppCompatActivity {
             vertaa();
         } else if (lastelo0 || lastelo1 || lastelo2 || lastelo3 || lastelo4 || lastelo5) {
             lastenelokuvat = true;
-            laskuri = 0;
-            vertaa();
-        } else if (lasten0 || lasten1 || lasten2 || lasten3 || lasten4 || lasten5) {
-            lastenkirjat = true;
             laskuri = 0;
             vertaa();
         } else if (lasttiet0 || lasttiet1 || lasttiet2 || lasttiet3 || lasttiet4 || lasttiet5) {
@@ -3855,12 +3639,16 @@ public class MainActivity extends AppCompatActivity {
             elokuvat = true;
             laskuri = 0;
             vertaa();
+        } else if (fantasia0 || fantasia1 || fantasia2 || fantasia3 || fantasia4 || fantasia5 || fantasia6 || fantasia7 || fantasia8 || fantasia9) {
+            fantasia = true;
+            laskuri = 0;
+            vertaa();
         } else if (ajankohtaista0 || ajankohtaista1 || ajankohtaista2 || ajankohtaista3 || ajankohtaista4 || ajankohtaista5) {
             ajankohtaista = true;
             laskuri = 0;
             vertaa();
-        } else if (paperituotteet0 || paperituotteet1 || paperituotteet2 || paperituotteet3 || paperituotteet4 || paperituotteet5){
-            paperituotteet = true;
+        } else if (kielet0 || kielet1 || kielet2 || kielet3 || kielet4 || kielet5) {
+            kielet = true;
             laskuri = 0;
             vertaa();
         } else if (sijainti0 || sijainti1 || sijainti2 || sijainti3) {
@@ -3869,6 +3657,22 @@ public class MainActivity extends AppCompatActivity {
             vertaa();
         } else if (kiito || oli || kiitos1) {
             kiitoksia = true;
+            vertaa();
+        } else if (tiede0 || tiede1 || tiede2 || tiede3 || tiede4 || tiede5 || tiede6 || tiede7) {
+            tiede = true;
+            laskuri = 0;
+            vertaa();
+        } else if (lasten0 || lasten1 || lasten2 || lasten3 || lasten4 || lasten5) {
+            lastenkirjat = true;
+            laskuri = 0;
+            vertaa();
+        } else if (maatjakulttuuri0 || maatjakulttuuri1 || maatjakulttuuri2 || maatjakulttuuri3 || maatjakulttuuri4 || maatjakulttuuri5) {
+            maatjakulttuuri = true;
+            laskuri = 0;
+            vertaa();
+        } else if (paperituotteet0 || paperituotteet1 || paperituotteet2 || paperituotteet3 || paperituotteet4 || paperituotteet5){
+            paperituotteet = true;
+            laskuri = 0;
             vertaa();
         } else if (keskustelu0 || keskustelu1 || keskustelu2 || keskustelu3 ||
                 keskustelu4) {
@@ -3916,7 +3720,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
 
     //Vertaa() methodissa toteutetaan toiminta mikö on valittu joko nappulalla tai avainsanan löytämisellä.
     public void vertaa() {
@@ -4006,8 +3809,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else if (ruotsinkieli){
-            ylakate.setVisibility(View.VISIBLE);
-
             marker30.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
@@ -4166,9 +3967,6 @@ public class MainActivity extends AppCompatActivity {
 
         }*/
         else if (kaunokirjallisuus) {
-
-            ylakate.setVisibility(View.VISIBLE);
-
             marker24.setVisibility(View.VISIBLE);
             marker27.setVisibility(View.VISIBLE);
             marker28.setVisibility(View.VISIBLE);
@@ -4225,7 +4023,7 @@ public class MainActivity extends AppCompatActivity {
 
             ylakate.setVisibility(View.VISIBLE);
 
-            marker28.setVisibility(View.VISIBLE);
+            marker26.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -4252,7 +4050,8 @@ public class MainActivity extends AppCompatActivity {
 
             ylakate.setVisibility(View.VISIBLE);
 
-            marker26.setVisibility(View.VISIBLE);
+            marker24.setVisibility(View.VISIBLE);
+            marker27.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.mispuhe);
@@ -4278,7 +4077,7 @@ public class MainActivity extends AppCompatActivity {
 
                 ylakate.setVisibility(View.VISIBLE);
 
-            marker24.setVisibility(View.VISIBLE);
+            marker10.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 //String x = getString(R.string.mispuhe);
@@ -4333,7 +4132,7 @@ public class MainActivity extends AppCompatActivity {
                 //String x = getString(R.string.fantapuhe);
 
 
-                marker12.setVisibility(View.VISIBLE);
+                marker28.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 MainActivity.textToSpeech.speak(getString(R.string.fantapuhe), TextToSpeech.QUEUE_FLUSH, null);
@@ -4362,7 +4161,8 @@ public class MainActivity extends AppCompatActivity {
 
                 //String x = getString(R.string.fantapuhe);
 
-            marker21.setVisibility(View.VISIBLE);
+            marker11.setVisibility(View.VISIBLE);
+            marker12.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 MainActivity.textToSpeech.speak(getString(R.string.runopuhe), TextToSpeech.QUEUE_FLUSH, null);
@@ -4387,7 +4187,7 @@ public class MainActivity extends AppCompatActivity {
         else if (rikojanitus) {
 
                 //String x = getString(R.string.fantapuhe);
-            marker10.setVisibility(View.VISIBLE);
+            marker21.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
                 MainActivity.textToSpeech.speak(getString(R.string.rikojanpuhe), TextToSpeech.QUEUE_FLUSH, null);
@@ -4862,6 +4662,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (ruoka){
+            marker17.setVisibility(View.VISIBLE);
             marker54.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
@@ -5799,8 +5600,6 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         }
-
-
 
     protected void restart(){
 

@@ -104,7 +104,7 @@
     <string name="newnonfictionpuhe">Jos menet tänne niin löydät englanninkieliset uudet tietokirjat.</string>
     
     
-    <string name="lehdpuhe">Jos menet tänne löydät True Crime kirjat.</string>
+    <string name="lehdpuhe">Jos menet tänne löydät lehdet.</string>
     <string name="sarjapuhe">Jos menet tänne niin löydät sarjakuvat.</string>
     <string name="pokkapuhe">Jos menet tänne niin löydät pokkarit</string>
     <string name="lastenkatepuhe">Täältä voit valita haluamasi lastenkirjallisuus kategorian.</string>
@@ -117,7 +117,7 @@
     <string name="kieli">Language</string>
     <string name="where">Olet <br/>täällä</string>
 
-    <string name="ylakate">Kirjallisuus kategoriat</string>
+    <string name="ylakate">Palaa yläkategoria valikkoon</string>
     <string name="alotusbtn">Paina aloittaaksesi</string>
     <string name="kaunokirbtn">Kaunokirjallisuus</string>
     <string name="tietokirbtn">Tietokirjallisuus</string>
@@ -368,11 +368,11 @@
     <string name="ukrvena5">venjäjä</string>
 
     <!-- Elokuva ja teatteri avainsanat -->
-    <string name="elokteat0">elokuva</string>
-    <string name="elokteat1">elokuvat</string>
-    <string name="elokteat2">elokuv</string>
+    <string name="elokteat0">elokuva kirjat</string>
+    <string name="elokteat1">Elokuva kirjat</string>
+    <string name="elokteat2">kirja elokuv</string>
     <string name="elokteat3">teatteri</string>
-    <string name="elokteat4">teatterit</string>
+    <string name="elokteat4">Teatteri</string>
     <string name="elokteat5">teatter</string>
 
     <!-- Elämänkerta avainsanat -->
@@ -440,10 +440,10 @@
     <string name="polit5">missä politiikka</string>
 
     <!-- Sanakirja avainsanat -->
-    <string name="sanak0">sanakirjat</string>
-    <string name="sanak1">Sanakirjat</string>
-    <string name="sanak2">Missä sanakirjat</string>
-    <string name="sanak3">missä on sanakirjat</string>
+    <string name="sanak0">sanakirja</string>
+    <string name="sanak1">Sanakirja</string>
+    <string name="sanak2">sanakirjo</string>
+    <string name="sanak3">Sanakirjo</string>
     <string name="sanak4">onko missä sanakirjat</string>
     <string name="sanak5">missä sanakirjat</string>
 
@@ -602,12 +602,12 @@
     <string name="paperituotteet5">kynä</string>
 
     <!-- Pokkarit avainsanat -->
-    <string name="pokka0">pokkarit</string>
-    <string name="pokka1">Pokkarit</string>
+    <string name="pokka0">pokkari</string>
+    <string name="pokka1">Pokkari</string>
     <string name="pokka2">taskukirjat</string>
     <string name="pokka3">Taskukirjat</string>
-    <string name="pokka4">onko missä pokkarit</string>
-    <string name="pokka5">missä pokkarit</string>
+    <string name="pokka4">onko missä pokkari</string>
+    <string name="pokka5">missä pokkari</string>
 
     <!-- Englannin kieliset avainsanat -->
     <string name="engl0">Englannin</string>
@@ -647,8 +647,8 @@
     <string name="lasten1">lasten</string>
     <string name="lasten2">Lapsien</string>
     <string name="lasten3">lapsien</string>
-    <string name="lasten4">Lapislle</string>
-    <string name="lasten5">lapsille</string>
+    <string name="lasten4">Lapset</string>
+    <string name="lasten5">lapset</string>
 
     <!-- Lasten tietokirjat avainsanat -->
     <string name="lasttiet0">Lasten tieto</string>
@@ -743,28 +743,29 @@
 
     <!-- Pokkarit avainsanat -->
     <!-- Kaunopokkarit -->
-    <string name="kaunopokkarit0">True Crime</string>
-    <string name="kaunopokkarit1">true crime</string>
-    <string name="kaunopokkarit2">True crime</string>
-    <string name="kaunopokkarit3">true Crime</string>
-    <string name="kaunopokkarit4">Oikea rikos</string>
-    <string name="kaunopokkarit5">oikea rikos</string>
+    <string name="kaunopokkarit0">Kaunopokkari</string>
+    <string name="kaunopokkarit1">kaunopokkari</string>
+    <string name="kaunopokkarit2">Kauno pokkari</string>
+    <string name="kaunopokkarit3">kauno pokkari</string>
+    <string name="kaunopokkarit4">Kaunopokkari</string>
+    <string name="kaunopokkarit5">Kaunopokkari</string>
 
     <!-- Scifi ja fantasia pokkarit -->
-    <string name="scifijafantasiapokkarit0">True Crime</string>
-    <string name="scifijafantasiapokkarit1">true crime</string>
-    <string name="scifijafantasiapokkarit2">True crime</string>
-    <string name="scifijafantasiapokkarit3">true Crime</string>
-    <string name="scifijafantasiapokkarit4">Oikea rikos</string>
-    <string name="scifijafantasiapokkarit5">oikea rikos</string>
+    <string name="scifijafantasiapokkarit0">Scifi pokkari</string>
+    <string name="scifijafantasiapokkarit1">scifi pokkari</string>
+    <string name="scifijafantasiapokkarit2">Fantasia pokkarit</string>
+    <string name="scifijafantasiapokkarit3">fantasia pokkarit</string>
+    <string name="scifijafantasiapokkarit4">Scifi ja fantasiapokkari</string>
+    <string name="scifijafantasiapokkarit5">scifi ja fantasiapokkarit
+</string>
 
     <!-- Tietopokkarit -->
-    <string name="tietopokkarit0">True Crime</string>
-    <string name="tietopokkarit1">true crime</string>
-    <string name="tietopokkarit2">True crime</string>
-    <string name="tietopokkarit3">true Crime</string>
-    <string name="tietopokkarit4">Oikea rikos</string>
-    <string name="tietopokkarit5">oikea rikos</string>
+    <string name="tietopokkarit0">Tietopokkari</string>
+    <string name="tietopokkarit1">Tietopokkari</string>
+    <string name="tietopokkarit2">Tieto pokkari</string>
+    <string name="tietopokkarit3">tieto pokkari</string>
+    <string name="tietopokkarit4">Pokkarit tieto</string>
+    <string name="tietopokkarit5">pokkarit tieto</string>
 
     <!-- Englanninkieliset kirjat avainsanat -->
     <!-- Crime -->

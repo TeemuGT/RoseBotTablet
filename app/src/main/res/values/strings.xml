@@ -117,7 +117,7 @@
     <string name="where">You are <br/>here</string>
 
     <!-- Nappien nimet -->
-    <string name="ylakate">Literature categories</string>
+    <string name="ylakate">Return to the top categories</string>
     <string name="alotusbtn">Press to start</string>
     <string name="kaunokirbtn">Fiction</string>
     <string name="tietokirbtn">non-fiction</string>
@@ -126,7 +126,7 @@
     <string name="rikoskirjallisuusbtn">Criminal literature</string>
     <string name="engkirjbtn">In English</string>
     <string name="lehdtbtn">Magazines</string>
-    <string name="pokkaritbtn">Pokkarit</string>
+    <string name="pokkaritbtn">Paperback</string>
     <string name="svenFranDeutsbtn">Sweden, France and Germany</string>
     <string name="elokuvatbtn">Movies</string>
     <string name="ajankohtaistabtn">Topical</string>
@@ -702,8 +702,8 @@
     <string name="nuoret1">Youth</string>
     <string name="nuoret2">Young</string>
     <string name="nuoret3">young</string>
-    <string name="nuoret4">young</string>
-    <string name="nuoret5">young</string>
+    <string name="nuoret4">Teenager</string>
+    <string name="nuoret5">teenager</string>
 
 
 
@@ -734,8 +734,8 @@
     <string name="rikosuudet5">new crime</string>
 
     <!-- Rikospokkarit avainsanat -->
-    <string name="rikospokka0">Crime pockets</string>
-    <string name="rikospokka1">crime pockets</string>
+    <string name="rikospokka0">Crime pocket</string>
+    <string name="rikospokka1">crime pocket</string>
     <string name="rikospokka2">"Crime paperback "</string>
     <string name="rikospokka3">"crime paperback "</string>
     <string name="rikospokka4">"Crime paperback "</string>
