@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "261422620474",
+    "project_id": "rosebottablet",
+    "storage_bucket": "rosebottablet.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:261422620474:android:06bcd060687730606afa03",
+        "android_client_info": {
+          "package_name": "com.example.rosebottablet"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "261422620474-4jh4lt3qucv6gh2m2tgne9g04lo37ed0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNJRIL1XVtlbKMGPMttO1l3OzhhCAMlBM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "261422620474-4jh4lt3qucv6gh2m2tgne9g04lo37ed0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
