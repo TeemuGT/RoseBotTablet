@@ -47,7 +47,11 @@ Sovelluksessa on luotuja metodeita:
   - Metodi tarkistaa onko sovellukselle annettu oikeudet äänen tallennukseen.
 - onRequestPermissionsResult()
 - showLanguageDialog()
+  - Metodissa luodaan popup dialog joka haetaan kielen vaihto napilla. Popup luodaan AlertDialog metodilla ja siihen laitetaan kahden stingin lista (englanti ja         suomi). Listasta luodaan yksittäin valittavia objekteja ja lisätään clikcListener. Halutusta vaihtoehdosta vaihtaa setLocale arvon haluttuun kieleen.
 - setLocale()
+  - Popup dialogista saatu arvo muutetaan käytettävään muotoon.
+- loadLocale()
+  - loadLocale metodia käytetään hakemaan valittua kieltä. Metodi käsittelee mikä kieli on viimeksi valittu ja palauttaa sen kutsuttaessa. Metodia haetaan puheen       tunnistuksessa sekä puheen tuottamisessa jotta molemmat toimii valitulla kielellä.
 - stopBackroundTread()
 - startBackgroundThread()
 
