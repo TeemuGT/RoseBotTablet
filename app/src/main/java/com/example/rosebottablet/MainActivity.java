@@ -697,7 +697,6 @@ public class MainActivity extends AppCompatActivity {
     static ImageView kartta;
     static ImageView hahmo;
     static ImageView hahmo1;
-    TextView where;
     ImageButton voiceBtn;
     public static TextView text;
     static TextView text1;
@@ -1171,7 +1170,6 @@ public class MainActivity extends AppCompatActivity {
         kartta = (ImageView) findViewById(R.id.kartta);
         hahmo = (ImageView) findViewById(R.id.hahmo);
         hahmo1 = (ImageView) findViewById(R.id.hahmo1);
-        where = findViewById(R.id.where);
 
         //Ruotsi, Ransaka ja Saksa nappien objektien haku
         ruotsinkielibtn = findViewById(R.id.ruotsinkielibtn);
@@ -2667,8 +2665,6 @@ public class MainActivity extends AppCompatActivity {
                     elokuvatbtn.setVisibility(View.VISIBLE);
                     ajankohtaistabtn.setVisibility(View.VISIBLE);
                     paperituotteetbtn.setVisibility(View.VISIBLE);
-
-                    where.setVisibility(View.VISIBLE);
 
                     //marker.setVisibility(View.VISIBLE);
                     kartta.setVisibility(View.VISIBLE);
