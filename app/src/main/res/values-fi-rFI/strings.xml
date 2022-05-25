@@ -9,7 +9,7 @@
     <string name="mispuhe">Punainen pallo näyttää kartalla sinun sijaintisi myymälässä.</string>
 
 
-    <string name="terve">Hei minun nimeni on RoseBotti. Voit kysyä minulta missä eri kirja kategoriat ovat tai painaa valmista nappia. Tallennan kaiken puheen tutkimus ja kehitystyötä varten. Voit esittää kategoria kysymyksen äänimerkin jälkeen?</string>
+    <string name="terve">Hei minun nimeni on RoseBotti. Voit kysyä minulta missä eri kirja kategoriat ovat äänimerkin jälkeen.</string>
     <string name="kiitos">Mahtavaa oli ilo olla avuksi. Nyt menen takaisin nukkumaan.</string>
     <string name="enymr">Anteeki en ymmärtänyt, voitko kysyä uudelleen?</string>
     <string name="kysyuu">En valitettavasti ymmärrä sinua. Voit myös painaa valmista nappia, tai sitten klikata minua ja yrittää kysyä uudelleen.</string>

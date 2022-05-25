@@ -140,9 +140,23 @@
         android:src="@drawable/nukkuvarobotti"
         android:visibility="visible" /> -->
 
+    <ImageButton
+        android:id="@+id/ylakate"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="600dp"
+        android:layout_marginBottom="200dp"
+        android:src="@drawable/ic_baseline_back_24"
+        android:visibility="invisible"/>
 
+    <!-- android:text="@string/ylakate"
+        android:textColor="@android:color/white"
+        android:textSize="12sp" -->
 
-    <Button
+    <!--
+        <Button
         android:id="@+id/ylakate"
         android:layout_width="200dp"
         android:layout_height="60dp"
@@ -153,9 +167,11 @@
         android:backgroundTint="#990600"
         android:text="@string/ylakate"
         android:textColor="@android:color/white"
+
         android:textSize="12sp"
         android:visibility="invisible"
         />
+        -->
 
     <!-- Yläkategoria nappulat -->
     <Button
@@ -1328,8 +1344,9 @@
     android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="190dp"
-        android:background="@drawable/pohjakuva_rosebud"
+        android:background="@drawable/pohjakuva_rosebud_viimeistelty"
         android:visibility="invisible" />
+
     <TextView
         android:id="@+id/where"
         android:layout_width="30dp"
@@ -1344,6 +1361,7 @@
         android:background="@drawable/circle"
         android:textColor="@color/black"
         android:visibility="invisible" />
+
 <!-- Markerit -->
     <ImageView
         android:id="@+id/marker1"
@@ -1352,7 +1370,7 @@
         android:layout_alignStart="@+id/kartta"
         android:layout_alignTop="@+id/kartta"
         android:layout_marginStart="1250px"
-        android:layout_marginTop="1200px"
+        android:layout_marginTop="1190px"
         android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
 
@@ -1362,8 +1380,8 @@
         android:layout_height="60dp"
         android:layout_alignStart="@+id/kartta"
         android:layout_alignTop="@+id/kartta"
-        android:layout_marginStart="1250px"
-        android:layout_marginTop="1000px"
+        android:layout_marginStart="1350px"
+        android:layout_marginTop="1020px"
         android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
     <ImageView
@@ -1373,7 +1391,7 @@
         android:layout_alignStart="@+id/kartta"
         android:layout_alignTop="@+id/kartta"
         android:layout_marginStart="1100px"
-        android:layout_marginTop="1050px"
+        android:layout_marginTop="1060px"
         android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
     <ImageView
@@ -1772,8 +1790,8 @@
         android:layout_height="60dp"
         android:layout_alignStart="@+id/kartta"
         android:layout_alignTop="@+id/kartta"
-        android:layout_marginStart="1550px"
-        android:layout_marginTop="550px"
+        android:layout_marginStart="1430px"
+        android:layout_marginTop="600px"
         android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
     <ImageView
@@ -1782,8 +1800,8 @@
         android:layout_height="60dp"
         android:layout_alignStart="@+id/kartta"
         android:layout_alignTop="@+id/kartta"
-        android:layout_marginStart="1700px"
-        android:layout_marginTop="600px"
+        android:layout_marginStart="1680px"
+        android:layout_marginTop="630px"
         android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
     <ImageView
@@ -1792,8 +1810,8 @@
         android:layout_height="60dp"
         android:layout_alignStart="@+id/kartta"
         android:layout_alignTop="@+id/kartta"
-        android:layout_marginStart="1650px"
-        android:layout_marginTop="400px"
+        android:layout_marginStart="1600px"
+        android:layout_marginTop="480px"
         android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
     <ImageView
@@ -1802,8 +1820,8 @@
         android:layout_height="60dp"
         android:layout_alignStart="@+id/kartta"
         android:layout_alignTop="@+id/kartta"
-        android:layout_marginStart="1650px"
-        android:layout_marginTop="250px"
+        android:layout_marginStart="1600px"
+        android:layout_marginTop="390px"
         android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
     <ImageView
@@ -1812,8 +1830,8 @@
         android:layout_height="60dp"
         android:layout_alignStart="@+id/kartta"
         android:layout_alignTop="@+id/kartta"
-        android:layout_marginStart="1780px"
-        android:layout_marginTop="400px"
+        android:layout_marginStart="1740px"
+        android:layout_marginTop="480px"
         android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
     <ImageView
@@ -1822,8 +1840,8 @@
         android:layout_height="60dp"
         android:layout_alignStart="@+id/kartta"
         android:layout_alignTop="@+id/kartta"
-        android:layout_marginStart="1880px"
-        android:layout_marginTop="650px"
+        android:layout_marginStart="1865px"
+        android:layout_marginTop="640px"
         android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
     <ImageView
@@ -1832,8 +1850,8 @@
         android:layout_height="60dp"
         android:layout_alignStart="@+id/kartta"
         android:layout_alignTop="@+id/kartta"
-        android:layout_marginStart="1880px"
-        android:layout_marginTop="350px"
+        android:layout_marginStart="1865px"
+        android:layout_marginTop="290px"
         android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
     <ImageView
@@ -1863,7 +1881,7 @@
         android:layout_alignStart="@+id/kartta"
         android:layout_alignTop="@+id/kartta"
         android:layout_marginStart="1100px"
-        android:layout_marginTop="1150px"
+        android:layout_marginTop="1160px"
         android:src="@drawable/ic_baseline_forward_24"
         android:visibility="invisible" />
     <ImageView

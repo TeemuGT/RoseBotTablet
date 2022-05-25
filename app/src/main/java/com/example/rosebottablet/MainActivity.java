@@ -969,7 +969,8 @@ public class MainActivity extends AppCompatActivity {
     public Button ajankohtaistabtn;
     public Button paperituotteetbtn;
 
-    public Button ylakate;
+    public ImageButton ylakate;
+    //public Button ylakate;
     private RelativeLayout mylayout = null;
 
     //Puheen tunnistus
@@ -2676,10 +2677,10 @@ public class MainActivity extends AppCompatActivity {
                     //Aloitetaan puheen kuuntelu puheen jälkeen.
                     speechRecognizer.startListening(speechRecognizerIntent);
                 }
-            }, 15000); //15 sekunnin viive handlerin toimintaan.
+            }, 7000); //15 sekunnin viive handlerin toimintaan.
         }
 
-    public static float compareEquivalance() {
+     public static float compareEquivalance() {
 
         if (bitmap == null || bitmap2 == null || bitmap.getWidth() != bitmap2.getWidth()
                 || bitmap.getHeight() != bitmap2.getHeight()) {
@@ -2753,9 +2754,11 @@ public class MainActivity extends AppCompatActivity {
         }
     };
 
-    //Verrataan contain() methodilla avain sana stringeihin kuunneltua puhetta.
-    //Mikäli avain sana löytyy puheesta muuttuu sitä vastaava boolean true:ksi.
-    //True booleanin alta löytyvä toiminta toteutetaan.
+    /**
+    *Verrataan contain() methodilla avain sana stringeihin kuunneltua puhetta.
+    *Mikäli avain sana löytyy puheesta muuttuu sitä vastaava boolean true:ksi.
+    *True booleanin alta löytyvä toiminta toteutetaan.
+     */
     public void tunnistus() {
         //Käytetään contains() methodia avain sana stringien läpiköymiseksi.
         keskustelu0 = word.contains(getString(R.string.kesk0));
@@ -3366,13 +3369,7 @@ public class MainActivity extends AppCompatActivity {
         paperituotteet4 = word.contains(getString(R.string.paperituotteet4));
         paperituotteet5 = word.contains(getString(R.string.paperituotteet5));
 
-
-            /*}
-        };thread.start();*/
-        //Log.e(LOG_TAG, "MyClass.getView() — get item number ");
-
         //Mikäli boolean on true toteutetaan sen alla oleva toiminta.
-
         if (ruotsinkieli0 || ruotsinkieli1 || ruotsinkieli2 || ruotsinkieli3 || ruotsinkieli4 || ruotsinkieli5) {
             ruotsinkieli = true;
             laskuri = 0;
@@ -3715,7 +3712,9 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    //Vertaa() methodissa toteutetaan toiminta mikö on valittu joko nappulalla tai avainsanan löytämisellä.
+    /**
+     * Vertaa() methodissa toteutetaan toiminta mikö on valittu joko nappulalla tai avainsanan löytämisellä.
+     */
     public void vertaa() {
 
         marker1.setVisibility(View.INVISIBLE);
@@ -3826,8 +3825,6 @@ public class MainActivity extends AppCompatActivity {
             }, 4000);
         }
         else if (ranskankieli){
-            ylakate.setVisibility(View.VISIBLE);
-
             marker20.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
@@ -3851,8 +3848,6 @@ public class MainActivity extends AppCompatActivity {
             }, 4000);
         }
         else if (saksankieli){
-            ylakate.setVisibility(View.VISIBLE);
-
             marker20.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
@@ -3877,9 +3872,6 @@ public class MainActivity extends AppCompatActivity {
         }
             //Kaunokirjallisuus kategorian toiminnot
         else if (baabel) {
-
-            ylakate.setVisibility(View.VISIBLE);
-
             marker10.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
@@ -3905,8 +3897,6 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (antikvaariset) {
 
-            ylakate.setVisibility(View.VISIBLE);
-
             marker10.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
@@ -3931,8 +3921,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
         /*else if (essee) {
-
-            ylakate.setVisibility(View.VISIBLE);
 
             RelativeLayout.LayoutParams markerRelativeLayout = new RelativeLayout.LayoutParams(60, 60);
             markerRelativeLayout.leftMargin = 1600;
@@ -3987,9 +3975,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else if (keltainen) {
-
-            ylakate.setVisibility(View.VISIBLE);
-
             marker10.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
@@ -4014,8 +3999,6 @@ public class MainActivity extends AppCompatActivity {
 
         }
         else if (uudetkaunokirjallisuus) {
-
-            ylakate.setVisibility(View.VISIBLE);
 
             marker26.setVisibility(View.VISIBLE);
 
@@ -4042,8 +4025,6 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (klassikot) {
 
-            ylakate.setVisibility(View.VISIBLE);
-
             marker24.setVisibility(View.VISIBLE);
             marker27.setVisibility(View.VISIBLE);
 
@@ -4069,8 +4050,6 @@ public class MainActivity extends AppCompatActivity {
         }
         else if (otava) {
 
-                ylakate.setVisibility(View.VISIBLE);
-
             marker10.setVisibility(View.VISIBLE);
 
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
@@ -4095,8 +4074,6 @@ public class MainActivity extends AppCompatActivity {
 
             }
         else if (aanikirja) {
-
-                ylakate.setVisibility(View.VISIBLE);
 
             marker22.setVisibility(View.VISIBLE);
 
@@ -5024,7 +5001,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (kids){
-
+            marker49.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -5143,7 +5120,7 @@ public class MainActivity extends AppCompatActivity {
             }, 3600);
         }
         else if (ruotsinkielisetlastenkirjat){
-
+            marker30.setVisibility(View.VISIBLE);
 
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
             //String x = getString(R.string.tiedpuhe);
@@ -5595,6 +5572,11 @@ public class MainActivity extends AppCompatActivity {
         }
         }
 
+    /**
+     * restart() metodi hakee recreate() metodin aktiviteetin uudelleen käynnistämiseksi.
+     * Ennen uudelleen käynnistystä nollataan kuvat tunnistuksesta sekä
+     * pysäytetään kaikki timerit ja handlerit jottei niitä lähde tuplamääränä pyörimään uudelleen aloitettua.
+     */
     protected void restart(){
 
         //Intent intent = getIntent()
@@ -5621,39 +5603,6 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-
-    /*
-    public void writeToFile(String fileName, String content){
-        File root = Environment.getRootDirectory();
-        File dir = new File(root.getAbsolutePath()+"/Tallenus");
-                if(!dir.exists()){
-                    dir.mkdir();
-                }
-                File file = new File(dir,fileName);
-        try {
-            FileOutputStream write = new FileOutputStream(file);
-            write.write(content.getBytes());
-            write.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-    }*/
-
-    /*public void writeToFile(String fileName, String content){
-        File path = getApplicationContext().getFilesDir().getAbsoluteFile();
-        try {
-            FileOutputStream writer = new FileOutputStream(new File(path, fileName));
-            //FileOutputStream writer = openFileOutput(fileName, MODE_PRIVATE);
-            writer.write(content.getBytes());
-            writer.close();
-            Toast.makeText(getApplicationContext(),"Wrote to the file " + fileName, Toast.LENGTH_SHORT).show();
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-    }*/
 
     @Override
     protected void onPostResume() {
