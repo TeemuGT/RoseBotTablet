@@ -307,40 +307,45 @@ public class MainActivity extends AppCompatActivity {
     public boolean filo3 = false;
     public boolean filo4 = false;
     public boolean filo5 = false;
-
-    //Historia avainsanat
+    /**
+     * Historia avainsanat
+     */
     public boolean hist0 = false;
     public boolean hist1 = false;
     public boolean hist2 = false;
     public boolean hist3 = false;
     public boolean hist4 = false;
     public boolean hist5 = false;
-
-    //Musiikki avainsanat
+    /**
+     * Musiikki avainsanat
+     */
     public boolean musii0 = false;
     public boolean musii1 = false;
     public boolean musii2 = false;
     public boolean musii3 = false;
     public boolean musii4 = false;
     public boolean musii5 = false;
-
-    //Politiikka avainsanat
+    /**
+     * Politiikka avainsanat
+     */
     public boolean polit0 = false;
     public boolean polit1 = false;
     public boolean polit2 = false;
     public boolean polit3 = false;
     public boolean polit4 = false;
     public boolean polit5 = false;
-
-    //Sanakirjat avainsanat
+    /**
+     * Sanakirjat avainsanat
+     */
     public boolean sanak0 = false;
     public boolean sanak1 = false;
     public boolean sanak2 = false;
     public boolean sanak3 = false;
     public boolean sanak4 = false;
     public boolean sanak5 = false;
-
-    //Tietokirjat avainsanat
+    /**
+     * Tietokirjat avainsanat
+     */
     public boolean tiede0 = false;
     public boolean tiede1 = false;
     public boolean tiede2 = false;
@@ -349,379 +354,448 @@ public class MainActivity extends AppCompatActivity {
     public boolean tiede5 = false;
     public boolean tiede6 = false;
     public boolean tiede7 = false;
-
-    //Kielet avainsanat
+    /**
+     * Kielet avainsanat
+     */
     public boolean kielet0 = false;
     public boolean kielet1 = false;
     public boolean kielet2 = false;
     public boolean kielet3 = false;
     public boolean kielet4 = false;
     public boolean kielet5 = false;
-
-    //Käsityö ja rakentaminen
+    /**
+     * Käsityö ja rakentaminen
+     */
     public boolean kasityojarakentaminen0 = false;
     public boolean kasityojarakentaminen1 = false;
     public boolean kasityojarakentaminen2 = false;
     public boolean kasityojarakentaminen3 = false;
     public boolean kasityojarakentaminen4 = false;
     public boolean kasityojarakentaminen5 = false;
-
-    //Luonnontieteet
+    /**
+     * Luonnontieteet
+     */
     public boolean luonnontieteet0 = false;
     public boolean luonnontieteet1 = false;
     public boolean luonnontieteet2 = false;
     public boolean luonnontieteet3 = false;
     public boolean luonnontieteet4 = false;
     public boolean luonnontieteet5 = false;
-
-    //Luonto, Kasvit ja eläimet
+    /**
+     * Luonto, Kasvit ja eläimet
+     */
     public boolean luontokasvitelaimet0 = false;
     public boolean luontokasvitelaimet1 = false;
     public boolean luontokasvitelaimet2 = false;
     public boolean luontokasvitelaimet3 = false;
     public boolean luontokasvitelaimet4 = false;
     public boolean luontokasvitelaimet5 = false;
-
-    // Maat ja Kulttuuri
+    /**
+     * Maat ja Kulttuuri
+     */
     public boolean maatjakulttuuri0 = false;
     public boolean maatjakulttuuri1 = false;
     public boolean maatjakulttuuri2 = false;
     public boolean maatjakulttuuri3 = false;
     public boolean maatjakulttuuri4 = false;
     public boolean maatjakulttuuri5 = false;
-
-    //Matkailu
+    /**
+     * Matkailu
+     */
     public boolean matkailu0 = false;
     public boolean matkailu1 = false;
     public boolean matkailu2 = false;
     public boolean matkailu3 = false;
     public boolean matkailu4 = false;
     public boolean matkailu5 = false;
-
-    // Puutarha
+    /**
+     * Puutarha
+     */
     public boolean puutarha0 = false;
     public boolean puutarha1 = false;
     public boolean puutarha2 = false;
     public boolean puutarha3 = false;
     public boolean puutarha4 = false;
     public boolean puutarha5 = false;
-
-    // Ruoka
+    /**
+     * Ruoka
+     */
     public boolean ruoka0 = false;
     public boolean ruoka1 = false;
     public boolean ruoka2 = false;
     public boolean ruoka3 = false;
     public boolean ruoka4 = false;
     public boolean ruoka5 = false;
-
-    // Taide ja Design
+    /**
+     * Taide ja Design
+     */
     public boolean taidejadesign0 = false;
     public boolean taidejadesign1 = false;
     public boolean taidejadesign2 = false;
     public boolean taidejadesign3 = false;
     public boolean taidejadesign4 = false;
     public boolean taidejadesign5 = false;
-
-    //Terveys
+    /**
+     * Terveys
+     */
     public boolean terveys0 = false;
     public boolean terveys1 = false;
     public boolean terveys2 = false;
     public boolean terveys3 = false;
     public boolean terveys4 = false;
     public boolean terveys5 = false;
-
-    // Tieteellinenkirjoittaminen ja kirjallisuus
+    /**
+     * Tieteellinenkirjoittaminen ja kirjallisuus
+     */
     public boolean tieteellinenkirjoittaminen0 = false;
     public boolean tieteellinenkirjoittaminen1 = false;
     public boolean tieteellinenkirjoittaminen2 = false;
     public boolean tieteellinenkirjoittaminen3 = false;
     public boolean tieteellinenkirjoittaminen4 = false;
     public boolean tieteellinenkirjoittaminen5 = false;
-
-    // Urheilu
+    /**
+     * Urheilu
+     */
     public boolean urheilu0 = false;
     public boolean urheilu1 = false;
     public boolean urheilu2 = false;
     public boolean urheilu3 = false;
     public boolean urheilu4 = false;
     public boolean urheilu5 = false;
-
-    // Uskonnot
+    /**
+     * Uskonnot
+     */
     public boolean uskonnot0 = false;
     public boolean uskonnot1 = false;
     public boolean uskonnot2 = false;
     public boolean uskonnot3 = false;
     public boolean uskonnot4 = false;
     public boolean uskonnot5 = false;
-
-    //Lastenkirjat avainsanat
-    //Lasten romaanit avainsanat
+    /**
+     * Lastenkirjat avainsanat
+     * Lasten romaanit avainsanat
+     */
     public boolean lastenromaani0 = false;
     public boolean lastenromaani1 = false;
     public boolean lastenromaani2 = false;
     public boolean lastenromaani3 = false;
     public boolean lastenromaani4 = false;
     public boolean lastenromaani5 = false;
-
-    //englannin kieliset lastenkirjat avainsanat
+    /**
+     * Englannin kieliset lastenkirjat avainsanat
+     */
     public boolean kids0 = false;
     public boolean kids1 = false;
     public boolean kids2 = false;
     public boolean kids3 = false;
     public boolean kids4 = false;
     public boolean kids5 = false;
-
-    //Lasten elokuvat avainsanat
+    /**
+     * Lasten elokuvat avainsanat
+     */
     public boolean lastelo0 = false;
     public boolean lastelo1 = false;
     public boolean lastelo2 = false;
     public boolean lastelo3 = false;
     public boolean lastelo4 = false;
     public boolean lastelo5 = false;
-
-    //Lastenkirjat avainsanat
+    /**
+     * Lastenkirjat avainsanat
+     */
     public boolean lasten0 = false;
     public boolean lasten1 = false;
     public boolean lasten2 = false;
     public boolean lasten3 = false;
     public boolean lasten4 = false;
     public boolean lasten5 = false;
-
-    //Lastentietokirjat avainsanat
+    /**
+     * Lastentietokirjat avainsanat
+     */
     public boolean lasttiet0 = false;
     public boolean lasttiet1 = false;
     public boolean lasttiet2 = false;
     public boolean lasttiet3 = false;
     public boolean lasttiet4 = false;
     public boolean lasttiet5 = false;
-
-    // Lastenkuvakirjat avainsanat
+    /**
+     * Lastenkuvakirjat avainsanat
+     */
     public boolean lastenkuvakirja0 = false;
     public boolean lastenkuvakirja1 = false;
     public boolean lastenkuvakirja2 = false;
     public boolean lastenkuvakirja3 = false;
     public boolean lastenkuvakirja4 = false;
     public boolean lastenkuvakirja5 = false;
-
-    //Lastenkirjat 4-6 vuotiaille avainsanat
+    /**
+     * Ruotsinkieliset lastenkirjat avainsanat
+     */
     public boolean ruotsilasten0 = false;
     public boolean ruotsilasten1 = false;
     public boolean ruotsilasten2 = false;
     public boolean ruotsilasten3 = false;
     public boolean ruotsilasten4 = false;
     public boolean ruotsilasten5 = false;
-
-    //Lasten kirjat 7-9 vuotiaille avainsanat
+    /**
+     * Vauvojen ja taaperoiden avainsanat
+     */
     public boolean vauvojenkirja0 = false;
     public boolean vauvojenkirja1 = false;
     public boolean vauvojenkirja2 = false;
     public boolean vauvojenkirja3 = false;
     public boolean vauvojenkirja4 = false;
     public boolean vauvojenkirja5 = false;
-
-    //Nuorten kirjat avainsanat
+    /**
+     * Nuorten kirjat avainsanat
+     */
     public boolean nuoret0 = false;
     public boolean nuoret1 = false;
     public boolean nuoret2 = false;
     public boolean nuoret3 = false;
     public boolean nuoret4 = false;
     public boolean nuoret5 = false;
-
-
-    //Puuhaa lapsille avainsanat
+    /**
+     * Puuhaa lapsille avainsanat
+     */
     public boolean lastpuuh0 = false;
     public boolean lastpuuh1 = false;
     public boolean lastpuuh2 = false;
     public boolean lastpuuh3 = false;
     public boolean lastpuuh4 = false;
     public boolean lastpuuh5 = false;
-
-    //Rikoskirjallisuus
-    //Crime novels in English avainsanat
+    /**
+     * Rikoskirjallisuus
+     * Crime novels in English avainsanat
+     */
     public boolean crimeNovEng0 = false;
     public boolean crimeNovEng1 = false;
     public boolean crimeNovEng2 = false;
     public boolean crimeNovEng3 = false;
     public boolean crimeNovEng4 = false;
     public boolean crimeNovEng5 = false;
-
-    //Rikoskirja uutuudet avainsanat
+    /**
+     * Rikoskirja uutuudet avainsanat
+     */
     public boolean rikosuudet0 = false;
     public boolean rikosuudet1 = false;
     public boolean rikosuudet2 = false;
     public boolean rikosuudet3 = false;
     public boolean rikosuudet4 = false;
     public boolean rikosuudet5 = false;
-
-    //Rikospokkarit avainsanat
+    /**
+     * Rikospokkarit avainsanat
+     */
     public boolean rikospokka0 = false;
     public boolean rikospokka1 = false;
     public boolean rikospokka2 = false;
     public boolean rikospokka3 = false;
     public boolean rikospokka4 = false;
     public boolean rikospokka5 = false;
-
-    //Rikosromaanit avainsanat
+    /**
+     * Rikosromaanit avainsanat
+     */
     public boolean rikosromaani0 = false;
     public boolean rikosromaani1 = false;
     public boolean rikosromaani2 = false;
     public boolean rikosromaani3 = false;
     public boolean rikosromaani4 = false;
     public boolean rikosromaani5 = false;
-
-    //True Crime avainsanat
+    /**
+     * True Crime avainsanat
+     */
     public boolean truecrime0 = false;
     public boolean truecrime1 = false;
     public boolean truecrime2 = false;
     public boolean truecrime3 = false;
     public boolean truecrime4 = false;
     public boolean truecrime5 = false;
-
-    // Pokkarit alakategorioiden avainsanat boolean
-    // Kaunopokkarit
+    /**
+     *  Pokkarit alakategorioiden avainsanat
+     *  Kaunopokkarit
+     */
     public boolean kaunopokkarit0 = false;
     public boolean kaunopokkarit1 = false;
     public boolean kaunopokkarit2 = false;
     public boolean kaunopokkarit3 = false;
     public boolean kaunopokkarit4 = false;
     public boolean kaunopokkarit5 = false;
-
-    // Scifi ja fantasiapokkarit
+    /**
+     * Scifi ja fantasiapokkarit
+     */
     public boolean scifijafantasiapokkarit0 = false;
     public boolean scifijafantasiapokkarit1 = false;
     public boolean scifijafantasiapokkarit2 = false;
     public boolean scifijafantasiapokkarit3 = false;
     public boolean scifijafantasiapokkarit4 = false;
     public boolean scifijafantasiapokkarit5 = false;
-
-    //Tietopokkarit
+    /**
+     * Tietopokkarit
+     */
     public boolean tietopokkarit0 = false;
     public boolean tietopokkarit1 = false;
     public boolean tietopokkarit2 = false;
     public boolean tietopokkarit3 = false;
     public boolean tietopokkarit4 = false;
     public boolean tietopokkarit5 = false;
-
-    // Englanninkieliset kirjat alakategoriat avainsanat
-    // Crime
+    /**
+     * Englanninkieliset kirjat alakategoriat avainsanat
+     * Crime
+     */
     public boolean crime0 = false;
     public boolean crime1 = false;
     public boolean crime2 = false;
     public boolean crime3 = false;
     public boolean crime4 = false;
     public boolean crime5 = false;
-
-    // Fiction
+    /**
+     * Fiction
+     */
     public boolean fiction0 = false;
     public boolean fiction1 = false;
     public boolean fiction2 = false;
     public boolean fiction3 = false;
     public boolean fiction4 = false;
     public boolean fiction5 = false;
-
-    // Non-fiction
+    /**
+     * Non-fiction
+     */
     public boolean nonfiction0 = false;
     public boolean nonfiction1 = false;
     public boolean nonfiction2 = false;
     public boolean nonfiction3 = false;
     public boolean nonfiction4 = false;
     public boolean nonfiction5 = false;
-
-    // Poetry
+    /**
+     * Poetry
+     */
     public boolean poetry0 = false;
     public boolean poetry1 = false;
     public boolean poetry2 = false;
     public boolean poetry3 = false;
     public boolean poetry4 = false;
     public boolean poetry5 = false;
-
-    // Englanninkielinen scifi
+    /**
+     * Englanninkielinen scifi
+     */
     public boolean engscifi0 = false;
     public boolean engscifi1 = false;
     public boolean engscifi2 = false;
     public boolean engscifi3 = false;
     public boolean engscifi4 = false;
     public boolean engscifi5 = false;
-
-    // Uudet fiction
+    /**
+     * Uudet fiction
+     */
     public boolean newfiction0 = false;
     public boolean newfiction1 = false;
     public boolean newfiction2 = false;
     public boolean newfiction3 = false;
     public boolean newfiction4 = false;
     public boolean newfiction5 = false;
-
-    // Uudet Non-fiction
+    /**
+     * Uudet Non-fiction
+     */
     public boolean newnonfiction0 = false;
     public boolean newnonfiction1 = false;
     public boolean newnonfiction2 = false;
     public boolean newnonfiction3 = false;
     public boolean newnonfiction4 = false;
     public boolean newnonfiction5 = false;
-
-
+    /**
+     * Lehdet avainsanat
+     */
     public boolean lehd0 = false;
     public boolean lehd1 = false;
     public boolean lehd2 = false;
     public boolean lehd3 = false;
     public boolean lehd4 = false;
     public boolean lehd5 = false;
-
+    /**
+     * Sarjakuvat avainsanat
+     */
     public boolean sarja0 = false;
     public boolean sarja1 = false;
     public boolean sarja2 = false;
     public boolean sarja3 = false;
     public boolean sarja4 = false;
     public boolean sarja5 = false;
-
+    /**
+     * Pokkarit yleisesti avainsanat (ei käytössä)
+     */
     public boolean pokka0 = false;
     public boolean pokka1 = false;
     public boolean pokka2 = false;
     public boolean pokka3 = false;
     public boolean pokka4 = false;
     public boolean pokka5 = false;
-
+    /**
+     * Englanninkieliset avainsanat (ei köytössä)
+     */
     public boolean engl0 = false;
     public boolean engl1 = false;
     public boolean engl2 = false;
     public boolean engl3 = false;
     public boolean engl4 = false;
     public boolean engl5 = false;
-
+    /**
+     * Elokuvat avainsanat
+     */
     public boolean elokuvat0 = false;
     public boolean elokuvat1 = false;
     public boolean elokuvat2 = false;
     public boolean elokuvat3 = false;
     public boolean elokuvat4 = false;
     public boolean elokuvat5 = false;
-
+    /**
+     * Ajankohtaiset avainsanat
+     */
     public boolean ajankohtaista0 = false;
     public boolean ajankohtaista1 = false;
     public boolean ajankohtaista2 = false;
     public boolean ajankohtaista3 = false;
     public boolean ajankohtaista4 = false;
     public boolean ajankohtaista5 = false;
-
+    /**
+     * Paperituotteet avainsanat
+     */
     public boolean paperituotteet0 = false;
     public boolean paperituotteet1 = false;
     public boolean paperituotteet2 = false;
     public boolean paperituotteet3 = false;
     public boolean paperituotteet4 = false;
     public boolean paperituotteet5 = false;
-
-
+    /**
+     * Kiitos avainsata
+     * Vastauksena kiittää käyttäjää ja palaa takaisin nukkumis tilaan.
+     */
     public boolean kiitos1 = false;
     public boolean oli = false;
     public boolean kiito = false;
-
+    /**
+     * Sijainti avainsanat (ei käytössä)
+     */
     public boolean sijainti0 = false;
     public boolean sijainti1 = false;
     public boolean sijainti2 = false;
     public boolean sijainti3 = false;
-
-
-    // Marker layout objektit
+    /**
+     * Jokaisella kategorialla on sijainteja mistä ne löytyvät.
+     * Jokainen sijainti kartalla omistaa oman markkerin joka tuodaan tarvittaessa näkyviin.
+     * Markkerit on nimetty "marker" ja erotettu toisistaan numerolla
+     * Lisä materiaalista löytyy myymälän kartta jossa jokainen sijainti on numeroitu. Tässä olevat markkerin numerot vastaavat kartassa oleviin numeroihin.
+     * Esim. Marker23 on osoitettu samaan kohtaan kuin lisämateriaali kartassa sijainnissa 23.
+     */
     static ImageView marker1, marker2, marker3, marker4, marker5, marker6, marker7,marker8, marker9, marker10, marker11, marker12, marker13, marker14, marker15, marker16, marker17,marker18, marker19, marker20, marker21, marker22, marker23, marker24, marker25, marker26, marker27,marker28, marker29, marker30, marker31, marker32, marker33, marker34, marker35, marker36, marker37,marker38, marker39, marker40, marker41, marker42, marker43, marker44, marker45, marker46, marker47,marker48, marker49, marker50, marker51, marker52, marker53, marker54;
+    /**
+     * Luodaan layout objekteja
+     * Kartatta, Robotti figuuri kahdessa eri sijainnissa (Hahmo).
+     * Aloitus nappi converBtn
+     * Aloita kuuntelu nappi (voiceBtn, sijoitettu xml tiedostossa hahmo1 päälle)
+     * Restart nappi (resButton)
+     * Myymälän logo
+     * otsikko, vaihtoehtoinen (ei käytösä)
+     * textToSpeech objekti
+     * Pari textView joita pystyy hyödyntämään tarvittaessa. Esim text1 ollut käytössä kertomaan havaitseeko kamera liikettä ja kertonut sen näytöllä.(Poistettu käytöstä asiakas kokeilua varten)
+     */
     //Layout Objekteja
     static ImageView kartta;
     static ImageView hahmo;
@@ -735,37 +809,47 @@ public class MainActivity extends AppCompatActivity {
     static ImageView gif;
     TextView otsikko;
     ImageView logo;
-
-
-
-    //Kamera preview ja tallennuskohteet
+    /**
+     * Kamera preview ja kuvien tallennuskohteet imageVieweihin. Kuvat eivät tule missään vaiheessa näkyviin ruudulle.
+     */
     private TextureView textureView;
     private ImageView imageView;
     private ImageView imageView2;
-
-    //Kamera bitmapit
+    /**
+     * Luodaa molemmille kuville kaksi bitmap objektia jossa niitä käsitellään ja verrataan toisiinsa.
+     */
     static Bitmap bitmap;
     static Bitmap bitmap2;
     static Bitmap resized;
     static Bitmap resized2;
-
+    /**
+     * Luodaan Timereita sekä Handlereita joita hyödynnetään jotta voidaan tehdä useampaa toimintaa saman aikaisesti.
+     */
     Timer timerlopetus = new Timer();
     Timer timer = new Timer();
     Handler handler = new Handler();
     Handler handlerloppu = new Handler();
     Handler handler1 = new Handler();
     Handler handler2 = new Handler();
-
-    //Logcat LOG ilmoitus
+    /**
+     * Logcat LOG ilmoitus jolla tulostetaan tietoa mitä halutaan serata kehityksen kannalta.
+     */
     private static final Float LOG_TAG = compareEquivalance();
-
+    /**
+     * SimpleDataFormat luodaan aikaleima jota tallenetaan databaseen datankeruussa.
+     * Käytetään Firebase databasea.
+     */
     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
     String millisInString  = dateFormat.format(new Date());
     FirebaseDatabase database = FirebaseDatabase.getInstance();
-
-
+    /**
+     * Int kuva käytetään vaihtamaan uuden kuvan sijaintia jotta joka toinen kuva korvaisi aina joka toisen.
+     */
     int kuva = 0;
-
+    /**
+     * Kamera kuvan määrittelyä
+     * Kameran objektien luontia (kaikki ei käytössä, koska poistettu tallentaminen ja preview näkyminen)
+     */
     private  static final SparseIntArray ORIENTATIONS = new SparseIntArray();
     static {
         ORIENTATIONS.append(Surface.ROTATION_0,90);
@@ -773,7 +857,6 @@ public class MainActivity extends AppCompatActivity {
         ORIENTATIONS.append(Surface.ROTATION_180, 270);
         ORIENTATIONS.append(Surface.ROTATION_270, 180);
     }
-
     private String cameraId;
     private CameraDevice cameraDevice;
     private CameraCaptureSession cameraCaptureSessions;
@@ -786,30 +869,50 @@ public class MainActivity extends AppCompatActivity {
     private boolean nFlashSupported;
     private Handler mBackgroundHandler;
     private HandlerThread mBackgroundThread;
-
+    /**
+     * Boolean arvoja
+     * ihminen muutetaan true:ksi mikäli kuvien vertailussa huomataan muutos
+     * aloitettu muutetaan true:ksi mikäli
+     * aloitettu oli kokeilu käytössä määrittämään että sovellus on aktivoitu. (ei käytössä)
+     */
     boolean ihminen = false;
-    boolean aloitettu = true;
-
-
+    boolean aloitettu = false;
+    /**
+     * Int kuvalasku käytetään laskurissa kertomaan kuinka monta kuvaa on otettu.
+     * Int laskuri laskee kuikamonta kertaa sovellus kuulee jotain mitä se ei ymmörrä. Int nollataan joka kerta kun sovellus löytää kuulemastaan avainsanan.
+     */
     int kuvalasku;
     public int laskuri =  0;
-
+    /**
+     * Int i on käytössä lopetus metodissa. Se pyörii timerissa ja joka kierroksella siihen lisätään yksi. i määrittää milloin sovelluksen tulisi käynnistyä uudelleen.
+     */
     int i = 0;
-
-    //Avain sana
+    /**
+     * String word on tallennus sijainti puheen tunnistukselle. Sovelluksen kuulema puhe tallenetaan lopulta tähän ja sitä käytetään vertailussa aviansanoihin. word tallennetaan myös tietokantaan tutkimus käyttöön.
+     */
     public static String word = "";
+    /**
+     * FILE_NAME oli yritys tallentaa paikallisesti teksti tiedostoon. (ei tällähetkellä käytössä)
+     */
     private static final String FILE_NAME = "text.txt";
-
-
+    /**
+     * mainLayout on objekti joka luodaan xml layout tiedostosta.
+     */
     @SuppressLint("StaticFieldLeak")
     public static ViewGroup mainLayout;
-    //Boolean joka määrittää mikä kategoria on valittu
-    //Ruotsin, ranskan ja Saksan booleanit
+    /**
+     * Jokaisella kategorialla on oma boolean joka kertoo mikäli sitä haetaan.
+     * Puheen tunnistuksen ja napin painamisella molemmilla ohjataan tämä boolean true:ksi joka mahdollistaa halutun toiminan
+     * Boolean määrittelee vertaa() metodissa halutun toiminta tavan.
+     *
+     * Ruotsin, ranskan ja Saksan booleanit
+     */
     public static boolean ruotsinkieli = false;
     public static boolean ranskankieli = false;
     public static boolean saksankieli = false;
-
-    //Kaunokirjallisuus booleanit
+    /**
+     * Kaunokirjallisuus booleanit
+     */
     public static boolean baabel = false;
     public static boolean antikvaariset = false;
     //public static boolean essee = false;
@@ -822,9 +925,9 @@ public class MainActivity extends AppCompatActivity {
     public static boolean fantasia = false;
     public static boolean runo = false;
     public static boolean rikojanitus;
-
-
-    //Tietokirjallisuus booleanit
+    /**
+     * Tietokirjallisuus booleanit
+     */
     public static boolean ukrainajavenaja = false;
     public static boolean elokuvajateatteri = false;
     public static boolean elamankerta = false;
@@ -850,8 +953,9 @@ public class MainActivity extends AppCompatActivity {
     public static boolean tieteellinenkirjoittaminen = false;
     public static boolean urheilu = false;
     public static boolean uskonnot = false;
-
-    //Lastenkirjat booleanit
+    /**
+     * Lastenkirjat booleanit
+     */
     public static boolean lastenromaani = false;
     public static boolean kids = false;
     public static boolean lastenelokuvat = false;
@@ -860,25 +964,26 @@ public class MainActivity extends AppCompatActivity {
     public static boolean lastenkuvakirja = false;
     public static boolean ruotsinkielisetlastenkirjat = false;
     public static boolean vauvojenkirja = false;
-
     public static boolean nuoret = false;
-
     public static boolean puuhaalapsille = false;
-
-    //Rikoskirjat booleanit
+    /**
+     * Rikoskirjat booleanit
+     */
     public static boolean CrimeNovelsInEnglish = false;
     public static boolean RikoskirjaUutuudet = false;
     public static boolean RikosPokkarit = false;
     public static boolean Rikosromaanit = false;
     public static boolean TrueCrime = false;
-
-    // Pokkarit booleanit
+    /**
+     * Pokkarit booleanit
+     */
     public static boolean kaunopokkarit = false;
     public static boolean rikosjajannityspokkarit = false;
     public static boolean scifijafantasiapokkarit = false;
     public static boolean tietopokkarit = false;
-
-    //Englanninkieliset kirjat booleanit
+    /**
+     * Englanninkieliset kirjat booleanit
+     */
     public static boolean crime = false;
     public static boolean fiction = false;
     public static boolean nonfiction = false;
@@ -886,8 +991,9 @@ public class MainActivity extends AppCompatActivity {
     public static boolean engscifi = false;
     public static boolean newfiction = false;
     public static boolean newnonfiction = false;
-
-
+    /**
+     * Yksittäis yläkategorioita jolla ei olo alakategorioita vaan omat sijainnit booleanit
+     */
     public static boolean lehdet = false;
     public static boolean sarjakuvat = false;
     public static boolean pokkarit = false;
@@ -895,18 +1001,22 @@ public class MainActivity extends AppCompatActivity {
     public static boolean elokuvat = false;
     public static boolean ajankohtaista = false;
     public static boolean paperituotteet = false;
-
+    /**
+     * Interaktiivisuus kokeilu booleanit
+     */
     public static boolean kiitoksia = false;
     public static boolean sijainti = false;
     @SuppressLint("StaticFieldLeak")
-    //Napit
-
-    //Ruotsi, Ranska ja Saksa napit
+    /**
+    * Luodaan jokaiselle yläkategorialle ja alagategorialle oma nappi
+    * Ruotsi, Ranska ja Saksa napit
+    */
     public Button ruotsinkielibtn;
     public Button ranskankielibtn;
     public Button saksankielibtn;
-
-    //Kaunokirjallisuus napit
+    /**
+     * Kaunokirjallisuus napit
+     */
     public Button baabebtn;
     public Button antikvaarisetbtn;
     //public Button esseebtn;
@@ -920,8 +1030,9 @@ public class MainActivity extends AppCompatActivity {
     public Button runobtn;
     public Button rikojanbtn;
     public Button uudetrikosbtn;
-
-    //Tietokirjallisuus napit
+    /**
+     * Tietokirjallisuus napit
+     */
     public Button ukravenabtn;
     public Button eloteatbtn;
     public Button elamankbtn;
@@ -947,8 +1058,9 @@ public class MainActivity extends AppCompatActivity {
     public Button tieteellinenkirjoittaminenbtn;
     public Button urheilubtn;
     public Button uskonnotbtn;
-
-    //Lastenkirjat napit
+    /**
+     * Lastenkirjat napit
+     */
     public Button lastenromaanibtn;
     public Button kidsbtn;
     public Button lastelobtn;
@@ -959,21 +1071,24 @@ public class MainActivity extends AppCompatActivity {
     public Button vauvojenkirjabtn;
     public Button nuoretbtn;
     public Button lastpuuhbtn;
-
-    //Rikoskirjallisuus
+    /**
+     * Rikoskirjallisuus
+     */
     public Button crimeNovEngbtn;
     public Button rikosuudetbtn;
     public Button rikospokkabtn;
     public Button rikosromaanibtn;
     public Button truecrimebtn;
-
-    //Pokkarit napit
+    /**
+     * Pokkarit napit
+     */
     public Button kaunopokkaritbtn;
     public Button rikosjajannityspokkaritbtn;
     public Button scifijafantasiapokkaritbtn;
     public Button tietopokkaritbtn;
-
-    // Englaninkieliset kirjat napit
+    /**
+     * Englaninkieliset kirjat napit
+     */
     public Button crimebtn;
     public Button fictionbnt;
     public Button nonfictionbtn;
@@ -981,9 +1096,13 @@ public class MainActivity extends AppCompatActivity {
     public Button engscifibtn;
     public Button newfictionbtn;
     public Button newnonfictionbtn;
-
+    /**
+     * Kielen vaihto nappi
+     */
     public Button shlang;
-
+    /**
+     * Yläkategoria napit
+     */
     public Button kaunobtn;
     public Button tietogabtn;
     public Button lapsetbtn;
@@ -996,15 +1115,25 @@ public class MainActivity extends AppCompatActivity {
     public Button elokuvatbtn;
     public Button ajankohtaistabtn;
     public Button paperituotteetbtn;
-
+    /**
+     * Paluu nappi jolla saadaan näkymiin uudelleen kaikki yläkategoriat
+     * Tällähetkellä ImageButtonina. Aikasiemmin ollut perus nappi ja on vielä tallella kommentti kenttänä.
+     */
     public ImageButton ylakate;
     //public Button ylakate;
+    /**
+     * Nollataan mylayout
+     */
     private RelativeLayout mylayout = null;
-
+    /**
+     * Luodaan tarvittavat objektit puheen tunnistukselle.
+     */
     //Puheen tunnistus
     public static SpeechRecognizer speechRecognizer;
     public static Intent speechRecognizerIntent;
-
+    /**
+     * Määritellään kameralle toimintoja eri tilanteissa.
+     */
     CameraDevice.StateCallback stateCallback = new CameraDevice.StateCallback() {
         @Override
         public void onOpened(@NonNull CameraDevice camera) {
@@ -1022,58 +1151,85 @@ public class MainActivity extends AppCompatActivity {
             cameraDevice=null;
         }
     };
-
+    /**
+    * onCreate on pää metodi jossa pyöritetään näytöllä olevia objekteja sekä toimintaa.
+    */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        /**
+         *  Piilotetaan yläbanneri nkyvistä.
+         */
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //Ylä bannerin piilotus
         Objects.requireNonNull(getSupportActionBar()).hide();
-        //Valitu kieli löytyy metodin takaa joka tarkistaa valinnan.
+        /**
+         * Haetaan aktiviteetin heti alussa valittu kieli loadLocale metodista.
+         */
         loadLocale();
-
-
-        //Taimeri joka pyörii robotin ollessa nukkumistilassa.
-        // Hakee takePicture metodin tietyn väliajoin jossa otetaan kuvia ja verrataan niitä toisiinsa eroavuuden etsimiseksi.
+        /**
+          Sovelluksen alussa aktyiviteetin käynnistyttä sovellus on "nukkumistilassa" jossa pyöritetään tätä timeria joka ottaa kuvia takePicture metodin avulla.
+          Timeri pyörii niin kauan kun kukaan ei käytä sovellusta tai sitten tietty kuva määrä täyttyy ja sovellus käynnistyy uudelleen.
+         */
         timer.schedule(new TimerTask() {
             @Override
             public void run() {
                 MainActivity.this.runOnUiThread(new Runnable() {
                     public void run() {
-                        //what you want to do
+                        /**
+                         * Jos ihminen on false, eli kuvissa ei ole eroavaisuutta jatketaan timerin pyörittämistä ja otetaan uusi kuva.
+                         * logcattiin tulostetaan kuvan numero järjestyksessä.
+                         */
                         if (!ihminen) {
                             kuvalasku++;
                             takePicture();
                             Log.e(String.valueOf(LOG_TAG), "Kuva numero " + kuvalasku);
                         }
+                        /**
+                         * Jos ihminen on muuttunut true:ksi on kuvissa näkyvyt eroavaisuutta.
+                         * Tällöin timeri pysäutetään, jonka jälkeen haetaan aloita metodi jolla sovellus aktivoituu.
+                         */
                         if (ihminen) {
                             timer.cancel();
                             aloita();
                         }
+                        /**
+                         * Jos kuvien määrä ylittää arvon 20 käynnistetään sovellus uudelleen.
+                         */
                         if (kuvalasku > 20){
                             restart();
                         }
                     }
                 });
             }
-        }, 0, 5000);
-
+        }, 0, 5000);/** lopussa määritellään timerin kesto millisekunneissa joka määrittelee kuvien otto nopeuden. */
+        /**
+        * Haetaan acivity_main.xml tiedostosta näkymä näytölle.
+        */
         setContentView(R.layout.activity_main);
-
-        //Kysyy mikrofoonin käyttöoikeutta
+        /**
+         * Kysytään mikrofoonin käyttö oikeutta
+         */
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.RECORD_AUDIO) != PackageManager.PERMISSION_GRANTED) {
             checkPermission();
         }
-
-        //Puheen tunnistuksen määrittelyä
+        /**
+         * Määritellään puheen tunnistaminen
+         * Haetaan tarvittavat toiminnot oikeassa muodossa.
+         * Heataan kieli millä halutaan kuunnella (käytetään loadLocale metodia jotta valittu kieli on sama mikä ollaan valittu sovelluksen käyttökieleksi):
+         */
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(this);
         speechRecognizerIntent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
         speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,
                 RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
         speechRecognizerIntent.putExtra(RecognizerIntent.EXTRA_LANGUAGE, loadLocale());
-
-        //Puheen tunnistus
+        /**
+         * Luodaan puheentunnistus listener jota voidaan hakea kun halutaan kuunnella puhetta.
+         * Täällä myös luodaan kaikki puheen tunnistuksessa käytävät kohdat ja mitä niissä tehdään.
+         */
         speechRecognizer.setRecognitionListener(new RecognitionListener() {
+            /**
+             * Ennen kuuntelua valmistudutaan kuuntelemaan ja tässä vaiheessa haetaan lopetus metodi jotta sovellus ei sammu itsestään.
+             */
             @Override
             public void onReadyForSpeech(Bundle bundle) {
                 lopetus();
@@ -1081,6 +1237,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+            /**
+             * Kun puheen kuuntelu aloitetaan vaihdetaan näytöllä oleva figuuri kuuntelevaan figuuriin imageView hahmo1:ssä
+             */
             @Override
             public void onBeginningOfSpeech() {
                 hahmo1.setImageResource(R.drawable.kuuntelevarobo);
@@ -1096,6 +1255,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+            /**
+             * Kun kuuntelu lopetetaan vaidetaan näytöllä oleva figuuri takaisi perus tilaan.
+             */
             @Override
             public void onEndOfSpeech() {
                 hahmo1.setImageResource(R.drawable.kuvarobo);
@@ -1107,6 +1269,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
 
+            /**
+             * onResult kohdassa käsitellään kuultua dataa. tunnistettu puhe laitetataan ArrayList josta se siirretään "word" stringiin helposti käsiteltäväksi
+             */
             @Override
             public void onResults(Bundle bundle) {
                 ArrayList<String> matches = bundle.getStringArrayList(SpeechRecognizer.RESULTS_RECOGNITION);
@@ -1114,10 +1279,14 @@ public class MainActivity extends AppCompatActivity {
                     //keeper = matches.get(0);
                     text.setText(matches.get(0));
                     word = text.getText().toString();
-
+                    /**
+                    * kuultu puhe tallenetaan myös databaseen aikaleiman kanssa.
+                    */
                     DatabaseReference myRef = database.getReference("text");
                     myRef.push().setValue(millisInString + " " + word);
-
+                    /**
+                    * Tuloksien saamisen jälkeen heataan tunnistus metodi jossa saatuja tuloksia käsitellään.
+                    */
                     tunnistus();
                 }
             }
@@ -1128,17 +1297,24 @@ public class MainActivity extends AppCompatActivity {
             public void onEvent(int i, Bundle bundle) {
             }
         });
-        //Kameran objektien haku
+        /**
+         * kaksi ylimääräistä imageViewiä joita voi hyödyntää tarpeen mukaan. (ei käytössä)
+         */
         imageView = (ImageView) findViewById(R.id.imageView);
         imageView2 = (ImageView) findViewById(R.id.imageView2);
-
+        /**
+         * textureView on näkymätön kameran preview
+         */
         textureView = (TextureView) findViewById(R.id.textureView);
         assert textureView != null;
         textureView.setSurfaceTextureListener(textureListener);
-
+        /**
+         * Haetaan main layout xml tiedostosta.
+        */
         mylayout = (RelativeLayout) findViewById(R.id.main);
-
-        // Haetaan marker objektit id:n perusteella.
+        /**
+        * Heataan kaikki sijainti markkerit xml tiedostosta.
+        */
         marker1 = (ImageView) findViewById(R.id.marker1);
         marker2 = (ImageView) findViewById(R.id.marker2);
         marker3 = (ImageView) findViewById(R.id.marker3);
@@ -1193,19 +1369,24 @@ public class MainActivity extends AppCompatActivity {
         marker52 = (ImageView) findViewById(R.id.marker52);
         marker53 = (ImageView) findViewById(R.id.marker53);
         marker54 = (ImageView) findViewById(R.id.marker54);
-
-        //Hakee objekteja id:n perusteella.
+        /**
+         * Heataan kartta, ha figuuri (hahmo ja hahmo1) xml tiedostosta
+         */
         mainLayout = (RelativeLayout) findViewById(R.id.main);
         kartta = (ImageView) findViewById(R.id.kartta);
         hahmo = (ImageView) findViewById(R.id.hahmo);
         hahmo1 = (ImageView) findViewById(R.id.hahmo1);
-
-        //Ruotsi, Ransaka ja Saksa nappien objektien haku
+        /**
+         * Haetaan xml tiedostosta kaikki napit
+         *
+         * Ruotsi, Ransaka ja Saksa nappien objektien haku
+         */
         ruotsinkielibtn = findViewById(R.id.ruotsinkielibtn);
         ranskankielibtn = findViewById(R.id.ranskankielibtn);
         saksankielibtn = findViewById(R.id.saksankielibtn);
-
-        //Kaunokirjallisuus nappien objektien haku
+        /**
+         * Kaunokirjallisuus nappien objektien haku
+         */
         baabebtn = findViewById(R.id.baabebtn);
         antikvaarisetbtn = findViewById(R.id.antikvaarisetbtn);
         //esseebtn = findViewById(R.id.esseebtn);
@@ -1219,8 +1400,9 @@ public class MainActivity extends AppCompatActivity {
         runobtn = findViewById(R.id.runobtn);
         rikojanbtn = findViewById(R.id.rikojanbtn);
         uudetrikosbtn = findViewById(R.id.uudetrikosbtn);
-
-        //Tietokirjallisuus nappien objektien haku
+        /**
+         * Tietokirjallisuus nappien objektien haku
+         */
         ukravenabtn = findViewById(R.id.ukravenabtn);
         eloteatbtn = findViewById(R.id.eloteatbtn);
         elamankbtn = findViewById(R.id.elamankbtn);
@@ -1246,8 +1428,9 @@ public class MainActivity extends AppCompatActivity {
         tieteellinenkirjoittaminenbtn = findViewById(R.id.tieteellinenkirjoittaminenbtn);
         urheilubtn = findViewById(R.id.urheilubtn);
         uskonnotbtn = findViewById(R.id.uskonnotbtn);
-
-        //Lastenkirja nappien objektien haku
+        /**
+         * Lastenkirja nappien objektien haku
+         */
         lastenromaanibtn = findViewById(R.id.lastenromaanibtn);
         kidsbtn = findViewById(R.id.kidsbtn);
         lastelobtn = findViewById(R.id.lastelobtn);
@@ -1258,21 +1441,24 @@ public class MainActivity extends AppCompatActivity {
         vauvojenkirjabtn = findViewById(R.id.vauvojenkirjabtn);
         nuoretbtn = findViewById(R.id.nuoretbtn);
         lastpuuhbtn = findViewById(R.id.lastpuuhbtn);
-
-        //Rikoskirjojen objektien haku
+        /**
+         * Rikoskirjojen objektien haku
+         */
         crimeNovEngbtn = findViewById(R.id.crimeNovEngbtn);
         rikosuudetbtn = findViewById(R.id.rikosuudetbtn);
         rikospokkabtn = findViewById(R.id.rikospokkabtn);
         rikosromaanibtn = findViewById(R.id.rikosromaanibtn);
         truecrimebtn = findViewById(R.id.truecrimebtn);
-
-        //Pokkarit nappien objektien haku
+        /**
+         * Pokkarit nappien objektien haku
+         */
         kaunopokkaritbtn = findViewById(R.id.kaunopokkaritbtn);
         rikosjajannityspokkaritbtn = findViewById(R.id.rikosjajannityspokkaritbtn);
         scifijafantasiapokkaritbtn = findViewById(R.id.scifijafantasiapokkaritbtn);
         tietopokkaritbtn = findViewById(R.id.tietopokkaritbtn);
-
-        //Englanninkieliset kirjat nappien objektien haku
+        /**
+         * Englanninkieliset kirjat nappien objektien haku
+         */
         crimebtn = findViewById(R.id.crimebtn);
         fictionbnt = findViewById(R.id.fictionbnt);
         nonfictionbtn = findViewById(R.id.nonfictionbtn);
@@ -1280,7 +1466,10 @@ public class MainActivity extends AppCompatActivity {
         engscifibtn = findViewById(R.id.engscifibtn);
         newfictionbtn = findViewById(R.id.newfictionbtn);
         newnonfictionbtn = findViewById(R.id.newnonfictionbtn);
-
+        /**
+         * puheen aloitus, aloitus, uudelleen käynnistys ja kielenvaihto napin haku
+         * teksti kentien, otsikon ja logon haku
+         */
         voiceBtn = findViewById(R.id.voiceBtn);
         text = findViewById(R.id.text);
         text1 = findViewById(R.id.text1);
@@ -1290,8 +1479,9 @@ public class MainActivity extends AppCompatActivity {
         //gif = findViewById(R.id.gif);
         otsikko = findViewById(R.id.otsikko);
         logo = findViewById(R.id.logo);
-
-        //Yläkategoriat napit
+        /**
+         * Yläkategoriat napit
+         */
         kaunobtn = findViewById(R.id.kaunobtn);
         tietogabtn = findViewById(R.id.tietogabtn);
         lapsetbtn = findViewById(R.id.lapsetbtn);
@@ -1304,35 +1494,43 @@ public class MainActivity extends AppCompatActivity {
         elokuvatbtn = findViewById(R.id.elokuvatbtn);
         ajankohtaistabtn = findViewById(R.id.ajankohtaistabtn);
         paperituotteetbtn = findViewById(R.id.paperituotteetbtn);
-
+        /**
+         * paluu nappi yläkategorioihin
+         */
         ylakate = findViewById(R.id.ylakate);
-
-        //Kielen vaihto bar
+        /**
+         * Kielen vaihto popup actionbar
+         */
         ActionBar actionBar = getSupportActionBar();
         actionBar.setTitle(getResources().getString(R.string.app_name));
-
-
-        //Kielen vaihto nappula
-        shlang.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showLanguageDialog();
-            }
-        });
-
-        //Puheen tuottaminen tekstistä
+        /**
+         * Luodaan uusi TextToSpeech kutsuttaessa joka tuottaa valitun stringin puheeksi.
+         */
         textToSpeech = new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
-
+            /**
+             * Toiminnalla tulee olla valittu kieli mitä halutaan tuottaa ja tähän käytetään metodia loadLocale jotta tuotettu kieli on sama mikä on valittu sovelluksen käyttökieleksi.
+             */
             @Override
             public void onInit(int i) {
 
                 if (i != TextToSpeech.ERROR) {
                     textToSpeech.setLanguage(Locale.forLanguageTag(loadLocale()));
                 }
-
             }
         });
-        //Aloitus nappula joka aloittaa toiminnan
+        /**
+         * Kaikille napeille luodaan listenerit sekä toiminta mitä tapahtuu jos niitä painaa.
+         * shlang on nappi jolla vaihdetaan kieltä. Ja se hakee showLanguageDialog metodin.
+         */
+        shlang.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showLanguageDialog();
+            }
+        });
+        /**
+         * Aloitus nappula joka hakee aloita metodin. Sekä pysäyttää nukkumistilassa pyörivän timerin.
+         */
         converBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -1341,15 +1539,18 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        //Restart nappula joka hakee restart methodin
+        /**
+         * Nappi jolla sovellus käynnistetään uudelleen. Hakee restart metodin.
+         */
         resButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 restart();
             }
         });
-        //Kuva painike josta aukeaa puheen kuuntelu
+        /**
+         * voiceBtn on näkymätön imageButton joka on hahmo1 päällä. Tällä aloitetaan puheenkuuntelu hakemalla speechRecognizer.
+         */
         voiceBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 timer.cancel();
@@ -1358,16 +1559,43 @@ public class MainActivity extends AppCompatActivity {
                 speechRecognizer.startListening(speechRecognizerIntent);
             }
         });
-
+        /**
+        * Yläkategoria napit joilla on alaategorioita avaavat napit siihen kuuluvaan alagategoriaan ja piilottavat kaikki yläkategorian napit.
+         * Jokaisesa tuotetaan myös puhetta joka kertoo minkä yläkategorian on valinnut ja figuuri muutetaan puhuvaksi animaatioksi.
+         * Handlerin avulla toteutetaan puhumisen jälkeinen figuurin takaisin muuttaminen perus kuvakkeeseen.
+         *
+         * Kaikki yläketegoriat joilla on alaketegorioita ovat rakenteeltaan samanlaisia muuten kuin id muutoksilta.
+         * Tarkempi kuvaus komentointina löytyy vain "kaunobtn" napilta.
+         *
+         * Yläkatekoriat joilla ei ole alakategorioita muuttavat kyseisen kategorian booleanin true:ksi.
+         * Nappi hakee vertaa metodin jossa tuotetaan toiminta valitun kategorian mukaan.
+         *
+         * Kaikki yläkategoriat joilla ei ole alakategoriaa ovat rakenteeltaan samanlaisia muuten kuin id muutoksilta
+         * Tarkempi kuvaus kommentoituna löytyy vain "paperituotteetbtn" napilta.
+        */
         //Yläkategorioiden nappien toiminnot
         kaunobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /**
+                 * nappeja painamalla haetaan lopetus metodi jotta sovellus tajuaa että sitä käytetään.
+                 */
                 lopetus();
+                /**
+                 * Nappia painamalla lopetetaan kuunteleminen koska käyttö tapa on muuttunut napeilla ohjaamiseksi.
+                 */
                 speechRecognizer.stopListening();
+                /**
+                 * Muutetaan hahmo1 figuuri gif animaatioksi puhuessa.
+                 */
                 Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+                /**
+                 * Tuotetaan puhe textToSpeech toiminnon avulla.
+                 */
                 textToSpeech.speak(getString(R.string.kaunospeak), TextToSpeech.QUEUE_FLUSH, null);
-                //Poistetaan pääkategotia napit käytöstä.
+                /**
+                 * Piilotetaan kaikki yläkategoria napit.
+                 */
                 kaunobtn.setVisibility(View.INVISIBLE);
                 tietogabtn.setVisibility(View.INVISIBLE);
                 lapsetbtn.setVisibility(View.INVISIBLE);
@@ -1380,8 +1608,9 @@ public class MainActivity extends AppCompatActivity {
                 elokuvatbtn.setVisibility(View.INVISIBLE);
                 ajankohtaistabtn.setVisibility(View.INVISIBLE);
                 paperituotteetbtn.setVisibility(View.INVISIBLE);
-
-                //Avataan alakategorianapit käyttöön.
+                /**
+                 * Avataan kaikki alakategoria napit käyttöön kaunokirjallisuuden alta.
+                 */
                 fantasibtn.setVisibility(View.VISIBLE);
                 uudetrikosbtn.setVisibility(View.VISIBLE);
                 runobtn.setVisibility(View.VISIBLE);
@@ -1395,16 +1624,20 @@ public class MainActivity extends AppCompatActivity {
                 klassikotbtn.setVisibility(View.VISIBLE);
                 otavabtn.setVisibility(View.VISIBLE);
                 aanikibtn.setVisibility(View.VISIBLE);
-
+                /**
+                 * Avataan takaisin nappi yläkategorioihin josta voi palata taaksepäin valitsemaan uuden yläkategorian.
+                 */
                 ylakate.setVisibility(View.VISIBLE);
-
+                /**
+                 * Luodaan Hadler postDelayd joka muuttaa hahmo1 figuurin puhuvasta gif animaatiosta takaisin perus kuvakeeksi halutun ajan jälkeen. Tarkoitus osua puheen loppumisen kohdalle.
+                 */
                 Handler handler = new Handler();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         hahmo1.setImageResource(R.drawable.kuvarobo);
                     }
-                }, 3600);
+                }, 3600); /** Toiminnan ajoittamisen aika millisekuntteina */
             }
         });
         tietogabtn.setOnClickListener(new View.OnClickListener() {
@@ -1709,25 +1942,58 @@ public class MainActivity extends AppCompatActivity {
         paperituotteetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /**
+                 * Haetaan lopetus metodi jotta sovellus tietää että sitä käytetään.
+                 */
                 lopetus();
+                /**
+                 * Lopetetaan kuunteleminen koska sovelluksen ohjaaminen on toteutettu napeilla.
+                 */
                 speechRecognizer.stopListening();
+                /**
+                 * Muutetaan paperituotteet boolean true:ksi jotta voidaan toteuttaa sen toiminta.
+                 */
                 paperituotteet = true;
+                /**
+                 * Haetaan vertaa metodi jossa toiminta toteutetaan.
+                 */
                 vertaa();
             }
         });
-
-        //Nappulat valitsevat eri kategorioita
-        //Ruotsi, Ranska ja Saksa napit
-        //Ruotsi nappi
+        /**
+         * Alakategoria nappulat muuttavat kyseisen kategorian booleanin true:ksi.
+         * Nappi hakee vertaa metodia jossa toteutetaan toiminto
+         *
+         * Kaikki alakategoria napit ovat rakeneeltaan samanlaisia muuten kuin id muutoksilta.
+         * tarkempi kuvaus kommentoituna löytyy vain "ruotsinkielibtn" napilta.
+         *
+         * Ruotsi, Ranska ja Saksa napit
+         *Ruotsinkieli nappi
+         */
         ruotsinkielibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /**
+                 * Haetaan lopetus metodi jotta sovellus tietää että sitä käytetään.
+                 */
                 lopetus();
+                /**
+                 * Lopetetaan kuunteleminen koska sovelluksen ohjaaminen on toteutettu napeilla.
+                 */
                 speechRecognizer.stopListening();
+                /**
+                 * Muutetaan ruotsinkieli boolean true:ksi jotta voidaan toteuttaa sen toiminta.
+                 */
                 ruotsinkieli = true;
+                /**
+                 * Haetaan vertaa metodi jossa toiminta toteutetaan.
+                 */
                 vertaa();
             }
         });
+        /**
+         * Ranskankieli nappi
+         */
         ranskankielibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1737,6 +2003,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Saksankieli nappi
+         */
         saksankielibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1746,9 +2015,10 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
-        //Kaunokirjallisuus napit.
-        //Baabel nappi
+        /**
+        * Kaunokirjallisuus napit.
+         * Baabel nappi
+        */
         baabebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1758,7 +2028,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        // Antikvaariset nappi
+        /**
+         * Antikvaariset nappi
+         */
         antikvaarisetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1768,7 +2040,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Esseet nappi
+        /**
+         * Esseet nappi (ei käytössä ja siksi kommenti viivojen sisällä
+         */
         /*esseebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1778,7 +2052,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });*/
-        //Kaunokirjallisuus nappi
+        /**
+         * Kaunokirjallisuus nappi
+         */
         kaunokibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1788,7 +2064,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Keltainen kirjasto nappi
+        /**
+         * Keltainen kirjasto nappi
+         */
         keltainbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1798,7 +2076,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Uudet kaunokirjallisuus nappi
+        /**
+         * Uudet kaunokirjallisuus nappi
+         */
         uudetkaunobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1808,7 +2088,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        // Klassikot kaunokirjallisuus nappi
+        /**
+         * Klassikot kaunokirjallisuus nappi
+         */
         klassikotbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1818,7 +2100,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Otavan kirjaston nappi
+        /**
+         * Otavan kirjaston nappi
+         */
         otavabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1828,7 +2112,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Äänikirja nappi
+        /**
+         * Äänikirja nappi
+         */
         aanikibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1838,7 +2124,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Fantasia nappi
+        /**
+         * Scifi, Fantasia ja Kauhu nappi
+         */
         fantasibtn.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -1849,7 +2137,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Runo nappi
+        /**
+         * Runo nappi
+         */
         runobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1859,7 +2149,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Rikos ja jännitys nappi
+        /**
+         * Rikos ja jännitys nappi
+         */
         rikojanbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1869,7 +2161,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //uudet rikoskirjat nappi
+        /**
+         * uudet rikoskirjat nappi
+         */
         uudetrikosbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -1879,9 +2173,10 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
-        //Tietokirjallisuuden napit
-        //Ukraina ja venäjä nappi
+        /**
+        * Tietokirjallisuuden napit
+         * Venäjä nappi
+        */
         ukravenabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1891,7 +2186,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Elokuva ja teatteri nappi
+        /**
+         * Elokuva ja teatteri nappi
+         */
         eloteatbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1901,7 +2198,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Elämänkerrat nappi
+        /**
+         * Elämänkerrat nappi
+         */
         elamankbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1911,7 +2210,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Antiikkikirjallisuus nappi
+        /**
+         * Antiikkikirjallisuus nappi
+         */
         antiikkikirjallisuusbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1921,7 +2222,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Holokausti nappi
+        /**
+         * Holokausti nappi
+         */
         holokaustibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1931,7 +2234,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Ilmastonmuutos nappi
+        /**
+         * Ilmastonmuutos nappi
+         */
         ilmastonmuutosbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1941,7 +2246,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Filosofia nappi
+        /**
+         * Filosofia nappi
+         */
         filobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1951,7 +2258,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Historia nappi
+        /**
+         * Historia nappi
+         */
         histbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1961,7 +2270,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Musiikki nappi
+        /**
+         * Musiikki nappi
+         */
         musiibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1971,7 +2282,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Politiikka nappi
+        /**
+         * Politiikka nappi
+         */
         politbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1981,7 +2294,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Sanakirja nappi
+        /**
+         * Sanakirja nappi
+         */
         sanakbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -1991,7 +2306,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Tietokirja nappi
+        /**
+         * Tietokirja nappi
+         */
         tietobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -2003,7 +2320,9 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
-        //Kielet nappi
+        /**
+         * Kielet nappi
+         */
         kieletbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2013,6 +2332,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Käsityö ja rakentaminen nappi
+         */
         kasityojarakentaminenbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2022,6 +2344,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Luonnontieteet nappi
+         */
         luonnontieteetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2031,6 +2356,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Luonto, kasvit ja eläimet nappi
+         */
         luontokasvitelaimetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2040,6 +2368,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Maat ja kulttuurit nappi
+         */
         maatjakulttuuribtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2049,6 +2380,10 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         *
+         * Matkailu nappi
+         */
         matkailubtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2058,6 +2393,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Puutarha nappi
+         */
         puutarhabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2067,6 +2405,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Ruoka nappi
+         */
         ruokabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2076,6 +2417,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Taide ja design nappi
+         */
         taidejadesignbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2085,6 +2429,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Terveys nappi
+         */
         terveysbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2094,6 +2441,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Tieteellinen kirjoittaminen nappi
+         */
         tieteellinenkirjoittaminenbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2103,6 +2453,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Urheilu nappi
+         */
         urheilubtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2112,6 +2465,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Uskonnot nappi
+         */
         uskonnotbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2121,9 +2477,10 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
-        //Lastenkirjat napit
-        //Lasten romaanit nappi
+        /**
+         * Lastenkirjat napit
+         * Lasten romaanit nappi
+         */
         lastenromaanibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2133,7 +2490,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Englanninkieliset lastenkirjat nappi
+        /**
+         * Englanninkieliset lastenkirjat nappi
+         */
         kidsbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2143,7 +2502,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Lasten elokuvat nappi
+        /**
+         * Lasten elokuvat nappi
+         */
         lastelobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2153,7 +2514,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Lasten kirjat nappi
+        /**
+         * Lasten kirjat nappi
+         */
         lastenbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2163,7 +2526,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Lasten tietokirjat nappi
+        /**
+         * Lasten tietokirjat nappi
+         */
         lasttietbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2173,7 +2538,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        // Lastenkuvakirja
+        /**
+         * Lastenkuvakirja nappi
+         */
         lastenkuvakirjabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2183,7 +2550,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Lasten kirjat 4-6 vuotiaille nappi
+        /**
+         * Ruotsinkieliset lastenkirjat nappi
+         */
         ruotsilastenbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2193,7 +2562,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Lastenkirjat 7-9 vuotiaille nappi
+        /**
+         * Vauvojen ja taaperoiden kirjat nappi
+         */
         vauvojenkirjabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2203,7 +2574,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Nuorten kirjat nappi
+        /**
+         * Nuorten kirjat nappi
+         */
         nuoretbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2213,7 +2586,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Puuhaa lapsille nappi
+        /**
+         * Puuhaa lapsille nappi
+         */
         lastpuuhbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2223,9 +2598,10 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
-        //Elokuva napit
-        //Blue-ray nappi
+        /**
+         * Rikoskirjallisuus napit
+         * Englannin kieliset romaanit nappi
+         */
         crimeNovEngbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2235,7 +2611,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Dvd nappi
+        /**
+         * Rikoskirjallisuus uutuudet nappi
+         */
         rikosuudetbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2245,7 +2623,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Elokuva klassikot nappi
+        /**
+         * Rikos pokkarit nappi
+         */
         rikospokkabtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2255,7 +2635,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Rikosromaanit nappi
+        /**
+         * Rikos romaanit nappi
+         */
         rikosromaanibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2265,7 +2647,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //True Crime nappi
+        /**
+         * True Crime nappi
+         */
         truecrimebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2275,8 +2659,10 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-
-        // Pokkarit napit
+        /**
+         * Pokkarit napit
+         * kaunokirjallisuus pokkarit nappi
+         */
         kaunopokkaritbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2286,6 +2672,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Rikos ja jännitys pokkarit nappi
+         */
         rikosjajannityspokkaritbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2295,6 +2684,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Scifi ja fantasia pokkarit nappi
+         */
         scifijafantasiapokkaritbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2304,6 +2696,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Tietopokkarit nappi
+         */
         tietopokkaritbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2313,7 +2708,10 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Englanninkieliset kirjat napit
+        /**
+         * Englanninkieliset kirjat napit
+         * Crime nappi
+         */
         crimebtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2323,6 +2721,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Fiction nappi
+         */
         fictionbnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2332,6 +2733,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Non-Fiction nappi
+         */
         nonfictionbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2341,6 +2745,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Poetry nappi
+         */
         poetrybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2350,6 +2757,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Englanninkielinen Scifi nappi
+         */
         engscifibtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2359,6 +2769,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Uudet Fiction nappi
+         */
         newfictionbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2368,6 +2781,9 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
+        /**
+         * Uudet Non-fiction nappi
+         */
         newnonfictionbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -2377,15 +2793,31 @@ public class MainActivity extends AppCompatActivity {
                 vertaa();
             }
         });
-        //Ylä kategoria nappulat
+        /**
+         * ylakate nappi joka palautta yläkategoriat takaisin näkyviin
+         */
         ylakate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                /**
+                 * Haetaan lopetus metodi jotta sovellus tietää että sitä käytetään
+                 */
                 lopetus();
+                /**
+                 * Lopetetaan kuunteleminen koska sovellusta käytetään napeilla.
+                 */
                 speechRecognizer.stopListening();
+                /**
+                 * Lopetetaan aikaisempi puhe.
+                 */
                 textToSpeech.stop();
+                /**
+                 * Haetaan textToSpeech ja siihen string jossa kerrotaan että voidaan valita haluama yläkategoria.
+                 */
                 textToSpeech.speak(getString(R.string.ylakatepuhe), TextToSpeech.QUEUE_FLUSH, null);
-
+                /**
+                 * Avataan kaikki yläkategoria napit näkyville
+                 */
                 kaunobtn.setVisibility(View.VISIBLE);
                 tietogabtn.setVisibility(View.VISIBLE);
                 lapsetbtn.setVisibility(View.VISIBLE);
@@ -2398,13 +2830,12 @@ public class MainActivity extends AppCompatActivity {
                 elokuvatbtn.setVisibility(View.VISIBLE);
                 ajankohtaistabtn.setVisibility(View.VISIBLE);
                 paperituotteetbtn.setVisibility(View.VISIBLE);
-
-
-                //
+                /**
+                 * Piilotetaan kaikki alakategoria napit näkyvistä
+                 */
                 ruotsinkielibtn.setVisibility(View.INVISIBLE);
                 ranskankielibtn.setVisibility(View.INVISIBLE);
                 saksankielibtn.setVisibility(View.INVISIBLE);
-
                 fantasibtn.setVisibility(View.INVISIBLE);
                 uudetrikosbtn.setVisibility(View.INVISIBLE);
                 runobtn.setVisibility(View.INVISIBLE);
@@ -2418,7 +2849,6 @@ public class MainActivity extends AppCompatActivity {
                 klassikotbtn.setVisibility(View.INVISIBLE);
                 otavabtn.setVisibility(View.INVISIBLE);
                 aanikibtn.setVisibility(View.INVISIBLE);
-
                 tietobtn.setVisibility(View.INVISIBLE);
                 ukravenabtn.setVisibility(View.INVISIBLE);
                 eloteatbtn.setVisibility(View.INVISIBLE);
@@ -2444,7 +2874,6 @@ public class MainActivity extends AppCompatActivity {
                 tieteellinenkirjoittaminenbtn .setVisibility(View.INVISIBLE);
                 urheilubtn.setVisibility(View.INVISIBLE);
                 uskonnotbtn.setVisibility(View.INVISIBLE);
-
                 lastenromaanibtn.setVisibility(View.INVISIBLE);
                 kidsbtn.setVisibility(View.INVISIBLE);
                 lastelobtn.setVisibility(View.INVISIBLE);
@@ -2453,23 +2882,17 @@ public class MainActivity extends AppCompatActivity {
                 lastenkuvakirjabtn.setVisibility(View.INVISIBLE);
                 ruotsilastenbtn.setVisibility(View.INVISIBLE);
                 vauvojenkirjabtn.setVisibility(View.INVISIBLE);
-
                 nuoretbtn.setVisibility(View.INVISIBLE);
-
-
                 lastpuuhbtn.setVisibility(View.INVISIBLE);
-
                 crimeNovEngbtn.setVisibility(View.INVISIBLE);
                 rikosuudetbtn.setVisibility(View.INVISIBLE);
                 rikospokkabtn.setVisibility(View.INVISIBLE);
                 rikosromaanibtn.setVisibility(View.INVISIBLE);
                 truecrimebtn.setVisibility(View.INVISIBLE);
-
                 kaunopokkaritbtn.setVisibility(View.INVISIBLE);
                 rikosjajannityspokkaritbtn.setVisibility(View.INVISIBLE);
                 scifijafantasiapokkaritbtn.setVisibility(View.INVISIBLE);
                 tietopokkaritbtn.setVisibility(View.INVISIBLE);
-
                 crimebtn.setVisibility(View.INVISIBLE);
                 fictionbnt.setVisibility(View.INVISIBLE);
                 nonfictionbtn.setVisibility(View.INVISIBLE);
@@ -2477,39 +2900,58 @@ public class MainActivity extends AppCompatActivity {
                 engscifibtn.setVisibility(View.INVISIBLE);
                 newfictionbtn.setVisibility(View.INVISIBLE);
                 newnonfictionbtn.setVisibility(View.INVISIBLE);
-
+                /**
+                 * Piilotetaan ylakate nappula koska ollaan jo yläkategoria valikossa.
+                 */
                 ylakate.setVisibility(View.INVISIBLE);
-
-
             }
         });
-
-
+        /**
+         * Luodaan touchListener mainlayoutille joka on koko näkymä
+         * Tällä tarkoitus o hakea lopetus metodia joka kerta kun näyttöön koskee ja estää tällöin sovelluksen uudelleen käynnistymisen.
+         */
         mylayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View view, MotionEvent motionEvent) {
-
                 lopetus();
-
                 return false;
             }
         });
         }
-
+    /**
+     * lopetus metodi on metodi jossa on timeri joka laskee milloin sovellus käynnistyy uudelleen.
+     * Keskeisessä osassa on INT i, joka lisääntyy timerissa ja tietyn arvon saavuttaessa käynnistää sovelluksen uudelleen.
+     */
     public void lopetus(){
+        /**
+         * Sovelluksen ollessa aktivoitu i ei tule olemaan 0 ja tällöin tämä toteutuu.
+         * Metodia kutsuttaessa i ei ole nolla muutetaan i arvoon 1 jotta se on mahdollisimman kaukana uudelleen käynnistämisestä.
+         * i:tä ei muuteta 0 arvoon koska se käynnistäisi toisen samanlaisen timerin samanaikaisesti.
+         */
         if (i != 0) {
             i = 1;
             Log.e(String.valueOf(LOG_TAG), "Lopetus on valittu uudestaan ");
         }
+        /**
+         * Ensimmäisellä kerralla kun sovellus aktivoidaan kutsutaan tätä metodia ja silloin i on 0 joten tämä kohta tapahtuu.
+         * Tässä aloitetaan timeri joka lisää joka kierroksella i:n arvoon yhden arvon lisää.
+         */
         if (i == 0) {
             timerlopetus.schedule(new TimerTask() {
                 @Override
                 public void run() {
+                    /**
+                     * Timerin sisällu tulee olla "runOnUiThread metodi jotta se voi hakea restart metodin.
+                     */
                     MainActivity.this.runOnUiThread(new Runnable() {
                         public void run () {
-
                             i++;
                             Log.e(String.valueOf(LOG_TAG), "I on tällähetkellä " + i);
+                            /**
+                             * Jos i saavuttaa arvon 15 käynnistetään sovellus uudelleen koska kukaan ei ole sitä hetkeen käyttänyt.
+                             * Arvoa voi muuttaa jos haluaa nopeuttaa tai lisätä käynnistämisen kuluvaa aikaa.
+                             * Tällähetkellä jokainen i yksi arvo tarkoittaa 10 sekunttia.
+                             */
                             if (i > 15) {
                                 restart();
                             }
@@ -2517,16 +2959,14 @@ public class MainActivity extends AppCompatActivity {
                     });
                 }
 
-            }, 0, 10000);
+            }, 0, 10000); /** Tässö määritellään yhden timerin kierroksen kesto millisekuntteina. Tällähetkellä 10 sekunttia. Halutessa voi lisätä tai vähentää joka vakuttaa sovelluksen uudelleen käynnistämisen kaikaan */
         }
-
-
     }
 
-
+    /**
+     * takePicture metodi on metodi joka ottaa valokuvia. Tätä haetaan sovelluksen ollessa nukkumis tilassa.
+     */
     private void takePicture() {
-
-
         if (cameraDevice == null)
             return;
         CameraManager manager = (CameraManager)getSystemService(Context.CAMERA_SERVICE);
@@ -2536,13 +2976,11 @@ public class MainActivity extends AppCompatActivity {
             if (characteristics !=null)
                 jpegSizes =characteristics.get(CameraCharacteristics.SCALER_STREAM_CONFIGURATION_MAP)
                         .getOutputSizes(ImageFormat.JPEG);
-
             int width = 640;
             int height = 400;
             if(jpegSizes != null && jpegSizes.length >  0){
                 width = jpegSizes[0].getWidth();
                 height = jpegSizes[0].getHeight();
-
             }
             ImageReader reader = ImageReader.newInstance(width,height,ImageFormat.JPEG, 1);
             List<Surface> outputSurface = new ArrayList<>(2);
@@ -2556,55 +2994,49 @@ public class MainActivity extends AppCompatActivity {
             int rotation = getWindowManager().getDefaultDisplay().getRotation();
             captureBuilder.set(CaptureRequest.JPEG_ORIENTATION, ORIENTATIONS.get(rotation));
 
-
             ImageReader.OnImageAvailableListener readerListener = new ImageReader.OnImageAvailableListener() {
                 @RequiresApi(api = Build.VERSION_CODES.O)
                 @Override
                 public void onImageAvailable(ImageReader imageReader) {
                     Image image = null;
                     try {
-
                         image = reader.acquireLatestImage();
                         ByteBuffer buffer = image.getPlanes()[0].getBuffer();
                         byte[] bytes = new byte[buffer.capacity()];
                         buffer.get(bytes);
-
+                        /**
+                         * kuvan saamisen jälkeen kuva tallennetaan bitmappiin ja sen jälkeen sen kokoa pienennetään suuresti.
+                         * Int kuva toteuttaa että joka toinen käsitellään joka toisessa if lausekkeessa tasasen kierron saavutettavakasi.
+                         */
                         if(kuva == 0){
                             bitmap = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
                             resized = Bitmap.createScaledBitmap(bitmap, 10, 10, true);
                             resized.getColorSpace();
-
                             imageView.setImageBitmap(bitmap);
-
                             kuva++;
                         }else if (kuva == 1){
                             bitmap2 = BitmapFactory.decodeByteArray(bytes, 0, bytes.length);
-
                             resized2 = Bitmap.createScaledBitmap(bitmap2, 10, 10, true);
-
                             imageView2.setImageBitmap(bitmap2);
-
-
                             kuva--;
                         }
-
                         int[] pixels1 = new int[resized.getWidth() * resized.getHeight()];
                         int[] pixels2 = new int[resized2.getWidth() * resized2.getHeight()];
                         resized.getPixels(pixels1, 0, resized.getWidth(), 0, 0, resized.getWidth(), resized.getHeight());
                         resized2.getPixels(pixels2, 0, resized2.getWidth(), 0, 0, resized2.getWidth(), resized2.getHeight());
-
-
+                        /**
+                         * Kuvan käsittelyn jälkeen tulostetaan logcattiin niiden ero hakemalla compareEquivalance metodi jossa kuvia verrataan
+                         * Seuraava if lause hakee compareEquivalance metodista mikä oli kuvien eroavaisuus ja valitsee sen mukaan toiminnan.
+                         * Kuvissa on joka kerta eroa pitää vaan löytää oikea arvo jota ei saa alittaa. Aktivointi herkyyttä voi lisätä vertailuarvoa nostamalla.
+                         * text1 ei tällähetkellä tulosta mitään näytölle sillä se on näkymätön. Tätä on käytetty helpottamaan kehitystä ja näkemään näytöltä heti mikäli jokin muuttuu.
+                         */
                         Log.e(String.valueOf(LOG_TAG), "eroavaisuus on " + String.valueOf(compareEquivalance()));
-
                         if (compareEquivalance() < 0.285){
                             ihminen = true;
                             text1.setText("Joku on muuttunut");
-
                         }else {
                             text1.setText("mikään ei ole muuttunut");
                         }
-
-
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
@@ -2623,7 +3055,6 @@ public class MainActivity extends AppCompatActivity {
                     //creatCameraPreview();
                 }
             };
-
             cameraDevice.createCaptureSession(outputSurface, new CameraCaptureSession.StateCallback() {
                 @Override
                 public void onConfigured(@NonNull CameraCaptureSession cameraCaptureSession) {
@@ -2633,10 +3064,8 @@ public class MainActivity extends AppCompatActivity {
                         e.printStackTrace();
                     }
                 }
-
                 @Override
                 public void onConfigureFailed(@NonNull CameraCaptureSession cameraCaptureSession) {
-
                 }
             },mBackgroundHandler);
 
@@ -2644,43 +3073,58 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
-
-
+    /**
+     * aloita metodi on aktivointi metodi jota haetaan jos kamera vertailussa löytyy eroa tai jos painetaa aloita nappia.
+     */
     private void aloita() {
+        /**
+         * haetaan lopetus metodi jotta sovellus tietää että sitä käytetään
+         */
             lopetus();
             aloitettu = true;
-            //Hakee stringin ja tuotaa sen puheeksi
+        /**
+         * Pidempi tapa kuin aikasemmin toistaa puhetta haluamasta stringistä.
+         * Ensin hetaan haluttu string muuttujaan x joka sitten tuotetaan puheeksi textToSpeech metodilla.
+         */
             String x = getString(R.string.terve);
             textToSpeech.speak(x, TextToSpeech.QUEUE_FLUSH, null);
-
+        /**
+         * Piilotetaan aloitus nappi näkyvistä käynnistämisen jälkeen
+         * Tallennetaan databaseen aikaleima milloin sovellus on aktivoitu.
+         */
             converBtn.setVisibility(View.INVISIBLE);
             DatabaseReference myRef = database.getReference("aloitettu");
             myRef.push().setValue(millisInString);
-
-
-            //Vaihtaa hahmo imagen tilalle gif animaation
-            Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
-
-            //Handlerissä tuotetaan usempia toimintoja saman aikasesti
+        /**
+         * Vaihdetaan hahmo tilalle puhuva animaatio
+         */
+        Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo);
+        /**
+         * Luodaan handleri joka totetuttaa toiminnat alku tervehdyksen jälkeen.
+         */
             handler.postDelayed(new Runnable() {
                 @Override
                 public void run() {
+                    /**
+                     * Luodaan toinen handler joka muuttaa näytöllä olevan figuurin sijainnin.
+                     * Tässä ollut ongelmia ettei siirry mutta näin toiminut
+                     */
                     handler2.postAtFrontOfQueue(new Runnable() {
                         @Override
                         public void run() {
                             MainActivity.this.runOnUiThread(new Runnable() {
                                 @Override
                                 public void run() {
-                                    //Hahmon sijainti siirretään
                                 hahmo.setVisibility(View.INVISIBLE);
                                 hahmo1.setVisibility(View.VISIBLE);
                                 }
                             });
                         }
                     });
-                    //Tuotetaan näkyviin objekteja
-                    //hahmo.setImageResource(R.drawable.kuvarobo);
+                    /**
+                     * Tutetaan näkyviin yläkategorian napit.
+                     * Tuotetaan näkyviin kartta.
+                     */
                     voiceBtn.setVisibility(View.VISIBLE);
                     kaunobtn.setVisibility(View.VISIBLE);
                     tietogabtn.setVisibility(View.VISIBLE);
@@ -2694,24 +3138,30 @@ public class MainActivity extends AppCompatActivity {
                     elokuvatbtn.setVisibility(View.VISIBLE);
                     ajankohtaistabtn.setVisibility(View.VISIBLE);
                     paperituotteetbtn.setVisibility(View.VISIBLE);
-
-                    //marker.setVisibility(View.VISIBLE);
                     kartta.setVisibility(View.VISIBLE);
                     //text1.setVisibility(View.VISIBLE);
-
-                    //Aloitetaan puheen kuuntelu puheen jälkeen.
+                    /**
+                     * Aloitetaan automaattisesti puheen kuuntelu joka mahdollistaa ettei tablettiin tarvitse koskea koko käytön aikana.
+                     */
                     speechRecognizer.startListening(speechRecognizerIntent);
                 }
-            }, 7000); //15 sekunnin viive handlerin toimintaan.
+            }, 7000); /** Arvo määrittelee handlerin toiminnan ajoituksen. Tällähetkellä 7 sekunttia joka täsmää alkupuheen kanssa. Joten Handlerin sisöllä oleva toiminta toteutetaan heti alku puheen jälkeen. */
         }
-
+    /**
+     * Metodi suorittaa kuvien vertailun.
+     * Metodi palauttaa float arvon joka on kuvien eroaviasuus.
+     */
      public static float compareEquivalance() {
-
+        /**
+        * Mikäli ei ole kuvia palautta metodi 0.
+        */
         if (bitmap == null || bitmap2 == null || bitmap.getWidth() != bitmap2.getWidth()
                 || bitmap.getHeight() != bitmap2.getHeight()) {
             return 0;
         }
-
+         /**
+          * heataan molempien kuvien koko ja pixelit.
+          */
         ByteBuffer buffer1 = ByteBuffer.allocate(bitmap.getHeight() * bitmap.getRowBytes());
         bitmap.copyPixelsToBuffer(buffer1);
 
@@ -2721,18 +3171,26 @@ public class MainActivity extends AppCompatActivity {
         byte[] array1 = buffer1.array();
         byte[] array2 = buffer2.array();
 
-        int len = array1.length; // array1 and array2 will be of some length.
+        int len = array1.length; // array1 and array2 ovat saman pituisia.
         int count = 10;
-
-        for (int i = 0; i < len; i++) {
+         /**
+          * suoritetaan loop jossa käydään kaikki kuvan pixelit läpi ja verrataan toisen kuvan samaan pixeliin.
+          * Jos pixelit vastaavat toisiaan lisätään laskuriin count arvo.
+          */
+         for (int i = 0; i < len; i++) {
             if (array1[i] == array2[i]) {
                 count++;
             }
         }
-        //return tulos = count / len;
+         /**
+          * Palautetaan tulos laskemalla laskuriin kerättyt arvot jaettuna kuvan pituudella.
+          */
         return ((float) (count)) / len;
     }
 
+    /**
+     * Metodissa avataan kamera käyttöön.
+     */
     private void openCamera() {
         CameraManager manager = (CameraManager)getSystemService(Context.CAMERA_SERVICE);
         try{
@@ -2756,7 +3214,10 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
+    /**
+     * TLuodaan listener kameran textureViewille.
+     * Täältä haetaan openCamera metodi.
+     */
     TextureView.SurfaceTextureListener textureListener = new TextureView.SurfaceTextureListener() {
         @Override
         public void onSurfaceTextureAvailable(@NonNull SurfaceTexture surfaceTexture, int i, int i1) {
@@ -2785,7 +3246,12 @@ public class MainActivity extends AppCompatActivity {
     *True booleanin alta löytyvä toiminta toteutetaan.
      */
     public void tunnistus() {
-        //Käytetään contains() methodia avain sana stringien läpiköymiseksi.
+        /**
+         * Käytetään contains() methodia avain sana stringien läpikäymiseksi.
+         * Mikäli löydetään vastaavuus muuttuu kyseisen booleanin arvo true:ksi
+         *
+         * Keskustelu ja kuinkavoin ovat kokeellisia interaktiivisia avainsanoja keskustelusta.
+         */
         keskustelu0 = word.contains(getString(R.string.kesk0));
         keskustelu1 = word.contains(getString(R.string.kesk1));
         keskustelu2 = MainActivity.word.contains(getString(R.string.kesk2));
@@ -2797,107 +3263,119 @@ public class MainActivity extends AppCompatActivity {
         kuinkaVoin2 = MainActivity.word.contains(getString(R.string.kuin2));
         kuinkaVoin3 = MainActivity.word.contains(getString(R.string.kuin3));
         kuinkaVoin4 = MainActivity.word.contains(getString(R.string.kuin4));
-
-
-        //Ruotsi, Ranska ja Saksa tunnistus
-        //Ruotsi
+        /**
+         * Ruotsi, Ranska ja Saksa tunnistus
+         * Ruotsi
+         */
         ruotsinkieli0 = word.contains(getString(R.string.ruotsinkieli0));
         ruotsinkieli1 = word.contains(getString(R.string.ruotsinkieli1));
         ruotsinkieli2 = word.contains(getString(R.string.ruotsinkieli2));
         ruotsinkieli3 = word.contains(getString(R.string.ruotsinkieli3));
         ruotsinkieli4 = word.contains(getString(R.string.ruotsinkieli4));
         ruotsinkieli5 = word.contains(getString(R.string.ruotsinkieli5));
-
-        //Ranska
+        /**
+         * Ranska
+         */
         ranskankieli0 = word.contains(getString(R.string.ranskankieli0));
         ranskankieli1 = word.contains(getString(R.string.ranskankieli1));
         ranskankieli2 = word.contains(getString(R.string.ranskankieli2));
         ranskankieli3 = word.contains(getString(R.string.ranskankieli3));
         ranskankieli4 = word.contains(getString(R.string.ranskankieli4));
         ranskankieli5 = word.contains(getString(R.string.ranskankieli5));
-
-        //Saksa
+        /**
+        * Saksa
+        */
         saksankieli0 = word.contains(getString(R.string.saksankieli0));
         saksankieli1 = word.contains(getString(R.string.saksankieli1));
         saksankieli2 = word.contains(getString(R.string.saksankieli2));
         saksankieli3 = word.contains(getString(R.string.saksankieli3));
         saksankieli4 = word.contains(getString(R.string.saksankieli4));
         saksankieli5 = word.contains(getString(R.string.saksankieli5));
-
-        //Kaunokirjallisuus tunnistus
-        //Baabel
+        /**
+        * Kaunokirjallisuus tunnistus
+         * Baabel
+        */
         baabel0 = word.contains(getString(R.string.baabe0));
         baabel1 = word.contains(getString(R.string.baabe1));
         baabel2 = word.contains(getString(R.string.baabe2));
         baabel3 = word.contains(getString(R.string.baabe3));
         baabel4 = word.contains(getString(R.string.baabe4));
         baabel5 = word.contains(getString(R.string.baabe5));
-
-        // Antikvaariset
+        /**
+         * Antikvaariset
+         */
         antikvaariset0 = word.contains(getString(R.string.antikvaariset0));
         antikvaariset1 = word.contains(getString(R.string.antikvaariset1));
         antikvaariset2 = word.contains(getString(R.string.antikvaariset2));
         antikvaariset3 = word.contains(getString(R.string.antikvaariset3));
         antikvaariset4 = word.contains(getString(R.string.antikvaariset4));
         antikvaariset5 = word.contains(getString(R.string.antikvaariset5));
-
-        //Essee
+        /**
+         * Essee
+         */
         /*essee0 = word.contains(getString(R.string.essee0));
         essee1 = word.contains(getString(R.string.essee1));
         essee2 = word.contains(getString(R.string.essee2));
         essee3 = word.contains(getString(R.string.essee3));
         essee4 = word.contains(getString(R.string.essee4));
         essee5 = word.contains(getString(R.string.essee5));*/
-
-        //Kaunokirjallisus
+        /**
+         * Kaunokirjallisus
+         */
         kauno0 = word.contains(getString(R.string.kauno0));
         kauno1 = word.contains(getString(R.string.kauno1));
         kauno2 = word.contains(getString(R.string.kauno2));
         kauno3 = word.contains(getString(R.string.kauno3));
         kauno4 = word.contains(getString(R.string.kauno4));
         kauno5 = word.contains(getString(R.string.kauno5));
-
-        //Keltainen kirjasto
+        /**
+         * Keltainen kirjasto
+         */
         kelta0 = word.contains(getString(R.string.kelta0));
         kelta1 = word.contains(getString(R.string.kelta1));
         kelta2 = word.contains(getString(R.string.kelta2));
         kelta3 = word.contains(getString(R.string.kelta3));
         kelta4 = word.contains(getString(R.string.kelta4));
         kelta5 = word.contains(getString(R.string.kelta5));
-
-        //Uudet kaunokirjallisuus
+        /**
+         * Uudet kaunokirjallisuus
+         */
         uudetkauno0 = word.contains(getString(R.string.uudetkauno0));
         uudetkauno1 = word.contains(getString(R.string.uudetkauno1));
         uudetkauno2 = word.contains(getString(R.string.uudetkauno2));
         uudetkauno3 = word.contains(getString(R.string.uudetkauno3));
         uudetkauno4 = word.contains(getString(R.string.uudetkauno4));
         uudetkauno5 = word.contains(getString(R.string.uudetkauno5));
-
-        // Klassikot kaunokirjallisuus
+        /**
+         * Klassikot kaunokirjallisuus
+         */
         klassikot0 = word.contains(getString(R.string.klassikot0));
         klassikot1 = word.contains(getString(R.string.klassikot1));
         klassikot2 = word.contains(getString(R.string.klassikot2));
         klassikot3 = word.contains(getString(R.string.klassikot3));
         klassikot4 = word.contains(getString(R.string.klassikot4));
         klassikot5 = word.contains(getString(R.string.klassikot5));
-
-        // Otava kirjasto
+        /**
+         * Otava kirjasto
+         */
         otav0 = word.contains(getString(R.string.otav0));
         otav1 = word.contains(getString(R.string.otav1));
         otav2 = word.contains(getString(R.string.otav2));
         otav3 = word.contains(getString(R.string.otav3));
         otav4 = word.contains(getString(R.string.otav4));
         otav5 = word.contains(getString(R.string.otav5));
-
-        //Äänikirjat
+        /**
+         * Äänikirjat
+         */
         aani0 = word.contains(getString(R.string.aani0));
         aani1 = word.contains(getString(R.string.aani1));
         aani2 = word.contains(getString(R.string.aani2));
         aani3 = word.contains(getString(R.string.aani3));
         aani4 = word.contains(getString(R.string.aani4));
         aani5 = word.contains(getString(R.string.aani5));
-
-        //Fantasia
+        /**
+         * Fantasia
+         */
         fantasia0 = MainActivity.word.contains(getString(R.string.fanta0));
         fantasia1 = MainActivity.word.contains(getString(R.string.fanta1));
         fantasia2 = MainActivity.word.contains(getString(R.string.fanta2));
@@ -2908,120 +3386,138 @@ public class MainActivity extends AppCompatActivity {
         fantasia7 = MainActivity.word.contains(getString(R.string.fanta7));
         fantasia8 = MainActivity.word.contains(getString(R.string.fanta8));
         fantasia9 = MainActivity.word.contains(getString(R.string.fanta9));
-
-
+        /**
+         * Runot
+         */
         runot0 = MainActivity.word.contains(getString(R.string.runo0));
         runot1 = MainActivity.word.contains(getString(R.string.runo1));
         runot2 = MainActivity.word.contains(getString(R.string.runo2));
         runot3 = MainActivity.word.contains(getString(R.string.runo3));
         runot4 = MainActivity.word.contains(getString(R.string.runo4));
         runot5 = MainActivity.word.contains(getString(R.string.runo5));
-
+        /**
+         * Rikos ja jännitys
+         */
         rikoja0 = MainActivity.word.contains(getString(R.string.rikojan0));
         rikoja1 = MainActivity.word.contains(getString(R.string.rikojan1));
         rikoja2 = MainActivity.word.contains(getString(R.string.rikojan2));
         rikoja3 = MainActivity.word.contains(getString(R.string.rikojan3));
-
+        /**
+         * Kiitos takaa löytyy avainsanat kun käyttäjä kiittää sovellusta
+         */
         kiitos1 = word.contains(getString(R.string.kiits1));
         kiito = MainActivity.word.contains(getString(R.string.kiits0));
         oli = MainActivity.word.contains(getString(R.string.kiits1));
-
-
+        /**
+         * Sijainti
+         */
         sijainti0 = MainActivity.word.contains(getString(R.string.sijan0));
         sijainti1 = MainActivity.word.contains(getString(R.string.sijan1));
         sijainti2 = MainActivity.word.contains(getString(R.string.sijan2));
         sijainti3 = MainActivity.word.contains(getString(R.string.sijan3));
-
-        //Tietokirjallisuus tunnistus
-        //Ukraina ja venajä
+        /**
+         * Tietokirjallisuus tunnistus
+         * Venajä
+         */
         ukrvena0 = word.contains(getString(R.string.ukrvena0));
         ukrvena1 = word.contains(getString(R.string.ukrvena1));
         ukrvena2 = word.contains(getString(R.string.ukrvena2));
         ukrvena3 = word.contains(getString(R.string.ukrvena3));
         ukrvena4 = word.contains(getString(R.string.ukrvena4));
         ukrvena5 = word.contains(getString(R.string.ukrvena5));
-
-        //Elokuva ja teatteri
+        /**
+         * Elokuva ja teatteri
+         */
         elokteat0 = word.contains(getString(R.string.elokteat0));
         elokteat1 = word.contains(getString(R.string.elokteat1));
         elokteat2 = word.contains(getString(R.string.elokteat2));
         elokteat3 = word.contains(getString(R.string.elokteat3));
         elokteat4 = word.contains(getString(R.string.elokteat4));
         elokteat5 = word.contains(getString(R.string.elokteat5));
-
-        //Elämänkerta
+        /**
+         * Elämänkerta
+         */
         elamank0 = word.contains(getString(R.string.elamank0));
         elamank1 = word.contains(getString(R.string.elamank1));
         elamank2 = word.contains(getString(R.string.elamank2));
         elamank3 = word.contains(getString(R.string.elamank3));
         elamank4 = word.contains(getString(R.string.elamank4));
         elamank5 = word.contains(getString(R.string.elamank5));
-
-        //Antiikkikirjallisuus
+        /**
+         * Antiikkikirjallisuus
+         */
         antiikkikirjallisuus0 = word.contains(getString(R.string.antiikkikirjallisuus0));
         antiikkikirjallisuus1 = word.contains(getString(R.string.antiikkikirjallisuus1));
         antiikkikirjallisuus2 = word.contains(getString(R.string.antiikkikirjallisuus2));
         antiikkikirjallisuus3 = word.contains(getString(R.string.antiikkikirjallisuus3));
         antiikkikirjallisuus4 = word.contains(getString(R.string.antiikkikirjallisuus4));
         antiikkikirjallisuus5 = word.contains(getString(R.string.antiikkikirjallisuus5));
-
-        //Holokausti
+        /**
+         * Holokausti
+         */
         holokausti0 = word.contains(getString(R.string.holokausti0));
         holokausti1 = word.contains(getString(R.string.holokausti1));
         holokausti2 = word.contains(getString(R.string.holokausti2));
         holokausti3 = word.contains(getString(R.string.holokausti3));
         holokausti4 = word.contains(getString(R.string.holokausti4));
         holokausti5 = word.contains(getString(R.string.holokausti5));
-
-        //Ilmastonmuutos
+        /**
+         * Ilmastonmuutos
+         */
         ilmastonmuutos0 = word.contains(getString(R.string.ilmastonmuutos0));
         ilmastonmuutos1 = word.contains(getString(R.string.ilmastonmuutos1));
         ilmastonmuutos2 = word.contains(getString(R.string.ilmastonmuutos2));
         ilmastonmuutos3 = word.contains(getString(R.string.ilmastonmuutos3));
         ilmastonmuutos4 = word.contains(getString(R.string.ilmastonmuutos4));
         ilmastonmuutos5 = word.contains(getString(R.string.ilmastonmuutos5));
-
-        //Filosofia
+        /**
+         * Filosofia
+         */
         filo0 = word.contains(getString(R.string.filo0));
         filo1 = word.contains(getString(R.string.filo1));
         filo2 = word.contains(getString(R.string.filo2));
         filo3 = word.contains(getString(R.string.filo3));
         filo4 = word.contains(getString(R.string.filo4));
         filo5 = word.contains(getString(R.string.filo5));
-
-        //Historia
+        /**
+         * Historia
+         */
         hist0 = word.contains(getString(R.string.hist0));
         hist1 = word.contains(getString(R.string.hist1));
         hist2 = word.contains(getString(R.string.hist2));
         hist3 = word.contains(getString(R.string.hist3));
         hist4 = word.contains(getString(R.string.hist4));
         hist5 = word.contains(getString(R.string.hist5));
-
-        //Musiikki
+        /**
+         * Musiikki
+         */
         musii0 = word.contains(getString(R.string.musii0));
         musii1 = word.contains(getString(R.string.musii1));
         musii2 = word.contains(getString(R.string.musii2));
         musii3 = word.contains(getString(R.string.musii3));
         musii4 = word.contains(getString(R.string.musii4));
         musii5 = word.contains(getString(R.string.musii5));
-
-        //Politiikka
+        /**
+         * Politiikka
+         */
         polit0 = word.contains(getString(R.string.polit0));
         polit1 = word.contains(getString(R.string.polit1));
         polit2 = word.contains(getString(R.string.polit2));
         polit3 = word.contains(getString(R.string.polit3));
         polit4 = word.contains(getString(R.string.polit4));
         polit5 = word.contains(getString(R.string.polit5));
-
-        //Sanakirjat
+        /**
+         * Sanakirjat
+         */
         sanak0 = word.contains(getString(R.string.sanak0));
         sanak1 = word.contains(getString(R.string.sanak1));
         sanak2 = word.contains(getString(R.string.sanak2));
         sanak3 = word.contains(getString(R.string.sanak3));
         sanak4 = word.contains(getString(R.string.sanak4));
         sanak5 = word.contains(getString(R.string.sanak5));
-
-        //Tietokirjat
+        /**
+         * Tietokirjat
+         */
         tiede0 = MainActivity.word.contains(getString(R.string.tiet0));
         tiede1 = MainActivity.word.contains(getString(R.string.tiet1));
         tiede2 = MainActivity.word.contains(getString(R.string.tiet2));
@@ -3030,371 +3526,421 @@ public class MainActivity extends AppCompatActivity {
         tiede5 = MainActivity.word.contains(getString(R.string.tiet5));
         tiede6 = MainActivity.word.contains(getString(R.string.tiet6));
         tiede7 = MainActivity.word.contains(getString(R.string.tiet7));
-
+        /**
+         * Kielet
+         */
         kielet0 = word.contains(getString(R.string.kielet0));
         kielet1 = word.contains(getString(R.string.kielet1));
         kielet2 = word.contains(getString(R.string.kielet2));
         kielet3 = word.contains(getString(R.string.kielet3));
         kielet4 = word.contains(getString(R.string.kielet4));
         kielet5 = word.contains(getString(R.string.kielet5));
-
-        //Käsityö ja rakentaminen
+        /**
+         * Käsityö ja rakentaminen
+         */
         kasityojarakentaminen0 = word.contains(getString(R.string.kasityojarakentaminen0));
         kasityojarakentaminen1 = word.contains(getString(R.string.kasityojarakentaminen1));
         kasityojarakentaminen2 = word.contains(getString(R.string.kasityojarakentaminen2));
         kasityojarakentaminen3 = word.contains(getString(R.string.kasityojarakentaminen3));
         kasityojarakentaminen4 = word.contains(getString(R.string.kasityojarakentaminen4));
         kasityojarakentaminen5 = word.contains(getString(R.string.kasityojarakentaminen5));
-
-        //Luonnontieteet
+        /**
+         * Luonnontieteet
+         */
         luonnontieteet0 = word.contains(getString(R.string.luonnontieteet0));
         luonnontieteet1 = word.contains(getString(R.string.luonnontieteet1));
         luonnontieteet2 = word.contains(getString(R.string.luonnontieteet2));
         luonnontieteet3 = word.contains(getString(R.string.luonnontieteet3));
         luonnontieteet4 = word.contains(getString(R.string.luonnontieteet4));
         luonnontieteet5 = word.contains(getString(R.string.luonnontieteet5));
-
-        //Luonto, Kasvit ja eläimet
+        /**
+         * Luonto, Kasvit ja eläimet
+         */
         luontokasvitelaimet0 = word.contains(getString(R.string.luontokasvitelaimet0));
         luontokasvitelaimet1 = word.contains(getString(R.string.luontokasvitelaimet1));
         luontokasvitelaimet2 = word.contains(getString(R.string.luontokasvitelaimet2));
         luontokasvitelaimet3 = word.contains(getString(R.string.luontokasvitelaimet3));
         luontokasvitelaimet4 = word.contains(getString(R.string.luontokasvitelaimet4));
         luontokasvitelaimet5 = word.contains(getString(R.string.luontokasvitelaimet5));
-
-        // Maat ja kulttuuri
+        /**
+         * Maat ja kulttuuri
+         */
         maatjakulttuuri0 = word.contains(getString(R.string.maatjakulttuuri0));
         maatjakulttuuri1 = word.contains(getString(R.string.maatjakulttuuri1));
         maatjakulttuuri2 = word.contains(getString(R.string.maatjakulttuuri2));
         maatjakulttuuri3 = word.contains(getString(R.string.maatjakulttuuri3));
         maatjakulttuuri4 = word.contains(getString(R.string.maatjakulttuuri4));
         maatjakulttuuri5 = word.contains(getString(R.string.maatjakulttuuri5));
-
-        // Matkailu
+        /**
+         * Matkailu
+         */
         matkailu0 = word.contains(getString(R.string.matkailu0));
         matkailu1 = word.contains(getString(R.string.matkailu1));
         matkailu2 = word.contains(getString(R.string.matkailu2));
         matkailu3 = word.contains(getString(R.string.matkailu3));
         matkailu4 = word.contains(getString(R.string.matkailu4));
         matkailu5 = word.contains(getString(R.string.matkailu5));
-
-        // Puutarha
+        /**
+         * Puutarha
+         */
         puutarha0 = word.contains(getString(R.string.puutarha0));
         puutarha1 = word.contains(getString(R.string.puutarha1));
         puutarha2 = word.contains(getString(R.string.puutarha2));
         puutarha3 = word.contains(getString(R.string.puutarha3));
         puutarha4 = word.contains(getString(R.string.puutarha4));
         puutarha5 = word.contains(getString(R.string.puutarha5));
-
-        // Ruoka
+        /**
+         * Ruoka
+         */
         ruoka0 = word.contains(getString(R.string.ruoka0));
         ruoka1 = word.contains(getString(R.string.ruoka1));
         ruoka2 = word.contains(getString(R.string.ruoka2));
         ruoka3 = word.contains(getString(R.string.ruoka3));
         ruoka4 = word.contains(getString(R.string.ruoka4));
         ruoka5 = word.contains(getString(R.string.ruoka5));
-
-        // Taide ja Design
+        /**
+         * Taide ja Design
+         */
         taidejadesign0 = word.contains(getString(R.string.taidejadesign0));
         taidejadesign1 = word.contains(getString(R.string.taidejadesign1));
         taidejadesign2 = word.contains(getString(R.string.taidejadesign2));
         taidejadesign3 = word.contains(getString(R.string.taidejadesign3));
         taidejadesign4 = word.contains(getString(R.string.taidejadesign4));
         taidejadesign5 = word.contains(getString(R.string.taidejadesign5));
-
-        // Terveys
+        /**
+         * Terveys
+         */
         terveys0 = word.contains(getString(R.string.terveys0));
         terveys1 = word.contains(getString(R.string.terveys1));
         terveys2 = word.contains(getString(R.string.terveys2));
         terveys3 = word.contains(getString(R.string.terveys3));
         terveys4 = word.contains(getString(R.string.terveys4));
         terveys5 = word.contains(getString(R.string.terveys5));
-
-        // Tieteellinenkirjoittaminen ja kirjallisuus
+        /**
+         * Tieteellinenkirjoittaminen ja kirjallisuus
+         */
         tieteellinenkirjoittaminen0 = word.contains(getString(R.string.tieteellinenkirjoittaminen0));
         tieteellinenkirjoittaminen1 = word.contains(getString(R.string.tieteellinenkirjoittaminen1));
         tieteellinenkirjoittaminen2 = word.contains(getString(R.string.tieteellinenkirjoittaminen2));
         tieteellinenkirjoittaminen3 = word.contains(getString(R.string.tieteellinenkirjoittaminen3));
         tieteellinenkirjoittaminen4 = word.contains(getString(R.string.tieteellinenkirjoittaminen4));
         tieteellinenkirjoittaminen5 = word.contains(getString(R.string.tieteellinenkirjoittaminen5));
-
-        // Urheilu
+        /**
+         * Urheilu
+         */
         urheilu0 = word.contains(getString(R.string.urheilu0));
         urheilu1 = word.contains(getString(R.string.urheilu1));
         urheilu2 = word.contains(getString(R.string.urheilu2));
         urheilu3 = word.contains(getString(R.string.urheilu3));
         urheilu4 = word.contains(getString(R.string.urheilu4));
         urheilu5 = word.contains(getString(R.string.urheilu5));
-
-        // Uskonnot
+        /**
+         * Uskonnot
+         */
         uskonnot0 = word.contains(getString(R.string.uskonnot0));
         uskonnot1 = word.contains(getString(R.string.uskonnot1));
         uskonnot2 = word.contains(getString(R.string.uskonnot2));
         uskonnot3 = word.contains(getString(R.string.uskonnot3));
         uskonnot4 = word.contains(getString(R.string.uskonnot4));
         uskonnot5 = word.contains(getString(R.string.uskonnot5));
-
-        //Lastenkirjat
-        //Lasten romaanit
+        /**
+         * Lastenkirjat
+         * Lasten romaanit
+         */
         lastenromaani0 = word.contains(getString(R.string.lastenromaani0));
         lastenromaani1 = word.contains(getString(R.string.lastenromaani1));
         lastenromaani2 = word.contains(getString(R.string.lastenromaani2));
         lastenromaani3 = word.contains(getString(R.string.lastenromaani3));
         lastenromaani4 = word.contains(getString(R.string.lastenromaani4));
         lastenromaani5 = word.contains(getString(R.string.lastenromaani5));
-
-        //Englanninkieliset lastenkirjat
+        /**
+         * Englanninkieliset lastenkirjat
+         */
         kids0 = word.contains(getString(R.string.kids0));
         kids1 = word.contains(getString(R.string.kids1));
         kids2 = word.contains(getString(R.string.kids2));
         kids3 = word.contains(getString(R.string.kids3));
         kids4 = word.contains(getString(R.string.kids4));
         kids5 = word.contains(getString(R.string.kids5));
-
-        //Lasten elokuvat
+        /**
+         * Lasten elokuvat
+         */
         lastelo0 = word.contains(getString(R.string.lastelo0));
         lastelo1 = word.contains(getString(R.string.lastelo1));
         lastelo2 = word.contains(getString(R.string.lastelo2));
         lastelo3 = word.contains(getString(R.string.lastelo3));
         lastelo4 = word.contains(getString(R.string.lastelo4));
         lastelo5 = word.contains(getString(R.string.lastelo5));
-
-        //Lastenkirjat
+        /**
+         * Lastenkirjat
+         */
         lasten0 = word.contains(getString(R.string.lasten0));
         lasten1 = word.contains(getString(R.string.lasten1));
         lasten2 = word.contains(getString(R.string.lasten2));
         lasten3 = word.contains(getString(R.string.lasten3));
         lasten4 = word.contains(getString(R.string.lasten4));
         lasten5 = word.contains(getString(R.string.lasten5));
-
-        //Lasten tietokirjat
+        /**
+         * Lasten tietokirjat
+         */
         lasttiet0 = word.contains(getString(R.string.lasttiet0));
         lasttiet1 = word.contains(getString(R.string.lasttiet1));
         lasttiet2 = word.contains(getString(R.string.lasttiet2));
         lasttiet3 = word.contains(getString(R.string.lasttiet3));
         lasttiet4 = word.contains(getString(R.string.lasttiet4));
         lasttiet5 = word.contains(getString(R.string.lasttiet5));
-
-        //Lastenkuvakirjat
+        /**
+         * Lastenkuvakirjat
+         */
         lastenkuvakirja0 = word.contains(getString(R.string.lastenkuvakirja0));
         lastenkuvakirja1 = word.contains(getString(R.string.lastenkuvakirja1));
         lastenkuvakirja2 = word.contains(getString(R.string.lastenkuvakirja2));
         lastenkuvakirja3 = word.contains(getString(R.string.lastenkuvakirja3));
         lastenkuvakirja4 = word.contains(getString(R.string.lastenkuvakirja4));
         lastenkuvakirja5 = word.contains(getString(R.string.lastenkuvakirja5));
-
-        // Ruotsinkieliset lastenkirjat
+        /**
+         * Ruotsinkieliset lastenkirjat
+         */
         ruotsilasten0 = word.contains(getString(R.string.ruotsilasten0));
         ruotsilasten1 = word.contains(getString(R.string.ruotsilasten1));
         ruotsilasten2 = word.contains(getString(R.string.ruotsilasten2));
         ruotsilasten3 = word.contains(getString(R.string.ruotsilasten3));
         ruotsilasten4 = word.contains(getString(R.string.ruotsilasten4));
         ruotsilasten5 = word.contains(getString(R.string.ruotsilasten5));
-
-        //Lastenkirjat 7-9 vuotiaat
+        /**
+         * Vauvojen ja taaperoiden kirjat
+         */
         vauvojenkirja0 = word.contains(getString(R.string.vauvojenkirja0));
         vauvojenkirja1 = word.contains(getString(R.string.vauvojenkirja1));
         vauvojenkirja2 = word.contains(getString(R.string.vauvojenkirja2));
         vauvojenkirja3 = word.contains(getString(R.string.vauvojenkirja3));
         vauvojenkirja4 = word.contains(getString(R.string.vauvojenkirja4));
         vauvojenkirja5 = word.contains(getString(R.string.vauvojenkirja5));
-
-        //Nuoret
+        /**
+         * Nuortenkirjat
+         */
         nuoret0 = word.contains(getString(R.string.nuoret0));
         nuoret1 = word.contains(getString(R.string.nuoret1));
         nuoret2 = word.contains(getString(R.string.nuoret2));
         nuoret3 = word.contains(getString(R.string.nuoret3));
         nuoret4 = word.contains(getString(R.string.nuoret4));
         nuoret5 = word.contains(getString(R.string.nuoret5));
-
-
-        //Puuhaa lapsille
+        /**
+         * Puuhaa lapsille
+         */
         lastpuuh0 = word.contains(getString(R.string.lastpuuh0));
         lastpuuh1 = word.contains(getString(R.string.lastpuuh1));
         lastpuuh2 = word.contains(getString(R.string.lastpuuh2));
         lastpuuh3 = word.contains(getString(R.string.lastpuuh3));
         lastpuuh4 = word.contains(getString(R.string.lastpuuh4));
         lastpuuh5 = word.contains(getString(R.string.lastpuuh5));
-
-
-        //Rikoskirjallisuus
-        //Crime novels, in English
+        /**
+         * Rikoskirjallisuus
+         * Crime novels, in English
+         */
         crimeNovEng0 = word.contains(getString(R.string.crimeNovEng0));
         crimeNovEng1 = word.contains(getString(R.string.crimeNovEng1));
         crimeNovEng2 = word.contains(getString(R.string.crimeNovEng2));
         crimeNovEng3 = word.contains(getString(R.string.crimeNovEng3));
         crimeNovEng4 = word.contains(getString(R.string.crimeNovEng4));
         crimeNovEng5 = word.contains(getString(R.string.crimeNovEng5));
-
-        //Rikos uutuudet
+        /**
+         * Rikos uutuudet
+         */
         rikosuudet0 = word.contains(getString(R.string.rikosuudet0));
         rikosuudet1 = word.contains(getString(R.string.rikosuudet1));
         rikosuudet2 = word.contains(getString(R.string.rikosuudet2));
         rikosuudet3 = word.contains(getString(R.string.rikosuudet3));
         rikosuudet4 = word.contains(getString(R.string.rikosuudet4));
         rikosuudet5 = word.contains(getString(R.string.rikosuudet5));
-
-        //Rikospokkarit
+        /**
+         * Rikospokkarit
+         */
         rikospokka0 = word.contains(getString(R.string.rikospokka0));
         rikospokka1 = word.contains(getString(R.string.rikospokka1));
         rikospokka2 = word.contains(getString(R.string.rikospokka2));
         rikospokka3 = word.contains(getString(R.string.rikospokka3));
         rikospokka4 = word.contains(getString(R.string.rikospokka4));
         rikospokka5 = word.contains(getString(R.string.rikospokka5));
-
-        //Rikosromaanit
+        /**
+         * Rikosromaanit
+         */
         rikosromaani0 = word.contains(getString(R.string.rikosromaani0));
         rikosromaani1 = word.contains(getString(R.string.rikosromaani1));
         rikosromaani2 = word.contains(getString(R.string.rikosromaani2));
         rikosromaani3 = word.contains(getString(R.string.rikosromaani3));
         rikosromaani4 = word.contains(getString(R.string.rikosromaani4));
         rikosromaani5 = word.contains(getString(R.string.rikosromaani5));
-
-        //True Crime
+        /**
+         * True Crime
+         */
         truecrime0 = word.contains(getString(R.string.truecrime0));
         truecrime1 = word.contains(getString(R.string.truecrime1));
         truecrime2 = word.contains(getString(R.string.truecrime2));
         truecrime3 = word.contains(getString(R.string.truecrime3));
         truecrime4 = word.contains(getString(R.string.truecrime4));
         truecrime5 = word.contains(getString(R.string.truecrime5));
-
-        // Pokkarit
-        //Kaunopokkarit
+        /**
+         * Pokkarit
+         * Kaunopokkarit
+         */
         kaunopokkarit0 = word.contains(getString(R.string.kaunopokkarit0));
         kaunopokkarit1 = word.contains(getString(R.string.kaunopokkarit1));
         kaunopokkarit2 = word.contains(getString(R.string.kaunopokkarit2));
         kaunopokkarit3 = word.contains(getString(R.string.kaunopokkarit3));
         kaunopokkarit4 = word.contains(getString(R.string.kaunopokkarit4));
         kaunopokkarit5 = word.contains(getString(R.string.kaunopokkarit5));
-
-        // Scifi ja fantasia pokkarit
+        /**
+         * Scifi ja fantasia pokkarit
+         */
         scifijafantasiapokkarit0 = word.contains(getString(R.string.scifijafantasiapokkarit0));
         scifijafantasiapokkarit1 = word.contains(getString(R.string.scifijafantasiapokkarit1));
         scifijafantasiapokkarit2 = word.contains(getString(R.string.scifijafantasiapokkarit2));
         scifijafantasiapokkarit3 = word.contains(getString(R.string.scifijafantasiapokkarit3));
         scifijafantasiapokkarit4 = word.contains(getString(R.string.scifijafantasiapokkarit4));
         scifijafantasiapokkarit5 = word.contains(getString(R.string.scifijafantasiapokkarit5));
-
-        // Tietopokkarit
+        /**
+         * Tietopokkarit
+         */
         tietopokkarit0 = word.contains(getString(R.string.tietopokkarit0));
         tietopokkarit1 = word.contains(getString(R.string.tietopokkarit1));
         tietopokkarit2 = word.contains(getString(R.string.tietopokkarit2));
         tietopokkarit3 = word.contains(getString(R.string.tietopokkarit3));
         tietopokkarit4 = word.contains(getString(R.string.tietopokkarit4));
         tietopokkarit5 = word.contains(getString(R.string.tietopokkarit5));
-
-        //Englanninkieliset kirjat
-        // Crime
+        /**
+         * Englanninkieliset kirjat
+         * Crime
+         */
         crime0 = word.contains(getString(R.string.crime0));
         crime1 = word.contains(getString(R.string.crime1));
         crime2 = word.contains(getString(R.string.crime2));
         crime3 = word.contains(getString(R.string.crime3));
         crime4 = word.contains(getString(R.string.crime4));
         crime5 = word.contains(getString(R.string.crime5));
-
-        // Fiction
+        /**
+         * Fiction
+         */
         fiction0 = word.contains(getString(R.string.fiction0));
         fiction1 = word.contains(getString(R.string.fiction1));
         fiction2 = word.contains(getString(R.string.fiction2));
         fiction3 = word.contains(getString(R.string.fiction3));
         fiction4 = word.contains(getString(R.string.fiction4));
         fiction5 = word.contains(getString(R.string.fiction5));
-
-        // Non-fiction
+        /**
+         * Non-fiction
+         */
         nonfiction0 = word.contains(getString(R.string.nonfiction0));
         nonfiction1 = word.contains(getString(R.string.nonfiction1));
         nonfiction2 = word.contains(getString(R.string.nonfiction2));
         nonfiction3 = word.contains(getString(R.string.nonfiction3));
         nonfiction4 = word.contains(getString(R.string.nonfiction4));
         nonfiction5 = word.contains(getString(R.string.nonfiction5));
-
-        // Poetry
+        /**
+         * Poetry
+         */
         poetry0 = word.contains(getString(R.string.poetry0));
         poetry1 = word.contains(getString(R.string.poetry1));
         poetry2 = word.contains(getString(R.string.poetry2));
         poetry3 = word.contains(getString(R.string.poetry3));
         poetry4 = word.contains(getString(R.string.poetry4));
         poetry5 = word.contains(getString(R.string.poetry5));
-
-        //Englanninkielinen scifi
+        /**
+         * Englanninkielinen scifi
+         */
         engscifi0 = word.contains(getString(R.string.engscifi0));
         engscifi1 = word.contains(getString(R.string.engscifi1));
         engscifi2 = word.contains(getString(R.string.engscifi2));
         engscifi3 = word.contains(getString(R.string.engscifi3));
         engscifi4 = word.contains(getString(R.string.engscifi4));
         engscifi5 = word.contains(getString(R.string.engscifi5));
-
-        // Uudet fiction
+        /**
+         * Uudet fiction
+         */
         newfiction0 = word.contains(getString(R.string.newfiction0));
         newfiction1 = word.contains(getString(R.string.newfiction1));
         newfiction2 = word.contains(getString(R.string.newfiction2));
         newfiction3 = word.contains(getString(R.string.newfiction3));
         newfiction4 = word.contains(getString(R.string.newfiction4));
         newfiction5 = word.contains(getString(R.string.newfiction5));
-
-        // Uudet Non-fiction
+        /**
+         * Uudet Non-fiction
+         */
         newnonfiction0 = word.contains(getString(R.string.newnonfiction0));
         newnonfiction1 = word.contains(getString(R.string.newnonfiction1));
         newnonfiction2 = word.contains(getString(R.string.newnonfiction2));
         newnonfiction3 = word.contains(getString(R.string.newnonfiction3));
         newnonfiction4 = word.contains(getString(R.string.newnonfiction4));
         newnonfiction5 = word.contains(getString(R.string.newnonfiction5));
-
-        //Lehdet
+        /**
+         * Lehdet
+         */
         lehd0 = word.contains(getString(R.string.lehd0));
         lehd1 = word.contains(getString(R.string.lehd1));
         lehd2 = word.contains(getString(R.string.lehd2));
         lehd3 = word.contains(getString(R.string.lehd3));
         lehd4 = word.contains(getString(R.string.lehd4));
         lehd5 = word.contains(getString(R.string.lehd5));
-
-        //Sarjakuvat
+        /**
+         * Sarjakuvat
+         */
         sarja0 = word.contains(getString(R.string.sarja0));
         sarja1 = word.contains(getString(R.string.sarja1));
         sarja2 = word.contains(getString(R.string.sarja2));
         sarja3 = word.contains(getString(R.string.sarja3));
         sarja4 = word.contains(getString(R.string.sarja4));
         sarja5 = word.contains(getString(R.string.sarja5));
-
-        //Pokkarit
+        /**
+         * Pokkarit
+         */
         pokka0 = word.contains(getString(R.string.pokka0));
         pokka1 = word.contains(getString(R.string.pokka1));
         pokka2 = word.contains(getString(R.string.pokka2));
         pokka3 = word.contains(getString(R.string.pokka3));
         pokka4 = word.contains(getString(R.string.pokka4));
         pokka5 = word.contains(getString(R.string.pokka5));
-
+        /**
+         * Englanninkieliset
+         */
         engl0 = word.contains(getString(R.string.engl0));
         engl1 = word.contains(getString(R.string.engl1));
         engl2 = word.contains(getString(R.string.engl2));
         engl3 = word.contains(getString(R.string.engl3));
         engl4 = word.contains(getString(R.string.engl4));
         engl5 = word.contains(getString(R.string.engl5));
-
-        //Elokuvat
+        /**
+         * Elokuvat
+         */
         elokuvat0 = word.contains(getString(R.string.elokuvat0));
         elokuvat1 = word.contains(getString(R.string.elokuvat1));
         elokuvat2 = word.contains(getString(R.string.elokuvat2));
         elokuvat3 = word.contains(getString(R.string.elokuvat3));
         elokuvat4 = word.contains(getString(R.string.elokuvat4));
         elokuvat5 = word.contains(getString(R.string.elokuvat5));
-
-        //Ajankoitaiset
+        /**
+         * Ajankoitaiset
+         */
         ajankohtaista0 = word.contains(getString(R.string.ajankohtaista0));
         ajankohtaista1 = word.contains(getString(R.string.ajankohtaista1));
         ajankohtaista2 = word.contains(getString(R.string.ajankohtaista2));
         ajankohtaista3 = word.contains(getString(R.string.ajankohtaista3));
         ajankohtaista4 = word.contains(getString(R.string.ajankohtaista4));
         ajankohtaista5 = word.contains(getString(R.string.ajankohtaista5));
-
+        /**
+         * Paperituotteet
+         */
         paperituotteet0 = word.contains(getString(R.string.paperituotteet0));
         paperituotteet1 = word.contains(getString(R.string.paperituotteet1));
         paperituotteet2 = word.contains(getString(R.string.paperituotteet2));
         paperituotteet3 = word.contains(getString(R.string.paperituotteet3));
         paperituotteet4 = word.contains(getString(R.string.paperituotteet4));
         paperituotteet5 = word.contains(getString(R.string.paperituotteet5));
-
-        //Mikäli boolean on true toteutetaan sen alla oleva toiminta.
+        /**
+         * Kaikki avainsanat läpi käytyä katsotaan onko jokin avainsanan boolean muuttunut true:ksi eli vastannutr kuultua.
+         * Muutetaan kyseisen vastaavuuden mukaan kyseisen kategororian boolean true:ksi.
+         * laskuri arvo muutetaan 0 joka kerta kun vastaavuus löytyy.
+         * lopuksi kun vastaavuus löytyy haetaan vertaa metodi jossa toteutetaan toiminta.
+         */
         if (ruotsinkieli0 || ruotsinkieli1 || ruotsinkieli2 || ruotsinkieli3 || ruotsinkieli4 || ruotsinkieli5) {
             ruotsinkieli = true;
             laskuri = 0;
@@ -3692,6 +4238,9 @@ public class MainActivity extends AppCompatActivity {
             vertaa();
         } else if (keskustelu0 || keskustelu1 || keskustelu2 || keskustelu3 ||
                 keskustelu4) {
+            /**
+             * kokeellisissa interaktiivisissa vastauksissa toiminta on tuotettu tässä metodissa mutta sen voi siirtää tulevaisuudessa myös vertaa metodiin.
+             */
             MainActivity.textToSpeech.speak(getString(R.string.keskus), TextToSpeech.QUEUE_FLUSH, null);
             speechRecognizer.startListening(speechRecognizerIntent);
             try {
@@ -3712,18 +4261,22 @@ public class MainActivity extends AppCompatActivity {
             laskuri = 0;
 
         }else{
-            //Mikäli puuheesta ei löydetty avain sanoja lisätään int "laskuri" yksi arvo.
+            /**
+             * Mikäli puuheesta ei löydetty avain sanoja lisätään int "laskuri" yksi arvo.
+             */
             ++laskuri;
-            //String x = getString(R.string.enymr);
-            //MainActivity.text1.setText("Anteeksi minä en ymmärtänyt sinua. Voitko kysyä uudelleen?");
-
-                //Mikäli int "laskuri" arvo on kaksi pysäytetään kuuntelu kierre ja annetaan uudet ohjeet.
+            /**
+             * Mikäli int "laskuri" arvo on kaksi pysäytetään kuuntelu kierre ja annetaan uudet ohjeet.
+             * Tällä keskeytetään ikuinen loop jossa aina kysytään uudelleen kun ei ymmerretä.
+             * laskuri myös nollataan tässä.
+             */
             if (laskuri == 2) {
                 MainActivity.textToSpeech.speak(getString(R.string.kysyuu), TextToSpeech.QUEUE_FLUSH, null);
                 speechRecognizer.stopListening();
                 laskuri = 0;
-
-                //Mikäli int "laskuri" arvo on alle 2 pyydetään kysymään uudelleen.
+                /**
+                 * Mikäli int "laskuri" arvo on alle 2 pyydetään kysymään uudelleen ja aloitetaan uudestaan kuuntelu
+                 */
             } else{
                 MainActivity.textToSpeech.speak(getString(R.string.enymr), TextToSpeech.QUEUE_FLUSH, null);
                 try {
@@ -3741,7 +4294,9 @@ public class MainActivity extends AppCompatActivity {
      * Vertaa() methodissa toteutetaan toiminta mikö on valittu joko nappulalla tai avainsanan löytämisellä.
      */
     public void vertaa() {
-
+        /**
+         * Metodin alussa piilotetaan kaikki markerit jotta saadaan varmasti näkyviin ainoastaan haetut sijainnit.
+         */
         marker1.setVisibility(View.INVISIBLE);
         marker2.setVisibility(View.INVISIBLE);
         marker3.setVisibility(View.INVISIBLE);
@@ -3796,8 +4351,15 @@ public class MainActivity extends AppCompatActivity {
         marker52.setVisibility(View.INVISIBLE);
         marker53.setVisibility(View.INVISIBLE);
         marker54.setVisibility(View.INVISIBLE);
-
-
+        /**
+         * if elsen avulla käydään kaikkien kategorioiden booleanit läpi jotta löydetään kategoria jota on haettu.
+         * Mikäli kategorian boolean on true toteutetaan sen toiminta.
+         *
+         * Kaikkien kategorioiden rakenne on sama mutta toiminnat eroavat
+         * Tarkempi kuvaus toiminnasta kommentoituna löytyy vain "else if (ruotsinkieli)" alta.
+         *
+         * Sijainti ei ole käytössä. Sijainti näytti käyttäjälle oman sijainnin kartalla. Sijainti on tällähetkellä piirettynä kartta kuvaan manuaalisesti
+         */
         if (MainActivity.sijainti) {
 
             ylakate.setVisibility(View.VISIBLE);
@@ -3826,12 +4388,28 @@ public class MainActivity extends AppCompatActivity {
             }, 4000);
 
         }
+        /**
+         * Ruotsi, ranska ja saksa toiminnot
+         */
         else if (ruotsinkieli){
+            /**
+             * tuotetaan kyseisen kategorian sijainti näkyviin
+             * Katso lisä materiaali sijainti numeroista ja niiden sijainnista kartalla.
+             */
             marker30.setVisibility(View.VISIBLE);
-
+            /**
+             * Vaihdetaan hahmo1 tilalle puhuva animaatio
+             */
             Glide.with(MainActivity.mainLayout).load(R.drawable.puhuvarobo).into(MainActivity.hahmo1);
+            /**
+             * Tuotetaan puhe ohjeistus sijainnista.
+             */
             //String x = getString(R.string.mispuhe);
             MainActivity.textToSpeech.speak(getString(R.string.ruotsinkielipuhe), TextToSpeech.QUEUE_FLUSH, null);
+            /**
+             * Muutetaan kategorian boolean = false.
+             * Muutetaan kategorian avainsanojen booleanit = false.
+             */
             ruotsinkieli = false;
             ruotsinkieli0 = false;
             ruotsinkieli1 = false;
@@ -3839,7 +4417,9 @@ public class MainActivity extends AppCompatActivity {
             ruotsinkieli3 = false;
             ruotsinkieli4 = false;
             ruotsinkieli5 = false;
-
+            /**
+             * Luodaan handler joka muuttaa hahmo1 figuurin takaisin perus kuvaksi puheen jälkeen.
+             */
             Handler handler = new Handler();
             handler.postDelayed(new Runnable() {
                 @Override
@@ -3895,7 +4475,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 4000);
         }
-            //Kaunokirjallisuus kategorian toiminnot
+        /**
+         * Kaunokirjallisuus kategorian toiminnot
+         */
         else if (baabel) {
             marker10.setVisibility(View.VISIBLE);
 
@@ -4203,8 +4785,9 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }, 3600);
             }
-
-        //Tietokirjallisuuden katagorian toiminnot
+        /**
+         * Tietokirjallisuuden katagorian toiminnot
+         */
         else if (ukrainajavenaja){
 
                 marker36.setVisibility(View.VISIBLE);
@@ -4802,8 +5385,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 3600);
         }
-
-        //Ylakategorian yksittäis kategoriat
+        /**
+         * Ylakategorian yksittäis kategoriat
+         */
         else if (lehdet){
             marker52.setVisibility(View.VISIBLE);
 
@@ -5000,8 +5584,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 3600);
         }
-
-        //Lastenkirjat kategorian toiminnot
+        /**
+         * Lastenkirjat kategorian toiminnot
+         */
         else if (lastenromaani){
             marker41.setVisibility(View.VISIBLE);
 
@@ -5214,8 +5799,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 3600);
         }
-
-
         else if (puuhaalapsille){
             marker45.setVisibility(View.VISIBLE);
             marker46.setVisibility(View.VISIBLE);
@@ -5240,9 +5823,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 3600);
         }
-
-
-        //Rikoskirja kategoria toiminnot
+        /**
+         * Rikoskirja kategoria toiminnot
+         */
         else if (CrimeNovelsInEnglish){
             marker15.setVisibility(View.VISIBLE);
 
@@ -5358,7 +5941,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 3600);
         }
-        //Pokkarit
+        /**
+         * Pokkarit
+         */
         else if (kaunopokkarit){
             marker22.setVisibility(View.VISIBLE);
             marker23.setVisibility(View.VISIBLE);
@@ -5429,7 +6014,9 @@ public class MainActivity extends AppCompatActivity {
                 }
             }, 3600);
         }
-        //Ennglanninkieliset kirja kategoriat
+        /**
+         * Ennglanninkieliset kirja kategoriat
+         */
         else if (crime) {
             marker15.setVisibility(View.VISIBLE);
 
@@ -5603,18 +6190,15 @@ public class MainActivity extends AppCompatActivity {
      * pysäytetään kaikki timerit ja handlerit jottei niitä lähde tuplamääränä pyörimään uudelleen aloitettua.
      */
     protected void restart(){
-
         //Intent intent = getIntent()
         //finish();
         //startActivity(getIntent());
-
                 resized = null;
                 resized2 = null;
                 imageView2.setImageBitmap(null);
                 imageView.setImageBitmap(null);
                 //imageView.setImageResource(0);
                 //imageView2.setImageResource(0);
-
                 speechRecognizer.stopListening();
                 textToSpeech.stop();
                 handler.removeCallbacksAndMessages(null);
@@ -5624,11 +6208,7 @@ public class MainActivity extends AppCompatActivity {
                 aloitettu = false;
                 ihminen = false;
                 recreate();
-
-
-
     }
-
     @Override
     protected void onPostResume() {
         super.onPostResume();
@@ -5638,7 +6218,6 @@ public class MainActivity extends AppCompatActivity {
         else
             textureView.setSurfaceTextureListener(textureListener);
     }
-
     @Override
     protected void onPause(){
 
@@ -5650,13 +6229,11 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onPause();
     }
-
     private void checkPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.RECORD_AUDIO},RecordAudioRequestCode);
         }
     }
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -5671,7 +6248,6 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
-
     private void showLanguageDialog(){
         final String[] listItems = {"English", "Suomi"};
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
@@ -5724,7 +6300,6 @@ public class MainActivity extends AppCompatActivity {
         setLocale(language);
         return language;
     }
-
     private void stopBackgroundThread() {
         mBackgroundThread.quitSafely();
         try {
@@ -5735,7 +6310,6 @@ public class MainActivity extends AppCompatActivity {
             e.printStackTrace();
         }
     }
-
     private void startBackgroundThread() {
         mBackgroundThread = new HandlerThread("Camera Background");
         mBackgroundThread.start();
