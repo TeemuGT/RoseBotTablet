@@ -79,110 +79,128 @@ import java.util.TimerTask;
 
 
 public class MainActivity extends AppCompatActivity {
-
     public static final Integer RecordAudioRequestCode = 1;
-
-    //Avainsanojen Boolean
-
-    //Ruotsi, Ranska ja Saksa alakategoriat
-    //Ruotsi avainsanat
+    /**
+     * Jokaisella string.xml tiedostoon luodulla avainsanalla on oma bollean joka kertoo onko kyseinen avainsana vastannut vertailussa kuultuun puheeseen.
+     * Avainsanojen booleaneja on useampi jokaista kategoriaa kohti ja ne on nimetty samalla tavalla ja eroteltu numeroinnilla.
+     *
+     * Ruotsi, Ranska ja Saksa alakategoriat
+     * Ruotsi avainsanat
+     */
     public  boolean ruotsinkieli0 = false;
     public  boolean ruotsinkieli1 = false;
     public  boolean ruotsinkieli2 = false;
     public  boolean ruotsinkieli3 = false;
     public  boolean ruotsinkieli4 = false;
     public  boolean ruotsinkieli5 = false;
-
-    //Ranskan avainsanat
+    /**
+     * Ranskan avainsanat
+     */
     public  boolean ranskankieli0 = false;
     public  boolean ranskankieli1 = false;
     public  boolean ranskankieli2 = false;
     public  boolean ranskankieli3 = false;
     public  boolean ranskankieli4 = false;
     public  boolean ranskankieli5 = false;
-
-    //Saksan avainsanat
+    /**
+     * Saksan avainsanat
+     */
     public  boolean saksankieli0 = false;
     public  boolean saksankieli1 = false;
     public  boolean saksankieli2 = false;
     public  boolean saksankieli3 = false;
     public  boolean saksankieli4 = false;
     public  boolean saksankieli5 = false;
-
-    //Kaunokirjallisuuden avain sanat
-    //Baabel avainsanat
+    /**
+     * Kaunokirjallisuuden avain sanat
+     * Baabel avainsanat
+     */
     public  boolean baabel0 = false;
     public  boolean baabel1 = false;
     public  boolean baabel2 = false;
     public  boolean baabel3 = false;
     public  boolean baabel4 = false;
     public  boolean baabel5 = false;
-
-    // Antikvaariset avainsanat
+    /**
+     * Antikvaariset avainsanat
+     */
     public  boolean antikvaariset0 = false;
     public  boolean antikvaariset1 = false;
     public  boolean antikvaariset2 = false;
     public  boolean antikvaariset3 = false;
     public  boolean antikvaariset4 = false;
     public  boolean antikvaariset5 = false;
+    /**
+     * Essee kategoria ei ole tällä hetkellä käytössä mutta jätetty kommenti viivojen sisälle mikäli sitä halutaan käyttää myöhemmin.
+     *
+     * Essee avain sanat
+     *     public boolean essee0 = false;
+     *     public boolean essee1 = false;
+     *     public boolean essee2 = false;
+     *     public boolean essee3 = false;
+     *     public boolean essee4 = false;
+     *     public boolean essee5 = false;
+     */
 
-    // Essee avain sanat
-    /*public boolean essee0 = false;
-    public boolean essee1 = false;
-    public boolean essee2 = false;
-    public boolean essee3 = false;
-    public boolean essee4 = false;
-    public boolean essee5 = false;*/
-
-    //Kaunokirjallisuuden avainsanat
+    /**
+     * Kaunokirjallisuuden avainsanat
+     */
     public boolean kauno0 = false;
     public boolean kauno1 = false;
     public boolean kauno2 = false;
     public boolean kauno3 = false;
     public boolean kauno4 = false;
     public boolean kauno5 = false;
-
-    //Keltainen kirjasto avainsanat
+    /**
+     * Keltainen kirjasto avainsanat
+     */
     public boolean kelta0 =false;
     public boolean kelta1 =false;
     public boolean kelta2 =false;
     public boolean kelta3 =false;
     public boolean kelta4 =false;
     public boolean kelta5 =false;
-
-    //Uudet kaunokirjallisuus avainsanat
+    /**
+     * Uudet kaunokirjallisuus avainsanat
+     */
     public boolean uudetkauno0 = false;
     public boolean uudetkauno1 = false;
     public boolean uudetkauno2 = false;
     public boolean uudetkauno3 = false;
     public boolean uudetkauno4 = false;
     public boolean uudetkauno5 = false;
-
-    // Klassikot avainsanat
+    /**
+     * Klassikot avainsanat
+     */
     public boolean klassikot0 = false;
     public boolean klassikot1 = false;
     public boolean klassikot2 = false;
     public boolean klassikot3 = false;
     public boolean klassikot4 = false;
     public boolean klassikot5 = false;
-
-    //Otava avainsanat
+    /**
+     * Otava avainsanat
+     */
     public boolean otav0 = false;
     public boolean otav1 = false;
     public boolean otav2 = false;
     public boolean otav3 = false;
     public boolean otav4 = false;
     public boolean otav5 = false;
-
-    //Äänikirjojen avainsanat
+    /**
+     * Äänikirjojen avainsanat
+     */
     public boolean aani0 = false;
     public boolean aani1 = false;
     public boolean aani2 = false;
     public boolean aani3 = false;
     public boolean aani4 = false;
     public boolean aani5 = false;
-
-
+    /**
+     * Keskustelu ja kuinkaVoin auttaa ovat interaktiivisuuteen liittyviä kokeiluja puheessa jossa on luotu yksinkertaisimpia keskustelun tapoja ja niihin vastauksia.
+     * Voit kysyä robotilta miten hän voi.
+     * Voit kertoa robotille miten voit.
+     */
     public boolean keskustelu0 = false;
     public boolean keskustelu1 = false;
     public boolean keskustelu2 = false;
@@ -194,7 +212,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean kuinkaVoin2 = false;
     public boolean kuinkaVoin3 = false;
     public boolean kuinkaVoin4 = false;
-
+    /**
+     * Scifi, fantasia ja kauhu avainsana
+     * Kaikki kolme kategoriaa on yhdistetty ja löytyvät fantasia alta.
+     */
     public boolean fantasia0 = false;
     public boolean fantasia1 = false;
     public boolean fantasia2 = false;
@@ -205,73 +226,81 @@ public class MainActivity extends AppCompatActivity {
     public boolean fantasia7 = false;
     public boolean fantasia8 = false;
     public boolean fantasia9 = false;
-
-
-
-
-
+    /**
+     * Runot avainsanat
+     */
     public boolean runot0 = false;
     public boolean runot1 = false;
     public boolean runot2 = false;
     public boolean runot3 = false;
     public boolean runot4 = false;
     public boolean runot5 = false;
-
+    /**
+     * Riskos ja jännitys avainsanat
+     */
     public boolean rikoja0 = false;
     public boolean rikoja1 = false;
     public boolean rikoja2 = false;
     public boolean rikoja3 = false;
 
-    //Tietokirjallisuuden avainsanat
-    //Ukraina ja venäjä avainsanat
+    /**
+     * Tietokirjallisuuden avainsanat
+     * Ukraina ja venäjä avainsanat
+     */
     public boolean ukrvena0 = false;
     public boolean ukrvena1 = false;
     public boolean ukrvena2 = false;
     public boolean ukrvena3 = false;
     public boolean ukrvena4 = false;
     public boolean ukrvena5 = false;
-
-    //Elokuva ja teatteri avainsanat
+    /**
+     * Elokuva ja teatteri avainsanat
+     */
     public boolean elokteat0 = false;
     public boolean elokteat1 = false;
     public boolean elokteat2 = false;
     public boolean elokteat3 = false;
     public boolean elokteat4 = false;
     public boolean elokteat5 = false;
-
-    //Elämänkerta avainsanat
+    /**
+     * Elämänkerta avainsanat
+     */
     public boolean elamank0 = false;
     public boolean elamank1 = false;
     public boolean elamank2 = false;
     public boolean elamank3 = false;
     public boolean elamank4 = false;
     public boolean elamank5 = false;
-
-    //Antiikkikirjallisuus avainsanat
+    /**
+     * Antiikkikirjallisuus avainsanat
+     */
     public boolean antiikkikirjallisuus0 = false;
     public boolean antiikkikirjallisuus1 = false;
     public boolean antiikkikirjallisuus2 = false;
     public boolean antiikkikirjallisuus3 = false;
     public boolean antiikkikirjallisuus4 = false;
     public boolean antiikkikirjallisuus5 = false;
-
-    //Holokausti avainsanat
+    /**
+     * Holokausti avainsanat
+     */
     public boolean holokausti0 = false;
     public boolean holokausti1 = false;
     public boolean holokausti2 = false;
     public boolean holokausti3 = false;
     public boolean holokausti4 = false;
     public boolean holokausti5 = false;
-
-    //Ilmastonmuutos avainsanat
+    /**
+     * Ilmastonmuutos avainsanat
+     */
     public boolean ilmastonmuutos0 = false;
     public boolean ilmastonmuutos1 = false;
     public boolean ilmastonmuutos2 = false;
     public boolean ilmastonmuutos3 = false;
     public boolean ilmastonmuutos4 = false;
     public boolean ilmastonmuutos5 = false;
-
-    //Filosofia avainsanat
+    /**
+     * Filosofia avainsanat
+     */
     public boolean filo0 = false;
     public boolean filo1 = false;
     public boolean filo2 = false;
