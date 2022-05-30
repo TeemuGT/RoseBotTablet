@@ -6209,6 +6209,11 @@ public class MainActivity extends AppCompatActivity {
                 ihminen = false;
                 recreate();
     }
+
+    /**
+     * onPostResume() metodin tarpeellisuutta tulee selvittää.
+     * Metodi oli käytössä avaamaan kameran taustan sekä kameran itsestään kutsuttaessa.
+     */
     @Override
     protected void onPostResume() {
         super.onPostResume();
@@ -6218,6 +6223,11 @@ public class MainActivity extends AppCompatActivity {
         else
             textureView.setSurfaceTextureListener(textureListener);
     }
+
+    /**
+     * onPause() tarpeellisuutta tulee selvittöö.
+     * Metodi oli käytössä pysäyttämään tarpeen mukaan kameran tausta sekä puheen tuottamis toimintoja.
+     */
     @Override
     protected void onPause(){
 
@@ -6229,11 +6239,19 @@ public class MainActivity extends AppCompatActivity {
         }
         super.onPause();
     }
+
+    /**
+     * checkPermission() metodi tarkistaa onko äänen tallentamiselle annettu lupa sovelluksella.
+     */
     private void checkPermission() {
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
             ActivityCompat.requestPermissions(this,new String[]{Manifest.permission.RECORD_AUDIO},RecordAudioRequestCode);
         }
     }
+
+    /**
+     * onRequestPermissionResult() metodi tarkistaa käyttölupaa äänentallentamisesta sekä kameran käytöstä.
+     */
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -6248,11 +6266,24 @@ public class MainActivity extends AppCompatActivity {
             }
         }
     }
+
+    /**
+     * showLanguageDialog() luo popup dialogin josta voi vaihtaa kieltä.
+     */
     private void showLanguageDialog(){
+        /**
+         * Luodaan lista jossa on kaksi eri stringiä jotka ovat kielivaihtoehdot.
+         * Luodaan AlertDialog.Builder joka  tekee popupin. Heataan stringi otsikoksi sekä lisätään ruotsinkielinen teksti seuraavelle riville.
+         */
         final String[] listItems = {"English", "Suomi"};
         AlertDialog.Builder mBuilder = new AlertDialog.Builder(MainActivity.this);
         mBuilder.setTitle(getString(R.string.kielivalinta) + "\nSvensk språkliga användargränssnittet är i utvecklingsfasen.");
 
+        /**
+         * Laitetaan luotu lista popuppiin ja tehdään listan itemeistä klikattavaia.
+         * Luodaan molempien itemien listenerien sisälle toiminta mitä tehdään (Haetaan setLocale metodi johon lähetetään haluttu kielivalinta).
+         * Haetaan restart metodi kielivalinnan jälkeen.
+         */
         mBuilder.setSingleChoiceItems(listItems, -1, new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialogInterface, int i) {
@@ -6283,6 +6314,10 @@ public class MainActivity extends AppCompatActivity {
         mDialog.show();
 
     }
+
+    /**
+     * Valittu kielivalinta muutetaan käyttöliittymään käyttöön jotta sovellus käyttää oikeaa kieltä.
+     */
     private void setLocale(String lang){
         Locale locale = new Locale(lang);
         Locale.setDefault(locale);
@@ -6294,12 +6329,22 @@ public class MainActivity extends AppCompatActivity {
         editor.putString("My_Lang", lang);
         editor.apply();
     }
+
+    /**
+     * Haetaan valittua kielivalintaa ja palautetaan se "language" stringinä. Tätä metodia haettassa saadaan haettua käytössä oleva kieli.
+     * Käytetään esim puheentunnistuksen ja puheen tuottamisen määrittelyssä että oikea kieli on valittu.
+     */
     public String loadLocale(){
         SharedPreferences prefs = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang", "");
         setLocale(language);
         return language;
     }
+
+    /**
+     * stopBackgroundThread() ja startBackGroundThread() metodien tarpeellisuutta pitää selvittää.
+     * Metodeita kutsuttiin kameran taustan luomiseen ja lopettamiseen mutta kamera toimii piilossa eikä näytä mitään näytöllä.
+     */
     private void stopBackgroundThread() {
         mBackgroundThread.quitSafely();
         try {
