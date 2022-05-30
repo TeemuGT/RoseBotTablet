@@ -782,8 +782,8 @@
     <string name="fiction1">englanninkieliset kaunokirjalli</string>
     <string name="fiction2">Englanninkielinen kaunokirjalli</string>
     <string name="fiction3">englanninkielinen kaunokirjalli</string>
-    <string name="fiction4">Kaunokirjallisuus englanni</string>
-    <string name="fiction5">kaunokirjallisuus englanni</string>
+    <string name="fiction4">Englannin</string>
+    <string name="fiction5">englannin</string>
 
     <!-- Non-fiction -->
     <string name="nonfiction0">Englanninkieliset tietokirja</string>

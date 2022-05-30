@@ -716,7 +716,7 @@
     <string name="lastpuuh5">children activities</string>
 
 
-    <!--Elokuvien avaisanat -->
+    <!-- Rikoskirjat avaisanat -->
     <!-- Crime novels, in English avainsanat -->
     <string name="crimeNovEng0">"Crime novels, in English "</string>
     <string name="crimeNovEng1">"crime novels, in English "</string>
@@ -736,10 +736,10 @@
     <!-- Rikospokkarit avainsanat -->
     <string name="rikospokka0">Crime pocket</string>
     <string name="rikospokka1">crime pocket</string>
-    <string name="rikospokka2">"Crime paperback "</string>
-    <string name="rikospokka3">"crime paperback "</string>
-    <string name="rikospokka4">"Crime paperback "</string>
-    <string name="rikospokka5">"Crime paperback "</string>
+    <string name="rikospokka2">"Crime paperback</string>
+    <string name="rikospokka3">"crime paperback</string>
+    <string name="rikospokka4">"Crime paperback</string>
+    <string name="rikospokka5">"Crime paperback</string>
 
     <!-- Rikosromaanit avainsanat -->
     <string name="rikosromaani0">Crime novels</string>
@@ -759,84 +759,84 @@
 
     <!-- Pokkarit avainsanat -->
     <!-- Kaunopokkarit -->
-    <string name="kaunopokkarit0">True Crime</string>
-    <string name="kaunopokkarit1">true crime</string>
-    <string name="kaunopokkarit2">True crime</string>
-    <string name="kaunopokkarit3">true Crime</string>
-    <string name="kaunopokkarit4">Oikea rikos</string>
-    <string name="kaunopokkarit5">oikea rikos</string>
+    <string name="kaunopokkarit0">Fiction Pocketbooks</string>
+    <string name="kaunopokkarit1">fiction Pocketbooks</string>
+    <string name="kaunopokkarit2">Fiction paperback</string>
+    <string name="kaunopokkarit3">fiction paperback</string>
+    <string name="kaunopokkarit4">Paperback fiction</string>
+    <string name="kaunopokkarit5">paperback fiction</string>
 
     <!-- Scifi ja fantasia pokkarit -->
-    <string name="scifijafantasiapokkarit0">True Crime</string>
-    <string name="scifijafantasiapokkarit1">true crime</string>
-    <string name="scifijafantasiapokkarit2">True crime</string>
-    <string name="scifijafantasiapokkarit3">true Crime</string>
-    <string name="scifijafantasiapokkarit4">Oikea rikos</string>
-    <string name="scifijafantasiapokkarit5">oikea rikos</string>
+    <string name="scifijafantasiapokkarit0">Fantasy paperback</string>
+    <string name="scifijafantasiapokkarit1">fantasy paperback</string>
+    <string name="scifijafantasiapokkarit2">Scifi paperback</string>
+    <string name="scifijafantasiapokkarit3">scifi paperback</string>
+    <string name="scifijafantasiapokkarit4">paperback fantasy</string>
+    <string name="scifijafantasiapokkarit5">scifi paperback</string>
 
     <!-- Tietopokkarit -->
-    <string name="tietopokkarit0">True Crime</string>
-    <string name="tietopokkarit1">true crime</string>
-    <string name="tietopokkarit2">True crime</string>
-    <string name="tietopokkarit3">true Crime</string>
-    <string name="tietopokkarit4">Oikea rikos</string>
-    <string name="tietopokkarit5">oikea rikos</string>
+    <string name="tietopokkarit0">Nonfiction paperback</string>
+    <string name="tietopokkarit1">nonfiction paperback</string>
+    <string name="tietopokkarit2">Paperback nonfiction</string>
+    <string name="tietopokkarit3">paperback nonfiction</string>
+    <string name="tietopokkarit4">Nonfiction pocketbooks</string>
+    <string name="tietopokkarit5">nonfiction pocketbooks</string>
 
     <!-- Englanninkieliset kirjat avainsanat -->
     <!-- Crime -->
-    <string name="crime0">Englanninkieliset rikos</string>
-    <string name="crime1">englanninkieliset rikos</string>
-    <string name="crime2">Englanninkielinen rikos</string>
-    <string name="crime3">englanninkielinen rikos</string>
-    <string name="crime4">Rikos englanni</string>
-    <string name="crime5">Rikos englanni</string>
+    <string name="crime0">Crime in english</string>
+    <string name="crime1">crime in english</string>
+    <string name="crime2">English crime</string>
+    <string name="crime3">English crime</string>
+    <string name="crime4">Criminal records in English</string>
+    <string name="crime5">criminal records in English</string>
 
     <!-- Fiction -->
-    <string name="fiction0">Englanninkieliset kaunokirjalli</string>
-    <string name="fiction1">englanninkieliset kaunokirjalli</string>
-    <string name="fiction2">Englanninkielinen kaunokirjalli</string>
-    <string name="fiction3">englanninkielinen kaunokirjalli</string>
-    <string name="fiction4">Kaunokirjallisuus englanni</string>
-    <string name="fiction5">kaunokirjallisuus englanni</string>
+    <string name="fiction0">English fiction</string>
+    <string name="fiction1">english fiction</string>
+    <string name="fiction2">Fiction in English</string>
+    <string name="fiction3">iction in English</string>
+    <string name="fiction4">English</string>
+    <string name="fiction5">english</string>
 
     <!-- Non-fiction -->
-    <string name="nonfiction0">Englanninkieliset tietokirja</string>
-    <string name="nonfiction1">englanninkieliset tietokirja</string>
-    <string name="nonfiction2">Englanninkielinen tietokirja</string>
-    <string name="nonfiction3">englanninkielinen tietokirja</string>
-    <string name="nonfiction4">Tietokirjallisuus englanni</string>
-    <string name="nonfiction5">tietokirjallisuus englanni</string>
+    <string name="nonfiction0">English nonfiction</string>
+    <string name="nonfiction1">English nonfiction</string>
+    <string name="nonfiction2">Nonfiction in English</string>
+    <string name="nonfiction3">nonfiction in English</string>
+    <string name="nonfiction4">Nonfiction English</string>
+    <string name="nonfiction5">nonfiction English</string>
 
     <!-- Poetry -->
-    <string name="poetry0">Englanninkieliset runo</string>
-    <string name="poetry1">englanninkieliset runo</string>
-    <string name="poetry2">Englanninkielinen runo</string>
-    <string name="poetry3">englanninkielinen runo</string>
-    <string name="poetry4">Runous englanni</string>
-    <string name="poetry5">runous englanni</string>
+    <string name="poetry0">English poem</string>
+    <string name="poetry1">english poem</string>
+    <string name="poetry2">Poems in english</string>
+    <string name="poetry3">poems in english</string>
+    <string name="poetry4">Poetry in English</string>
+    <string name="poetry5">poetry in English</string>
 
     <!-- Enganninkielinen scifi -->
-    <string name="engscifi0">Englanninkieliset scifi</string>
-    <string name="engscifi1">englanninkieliset scifi</string>
-    <string name="engscifi2">Englanninkielinen scifi</string>
-    <string name="engscifi3">englanninkielinen scifi</string>
-    <string name="engscifi4">Scifi englanni</string>
-    <string name="engscifi5">scifi englanni</string>
+    <string name="engscifi0">English sci-fi</string>
+    <string name="engscifi1">english sci-fi</string>
+    <string name="engscifi2">English scifi</string>
+    <string name="engscifi3">english scifi</string>
+    <string name="engscifi4">Scifi in English</string>
+    <string name="engscifi5">scifi in English</string>
 
     <!-- Uudet fiction -->
-    <string name="newfiction0">Uudet englanninkieliset kaunokirjalli</string>
-    <string name="newfiction1">uudet englanninkieliset kaunokirjalli</string>
-    <string name="newfiction2">Uudet englanninkielinen kaunokirjalli</string>
-    <string name="newfiction3">uudet englanninkielinen kaunokirjalli</string>
-    <string name="newfiction4">Uudet kaunokirjallisuus englanni</string>
-    <string name="newfiction5">uudet kaunokirjalli englanni</string>
+    <string name="newfiction0">New fiction in english</string>
+    <string name="newfiction1">new fiction in english</string>
+    <string name="newfiction2">New English fiction</string>
+    <string name="newfiction3">new English fiction</string>
+    <string name="newfiction4">New fiction in English</string>
+    <string name="newfiction5">new fiction in English</string>
 
     <!-- Uudet Non-fiction -->
-    <string name="newnonfiction0">Uudet englanninkieliset tietokirja</string>
-    <string name="newnonfiction1">uudet englanninkieliset tietokirja</string>
-    <string name="newnonfiction2">Uudet englanninkielinen tietokirja</string>
-    <string name="newnonfiction3">uudet englanninkielinen tietokirja</string>
-    <string name="newnonfiction4">Uudet tietokirjallisuus englanni</string>
-    <string name="newnonfiction5">uudet tietokirjalli englanni</string>
+    <string name="newnonfiction0">New Nonfiction in English</string>
+    <string name="newnonfiction1">new Nonfiction in English</string>
+    <string name="newnonfiction2">New English nonfiction</string>
+    <string name="newnonfiction3">new English nonfiction</string>
+    <string name="newnonfiction4">New nonfiction English</string>
+    <string name="newnonfiction5">new nonfiction English</string>
 
 </resources>
