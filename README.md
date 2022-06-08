@@ -62,3 +62,7 @@ Jatkokehitys ideoita:
 - Puheohjauksella haettaessa avautuisi myös haetun kategorian yläkategorian muutkin alakategoria napit.
 - Teksti ohjaus "klikkaa minua kysyäksesi puheohjauksella".
 - Avainsanojen parantelu sekä kehittäminen.
+
+Avainsanoja joita ei ole ohjelmassa mutta voisi olla.
+- **Romaanit** Tällä hetkellä ei voi etsiä romaani avainsanalla.
+- **Teologinen** Asiakas etsi tätä mutta pitää selvittää onko kyseisiä kirjoja miten ja järkevää lisätä.
