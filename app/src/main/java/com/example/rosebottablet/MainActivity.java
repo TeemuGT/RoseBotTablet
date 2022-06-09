@@ -3992,10 +3992,6 @@ public class MainActivity extends AppCompatActivity {
             keltainen = true;
             laskuri = 0;
             vertaa();
-        } else if (uudetkauno0 || uudetkauno1 || uudetkauno2 || uudetkauno3 || uudetkauno4 || uudetkauno5) {
-            uudetkaunokirjallisuus = true;
-            laskuri = 0;
-            vertaa();
         } else if (klassikot0 || klassikot1 || klassikot2 || klassikot3 || klassikot4 || klassikot5) {
             klassikot = true;
             laskuri = 0;
@@ -4210,6 +4206,10 @@ public class MainActivity extends AppCompatActivity {
             vertaa();
         } else if (nonfiction0 || nonfiction1 || nonfiction2 || nonfiction3 || nonfiction4 || nonfiction5) {
             nonfiction = true;
+            laskuri = 0;
+            vertaa();
+        } else if (uudetkauno0 || uudetkauno1 || uudetkauno2 || uudetkauno3 || uudetkauno4 || uudetkauno5) {
+            uudetkaunokirjallisuus = true;
             laskuri = 0;
             vertaa();
         } else if (elokuvat0 || elokuvat1 || elokuvat3 || elokuvat4 || elokuvat5) {
