@@ -59,6 +59,7 @@ Database:
 
 Sovelluksessa hyödynnetään Firebase Databasea tiedonkeruuseen. Databaseen tallennetaan aloita() metodin haut sekä kaikki kuunnellut puheet mitä sovellus      kuuntelee.
 Databasessa on kaksi id:tä johon tietoa tallennetaan. text ja aloitettu. text id:n taakse tallennetaan kaikki puhe mitä sovellus kuulee. aloitettu id:n taakse tallennetaan aikaleima joka kerta kun aloita() metodi haetaan.
+Uuden Firebase databasen saa lisättyä Android studion avulla helposti. Valitse yläpalkista "tools" ja sen valikosta "Firebase". Tämä avaa Firebase consolin. Valitse sieltä "realtime database", koska tämä on käytössä. Sen jälkeen valitse "get started wiht realtime database", josta saat Android studion omat ohjeet databasen käyttöön. Mitään koodia ei tarvitse vaihtaa mikäli uudessa databasessa on myös id:t "aloitettu" aktivoinneille sekä "text" puheentunnistukselle. Consolista Databasen yhdistäminen tekee automaattisesti kaiken tarvittavat muutokset ohjelmaan jotta database tulee oikein yhdistettyä. 
 
 Jatkokehitys ideoita:
 - Alku speaking skippaus nappi.
