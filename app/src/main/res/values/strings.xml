@@ -746,8 +746,8 @@
     <string name="rikosromaani1">crime novels</string>
     <string name="rikosromaani2">Crime novels</string>
     <string name="rikosromaani3">Crime novels</string>
-    <string name="rikosromaani4">Crime novels</string>
-    <string name="rikosromaani5">Crime novels</string>
+    <string name="rikosromaani4">Detective</string>
+    <string name="rikosromaani5">detective</string>
 
     <!-- True Crime avainsanat -->
     <string name="truecrime0">True Crime</string>
