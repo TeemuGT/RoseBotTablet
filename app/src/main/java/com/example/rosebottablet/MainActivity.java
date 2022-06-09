@@ -4192,10 +4192,6 @@ public class MainActivity extends AppCompatActivity {
             crime = true;
             laskuri = 0;
             vertaa();
-        } else if (nonfiction0 || nonfiction1 || nonfiction2 || nonfiction3 || nonfiction4 || nonfiction5) {
-            nonfiction = true;
-            laskuri = 0;
-            vertaa();
         } else if (poetry0 || poetry1 || poetry2 || poetry3 || poetry4 || poetry5) {
             poetry = true;
             laskuri = 0;
@@ -4210,6 +4206,10 @@ public class MainActivity extends AppCompatActivity {
             vertaa();
         } else if (newnonfiction0 || newnonfiction1 || newnonfiction2 || newnonfiction3 || newnonfiction4 || newnonfiction5) {
             newnonfiction = true;
+            laskuri = 0;
+            vertaa();
+        } else if (nonfiction0 || nonfiction1 || nonfiction2 || nonfiction3 || nonfiction4 || nonfiction5) {
+            nonfiction = true;
             laskuri = 0;
             vertaa();
         } else if (elokuvat0 || elokuvat1 || elokuvat3 || elokuvat4 || elokuvat5) {
@@ -4273,7 +4273,7 @@ public class MainActivity extends AppCompatActivity {
             }
             laskuri = 0;
 
-        }else if (kuinkaVoin0 || kuinkaVoin1 || kuinkaVoin2 ||  kuinkaVoin3 || kuinkaVoin4 ){
+        } else if (kuinkaVoin0 || kuinkaVoin1 || kuinkaVoin2 ||  kuinkaVoin3 || kuinkaVoin4 ){
             MainActivity.textToSpeech.speak(getString(R.string.kuuluu), TextToSpeech.QUEUE_FLUSH, null);
             speechRecognizer.startListening(speechRecognizerIntent);
             try {
@@ -4283,7 +4283,7 @@ public class MainActivity extends AppCompatActivity {
             }
             laskuri = 0;
 
-        }else{
+        } else{
             /**
              * Mikäli puuheesta ei löydetty avain sanoja lisätään int "laskuri" yksi arvo.
              */
