@@ -4224,10 +4224,6 @@ public class MainActivity extends AppCompatActivity {
             ajankohtaista = true;
             laskuri = 0;
             vertaa();
-        } else if (kielet0 || kielet1 || kielet2 || kielet3 || kielet4 || kielet5) {
-            kielet = true;
-            laskuri = 0;
-            vertaa();
         } else if (sijainti0 || sijainti1 || sijainti2 || sijainti3) {
             sijainti = true;
             laskuri = 0;
@@ -4257,6 +4253,10 @@ public class MainActivity extends AppCompatActivity {
             vertaa();
         } else if (fiction0 || fiction1 || fiction2 || fiction3 || fiction4 || fiction5) {
             fiction = true;
+            laskuri = 0;
+            vertaa();
+        } else if (kielet0 || kielet1 || kielet2 || kielet3 || kielet4 || kielet5) {
+            kielet = true;
             laskuri = 0;
             vertaa();
         } else if (keskustelu0 || keskustelu1 || keskustelu2 || keskustelu3 ||
