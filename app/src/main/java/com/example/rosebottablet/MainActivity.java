@@ -1,3 +1,26 @@
+/*
+Copyright (c) <2022> <Haaga-Helia Oy, Teemu Tähkä>
+
+ Permission is hereby granted, free of charge, to any person obtaining
+ a copy of this software and associated documentation files (the
+ "Software"), to deal in the Software without restriction, including
+ without limitation the rights to use, copy, modify, merge, publish,
+ distribute, sublicense, and/or sell copies of the Software, and to
+ permit persons to whom the Software is furnished to do so, subject to
+ the following conditions:
+
+ The above copyright notice and this permission notice shall be included
+ in all copies or substantial portions of the Software.
+
+ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
+ CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
+ TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
+ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
 package com.example.rosebottablet;
 
 import androidx.annotation.NonNull;
@@ -3965,11 +3988,7 @@ public class MainActivity extends AppCompatActivity {
             essee = true;
             laskuri = 0;
             vertaa();
-        }*/ else if (kauno0 || kauno1 || kauno2 || kauno3 || kauno4 || kauno5) {
-            kaunokirjallisuus = true;
-            laskuri = 0;
-            vertaa();
-        } else if (kelta0 || kelta1 || kelta2 || kelta3 || kelta4 || kelta5) {
+        }*/ else if (kelta0 || kelta1 || kelta2 || kelta3 || kelta4 || kelta5) {
             keltainen = true;
             laskuri = 0;
             vertaa();
@@ -4094,14 +4113,14 @@ public class MainActivity extends AppCompatActivity {
             laskuri = 0;
             vertaa();
         } else if (pokka0 || pokka1 || pokka2 || pokka3 || pokka4 || pokka5) {
-            pokkarit = true;
+            kaunopokkarit = true;
             laskuri = 0;
             vertaa();
-        } else if (engl0 || engl1 || engl2 || engl3 || engl4 || engl5) {
+        } /**else if (engl0 || engl1 || engl2 || engl3 || engl4 || engl5) {
             englanti = true;
             laskuri = 0;
             vertaa();
-        } else if (lastenromaani0 || lastenromaani1 || lastenromaani2 || lastenromaani3 || lastenromaani4 || lastenromaani5) {
+        }*/ else if (lastenromaani0 || lastenromaani1 || lastenromaani2 || lastenromaani3 || lastenromaani4 || lastenromaani5) {
             lastenromaani = true;
             laskuri = 0;
             vertaa();
@@ -4218,6 +4237,10 @@ public class MainActivity extends AppCompatActivity {
             vertaa();
         } else if (tiede0 || tiede1 || tiede2 || tiede3 || tiede4 || tiede5 || tiede6 || tiede7) {
             tiede = true;
+            laskuri = 0;
+            vertaa();
+        } else if (kauno0 || kauno1 || kauno2 || kauno3 || kauno4 || kauno5) {
+            kaunokirjallisuus = true;
             laskuri = 0;
             vertaa();
         } else if (lasten0 || lasten1 || lasten2 || lasten3 || lasten4 || lasten5) {
@@ -6312,7 +6335,6 @@ public class MainActivity extends AppCompatActivity {
         });
         AlertDialog mDialog = mBuilder.create();
         mDialog.show();
-
     }
 
     /**
