@@ -82,7 +82,9 @@ Avainsanoja joita ei ole ohjelmassa mutta voisi olla.
 - **Romaanit** Tällä hetkellä ei voi etsiä romaani avainsanalla.
 - **Teologinen** Asiakas etsi tätä mutta pitää selvittää onko kyseisiä kirjoja miten ja järkevää lisätä.
 
-Sovelluksen käyttöönotto uudesa ympäristössä
+
+**Sovelluksen käyttöönotto uudesa ympäristössä**
+
 Mikäli kyseisen sovelluksen haluaa ottaa käyttöön uudessa liikkeessä tai ymäristössä tulee varautua suureen määrään ohjelmakoodin sisällön luontia ja muokkaamista.
 Soovellukseen tulee vaihtaa uutta tilannetta vaativa pohjapiirrustus kartta. Kartan saa vaihdettua activity_main.xml tiedostosta jossa kartta imageView luodaan.
 Samassa tiedostossa voi vahtaa uuden logon sovelluksen vasempaan yläreunaan.
