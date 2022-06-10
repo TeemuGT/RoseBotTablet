@@ -64,10 +64,16 @@ Uuden Firebase databasen saa lisättyä Android studion avulla helposti. Valitse
 Jatkokehitys ideoita:
 - Alku speaking skippaus nappi.
 - Firebase ML kit face recognition.
+- Tietokannan kehitys
 - Sijainnit tarkemmaksi. Millä puolella hyllyä sijainti on ja usempi sijainti hyllyyn.
 - Puheohjauksella haettaessa avautuisi myös haetun kategorian yläkategorian muutkin alakategoria napit.
+- Puheohjauksella aktivoida kuuntelu
 - Teksti ohjaus "klikkaa minua kysyäksesi puheohjauksella".
 - Avainsanojen parantelu sekä kehittäminen.
+- Nimi ja kirja haku
+- Ylläpitokäyttöliittymä
+- Ehdotuksia käyttäjälle
+- Yleisesti ohjelmakoodin rakenteen tarkastelu
 
 Avainsanoja joita ei ole ohjelmassa mutta voisi olla.
 - **Romaanit** Tällä hetkellä ei voi etsiä romaani avainsanalla.
