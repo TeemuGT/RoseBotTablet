@@ -13,6 +13,9 @@ Sovelluksen käyttö.
 - Puhe ohjais ohjaa suoraan valittuu alakategoriaan asetettujen avainsanojen avulla. Nappi ohjauksella tulee ensin valita pääkategoria ja sen jälkeen haluttu alagategoria.
 - Valittu kategoria näytetään kartalla nuolen avulla.
 - Sovelluksessa on ajastin joka käynnistää sovelluksen automaattisesti uudelleen nukkumis tilaan tietyn ajan kuluttua.
+- Sovelluksen voi myös itse käynnistää restart napista uudelleen.
+- Sovellus toimii kahdella kielellä, Suomi ja Englanti.
+- Sovellus tunnistaa kuvassa muutoksen kameran avulla jos joku tulee tabletin eteen. Jos muutos huomataan käynnistyy ohjelma.
 
 Sovelluksessa on yksi Class: MainActivity
 
@@ -78,3 +81,32 @@ Jatkokehitys ideoita:
 Avainsanoja joita ei ole ohjelmassa mutta voisi olla.
 - **Romaanit** Tällä hetkellä ei voi etsiä romaani avainsanalla.
 - **Teologinen** Asiakas etsi tätä mutta pitää selvittää onko kyseisiä kirjoja miten ja järkevää lisätä.
+
+Sovelluksen käyttöönotto uudesa ympäristössä
+Mikäli kyseisen sovelluksen haluaa ottaa käyttöön uudessa liikkeessä tai ymäristössä tulee varautua suureen määrään ohjelmakoodin sisällön luontia ja muokkaamista.
+Soovellukseen tulee vaihtaa uutta tilannetta vaativa pohjapiirrustus kartta. Kartan saa vaihdettua activity_main.xml tiedostosta jossa kartta imageView luodaan.
+Samassa tiedostossa voi vahtaa uuden logon sovelluksen vasempaan yläreunaan.
+Työläin osuus on luoda sovellukselle tarvittavat yläkategoriat ja alakategoriat.
+Ilman yllapitokäyttöliittymää jota ei vielä ole, pitää kaikki kategoriat ja niiden avainsanat sekä sijainnit lisätä ohjelmakoodiin.
+
+Yläkategorian luonti
+- Luo kategorialle nappi. activity_main.xml
+- Tuo nappi näkyviin main java tiedostossa ja uo napille listeneri.
+- Luo string.xml tiedostoissa napin nimi sekä puhe joka tuotetaan nappia painessa.(Kaikille kielille oma)
+
+Alakategorian luonti
+- Luo kategorialle nappi. Sijoita myös nappi oikeaan kohtaan. activity_main.xml
+- Tuo nappi näkyviin main java tiedostossa ja uo napille listeneri.
+- Luo string.xml tiedostoissa napin nimi sekä puhe joka tuotetaan kategorian toiminnassa.(Kaikille kielille oma)
+- Luo kategorialle oma markkeri ja sijoita se kartalla oikeaan kohtaan. Markeri on oletuksena INVISIBLE. activity_main.xml
+- Luo kategorialle pää boolean.
+- Luo kategorialle avainsanojen verran avainsana booleaneja.
+- Luo avainsana booleanien verran avainsanoja kategorialle. string.xml(Joka kielelle omat)
+- Tunnistus() metodissa luodaan jokaiseelle avainsana booleanille contains lauseke jossa haetaan yksittäin avainsanoja string.xml tiedostosta ja verrataan niitä        kuultuun puheeseen. Jos avainsanoja on luotu esim 6 kpl niin lauseke luodaan 6 kertaan jokaisella oma boolean jokaista eri avainsanaa kohti.
+runot0 = word.contains(getString(R.string.runo0)); runot0 on luotu boolean (oletuksena false). word on puheen tunnistuksena kuultu puhe. runo0 on id string.xml tiedostossa olevalle avainsanalle. käytetään contains metodia vertaamaan haettua avainsanaa kuultuun puheeseen. Mikäli vertailussa on yhteneväisyys muuttuu runot0 boolean true:ksi.
+- Luo Tunnistus() metodissa vertailu kategorian avainsanoille että onko joku niistä true. Jos on muuta kategorian pää boolean true:ksi. 
+else if (runot0){ 
+runo = true;        //Runo kategorian pää boolean true.
+laskuri = 0;        //Kuuntelu laskuri nollataan kun löydetään vastaus kysymykseen.
+vertaa() }          //Haetaan seuraava metodi.
+- Vertaa() metodiin luodaan kategorialle oma else if() joka toteutuu jos kategorian pää boolean on true. Lausekkeen sisällä tuotetaan kategorian puhe ja animaatiot. Sen lisäksi otetaan kyseisen kategorian sijainti näkyviin.
