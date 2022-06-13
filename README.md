@@ -58,7 +58,7 @@ Sovelluksessa on luotuja metodeita:
 - stopBackroundTread()
 - startBackgroundThread()
 
-Database:
+**Database:**
 
 Sovelluksessa hyödynnetään Firebase Databasea tiedonkeruuseen. Databaseen tallennetaan aloita() metodin haut sekä kaikki kuunnellut puheet mitä sovellus      kuuntelee.
 Databasessa on kaksi id:tä johon tietoa tallennetaan. text ja aloitettu. text id:n taakse tallennetaan kaikki puhe mitä sovellus kuulee. aloitettu id:n taakse tallennetaan aikaleima joka kerta kun aloita() metodi haetaan.
@@ -72,7 +72,7 @@ Jokaiselle vertailulle on osoitettu oma boolean arvo joka muutetaan vastaavuuden
 Kun kaikki avainsanat on käyty läpi käydään boolean arvot läpi if lauseella ja katsotaan onko joku true.
 Useampi boolean voi olla true mutta boolean vertailussa toteutuu vain ensimmäinen lause joka on true. Tämän vuoksi vertailussa pitää katsoa järjestystä niin että monimutkasimmat avainsanan booleanit tulee ensin jotta jos käyttäjä etsii niitä niin ne toteutuu. Yksinkertasimmat avainsana booleanit voi laittaa vertailussa viimeisiksi jotta jos ennenn niitä ei löydy vastausta niin ne toteutuu. Esim. "maa" merkkijono esiintyy monessa eri sanassa ja tämän vuoksi sen pitää olla vertailun viimesiten joukossa. Ei ole hyvä että käyttäjän etsiessä "riskosromaanit" avainsanalla ja ohjelma ohjaisi "maa" avainsanan kategoriaan.
 
-Jatkokehitys ideoita:
+**Jatkokehitys ideoita:**
 - Alku speaking skippaus nappi.
 - Firebase ML kit face recognition.
 - Tietokannan kehitys
