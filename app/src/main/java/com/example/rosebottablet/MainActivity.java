@@ -3264,7 +3264,7 @@ public class MainActivity extends AppCompatActivity {
     };
 
     /**
-    *Verrataan contain() methodilla avain sana stringeihin kuunneltua puhetta.
+    *Verrataan contains() methodilla avain sana stringeihin kuunneltua puhetta.
     *Mikäli avain sana löytyy puheesta muuttuu sitä vastaava boolean true:ksi.
     *True booleanin alta löytyvä toiminta toteutetaan.
      */
