@@ -64,6 +64,14 @@ Sovelluksessa hyödynnetään Firebase Databasea tiedonkeruuseen. Databaseen tal
 Databasessa on kaksi id:tä johon tietoa tallennetaan. text ja aloitettu. text id:n taakse tallennetaan kaikki puhe mitä sovellus kuulee. aloitettu id:n taakse tallennetaan aikaleima joka kerta kun aloita() metodi haetaan.
 Uuden Firebase databasen saa lisättyä Android studion avulla helposti. Valitse yläpalkista "tools" ja sen valikosta "Firebase". Tämä avaa Firebase consolin. Valitse sieltä "realtime database", koska tämä on käytössä. Sen jälkeen valitse "get started wiht realtime database", josta saat Android studion omat ohjeet databasen käyttöön. Mitään koodia ei tarvitse vaihtaa mikäli uudessa databasessa on myös id:t "aloitettu" aktivoinneille sekä "text" puheentunnistukselle. Consolista Databasen yhdistäminen tekee automaattisesti kaiken tarvittavat muutokset ohjelmaan jotta database tulee oikein yhdistettyä. 
 
+**Avainsanojen vertaaminen:**
+
+Vertaamisessa hyödynnetään "contains()" metodia jolla pystytään tarkistamaan löytyykö verrattavasta stringistä yhtäläisyys metodille annettuun stringiin.
+Avainsanat on luotu xml.tiedostoon josta niitä haetaan. Kaikki avainsanat käydään puheentunnistuksen jälkeen läpi.
+Jokaiselle vertailulle on osoitettu oma boolean arvo joka muutetaan vastaavuuden löydyttyä true:ksi.
+Kun kaikki avainsanat on käyty läpi käydään boolean arvot läpi if lauseella ja katsotaan onko joku true.
+Useampi boolean voi olla true mutta boolean vertailussa toteutuu vain ensimmäinen lause joka on true. Tämän vuoksi vertailussa pitää katsoa järjestystä niin että monimutkasimmat avainsanan booleanit tulee ensin jotta jos käyttäjä etsii niitä niin ne toteutuu. Yksinkertasimmat avainsana booleanit voi laittaa vertailussa viimeisiksi jotta jos ennenn niitä ei löydy vastausta niin ne toteutuu. Esim. "maa" merkkijono esiintyy monessa eri sanassa ja tämän vuoksi sen pitää olla vertailun viimesiten joukossa. Ei ole hyvä että käyttäjän etsiessä "riskosromaanit" avainsanalla ja ohjelma ohjaisi "maa" avainsanan kategoriaan.
+
 Jatkokehitys ideoita:
 - Alku speaking skippaus nappi.
 - Firebase ML kit face recognition.
