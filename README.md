@@ -115,8 +115,10 @@ Alakategorian luonti
 - Tunnistus() metodissa luodaan jokaiseelle avainsana booleanille contains lauseke jossa haetaan yksittäin avainsanoja string.xml tiedostosta ja verrataan niitä        kuultuun puheeseen. Jos avainsanoja on luotu esim 6 kpl niin lauseke luodaan 6 kertaan jokaisella oma boolean jokaista eri avainsanaa kohti.
 runot0 = word.contains(getString(R.string.runo0)); runot0 on luotu boolean (oletuksena false). word on puheen tunnistuksena kuultu puhe. runo0 on id string.xml tiedostossa olevalle avainsanalle. käytetään contains metodia vertaamaan haettua avainsanaa kuultuun puheeseen. Mikäli vertailussa on yhteneväisyys muuttuu runot0 boolean true:ksi.
 - Luo Tunnistus() metodissa vertailu kategorian avainsanoille että onko joku niistä true. Jos on muuta kategorian pää boolean true:ksi. 
+
 else if (runot0){ 
 runo = true;        //Runo kategorian pää boolean true.
 laskuri = 0;        //Kuuntelu laskuri nollataan kun löydetään vastaus kysymykseen.
 vertaa() }          //Haetaan seuraava metodi.
+
 - Vertaa() metodiin luodaan kategorialle oma else if() joka toteutuu jos kategorian pää boolean on true. Lausekkeen sisällä tuotetaan kategorian puhe ja animaatiot. Sen lisäksi otetaan kyseisen kategorian sijainti näkyviin.
