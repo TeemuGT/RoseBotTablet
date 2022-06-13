@@ -1,5 +1,5 @@
 # RoseBotTablet
-Tabletti sovellus kehitetty Samsung galaxy tab 8  tabletille.
+Tabletti sovellus kehitetty Samsung Galaxy Tab 8 Ultra 5G tabletille.
 Sovelluksen tehtävä on auttaa kirjakaupassa asioivia henkilöitä löytämään haluamansa kirja kategoria helposti.
 Sovellus rakentuu robotti figuurista sekä kartasta. Kategoriat on jaettu pää kategorioihin ja niiden alle alakategoriat.
 Sovellusta voi käyttää joko puheohjauksella sekä fyysisesti nappeja painamalla.
