@@ -117,8 +117,11 @@ runot0 = word.contains(getString(R.string.runo0)); runot0 on luotu boolean (olet
 - Luo Tunnistus() metodissa vertailu kategorian avainsanoille että onko joku niistä true. Jos on muuta kategorian pää boolean true:ksi. 
 
 else if (runot0){ 
+  
   runo = true;        //Runo kategorian pää boolean true.
+  
   laskuri = 0;        //Kuuntelu laskuri nollataan kun löydetään vastaus kysymykseen.
+  
   vertaa() }          //Haetaan seuraava metodi.
 
 - Vertaa() metodiin luodaan kategorialle oma else if() joka toteutuu jos kategorian pää boolean on true. Lausekkeen sisällä tuotetaan kategorian puhe ja animaatiot. Sen lisäksi otetaan kyseisen kategorian sijainti näkyviin.
