@@ -72,6 +72,14 @@ Jokaiselle vertailulle on osoitettu oma boolean arvo joka muutetaan vastaavuuden
 Kun kaikki avainsanat on käyty läpi käydään boolean arvot läpi if lauseella ja katsotaan onko joku true.
 Useampi boolean voi olla true mutta boolean vertailussa toteutuu vain ensimmäinen lause joka on true. Tämän vuoksi vertailussa pitää katsoa järjestystä niin että monimutkasimmat avainsanan booleanit tulee ensin jotta jos käyttäjä etsii niitä niin ne toteutuu. Yksinkertasimmat avainsana booleanit voi laittaa vertailussa viimeisiksi jotta jos ennenn niitä ei löydy vastausta niin ne toteutuu. Esim. "maa" merkkijono esiintyy monessa eri sanassa ja tämän vuoksi sen pitää olla vertailun viimesiten joukossa. Ei ole hyvä että käyttäjän etsiessä "riskosromaanit" avainsanalla ja ohjelma ohjaisi "maa" avainsanan kategoriaan.
 
+**Sovelluksen palautus nukkumistilaan automaattisesti:**
+Sovellus on käytön alussa nukkumistilassa ja se palaa automaattisesti takaisin siihen käyttämättömänä. 
+Tämä on oteutettu kahdella eri metodilla. Sovelluksessa on luotu restart() metodi joka käynnistää sovelluksen haettaessa uudelleen.
+Sovellukseen on luotu lopetus() metodi jolla saadaan sovellus käynnistymään itse käyttämättömänä uudelleen.
+lopetus() metodi haetaan enimmäisen kerran kun sovellus aktivoituu joko tunnistuksen tai napin painamisen yhteydessä. Olemassa oleva int I on tässä vaiheessa = 0.
+Kun lopetus() metodi haetaan ja I on 0, on metodissa lauseke jolla saadaan käynnistettyä timer joka lisää asetetun ajan välein int I:lle yhden arvon lisää. Timeriin on asetettu lauseke jossa kun int I saavuttaa tietyn arvon hakee se restart() metodin jotta sovellus käynnistyy uudelleen. Tämä mahdollistaa että aktivoinnin jälkeen sovellus käynnistyy itse tietyn ajan kuluttua uudelleen. 
+lopetus() metodi haetaan joka kerta kun käyttäjä koskee laitteeseen tai laite kuuntelee käyttäjää. lopetus() metodiin on tehty myös lauseke jos int I on jokin muu kuin 0, muuttaa se int I arvon = 1. Tällä toiminnolla saadaan aikaiseksi että kun metodi haetaan kun käyttäjä käyttää sovellusta ja timer on jo käynnissä muutetaan int I arvo mahdollisimman pieneksi jotta uudelleen käynnistykseen kuluva aika nollaantuu. Int I:tä ei voida muuttaa = 0, koska muuten timer voisi käynnistyä useamman kerran ja niitä olisi enemmän kuin yksi päällekkäin päällä. Timer on käynnissä koko sovelluksen aktiivisen käytön ajan kunnes sovellus käynnistyy uudelleen ja timer suljetaan.
+
 **Jatkokehitys ideoita:**
 - Alku speaking skippaus nappi.
 - Firebase ML kit face recognition.
