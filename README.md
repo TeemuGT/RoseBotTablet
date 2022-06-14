@@ -73,12 +73,23 @@ Kun kaikki avainsanat on käyty läpi käydään boolean arvot läpi if lauseell
 Useampi boolean voi olla true mutta boolean vertailussa toteutuu vain ensimmäinen lause joka on true. Tämän vuoksi vertailussa pitää katsoa järjestystä niin että monimutkasimmat avainsanan booleanit tulee ensin jotta jos käyttäjä etsii niitä niin ne toteutuu. Yksinkertasimmat avainsana booleanit voi laittaa vertailussa viimeisiksi jotta jos ennenn niitä ei löydy vastausta niin ne toteutuu. Esim. "maa" merkkijono esiintyy monessa eri sanassa ja tämän vuoksi sen pitää olla vertailun viimesiten joukossa. Ei ole hyvä että käyttäjän etsiessä "riskosromaanit" avainsanalla ja ohjelma ohjaisi "maa" avainsanan kategoriaan.
 
 **Sovelluksen palautus nukkumistilaan automaattisesti:**
+
 Sovellus on käytön alussa nukkumistilassa ja se palaa automaattisesti takaisin siihen käyttämättömänä. 
 Tämä on oteutettu kahdella eri metodilla. Sovelluksessa on luotu restart() metodi joka käynnistää sovelluksen haettaessa uudelleen.
 Sovellukseen on luotu lopetus() metodi jolla saadaan sovellus käynnistymään itse käyttämättömänä uudelleen.
 lopetus() metodi haetaan enimmäisen kerran kun sovellus aktivoituu joko tunnistuksen tai napin painamisen yhteydessä. Olemassa oleva int I on tässä vaiheessa = 0.
 Kun lopetus() metodi haetaan ja I on 0, on metodissa lauseke jolla saadaan käynnistettyä timer joka lisää asetetun ajan välein int I:lle yhden arvon lisää. Timeriin on asetettu lauseke jossa kun int I saavuttaa tietyn arvon hakee se restart() metodin jotta sovellus käynnistyy uudelleen. Tämä mahdollistaa että aktivoinnin jälkeen sovellus käynnistyy itse tietyn ajan kuluttua uudelleen. 
 lopetus() metodi haetaan joka kerta kun käyttäjä koskee laitteeseen tai laite kuuntelee käyttäjää. lopetus() metodiin on tehty myös lauseke jos int I on jokin muu kuin 0, muuttaa se int I arvon = 1. Tällä toiminnolla saadaan aikaiseksi että kun metodi haetaan kun käyttäjä käyttää sovellusta ja timer on jo käynnissä muutetaan int I arvo mahdollisimman pieneksi jotta uudelleen käynnistykseen kuluva aika nollaantuu. Int I:tä ei voida muuttaa = 0, koska muuten timer voisi käynnistyä useamman kerran ja niitä olisi enemmän kuin yksi päällekkäin päällä. Timer on käynnissä koko sovelluksen aktiivisen käytön ajan kunnes sovellus käynnistyy uudelleen ja timer suljetaan.
+
+**Automaattinen aktivointi kameran avulla:**
+
+Tässä vaiheessa kameran tunnistus ominaisuus on luotu kahta kuvaa vertailemalla. Tähän on olemassa muitakin tapoja tehdä esim. Firebase ML kit face recognition palvelun avulla.
+Tässä versiossa on tunnistukseen on käytetty laitteen kameraan ja se avataan näkymättömästi openCamera() metodilla. 
+onCreate() metodissa sovellusken käynnistyttä heti alussa luodaan timer joka on käynnissä niin kauan ennen kuin sovellus aktivoidaan aloita() metodilla. Timerissa on asetettu aikaväli jonka välein se hakee takePicture() metodin jossa otetaan valokuva. Valokuvan ottamisen jälkeen takePicture() metodissa valokuva tallenetaan vuoron perään kahteen eri bitmap:iin. Kuvaa tallentamisen jälkeen pienennetään suuresti vertailun helpoittamiseksi. Kuvan käsittelyn jälkeen takePicture() metodissa on if lauseke jossa haetaan compareEquivalance() metodi joka palauttaa kahden otetun kuvan vertailussa havaitun eron float arvona. Jos ero on tarpeeksi suuri toteutuu if lauseke ja siellä muutetaan boolean ihminen = true.
+compareEquivalance() metodissa käytetään for looppia jossa verrataan kuvien pikseleitä toisiinsa yksi kerrallaan. Jokaisesta yhteneväisyydestä lisätään laskuriin int count yksi arvo. Lopuksi int count jaetaan kuvan koolla jolloin saadaan eroavaisuudelle arvo joka palautetaan. 
+Kun timeri palaa uudelle kierokselle on siellä kaksi lauseketta. Boolean ihminen on joko true tai false. Jos se on false hakee timer takePicture() metodin uudelleen. Jos se on true hakee timer aloita metodin jotta sovellus aktivoituu ja timer suljetaan. 
+Timeriin on myös asetettu laskuri joka laskee kuinka monta kuvaa on otettu. Jos laskuri saa tietyn arvon hakee se restart metodin ja sovellus käynnistyy uudelleen. Tällä pyritään ettei sovellus ole liian pitkiä aikoja käynnissä ilman uudelleen käynnistymistä.
+Valkouvia tallennetaan aina vuorotellen kahteen eri bitmappiin. Jos bitmabissa on jo kuva se korvataan uudella. Valokuvat eivät tallennu pysyvästi missään vaihessa ja ne katoavat sovelluksen uudelleen käynnistyksessä tai sitten ku se korvataan uudella kuvalla.
 
 **Jatkokehitys ideoita:**
 - Alku speaking skippaus nappi.
