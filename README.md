@@ -72,6 +72,10 @@ Jokaiselle vertailulle on osoitettu oma boolean arvo joka muutetaan vastaavuuden
 Kun kaikki avainsanat on käyty läpi käydään boolean arvot läpi if lauseella ja katsotaan onko joku true.
 Useampi boolean voi olla true mutta boolean vertailussa toteutuu vain ensimmäinen lause joka on true. Tämän vuoksi vertailussa pitää katsoa järjestystä niin että monimutkasimmat avainsanan booleanit tulee ensin jotta jos käyttäjä etsii niitä niin ne toteutuu. Yksinkertasimmat avainsana booleanit voi laittaa vertailussa viimeisiksi jotta jos ennenn niitä ei löydy vastausta niin ne toteutuu. Esim. "maa" merkkijono esiintyy monessa eri sanassa ja tämän vuoksi sen pitää olla vertailun viimesiten joukossa. Ei ole hyvä että käyttäjän etsiessä "riskosromaanit" avainsanalla ja ohjelma ohjaisi "maa" avainsanan kategoriaan.
 
+**Animaatiot**
+
+Animaatiot on luotu sovellukseen Gif tiedostoina. Sovelluksessa on luotu kaksi "pl.droidsonroids.gif.GifImageView" sijaintia robotti figuurille. Nukkumistilalle sekä aktivoitu tilalle omansa. Näihin vaihdetaan tilanteen mukaan aina sopiva kuva tai gif animaatio. Esim. jos sovellus tuottaa puhetta vaihdetaan puhuvarobo gif animaation näkyville puheen ajaksi.
+
 **Sovelluksen palautus nukkumistilaan automaattisesti:**
 
 Sovellus on käytön alussa nukkumistilassa ja se palaa automaattisesti takaisin siihen käyttämättömänä. 
