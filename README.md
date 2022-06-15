@@ -58,6 +58,10 @@ Sovelluksessa on luotuja metodeita:
 - stopBackroundTread()
 - startBackgroundThread()
 
+**String.xml**
+Sovellukselle on luotu kaksi String.xml tiedostoa. Yksi suomeksi ja yksi englanniksi. Valittava tiedosto valitaan hakemalla käyttäjän valitsema kieli valinta. String.xml tiedostoja voi luoda lisää helposti Android Studiossa Translations Editor:ssa. Editorin yläreunassa on maapallonkuva plus merkillä "add locale" josta saa luotua uuden xml tiedoston haluamalleen kielelle. Uuden kielen luonnin jälkeen tulee se lisätä myös kielivalinta metodiin jotta käyttäjä voi sen valita käyttöön.
+Sovellus muuttaa kaikki String tietotyypit vaittun kielen String.xml tiedostoa vastaavaksi jolloin sovellus toimii valitulla kielellä.
+
 **Database:**
 
 Sovelluksessa hyödynnetään Firebase Databasea tiedonkeruuseen. Databaseen tallennetaan aloita() metodin haut sekä kaikki kuunnellut puheet mitä sovellus      kuuntelee.
